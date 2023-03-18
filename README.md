@@ -1,27 +1,49 @@
-# Front-End Repo for Team 2 of Baboon/Bald Eagle Practicum
+# BB Practicum Team 4 Front-end
 
-This will be the front-end for bb-practicum-team-2-back.
+This is the front-end repository for the BB Practicum Team 4 project. 
 
-It is suggested that you run these instructions **after** you setup the back-end server first.
-You can go through these steps during your first group meeting in-case you need assistance from your mentors.
+- Make sure to set up the back-end server first by following the instructions in the [back-end README](https://github.com/Code-the-Dream-School/bb-practicum-team-4-back/blob/readme/README.md).
 
-You will have two folders inside one team folder (one for front-end and one for back-end). 
+## Prerequisites
 
-![folders](images/folders.png)
+- Make sure you have [Node.js](https://nodejs.org/) installed on your system.
 
->The front-end app (React) will be running on port 3000. The back-end server will be running on port 8000. You will need to run both the front-end app and the back-end server at the same time to test your app.
+## Getting started
 
-### Setting up local development environment
+- Clone the repository.
 
-1. Clone this repository to the folder that was already created for both the front-end and back-end repos
-2. Run `npm install` to install dependencies
-3. Pull the latest version of the `main` branch (when needed)
-4. Run `npm start` to start the development server
-5. Open http://localhost:3000 with your browser to see the data received the back-end server.
-6. Now you have your front-end and back-end running locally!
+```bash
+git clone https://github.com/Code-the-Dream-School/bb-practicum-team-4-front
+```
 
-#### Running the front-end server in Visual Studio Code
-![vsc running](images/front-end-running-vsc.png)
+- Install dependencies.
 
-#### Running the front-end server in the browser
-![browser running](images/front-end-running-browser.png)
+```bash
+cd bb-practicum-team-4-front
+npm install
+```
+
+- Build and run the project.
+
+```bash
+npm start
+```
+
+Navigate to `http://localhost:3000`
+
+## User stories
+
+- User should be able to
+    - login or create an account
+    - see a list of products
+    - search for a product
+    - add product to cart
+- For MVP - the cart will not persist
+- User should be able to checkout
+- Checkout page takes shipping and billing info
+- Payment information (?)
+- Place order
+- After an order is placed it automatically goes into “completed” status
+- A logged in user is able to access order history
+- User should not be able to access order history if not logged in
+
