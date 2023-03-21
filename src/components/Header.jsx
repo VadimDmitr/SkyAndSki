@@ -15,11 +15,11 @@ export const Header = () => {
                 <MobileMenu openMobileMenu={openMobileMenu} setOpenMobileMenu={setOpenMobileMenu} />
             </nav>
             <nav className="nav desktop">
-                <NavLink>
+                <NavLink to={"/"}>
                     <Logo />
                 </NavLink>
-                <NavLink>Register</NavLink>
-                <NavLink>Log in</NavLink>
+                <NavLink to={"/register"}>Register</NavLink>
+                <NavLink to={"/signin"}>Log in</NavLink>
             </nav>
         </header>
     )

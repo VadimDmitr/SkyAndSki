@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Ul = styled.ul`
   list-style: none;
@@ -38,7 +38,7 @@ export const MobileMenu = ({ openMobileMenu, setOpenMobileMenu }) => {
   const navLinksData = ["register", "login"];
 
   const navLinks = navLinksData.map((navLink, index) => (
-    <Link
+    <NavLink
       key={index}
       style={{
         padding: "2.2rem 3.5rem",
@@ -48,7 +48,7 @@ export const MobileMenu = ({ openMobileMenu, setOpenMobileMenu }) => {
       to="/"
     >
       <li>{navLink}</li>
-    </Link>
+    </NavLink>
   ));
 
   return <Ul openMobileMenu={openMobileMenu}>{navLinks}</Ul>;
