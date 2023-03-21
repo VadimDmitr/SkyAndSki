@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Logo } from "./Logo";
+import { Hamburger } from "./Hamburger";
 
 export const Header = () => {
+    const [openMobileMenu, setOpenMobileMenu] = useState(false);
+
     return (
         <header className="header">
             <nav className="nav-mobile mobile">
                 <Logo />
+                <Hamburger openMobileMenu={openMobileMenu} setOpenMobileMenu={setOpenMobileMenu} />
             </nav>
             <nav className="nav desktop">
                 <NavLink>
