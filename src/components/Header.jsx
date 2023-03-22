@@ -19,7 +19,7 @@ export const Header = () => {
                     <Logo />
                 </NavLink>
                 <NavLink to={"/register"}>Register</NavLink>
-                <NavLink to={"/signin"}>Log in</NavLink>
+                <NavLink to={"/login"}>Log in</NavLink>
             </nav>
         </header>
     )

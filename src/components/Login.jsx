@@ -20,12 +20,12 @@ export const Login = () => {
 
     return (
         <form>
-            <h1>{message.fact}</h1>
-            {/* <p>username</p>
-            <input />
-            <p>password</p>
-            <input />
-            <button>Sign in</button> */}
+            {/* <h1>{message.fact}</h1> */}
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username"/>
+            <label for="password">Password: </label>
+            <input type="text" id="password" name="password" />
+            <button>Register</button>
         </form>
     )
 }
