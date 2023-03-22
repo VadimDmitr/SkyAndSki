@@ -11,11 +11,8 @@ const ProductCard = ({ product }) => {
         <h3 className="product-name">{product.name}</h3>
         <p className="product-brand">Brand: {product.brand}</p>
         <p className="product-price">Price: ${product.price.toFixed(2)}</p>
-        <p className="product-stock">
-          {product.stock > 0 ? `In Stock (${product.stock} available)` : 'Out of Stock'}
-        </p>
         <button className="add-to-cart-btn" disabled={!product.stock}>
-          {product.stock > 0 ? 'Add to Cart' : 'Notify Me'}
+          Add to Cart
         </button>
       </div>
     </div>
