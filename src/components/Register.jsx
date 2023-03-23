@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { register } from '../util/index';
 
 const URL = 'http://localhost:8000/api/v1/auth/register';
 
@@ -14,7 +13,16 @@ export const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const myData = register(URL, userInfo);
+        fetch(URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userInfo),
+        })
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
     }
 
     const handleChange = (event) => {

@@ -21,14 +21,4 @@ const getAllData = async (url) => {
   }
 };
 
-const register = async (url, reqData) => {
-  try {
-    let res = await axios.post(url, reqData);
-    let data = await res.data;
-    return data;
-  } catch (error) {
-    console.log(error, `error - getAllData in ${url} route`);
-  }
-};
-
-export { getData, getAllData, register };
+export { getData, getAllData };
