@@ -45,7 +45,7 @@ export const MobileMenu = ({ openMobileMenu, setOpenMobileMenu }) => {
         display: "flex",
         justifyContent: "center",
       }}
-      to="/"
+      to={"/" + navLink}
     >
       <li>{navLink}</li>
     </NavLink>

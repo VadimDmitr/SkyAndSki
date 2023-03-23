@@ -10,7 +10,7 @@ export const Login = () => {
     useEffect(() => {
         (async () => {
             const myData = await getAllData(URL);
-            setMessage(myData);
+            setMessage(myData.data);
         })();
 
         return () => {
@@ -20,10 +20,10 @@ export const Login = () => {
 
     return (
         <form>
-            {/* <h1>{message.fact}</h1> */}
-            <label for="username">Username: </label>
-            <input type="text" id="username" name="username"/>
-            <label for="password">Password: </label>
+            <h1>{message}</h1>
+            <label htmlFor="email">Email: </label>
+            <input type="text" id="email" name="email"/>
+            <label htmlFor="password">Password: </label>
             <input type="text" id="password" name="password" />
             <button>Login</button>
         </form>
