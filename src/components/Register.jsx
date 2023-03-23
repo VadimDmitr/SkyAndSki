@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { BASEAUTHURL, fetchData } from "../util/index";
 
-const URL = 'http://localhost:8000/api/v1/auth/register';
+const URL = BASEAUTHURL + "register";
 
 export const Register = () => {
     const [userInfo, setUserInfo] = useState({
@@ -10,23 +11,14 @@ export const Register = () => {
         password: "",
     });
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        fetch(URL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(userInfo),
-        })
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
-    }
-
     const handleChange = (event) => {
         setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        fetchData(URL, "POST", userInfo);
     }
 
     return (

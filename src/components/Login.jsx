@@ -1,31 +1,43 @@
-import { useState, useEffect } from "react";
-import { getAllData } from "../util/index";
+import { useState } from "react";
+import { BASEAUTHURL, fetchData } from "../util/index";
 
-// const URL = 'https://some-random-api.ml/animal/bird';
-const URL = 'http://localhost:8000/api/v1/';
+const URL = BASEAUTHURL + "login";
 
 export const Login = () => {
-    const [message, setMessage ] = useState("");
+    const [userInfo, setUserInfo] = useState({
+        email: "",
+        password: ""
+    })
 
-    useEffect(() => {
-        (async () => {
-            const myData = await getAllData(URL);
-            setMessage(myData.data);
-        })();
+    const handleChange = (event) => {
+        setUserInfo({ ...userInfo, [event.target.name]: event.target.value})
+    }
 
-        return () => {
-            console.log("unmounting");
-        }
-    }, []);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        fetchData(URL, "POST", userInfo);
+    }
 
     return (
-        <form>
-            <h1>{message}</h1>
+        <form onSubmit={(e) => handleSubmit(e)}>
             <label htmlFor="email">Email: </label>
-            <input type="text" id="email" name="email"/>
+            <input
+                type="text"
+                id="email"
+                name="email"
+                value={userInfo.email}
+                onChange={(e) => handleChange(e)}
+            />
             <label htmlFor="password">Password: </label>
-            <input type="text" id="password" name="password" />
-            <button>Login</button>
+            <input
+                type="text"
+                id="password"
+                name="password"
+                value={userInfo.password}
+                onChange={(e) => handleChange(e)}
+            />
+            <button type="submit">Login</button>
         </form>
     )
 }
