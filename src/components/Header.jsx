@@ -26,6 +26,9 @@ export const Header = () => {
                 <NavLink to={"/login"}>
                     <h1>Log in</h1>
                 </NavLink>
+                <NavLink to={"/delete-account"}>
+                    <h1>Delete account</h1>
+                </NavLink>
             </nav>
         </header>
     )
