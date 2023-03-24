@@ -16,10 +16,16 @@ export const Header = () => {
             </nav>
             <nav className="nav desktop">
                 <NavLink to={"/"}>
-                    <Logo />
+                    <h1>
+                        <Logo />
+                    </h1>
                 </NavLink>
-                <NavLink to={"/register"}>Register</NavLink>
-                <NavLink to={"/signin"}>Log in</NavLink>
+                <NavLink to={"/register"}>
+                    <h1>Register</h1>
+                </NavLink>
+                <NavLink to={"/login"}>
+                    <h1>Log in</h1>
+                </NavLink>
             </nav>
         </header>
     )

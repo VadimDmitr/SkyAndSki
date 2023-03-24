@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const BASEAUTHURL = "http://localhost:8000/api/v1/auth/";
+
 // note: not used, but could be used with GET with params
 const getData = async (url, params) => {
   try {
@@ -21,4 +23,17 @@ const getAllData = async (url) => {
   }
 };
 
-export { getData, getAllData };
+const fetchData = async (url, method, body) => {
+  fetch(url, {
+    method: method,
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  })
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+}
+
+export { BASEAUTHURL, getData, getAllData, fetchData };

@@ -1,21 +1,19 @@
 import { useState } from "react";
 import { BASEAUTHURL, fetchData } from "../util/index";
 
-const URL = BASEAUTHURL + "register";
+const URL = BASEAUTHURL + "login";
 
-export const Register = () => {
+export const Login = () => {
     const [userInfo, setUserInfo] = useState({
-        name: "",
         email: "",
-        username: "",
-        password: "",
-    });
+        password: ""
+    })
 
     const handleChange = (event) => {
-        setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
+        setUserInfo({ ...userInfo, [event.target.name]: event.target.value})
     }
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
 
         fetchData(URL, "POST", userInfo);
@@ -23,22 +21,6 @@ export const Register = () => {
 
     return (
         <form onSubmit={(e) => handleSubmit(e)}>
-            <label htmlFor="name">Name: </label>
-            <input
-                type="text"
-                id="name"
-                name="name"
-                value={userInfo.name}
-                onChange={(e) => handleChange(e)}
-            />
-            <label htmlFor="username">Username: </label>
-            <input
-                type="text"
-                id="username"
-                name="username"
-                value={userInfo.username}
-                onChange={(e) => handleChange(e)}
-            />
             <label htmlFor="email">Email: </label>
             <input
                 type="text"
@@ -55,7 +37,7 @@ export const Register = () => {
                 value={userInfo.password}
                 onChange={(e) => handleChange(e)}
             />
-            <button type="submit">Register</button>
+            <button type="submit">Login</button>
         </form>
     )
 }
