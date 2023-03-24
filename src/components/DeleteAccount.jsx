@@ -26,6 +26,7 @@ export const DeleteAccount = () => {
                 type="text"
                 id="email"
                 name="email"
+                required
                 value={userInfo.email}
                 onChange={(e) => handleChange(e)}
             />

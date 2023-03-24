@@ -29,6 +29,7 @@ export const Register = () => {
                 id="name"
                 name="name"
                 value={userInfo.name}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <label htmlFor="username">Username: </label>
@@ -37,6 +38,7 @@ export const Register = () => {
                 id="username"
                 name="username"
                 value={userInfo.username}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <label htmlFor="email">Email: </label>
@@ -45,6 +47,7 @@ export const Register = () => {
                 id="email"
                 name="email"
                 value={userInfo.email}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <label htmlFor="password">Password: </label>
@@ -53,6 +56,7 @@ export const Register = () => {
                 id="password"
                 name="password"
                 value={userInfo.password}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <button type="submit">Register</button>

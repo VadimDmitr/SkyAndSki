@@ -27,6 +27,7 @@ export const Login = () => {
                 id="email"
                 name="email"
                 value={userInfo.email}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <label htmlFor="password">Password: </label>
@@ -35,6 +36,7 @@ export const Login = () => {
                 id="password"
                 name="password"
                 value={userInfo.password}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <button type="submit">Login</button>
