@@ -1,6 +1,7 @@
 {
-  "name": "bb-practicum-team1-front",
+  "name": "bb-practicum-team4-front",
   "version": "0.1.0",
+  "description": "Front-End Repo for Team 4 of Baboon/Bald Eagle Practicum",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
