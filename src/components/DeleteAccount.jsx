@@ -6,7 +6,7 @@ const URL = BASEAUTHURL + "removeuser";
 
 export const DeleteAccount = () => {
     const [userInfo, setUserInfo] = useState({
-        email: ""
+        email: "test@test.com"
     })
 
     const handleChange = (event) => {
@@ -27,10 +27,22 @@ export const DeleteAccount = () => {
                 id="email"
                 name="email"
                 required
-                value={userInfo.email}
+                value="test@test.com"
                 onChange={(e) => handleChange(e)}
             />
             <button type="submit">Delete account</button>
         </form>
+        // <form onSubmit={(e) => handleSubmit(e)}>
+        //     <label htmlFor="email">Email: </label>
+        //     <input
+        //         type="text"
+        //         id="email"
+        //         name="email"
+        //         required
+        //         value={userInfo.email}
+        //         onChange={(e) => handleChange(e)}
+        //     />
+        //     <button type="submit">Delete account</button>
+        // </form>
     )
 }

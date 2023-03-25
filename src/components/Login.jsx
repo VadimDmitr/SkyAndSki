@@ -5,8 +5,8 @@ const URL = BASEAUTHURL + "login";
 
 export const Login = () => {
     const [userInfo, setUserInfo] = useState({
-        email: "",
-        password: ""
+        email: "test@test.com",
+        password: "test@test.com"
     })
 
     const handleChange = (event) => {
@@ -26,7 +26,7 @@ export const Login = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={userInfo.email}
+                value="test@test.com"
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -35,11 +35,32 @@ export const Login = () => {
                 type="text"
                 id="password"
                 name="password"
-                value={userInfo.password}
+                value="test@test.com"
                 required
                 onChange={(e) => handleChange(e)}
             />
             <button type="submit">Login</button>
         </form>
+        // <form onSubmit={(e) => handleSubmit(e)}>
+        //     <label htmlFor="email">Email: </label>
+        //     <input
+        //         type="email"
+        //         id="email"
+        //         name="email"
+        //         value={userInfo.email}
+        //         required
+        //         onChange={(e) => handleChange(e)}
+        //     />
+        //     <label htmlFor="password">Password: </label>
+        //     <input
+        //         type="text"
+        //         id="password"
+        //         name="password"
+        //         value={userInfo.password}
+        //         required
+        //         onChange={(e) => handleChange(e)}
+        //     />
+        //     <button type="submit">Login</button>
+        // </form>
     )
 }

@@ -6,10 +6,10 @@ const URL = BASEAUTHURL + "register";
 
 export const Register = () => {
     const [userInfo, setUserInfo] = useState({
-        name: "",
-        email: "",
-        username: "",
-        password: "",
+        name: "test@test.com",
+        email: "test@test.com",
+        username: "test@test.com",
+        password: "test@test.com",
     });
 
     const {userToken, setUserToken} = useContext(userTokenContext);
@@ -46,7 +46,7 @@ export const Register = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={userInfo.name}
+                value="test@test.com"
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -55,7 +55,7 @@ export const Register = () => {
                 type="text"
                 id="username"
                 name="username"
-                value={userInfo.username}
+                value="test@test.com"
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -64,7 +64,7 @@ export const Register = () => {
                 type="text"
                 id="email"
                 name="email"
-                value={userInfo.email}
+                value="test@test.com"
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -73,11 +73,50 @@ export const Register = () => {
                 type="text"
                 id="password"
                 name="password"
-                value={userInfo.password}
+                value="test@test.com"
                 required
                 onChange={(e) => handleChange(e)}
             />
             <button type="submit">Register</button>
         </form>
+        // <form onSubmit={(e) => handleSubmit(e)}>
+        //     <label htmlFor="name">Name: </label>
+        //     <input
+        //         type="text"
+        //         id="name"
+        //         name="name"
+        //         value={userInfo.name}
+        //         required
+        //         onChange={(e) => handleChange(e)}
+        //     />
+        //     <label htmlFor="username">Username: </label>
+        //     <input
+        //         type="text"
+        //         id="username"
+        //         name="username"
+        //         value={userInfo.username}
+        //         required
+        //         onChange={(e) => handleChange(e)}
+        //     />
+        //     <label htmlFor="email">Email: </label>
+        //     <input
+        //         type="text"
+        //         id="email"
+        //         name="email"
+        //         value={userInfo.email}
+        //         required
+        //         onChange={(e) => handleChange(e)}
+        //     />
+        //     <label htmlFor="password">Password: </label>
+        //     <input
+        //         type="text"
+        //         id="password"
+        //         name="password"
+        //         value={userInfo.password}
+        //         required
+        //         onChange={(e) => handleChange(e)}
+        //     />
+        //     <button type="submit">Register</button>
+        // </form>
     )
 }
