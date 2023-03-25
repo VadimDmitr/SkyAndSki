@@ -7,14 +7,13 @@ const URL = BASEAUTHURL + "register";
 
 export const Register = () => {
     const navigate = useNavigate();
+    const {userToken, setUserToken} = useContext(userTokenContext);
     const [userInfo, setUserInfo] = useState({
         name: "test@test.com",
         email: "test@test.com",
         username: "test@test.com",
         password: "test@test.com",
     });
-
-    const {userToken, setUserToken} = useContext(userTokenContext);
 
     const handleChange = (event) => {
         setUserInfo({ ...userInfo, [event.target.name]: event.target.value });

@@ -1,10 +1,11 @@
-import { useState } from "react";
-
-import { BASEAUTHURL, fetchData } from "../util/index";
+import { useState, useContext } from "react";
+import { userTokenContext } from "../contexts/userContext";
+import { BASEAUTHURL } from "../util/index";
 
 const URL = BASEAUTHURL + "removeuser";
 
 export const DeleteAccount = () => {
+    const {userToken, setUserToken} = useContext(userTokenContext);
     const [userInfo, setUserInfo] = useState({
         email: "test@test.com"
     })
@@ -16,7 +17,23 @@ export const DeleteAccount = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        fetchData(URL, "DELETE", userInfo);
+        // fetchData(URL, "DELETE", userInfo);
+        fetch(URL, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userInfo),
+        })
+        .then(response => response.text())
+        .then(result => {
+            console.log(result)
+            console.log("type of result ====> ", typeof result);
+            // console.log(JSON.stringify(result))
+            setUserToken({ ...userToken, token: ""})
+            console.log("userToken ====> ", userToken);
+        })
+        .catch(error => console.log('error', error))
     }
 
     return (
