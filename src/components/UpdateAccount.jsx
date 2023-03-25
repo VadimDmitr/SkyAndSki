@@ -1,29 +1,26 @@
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import { userDataContext } from "../contexts/userContext";
-import { BASEAUTHURL, fetchData } from "../util/index";
+import { BASEAUTHURL } from "../util/index";
 
-const URL = BASEAUTHURL + "login";
+const URL = BASEAUTHURL + "removeuser";
 
-export const Login = () => {
-    const navigate = useNavigate();
+export const UpdateAccount = () => {
     const {userData, setUserData} = useContext(userDataContext);
     const [userFormData, setUserFormData] = useState({
         email: "test@test.com",
-        password: "test@test.com"
-    })
+        emailToEdit: "test@test.com"
+    });
 
     const handleChange = (event) => {
-        setUserFormData({ ...userFormData, [event.target.name]: event.target.value})
+        setUserFormData({ ...userFormData, [event.target.name]: event.target.value })
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
-        // fetchData(URL, "POST", userInfo);
-
+        // fetchData(URL, "DELETE", userInfo);
         fetch(URL, {
-            method: "POST",
+            method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -33,18 +30,9 @@ export const Login = () => {
         .then(result => {
             console.log(result)
             console.log("type of result ====> ", typeof result);
-            console.log(JSON.parse(result))
-            console.log("JSON.parse(result).token ====> ", JSON.parse(result).token);
-            const userDateFromBackend = {
-                token: JSON.parse(result).token,
-                user: JSON.parse(result).user
-            }
-            setUserData({ ...userData, ...userDateFromBackend})
-            // setUserData({ ...userData, name: JSON.parse(result).name})
+            // console.log(JSON.stringify(result))
+            setUserData({ ...userData, token: null})
             console.log("userData ====> ", userData);
-            // if (userData) {
-            //     navigate("/account");
-            // }
         })
         .catch(error => console.log('error', error))
     }
@@ -53,23 +41,23 @@ export const Login = () => {
         <form onSubmit={(e) => handleSubmit(e)}>
             <label htmlFor="email">Email: </label>
             <input
-                type="email"
+                type="text"
                 id="email"
                 name="email"
-                value={userFormData.email}
                 required
+                value="tests@test.com"
                 onChange={(e) => handleChange(e)}
             />
-            <label htmlFor="password">Password: </label>
+            <label htmlFor="email">Email To Edit: </label>
             <input
                 type="text"
-                id="password"
-                name="password"
-                value={userFormData.password}
+                id="email-to-edit"
+                name="email-to-edit"
                 required
+                value="test@test.com"
                 onChange={(e) => handleChange(e)}
             />
-            <button type="submit">Login</button>
+            <button type="submit">Update account</button>
         </form>
     )
 }

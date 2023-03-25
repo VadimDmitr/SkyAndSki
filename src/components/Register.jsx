@@ -1,24 +1,55 @@
-import { useState } from "react";
-import { BASEAUTHURL, fetchData } from "../util/index";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { userDataContext } from "../contexts/userContext";
+import { BASEAUTHURL } from "../util/index";
 
 const URL = BASEAUTHURL + "register";
 
 export const Register = () => {
-    const [userInfo, setUserInfo] = useState({
-        name: "",
-        email: "",
-        username: "",
-        password: "",
+    const navigate = useNavigate();
+    const {userData, setUserData} = useContext(userDataContext);
+    const [userFormData, setUserFormData] = useState({
+        name: "test@test.com",
+        email: "test@test.com",
+        username: "test@test.com",
+        password: "test@test.com",
     });
 
     const handleChange = (event) => {
-        setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
+        setUserFormData({ ...userFormData, [event.target.name]: event.target.value });
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        fetchData(URL, "POST", userInfo);
+        // fetchData(URL, "POST", userInfo);
+
+        fetch(URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userFormData),
+        })
+        .then(response => response.text())
+        .then(result => {
+            console.log(result)
+            console.log("type of result ====> ", typeof result);
+            console.log(JSON.parse(result))
+            console.log("JSON.parse(result).token ====> ", JSON.parse(result).token);
+            // setUserData({ ...userData, token: JSON.parse(result).token})
+            // setUserData({ ...userData, name: JSON.parse(result).name})
+            const userDateFromBackend = {
+                token: JSON.parse(result).token,
+                user: JSON.parse(result).user
+            }
+            setUserData({ ...userData, ...userDateFromBackend})
+            console.log("userData ====> ", userData);
+            if (userData) {
+                navigate("/account");
+            }
+        })
+        .catch(error => console.log('error', error))
     }
 
     return (
@@ -28,7 +59,8 @@ export const Register = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={userInfo.name}
+                value={userFormData.name}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <label htmlFor="username">Username: </label>
@@ -36,7 +68,8 @@ export const Register = () => {
                 type="text"
                 id="username"
                 name="username"
-                value={userInfo.username}
+                value={userFormData.username}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <label htmlFor="email">Email: </label>
@@ -44,7 +77,8 @@ export const Register = () => {
                 type="text"
                 id="email"
                 name="email"
-                value={userInfo.email}
+                value={userFormData.email}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <label htmlFor="password">Password: </label>
@@ -52,7 +86,8 @@ export const Register = () => {
                 type="text"
                 id="password"
                 name="password"
-                value={userInfo.password}
+                value={userFormData.password}
+                required
                 onChange={(e) => handleChange(e)}
             />
             <button type="submit">Register</button>
