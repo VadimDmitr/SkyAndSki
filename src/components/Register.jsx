@@ -1,10 +1,12 @@
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { userTokenContext } from "../contexts/userContext";
 import { BASEAUTHURL } from "../util/index";
 
 const URL = BASEAUTHURL + "register";
 
 export const Register = () => {
+    const navigate = useNavigate();
     const [userInfo, setUserInfo] = useState({
         name: "test@test.com",
         email: "test@test.com",
@@ -37,6 +39,9 @@ export const Register = () => {
             // console.log(JSON.stringify(result))
             setUserToken({ ...userToken, token: result})
             console.log("userToken ====> ", userToken);
+            if (userToken) {
+                navigate("/account");
+            }
         })
         .catch(error => console.log('error', error))
     }
