@@ -4,6 +4,7 @@ import { Home } from "./components/pages/Home";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
 import { DeleteAccount } from "./components/DeleteAccount";
+import { Account } from "./components/pages/Account";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/register" element={<Register/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/delete-account" element={<DeleteAccount/>}/>
+          <Route path="/account" element={<Account/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

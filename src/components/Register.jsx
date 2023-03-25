@@ -21,22 +21,24 @@ export const Register = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
+        // fetchData(URL, "POST", userInfo);
+
         fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(userInfo),
-          })
-          .then(response => response.text())
-          .then(result => {
+        })
+        .then(response => response.text())
+        .then(result => {
             console.log(result)
             console.log("type of result ====> ", typeof result);
             // console.log(JSON.stringify(result))
             setUserToken({ ...userToken, token: result})
             console.log("userToken ====> ", userToken);
-          })
-          .catch(error => console.log('error', error))
+        })
+        .catch(error => console.log('error', error))
     }
 
     return (
