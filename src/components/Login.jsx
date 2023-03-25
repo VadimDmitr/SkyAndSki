@@ -23,7 +23,7 @@ export const Login = () => {
         <form onSubmit={(e) => handleSubmit(e)}>
             <label htmlFor="email">Email: </label>
             <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
                 value={userInfo.email}
