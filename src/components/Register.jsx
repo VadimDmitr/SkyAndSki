@@ -35,8 +35,9 @@ export const Register = () => {
         .then(result => {
             console.log(result)
             console.log("type of result ====> ", typeof result);
-            // console.log(JSON.stringify(result))
-            setUserToken({ ...userToken, token: result})
+            console.log(JSON.parse(result))
+            console.log("JSON.parse(result).token ====> ", JSON.parse(result).token);
+            setUserToken({ ...userToken, token: JSON.parse(result).token})
             console.log("userToken ====> ", userToken);
             if (userToken) {
                 navigate("/account");
@@ -52,7 +53,7 @@ export const Register = () => {
                 type="text"
                 id="name"
                 name="name"
-                value="test@test.com"
+                value={userInfo.name}
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -61,7 +62,7 @@ export const Register = () => {
                 type="text"
                 id="username"
                 name="username"
-                value="test@test.com"
+                value={userInfo.username}
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -70,7 +71,7 @@ export const Register = () => {
                 type="text"
                 id="email"
                 name="email"
-                value="test@test.com"
+                value={userInfo.email}
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -79,50 +80,11 @@ export const Register = () => {
                 type="text"
                 id="password"
                 name="password"
-                value="test@test.com"
+                value={userInfo.password}
                 required
                 onChange={(e) => handleChange(e)}
             />
             <button type="submit">Register</button>
         </form>
-        // <form onSubmit={(e) => handleSubmit(e)}>
-        //     <label htmlFor="name">Name: </label>
-        //     <input
-        //         type="text"
-        //         id="name"
-        //         name="name"
-        //         value={userInfo.name}
-        //         required
-        //         onChange={(e) => handleChange(e)}
-        //     />
-        //     <label htmlFor="username">Username: </label>
-        //     <input
-        //         type="text"
-        //         id="username"
-        //         name="username"
-        //         value={userInfo.username}
-        //         required
-        //         onChange={(e) => handleChange(e)}
-        //     />
-        //     <label htmlFor="email">Email: </label>
-        //     <input
-        //         type="text"
-        //         id="email"
-        //         name="email"
-        //         value={userInfo.email}
-        //         required
-        //         onChange={(e) => handleChange(e)}
-        //     />
-        //     <label htmlFor="password">Password: </label>
-        //     <input
-        //         type="text"
-        //         id="password"
-        //         name="password"
-        //         value={userInfo.password}
-        //         required
-        //         onChange={(e) => handleChange(e)}
-        //     />
-        //     <button type="submit">Register</button>
-        // </form>
     )
 }

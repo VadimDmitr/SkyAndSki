@@ -13,7 +13,8 @@ export const Account = () => {
 
     return (
         <>
-            {userToken.token === "" ? <></> : <h1>Account</h1>}
+            {/* {userToken.token === "" ? <></> : <h1>Account</h1>} */}
+            {userToken.token === "" ? <></> : <h1>{JSON.stringify(userToken, null, 4)}</h1>}
         </>
 
     )
