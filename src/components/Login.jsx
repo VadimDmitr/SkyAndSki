@@ -7,7 +7,7 @@ const URL = BASEAUTHURL + "login";
 
 export const Login = () => {
     const navigate = useNavigate();
-    const {userToken, setUserToken} = useContext(userTokenContext);
+    const {userData, setUserData} = useContext(userTokenContext);
     const [userFormData, setUserFormData] = useState({
         email: "test@test.com",
         password: "test@test.com"
@@ -35,9 +35,14 @@ export const Login = () => {
             console.log("type of result ====> ", typeof result);
             console.log(JSON.parse(result))
             console.log("JSON.parse(result).token ====> ", JSON.parse(result).token);
-            setUserToken({ ...userToken, token: JSON.parse(result).token})
-            console.log("userToken ====> ", userToken);
-            // if (userToken) {
+            const userDateFromBackend = {
+                token: JSON.parse(result).token,
+                user: JSON.parse(result).user
+            }
+            setUserData({ ...userData, ...userDateFromBackend})
+            // setUserData({ ...userData, name: JSON.parse(result).name})
+            console.log("userData ====> ", userData);
+            // if (userData) {
             //     navigate("/account");
             // }
         })

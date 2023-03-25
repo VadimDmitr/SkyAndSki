@@ -5,7 +5,7 @@ import { BASEAUTHURL } from "../util/index";
 const URL = BASEAUTHURL + "removeuser";
 
 export const UpdateAccount = () => {
-    const {userToken, setUserToken} = useContext(userTokenContext);
+    const {userData, setUserData} = useContext(userTokenContext);
     const [userFormData, setUserFormData] = useState({
         email: "test@test.com",
         emailToEdit: "test@test.com"
@@ -31,8 +31,8 @@ export const UpdateAccount = () => {
             console.log(result)
             console.log("type of result ====> ", typeof result);
             // console.log(JSON.stringify(result))
-            setUserToken({ ...userToken, token: null})
-            console.log("userToken ====> ", userToken);
+            setUserData({ ...userData, token: null})
+            console.log("userData ====> ", userData);
         })
         .catch(error => console.log('error', error))
     }

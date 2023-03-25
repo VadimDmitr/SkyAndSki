@@ -4,21 +4,22 @@ import { userTokenContext } from "../../contexts/userContext";
 
 export const Account = () => {
     const navigate = useNavigate();
-    const {userToken} = useContext(userTokenContext);
+    const {userData} = useContext(userTokenContext);
 
     useEffect(() => {
-        console.log("userToken =====> ", userToken);
-        if (userToken === null) navigate ("/");
-        // if (userToken.token === null) navigate ("/");
+        console.log("userData =====> ", userData);
+        if (userData === null) navigate ("/");
+        // if (userData.token === null) navigate ("/");
     })
 
-    if (userToken) return (
+    if (userData) return (
         <>
-            {/* {userToken.token === "" ? <></> : <h1>Account</h1>} */}
-            {userToken.token === null ? <></> : <h1>{JSON.stringify(userToken, null, 4)}</h1>}
+            {/* {userData.token === "" ? <></> : <h1>Account</h1>} */}
+            {/* {userData.token === null ? <></> : <h1>{JSON.stringify(userData, null, 4)}</h1>} */}
+            {userData.token === null ? <></> : <h1>User name: {userData.user.name} <br/> Token: {userData.token}</h1>}
         </>
     )
     return (<></>)
 }
 
-// userToken.token === null ? <></> : <h1>{JSON.stringify(userToken, null, 4)}</h1>
+// userData.token === null ? <></> : <h1>{JSON.stringify(userData, null, 4)}</h1>
