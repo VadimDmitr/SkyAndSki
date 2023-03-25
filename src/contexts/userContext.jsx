@@ -3,7 +3,7 @@ import { useState, createContext } from "react";
 export const userTokenContext = createContext({});
 
 export default ({ children }) => {
-    const [userToken, setUserToken] = useState("");
+    const [userToken, setUserToken] = useState(null);
 
     const userTokenData = {
         userToken, setUserToken

@@ -8,7 +8,7 @@ const URL = BASEAUTHURL + "register";
 export const Register = () => {
     const navigate = useNavigate();
     const {userToken, setUserToken} = useContext(userTokenContext);
-    const [userInfo, setUserInfo] = useState({
+    const [userFormData, setUserFormData] = useState({
         name: "test@test.com",
         email: "test@test.com",
         username: "test@test.com",
@@ -16,7 +16,7 @@ export const Register = () => {
     });
 
     const handleChange = (event) => {
-        setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
+        setUserFormData({ ...userFormData, [event.target.name]: event.target.value });
     }
 
     const handleSubmit = async (event) => {
@@ -29,7 +29,7 @@ export const Register = () => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(userInfo),
+            body: JSON.stringify(userFormData),
         })
         .then(response => response.text())
         .then(result => {
@@ -53,7 +53,7 @@ export const Register = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={userInfo.name}
+                value={userFormData.name}
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -62,7 +62,7 @@ export const Register = () => {
                 type="text"
                 id="username"
                 name="username"
-                value={userInfo.username}
+                value={userFormData.username}
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -71,7 +71,7 @@ export const Register = () => {
                 type="text"
                 id="email"
                 name="email"
-                value={userInfo.email}
+                value={userFormData.email}
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -80,7 +80,7 @@ export const Register = () => {
                 type="text"
                 id="password"
                 name="password"
-                value={userInfo.password}
+                value={userFormData.password}
                 required
                 onChange={(e) => handleChange(e)}
             />

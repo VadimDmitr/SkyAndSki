@@ -8,14 +8,17 @@ export const Account = () => {
 
     useEffect(() => {
         console.log("userToken =====> ", userToken);
-        if (userToken.token === "") navigate ("/");
+        if (userToken === null) navigate ("/");
+        // if (userToken.token === null) navigate ("/");
     })
 
-    return (
+    if (userToken) return (
         <>
             {/* {userToken.token === "" ? <></> : <h1>Account</h1>} */}
-            {userToken.token === "" ? <></> : <h1>{JSON.stringify(userToken, null, 4)}</h1>}
+            {userToken.token === null ? <></> : <h1>{JSON.stringify(userToken, null, 4)}</h1>}
         </>
-
     )
+    return (<></>)
 }
+
+// userToken.token === null ? <></> : <h1>{JSON.stringify(userToken, null, 4)}</h1>

@@ -6,12 +6,12 @@ const URL = BASEAUTHURL + "removeuser";
 
 export const DeleteAccount = () => {
     const {userToken, setUserToken} = useContext(userTokenContext);
-    const [userInfo, setUserInfo] = useState({
+    const [userFormData, setUserFormData] = useState({
         email: "test@test.com"
     })
 
     const handleChange = (event) => {
-        setUserInfo({ ...userInfo, [event.target.name]: event.target.value })
+        setUserFormData({ ...userFormData, [event.target.name]: event.target.value })
     }
 
     const handleSubmit = async (event) => {
@@ -23,14 +23,14 @@ export const DeleteAccount = () => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(userInfo),
+            body: JSON.stringify(userFormData),
         })
         .then(response => response.text())
         .then(result => {
             console.log(result)
             console.log("type of result ====> ", typeof result);
             // console.log(JSON.stringify(result))
-            setUserToken({ ...userToken, token: ""})
+            setUserToken({ ...userToken, token: null})
             console.log("userToken ====> ", userToken);
         })
         .catch(error => console.log('error', error))

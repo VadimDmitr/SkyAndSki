@@ -8,13 +8,13 @@ const URL = BASEAUTHURL + "login";
 export const Login = () => {
     const navigate = useNavigate();
     const {userToken, setUserToken} = useContext(userTokenContext);
-    const [userInfo, setUserInfo] = useState({
+    const [userFormData, setUserFormData] = useState({
         email: "test@test.com",
         password: "test@test.com"
     })
 
     const handleChange = (event) => {
-        setUserInfo({ ...userInfo, [event.target.name]: event.target.value})
+        setUserFormData({ ...userFormData, [event.target.name]: event.target.value})
     }
 
     const handleSubmit = (event) => {
@@ -27,7 +27,7 @@ export const Login = () => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(userInfo),
+            body: JSON.stringify(userFormData),
         })
         .then(response => response.text())
         .then(result => {
@@ -51,7 +51,7 @@ export const Login = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={userInfo.email}
+                value={userFormData.email}
                 required
                 onChange={(e) => handleChange(e)}
             />
@@ -60,7 +60,7 @@ export const Login = () => {
                 type="text"
                 id="password"
                 name="password"
-                value={userInfo.password}
+                value={userFormData.password}
                 required
                 onChange={(e) => handleChange(e)}
             />
