@@ -3,6 +3,7 @@ import { Layout } from "./components/Layout";
 import { Home } from "./components/pages/Home";
 import { Account } from "./components/pages/Account";
 import { Login } from "./components/Login";
+import { Logout } from "./components/Logout";
 import { Register } from "./components/Register";
 import { DeleteAccount } from "./components/DeleteAccount";
 import { UpdateAccount } from "./components/UpdateAccount";
@@ -16,6 +17,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path="/account" element={<Account />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/register" element={<Register />} />
           <Route path="/delete-account" element={<DeleteAccount />} />
           <Route path="/update-account" element={<UpdateAccount />} />
