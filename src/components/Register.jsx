@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { BASEAUTHURL, fetchData } from "../util/index";
+import { useState, useContext } from "react";
+import { userTokenContext } from "../contexts/userContext";
+import { BASEAUTHURL } from "../util/index";
 
 const URL = BASEAUTHURL + "register";
 
@@ -11,6 +12,8 @@ export const Register = () => {
         password: "",
     });
 
+    const {userToken, setUserToken} = useContext(userTokenContext);
+
     const handleChange = (event) => {
         setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
     }
@@ -18,7 +21,22 @@ export const Register = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        fetchData(URL, "POST", userInfo);
+        fetch(URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userInfo),
+          })
+          .then(response => response.text())
+          .then(result => {
+            console.log(result)
+            console.log("type of result ====> ", typeof result);
+            // console.log(JSON.stringify(result))
+            setUserToken({ ...userToken, token: result})
+            console.log("userToken ====> ", userToken);
+          })
+          .catch(error => console.log('error', error))
     }
 
     return (
