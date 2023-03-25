@@ -1,11 +1,11 @@
 import { useState, useContext } from "react";
-import { userTokenContext } from "../contexts/userContext";
+import { userDataContext } from "../contexts/userContext";
 import { BASEAUTHURL } from "../util/index";
 
 const URL = BASEAUTHURL + "removeuser";
 
 export const DeleteAccount = () => {
-    const {userData, setUserData} = useContext(userTokenContext);
+    const {userData, setUserData} = useContext(userDataContext);
     const [userFormData, setUserFormData] = useState({
         email: "test@test.com"
     })

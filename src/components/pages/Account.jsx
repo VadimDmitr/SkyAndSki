@@ -1,10 +1,10 @@
 import { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { userTokenContext } from "../../contexts/userContext";
+import { userDataContext } from "../../contexts/userContext";
 
 export const Account = () => {
     const navigate = useNavigate();
-    const {userData} = useContext(userTokenContext);
+    const {userData} = useContext(userDataContext);
 
     useEffect(() => {
         console.log("userData =====> ", userData);

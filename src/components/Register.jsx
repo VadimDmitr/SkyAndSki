@@ -1,13 +1,13 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { userTokenContext } from "../contexts/userContext";
+import { userDataContext } from "../contexts/userContext";
 import { BASEAUTHURL } from "../util/index";
 
 const URL = BASEAUTHURL + "register";
 
 export const Register = () => {
     const navigate = useNavigate();
-    const {userData, setUserData} = useContext(userTokenContext);
+    const {userData, setUserData} = useContext(userDataContext);
     const [userFormData, setUserFormData] = useState({
         name: "test@test.com",
         email: "test@test.com",

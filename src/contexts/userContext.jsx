@@ -1,13 +1,13 @@
 import { useState, createContext } from "react";
 
-export const userTokenContext = createContext({});
+export const userDataContext = createContext({});
 
 export default ({ children }) => {
     const [userData, setUserData] = useState(null);
 
-    const userTokenData = {
+    const userDataFromContext = {
         userData, setUserData
     }
 
-    return <userTokenContext.Provider value={userTokenData}>{ children }</userTokenContext.Provider>
+    return <userDataContext.Provider value={userDataFromContext}>{ children }</userDataContext.Provider>
 }
