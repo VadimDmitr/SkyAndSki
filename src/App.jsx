@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from "./components/Layout";
 import { Home } from "./components/pages/Home";
-import { Register } from "./components/Register";
-import { Login } from "./components/Login";
-import { DeleteAccount } from "./components/DeleteAccount";
 import { Account } from "./components/pages/Account";
+import { Login } from "./components/Login";
+import { Register } from "./components/Register";
+import { DeleteAccount } from "./components/DeleteAccount";
+import { UpdateAccount } from "./components/UpdateAccount";
 
 function App() {
   return (
@@ -12,10 +13,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/delete-account" element={<DeleteAccount/>}/>
-          <Route path="/account" element={<Account/>}/>
+          <Route path='/home' element={<Home />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/delete-account" element={<DeleteAccount />} />
+          <Route path="/update-account" element={<UpdateAccount />} />
         </Route>
       </Routes>
     </BrowserRouter>
