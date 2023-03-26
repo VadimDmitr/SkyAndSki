@@ -1,5 +1,3 @@
 export const Logo = () => {
-    return (
-        <p>eShop</p>
-    )
-}
+	return <p>eShop</p>;
+};
