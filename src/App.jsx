@@ -7,7 +7,7 @@ import { Logout } from "./components/Logout";
 import { Register } from "./components/Register";
 import { DeleteAccount } from "./components/DeleteAccount";
 import { UpdateAccount } from "./components/UpdateAccount";
-import { NotFound } from "./components/NotFound";
+import { NotFound } from "./components/pages/NotFound";
 
 function App() {
   return (
