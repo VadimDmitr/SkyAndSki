@@ -7,6 +7,7 @@ import { Logout } from "./components/Logout";
 import { Register } from "./components/Register";
 import { DeleteAccount } from "./components/DeleteAccount";
 import { UpdateAccount } from "./components/UpdateAccount";
+import { NotFound } from "./components/NotFound";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/delete-account" element={<DeleteAccount />} />
           <Route path="/update-account" element={<UpdateAccount />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
