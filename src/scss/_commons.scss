@@ -3,7 +3,7 @@
 }
 
 .desktop {
-    display: none;
+    display: none !important;
 }
 
 .form {
@@ -13,10 +13,10 @@
 
 @media only screen and (min-width: 768px) {
     .mobile {
-        display: none;
+        display: none !important;
     }
 
     .desktop {
-        display: flex;
+        display: flex !important;
     }
 }

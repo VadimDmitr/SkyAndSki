@@ -6,3 +6,15 @@
         padding: 3rem 0;
     }
 }
+
+@media only screen and (min-width: 768px) {
+    .account {
+        flex-direction: row;
+
+        &__sidebar {
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+}
