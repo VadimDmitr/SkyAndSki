@@ -24,6 +24,14 @@
         font-weight: 600;
     }
 
+    &__icon {
+        margin-left: auto;
+        transition:  0.6s ease;
+
+        &--rotate {
+            transform: rotate(90deg);
+        }
+    }
 
     &__content {
         background-color: #fff;

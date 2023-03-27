@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { act } from "react-dom/test-utils";
+import { Chevron } from "./Chevron";
 
 export const Accordion = (props) => {
     const [active, setActive] = useState(false);
@@ -20,6 +20,11 @@ export const Accordion = (props) => {
                 onClick={toggleActive}
             >
                 <p>{props.title}</p>
+                <Chevron
+                 className={active ? "accordion__icon accordion__icon--rotate" : "accordion__icon"}
+                 width={10}
+                 fill={"#777"}
+                />
             </button>
             <div ref={contentRef} className="accordion__content">
                 <div>{props.children}</div>
