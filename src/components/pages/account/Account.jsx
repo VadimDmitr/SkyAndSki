@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { userDataContext } from "../../contexts/userContext";
-import { AccountMobile } from "./account/AccountMobile";
-import { ChangePassword } from "../ChangePassword";
-import { DeleteAccount } from "../DeleteAccount";
-import { Logout } from "../Logout";
+import { userDataContext } from "../../../contexts/userContext";
+import { AccountMobile } from "./AccountMobile";
+import { ChangePassword } from "../../ChangePassword";
+import { DeleteAccount } from "../../DeleteAccount";
+import { Logout } from "../../Logout";
 
 export const Account = () => {
     const [view, setView] = useState("order-history");
@@ -48,11 +48,11 @@ export const Account = () => {
             </div>
             <div className="account desktop">
                 <div className="account__sidebar">
-                    <h1 className="account__greeting">Hello, {userData.user.name}</h1>
-                    <p onClick={() => changeView("order-history")}>Order History</p>
-                    <p onClick={() => changeView("change-password")}>Change password</p>
-                    <p onClick={() => changeView("delete-account")}>Delete account</p>
-                    <p onClick={() => changeView("log-out")}>Log out</p>
+                    <h2 className="account__greeting">Hello, {userData.user.name}</h2>
+                    <p className="account__heading pointer" onClick={() => changeView("order-history")}>Orders</p>
+                    <p className="account__heading pointer" onClick={() => changeView("change-password")}>Change password</p>
+                    <p className="account__heading pointer" onClick={() => changeView("delete-account")}>Delete account</p>
+                    <p className="account__heading pointer" onClick={() => changeView("log-out")}>Log out</p>
                 </div>
                 <div className="account__switch-section desktop">
                     { view === "order-history" ?

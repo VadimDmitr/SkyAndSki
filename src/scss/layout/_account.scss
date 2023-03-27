@@ -10,11 +10,22 @@
 @media only screen and (min-width: 768px) {
     .account {
         flex-direction: row;
+        gap: 14rem;
 
         &__sidebar {
             display: flex;
             flex-direction: column;
         }
-        
+
+        &__greeting {
+            padding: 3rem 0;
+            font-size: 6.5rem;
+        }
+
+
+
+        &__heading {
+            font-size: 3.2rem;
+        }
     }
 }
