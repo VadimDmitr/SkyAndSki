@@ -24,27 +24,27 @@ export const Header = () => {
             </div>
             <div className="header__middle-group">
             <NavLink className="header__nav-link" activeClassName="header__nav-link--active" to={"/about"}>
-            <h1>About</h1>
+            <p>About</p>
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/shop"}>
-            <h1>Shop</h1>
+            <p>Shop</p>
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/contact"}>
-            <h1>Contact</h1>
+            <p>Contact</p>
             </NavLink>
             </div>
             <div className="header__right-group">
             <NavLink activeClassName="header__nav-link--active" to={"/language"}>
-            <h1>Language</h1>
+            <p>Language</p>
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/search"}>
-            <h1>Search</h1>
+            <p>Search</p>
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/cart"}>
-            <h1>Cart</h1>
+            <p>Cart</p>
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/account"}>
-            <h1>Account</h1>
+            <p>Account</p>
             </NavLink>
         </div>
         </nav>
