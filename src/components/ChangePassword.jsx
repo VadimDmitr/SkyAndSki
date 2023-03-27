@@ -4,7 +4,7 @@ import { BASEAUTHURL } from "../util/index";
 
 const URL = BASEAUTHURL + "removeuser";
 
-export const UpdateAccount = () => {
+export const ChangePassword = () => {
     const {userData, setUserData} = useContext(userDataContext);
     const [userFormData, setUserFormData] = useState({
         email: "test@test.com",
@@ -38,7 +38,7 @@ export const UpdateAccount = () => {
     }
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form className="form" onSubmit={(e) => handleSubmit(e)}>
             <label htmlFor="email">Email: </label>
             <input
                 type="text"

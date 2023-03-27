@@ -2,6 +2,9 @@ import { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userDataContext } from "../../contexts/userContext";
 import { Accordion } from "../accordion/Accordion";
+import { ChangePassword } from "../ChangePassword";
+import { DeleteAccount } from "../DeleteAccount";
+import { Logout } from "../Logout";
 
 export const Account = () => {
     const navigate = useNavigate();
@@ -23,13 +26,13 @@ export const Account = () => {
                 <p>123</p>
             </Accordion>
             <Accordion title="Change password">
-                <p>123</p>
+                <ChangePassword />
             </Accordion>
             <Accordion title="Delete account">
-                <p>123</p>
+                <DeleteAccount />
             </Accordion>
             <Accordion title="Log out">
-                <p>123</p>
+                <Logout />
             </Accordion>
         </section>
     )
