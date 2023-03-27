@@ -3,11 +3,11 @@ import { Layout } from "./components/Layout";
 import { Home } from "./components/pages/Home";
 import About from './components/About';
 import { Account } from "./components/pages/Account";
-import { Login } from "./components/Login";
-import { Logout } from "./components/Logout";
-import { Register } from "./components/Register";
-import { DeleteAccount } from "./components/DeleteAccount";
-import { UpdateAccount } from "./components/UpdateAccount";
+//import { Login } from "./components/Login";
+//import { Logout } from "./components/Logout";
+//import { Register } from "./components/Register";
+//import { DeleteAccount } from "./components/DeleteAccount";
+//import { UpdateAccount } from "./components/UpdateAccount";
 
 function App() {
   return (
