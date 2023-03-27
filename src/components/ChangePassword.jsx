@@ -57,7 +57,7 @@ export const ChangePassword = () => {
                 value="test@test.com"
                 onChange={(e) => handleChange(e)}
             />
-            <button type="submit">Update account</button>
+            <button className="button" type="submit">Update account</button>
         </form>
     )
 }
