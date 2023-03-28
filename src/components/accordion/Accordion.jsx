@@ -14,21 +14,21 @@ export const Accordion = (props) => {
     }
 
     return (
-        <div className="accordion-section">
+        <>
             <button
                 className={active ? "accordion accordion--active" : "accordion"}
                 onClick={toggleActive}
             >
                 <p>{props.title}</p>
                 <Chevron
-                 className={active ? "accordion__icon accordion__icon--rotate" : "accordion__icon"}
-                 width={10}
-                 fill={"#777"}
+                    className={active ? "accordion__icon accordion__icon--rotate" : "accordion__icon"}
+                    width={10}
+                    fill={"#777"}
                 />
             </button>
             <div ref={contentRef} className="accordion__content">
                 <div>{props.children}</div>
             </div>
-        </div>
+        </>
     )
 }
