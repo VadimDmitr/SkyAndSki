@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import { userDataContext } from "../contexts/userContext";
-import { BASEAUTHURL } from "../util/index";
+import { userDataContext } from "../../../contexts/userContext";
+import { BASEAUTHURL } from "../../../api/index";
 
 const URL = BASEAUTHURL + "removeuser";
 
@@ -57,7 +57,7 @@ export const ChangePassword = () => {
                 value="test@test.com"
                 onChange={(e) => handleChange(e)}
             />
-            <button className="button" type="submit">Update account</button>
+            <button className="button" type="submit">Change password</button>
         </form>
     )
 }

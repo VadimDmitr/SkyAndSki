@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { userDataContext } from "../contexts/userContext";
+import { userDataContext } from "../../../contexts/userContext";
 
 export const Logout = () => {
     const {userData, setUserData} = useContext(userDataContext);

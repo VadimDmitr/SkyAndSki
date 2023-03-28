@@ -2,9 +2,9 @@ import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userDataContext } from "../../../contexts/userContext";
 import { AccountMobile } from "./AccountMobile";
-import { ChangePassword } from "../../ChangePassword";
-import { DeleteAccount } from "../../DeleteAccount";
-import { Logout } from "../../Logout";
+import { ChangePassword } from "./ChangePassword";
+import { DeleteAccount } from "./DeleteAccount";
+import { Logout } from "./Logout";
 
 export const Account = () => {
     const [view, setView] = useState("order-history");

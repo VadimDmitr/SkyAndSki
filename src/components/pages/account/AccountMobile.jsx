@@ -2,9 +2,9 @@ import { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userDataContext } from "../../../contexts/userContext";
 import { Accordion } from "../../accordion/Accordion";
-import { ChangePassword } from "../../ChangePassword";
-import { DeleteAccount } from "../../DeleteAccount";
-import { Logout } from "../../Logout";
+import { ChangePassword } from "./ChangePassword";
+import { DeleteAccount } from "./DeleteAccount";
+import { Logout } from "./Logout";
 
 export const AccountMobile = () => {
     const navigate = useNavigate();

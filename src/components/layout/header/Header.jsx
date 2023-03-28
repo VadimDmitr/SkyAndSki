@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Logo } from "./Logo";
+import { Logo } from "../../Logo";
 import { Hamburger } from "./Hamburger";
 import { MobileMenu } from "./MobileMenu";
 
