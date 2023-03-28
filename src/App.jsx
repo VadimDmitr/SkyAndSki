@@ -3,11 +3,12 @@ import { Layout } from "./components/Layout";
 import { Home } from "./components/pages/Home";
 import About from './components/About';
 import { Account } from "./components/pages/Account";
-//import { Login } from "./components/Login";
-//import { Logout } from "./components/Logout";
-//import { Register } from "./components/Register";
-//import { DeleteAccount } from "./components/DeleteAccount";
-//import { UpdateAccount } from "./components/UpdateAccount";
+import { Login } from "./components/Login";
+import { Logout } from "./components/Logout";
+import { Register } from "./components/Register";
+import { DeleteAccount } from "./components/DeleteAccount";
+import { UpdateAccount } from "./components/UpdateAccount";
+import { NotFound } from "./components/pages/NotFound";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/register" element={<Register />} />
           <Route path="/delete-account" element={<DeleteAccount />} />
-          <Route path="/update-account" element={<UpdateAccount />} />*/}
+          <Route path="/update-account" element={<UpdateAccount />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
