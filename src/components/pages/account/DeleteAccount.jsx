@@ -40,6 +40,7 @@ export const DeleteAccount = () => {
         <form className="form" onSubmit={(e) => handleSubmit(e)}>
             <label htmlFor="email">Email: </label>
             <input
+                className="input"
                 type="text"
                 id="email"
                 name="email"
@@ -47,7 +48,7 @@ export const DeleteAccount = () => {
                 value="test@test.com"
                 onChange={(e) => handleChange(e)}
             />
-            <button type="submit">Delete account</button>
+            <button className="button" type="submit">Delete account</button>
         </form>
         // <form onSubmit={(e) => handleSubmit(e)}>
         //     <label htmlFor="email">Email: </label>

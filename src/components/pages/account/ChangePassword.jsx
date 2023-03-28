@@ -41,6 +41,7 @@ export const ChangePassword = () => {
         <form className="form" onSubmit={(e) => handleSubmit(e)}>
             <label htmlFor="email">Email: </label>
             <input
+                className="input"
                 type="text"
                 id="email"
                 name="email"
@@ -50,6 +51,7 @@ export const ChangePassword = () => {
             />
             <label htmlFor="email">Email To Edit: </label>
             <input
+                className="input"
                 type="text"
                 id="email-to-edit"
                 name="email-to-edit"
