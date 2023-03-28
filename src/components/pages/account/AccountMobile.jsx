@@ -23,7 +23,7 @@ export const AccountMobile = () => {
             {/* {userData.token === null ? <></> : <h1>User name: {userData.user.name} <br/> Token: {userData.token}</h1>} */}
             <h1 className="account__greeting">Hello, {userData.user.name}</h1>
             <Accordion title="Order history">
-                <p>123</p>
+                <p style={{fontSize: "1.6rem", padding: "1rem", color: "var(--color-neutral-grey)"}}>In development</p>
             </Accordion>
             <Accordion title="Change password">
                 <ChangePassword />

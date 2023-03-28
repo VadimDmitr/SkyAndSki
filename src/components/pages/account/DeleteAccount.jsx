@@ -38,7 +38,7 @@ export const DeleteAccount = () => {
 
     return (
         <form className="form" onSubmit={(e) => handleSubmit(e)}>
-            <label htmlFor="email">Email: </label>
+            <label className="label" htmlFor="email">Enter your password to delete your account. </label>
             <input
                 className="input"
                 type="text"

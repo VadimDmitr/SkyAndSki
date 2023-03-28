@@ -39,7 +39,7 @@ export const ChangePassword = () => {
 
     return (
         <form className="form" onSubmit={(e) => handleSubmit(e)}>
-            <label htmlFor="email">Email: </label>
+            <label className="label" htmlFor="email">Email: </label>
             <input
                 className="input"
                 type="text"
@@ -49,7 +49,7 @@ export const ChangePassword = () => {
                 value="tests@test.com"
                 onChange={(e) => handleChange(e)}
             />
-            <label htmlFor="email">Email To Edit: </label>
+            <label className="label" htmlFor="email">Email To Edit: </label>
             <input
                 className="input"
                 type="text"
