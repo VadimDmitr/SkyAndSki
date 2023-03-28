@@ -11,7 +11,8 @@ export const Logout = () => {
             user: null,
             token: null
         }
-        setUserData({ ...userData, ...userDataNull})
+        setUserData({ ...userData, ...userDataNull});
+        navigate("/")
         console.log("userData ====> ", userData);
         console.log("logged out!");
     }

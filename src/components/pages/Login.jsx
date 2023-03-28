@@ -1,12 +1,12 @@
 import { useState, useContext } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { userDataContext } from "../../contexts/userContext";
 import { BASEAUTHURL } from "../../api/index";
 
 const URL = BASEAUTHURL + "login";
 
 export const Login = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const {userData, setUserData} = useContext(userDataContext);
     const [userFormData, setUserFormData] = useState({
         email: "test@test.com",
@@ -42,9 +42,9 @@ export const Login = () => {
             setUserData({ ...userData, ...userDateFromBackend})
             // setUserData({ ...userData, name: JSON.parse(result).name})
             console.log("userData ====> ", userData);
-            // if (userData) {
-            //     navigate("/account");
-            // }
+            if (userData) {
+                navigate("/account");
+            }
         })
         .catch(error => console.log('error', error))
     }

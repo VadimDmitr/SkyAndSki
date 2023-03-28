@@ -1,20 +1,31 @@
 import { useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { userDataContext } from "../../../contexts/userContext";
 import { Accordion } from "../../accordion/Accordion";
 import { ChangePassword } from "./ChangePassword";
 import { DeleteAccount } from "./DeleteAccount";
-import { Logout } from "./Logout";
+// import { Logout } from "./Logout";
 
 export const AccountMobile = () => {
     const navigate = useNavigate();
-    const {userData} = useContext(userDataContext);
+    const {userData, setUserData} = useContext(userDataContext);
 
     useEffect(() => {
         console.log("userData =====> ", userData);
         if (userData === null) navigate ("/");
         // if (userData.token === null) navigate ("/");
     })
+
+    const logout = () => {
+        const userDataNull = {
+            user: null,
+            token: null
+        }
+        setUserData({ ...userData, ...userDataNull });
+        console.log("userData ====> ", userData);
+        console.log("logged out!");
+        navigate("/");
+    }
 
     if (userData) return (
         <section className="account mobile wrapper">
@@ -31,9 +42,10 @@ export const AccountMobile = () => {
             <Accordion title="Delete account">
                 <DeleteAccount />
             </Accordion>
-            <Accordion title="Log out">
+            {/* <Accordion title="Log out">
                 <Logout />
-            </Accordion>
+            </Accordion> */}
+            <Link className="accordion accordion--link" to="/" onClick={() => logout()}>Log out</Link>
         </section>
     )
     return (<></>)

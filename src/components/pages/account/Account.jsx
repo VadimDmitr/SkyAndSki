@@ -1,21 +1,32 @@
 import { useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { userDataContext } from "../../../contexts/userContext";
 import { AccountMobile } from "./AccountMobile";
 import { ChangePassword } from "./ChangePassword";
 import { DeleteAccount } from "./DeleteAccount";
-import { Logout } from "./Logout";
+// import { Logout } from "./Logout";
 
 export const Account = () => {
     const [view, setView] = useState("order-history");
     const navigate = useNavigate();
-    const {userData} = useContext(userDataContext);
+    const {userData, setUserData} = useContext(userDataContext);
 
     useEffect(() => {
         console.log("userData =====> ", userData);
         if (userData === null) navigate ("/");
         // if (userData.token === null) navigate ("/");
     })
+
+    const logout = () => {
+        const userDataNull = {
+            user: null,
+            token: null
+        }
+        setUserData({ ...userData, ...userDataNull})
+        console.log("userData ====> ", userData);
+        console.log("logged out!");
+        navigate("/");
+    }
 
     const changeView = (str) => {
         switch (str) {
@@ -49,10 +60,10 @@ export const Account = () => {
             <div className="account desktop">
                 <div className="account__sidebar">
                     <h2 className="account__greeting">Hello, {userData.user.name}</h2>
-                    <p className="account__heading pointer" onClick={() => changeView("order-history")}>Orders</p>
+                    <p className="account__heading pointer" onClick={() => changeView("order-history")}>Order history</p>
                     <p className="account__heading pointer" onClick={() => changeView("change-password")}>Change password</p>
                     <p className="account__heading pointer" onClick={() => changeView("delete-account")}>Delete account</p>
-                    <p className="account__heading pointer" onClick={() => changeView("log-out")}>Log out</p>
+                    <Link to="/" className="account__heading"  onClick={() => logout()}>Log out</Link>
                 </div>
                 <div className="account__switch-section desktop">
                     { view === "order-history" ?
@@ -61,7 +72,7 @@ export const Account = () => {
                                 <ChangePassword /> :
                                 view === "delete-account" ?
                                     <DeleteAccount /> :
-                                        <Logout />
+                                        <Link to="/"  onClick={() => logout()}/>
                     }
                 </div>
             </div>
