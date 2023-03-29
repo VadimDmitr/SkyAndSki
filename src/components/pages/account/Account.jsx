@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { userDataContext } from "../../../contexts/userContext";
 import { AccountMobile } from "./AccountMobile";
+import { OrderHistory } from "./orders/OrderHistory";
 import { ChangePassword } from "./ChangePassword";
 import { DeleteAccount } from "./DeleteAccount";
 // import { Logout } from "./Logout";
@@ -67,7 +68,7 @@ export const Account = () => {
                 </div>
                 <div className="account__switch-section desktop">
                     { view === "order-history" ?
-                        <div>order history</div> :
+                        <OrderHistory /> :
                             view === "change-password" ?
                                 <ChangePassword /> :
                                 view === "delete-account" ?
