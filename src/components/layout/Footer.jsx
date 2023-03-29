@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink } from 'react-external-link';
-import { NavLink } from "react-router-dom";
+// import { ExternalLink } from 'react-external-link';
+// import { NavLink } from "react-router-dom";
 //import logo from '../img/logo.png';
 //import facebook from '../img/icons/facebook.svg';
 //import twitter from '../img/icons/twitter.svg';
 //import instagram from '../img/icons/instagram.svg';
 
-function Footer() {
+export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__main-container">
         <div className="footer__logo-container footer__logo-container--top-left"></div>
         <div className="footer__media-links">
           <h3 className="footer__media-title">Subscription</h3>
-          {/* have to put it then 
+          {/* have to put it then
           <div>
             <ExternalLink className="footer__social-link" href="https://facebook.com/">
               <img className="footer__social-img" src={facebook} alt="facebook" />
@@ -25,7 +25,7 @@ function Footer() {
             <ExternalLink className="footer__social-link" href="https://instagram.com/">
               <img className="footer__social-img" src={instagram} alt="instagram" />
             </ExternalLink>
-          </div>  
+          </div>
           */}
         </div>
         <div className="footer__company-info">
@@ -69,5 +69,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;
