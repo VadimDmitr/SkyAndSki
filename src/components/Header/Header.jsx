@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../Logo";
-import { Hamburger } from "../Hamburger";
+import { Hamburger } from "../layout/header/Hamburger";
 import { MobileMenu } from "../layout/header/MobileMenu";
 
 export const Header = () => {
