@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../Logo";
 import { Hamburger } from "../Hamburger";
-import { MobileMenu } from "../MobileMenu";
+import { MobileMenu } from "../layout/header/MobileMenu";
 
 export const Header = () => {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);

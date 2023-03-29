@@ -1,8 +1,10 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { userDataContext } from "../../../contexts/userContext";
 
 export const Logout = () => {
     const {userData, setUserData} = useContext(userDataContext);
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
