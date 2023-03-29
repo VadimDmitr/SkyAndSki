@@ -10,6 +10,7 @@ import { DeleteAccount } from "./components/pages/account/DeleteAccount";
 import { ChangePassword } from "./components/pages/account/ChangePassword";
 import { NotFound } from "./components/pages/NotFound";
 
+
 function App() {
   return (
     <BrowserRouter>
