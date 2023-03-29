@@ -18,11 +18,12 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/account" element={<Account />} />
-          {/*<Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/register" element={<Register />} />
           <Route path="/delete-account" element={<DeleteAccount />} />
-          <Route path="/update-account" element={<UpdateAccount />} />*/}
+          <Route path="/change-password" element={<ChangePassword />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

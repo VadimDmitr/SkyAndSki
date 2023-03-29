@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { userDataContext } from "../contexts/userContext";
-import { BASEAUTHURL, fetchData } from "../util/index";
+import { userDataContext } from "../../contexts/userContext";
+import { BASEAUTHURL } from "../../api/index";
 
 const URL = BASEAUTHURL + "login";
 
@@ -42,9 +42,9 @@ export const Login = () => {
             setUserData({ ...userData, ...userDateFromBackend})
             // setUserData({ ...userData, name: JSON.parse(result).name})
             console.log("userData ====> ", userData);
-            // if (userData) {
-            //     navigate("/account");
-            // }
+            if (userData) {
+                navigate("/account");
+            }
         })
         .catch(error => console.log('error', error))
     }

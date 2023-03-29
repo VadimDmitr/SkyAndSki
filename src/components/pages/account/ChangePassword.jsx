@@ -1,10 +1,10 @@
 import { useState, useContext } from "react";
-import { userDataContext } from "../contexts/userContext";
-import { BASEAUTHURL } from "../util/index";
+import { userDataContext } from "../../../contexts/userContext";
+import { BASEAUTHURL } from "../../../api/index";
 
 const URL = BASEAUTHURL + "removeuser";
 
-export const UpdateAccount = () => {
+export const ChangePassword = () => {
     const {userData, setUserData} = useContext(userDataContext);
     const [userFormData, setUserFormData] = useState({
         email: "test@test.com",
@@ -38,9 +38,10 @@ export const UpdateAccount = () => {
     }
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)}>
-            <label htmlFor="email">Email: </label>
+        <form className="form" onSubmit={(e) => handleSubmit(e)}>
+            <label className="label" htmlFor="email">Email: </label>
             <input
+                className="input"
                 type="text"
                 id="email"
                 name="email"
@@ -48,8 +49,9 @@ export const UpdateAccount = () => {
                 value="tests@test.com"
                 onChange={(e) => handleChange(e)}
             />
-            <label htmlFor="email">Email To Edit: </label>
+            <label className="label" htmlFor="email">Email To Edit: </label>
             <input
+                className="input"
                 type="text"
                 id="email-to-edit"
                 name="email-to-edit"
@@ -57,7 +59,7 @@ export const UpdateAccount = () => {
                 value="test@test.com"
                 onChange={(e) => handleChange(e)}
             />
-            <button type="submit">Update account</button>
+            <button className="button" type="submit">Change password</button>
         </form>
     )
 }
