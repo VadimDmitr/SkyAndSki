@@ -1,5 +1,5 @@
 export const Logo = () => {
     return (
-        <p>eShop</p>
+        <p>Sky&SkiLogo</p>
     )
 }
