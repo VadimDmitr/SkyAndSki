@@ -1,3 +1,5 @@
+import { OurUniqueFeatures } from '../OurUniqueFeatures'
+
 export const Home = () => {
     return (
         <div className="wrapper">
@@ -9,6 +11,10 @@ export const Home = () => {
                 <p>Boards</p>
                 <p>Other</p>
             </div>
+
+
+            <OurUniqueFeatures />
+
             <div className="products">
                 <div className="product"></div>
             </div>
