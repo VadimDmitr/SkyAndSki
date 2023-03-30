@@ -3,15 +3,19 @@
 }
 
 .desktop {
-	display: none;
+    display: none !important;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
-	.mobile {
-		display: none;
-	}
+    .mobile {
+        display: none !important;
+    }
 
-	.desktop {
-		display: flex;
-	}
+    .desktop {
+        display: flex !important;
+    }
 }

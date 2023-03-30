@@ -34,7 +34,7 @@ const Ul = styled.ul`
 `;
 
 export const MobileMenu = ({ openMobileMenu, setOpenMobileMenu }) => {
-	const navLinksData = ["home", "register", "login", "delete-account", "update-account", "account"];
+  const navLinksData = ["home", "register", "login", "account"];
 
 	const navLinks = navLinksData.map((navLink, index) => (
 		<NavLink
