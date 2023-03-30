@@ -46,6 +46,12 @@
             font-size: 6.5rem;
         }
 
+        &__section-content {
+            width: 73.8rem;
+            display: flex;
+            flex-direction: column;
+        }
+
         &__section-heading {
             font-size: 14rem;
         }

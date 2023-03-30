@@ -37,30 +37,21 @@ export const DeleteAccount = () => {
     }
 
     return (
-        <form className="form" onSubmit={(e) => handleSubmit(e)}>
-            <label className="label" htmlFor="email">Enter your password to delete your account. </label>
-            <input
-                className="input"
-                type="text"
-                id="email"
-                name="email"
-                required
-                value="test@test.com"
-                onChange={(e) => handleChange(e)}
-            />
-            <button className="button" type="submit">Delete account</button>
-        </form>
-        // <form onSubmit={(e) => handleSubmit(e)}>
-        //     <label htmlFor="email">Email: </label>
-        //     <input
-        //         type="text"
-        //         id="email"
-        //         name="email"
-        //         required
-        //         value={userInfo.email}
-        //         onChange={(e) => handleChange(e)}
-        //     />
-        //     <button type="submit">Delete account</button>
-        // </form>
+        <div className="account__section-content">
+            <h2 className="account__section-heading">Delete account</h2>
+            <form className="form" onSubmit={(e) => handleSubmit(e)}>
+                <label className="label" htmlFor="email">Enter your password to delete your account. </label>
+                <input
+                    className="input"
+                    type="text"
+                    id="email"
+                    name="email"
+                    required
+                    value="test@test.com"
+                    onChange={(e) => handleChange(e)}
+                />
+                <button className="button" type="submit">Delete account</button>
+            </form>
+        </div>
     )
 }

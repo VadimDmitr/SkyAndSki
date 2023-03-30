@@ -38,28 +38,31 @@ export const ChangePassword = () => {
     }
 
     return (
-        <form className="form" onSubmit={(e) => handleSubmit(e)}>
-            <label className="label" htmlFor="email">Email: </label>
-            <input
-                className="input"
-                type="text"
-                id="email"
-                name="email"
-                required
-                value="tests@test.com"
-                onChange={(e) => handleChange(e)}
-            />
-            <label className="label" htmlFor="email">Email To Edit: </label>
-            <input
-                className="input"
-                type="text"
-                id="email-to-edit"
-                name="email-to-edit"
-                required
-                value="test@test.com"
-                onChange={(e) => handleChange(e)}
-            />
-            <button className="button" type="submit">Change password</button>
-        </form>
+        <div className="account__section-content">
+            <h2 className="account__section-heading">Password</h2>
+            <form className="form" onSubmit={(e) => handleSubmit(e)}>
+                <label className="label" htmlFor="email">Email: </label>
+                <input
+                    className="input"
+                    type="text"
+                    id="email"
+                    name="email"
+                    required
+                    value="tests@test.com"
+                    onChange={(e) => handleChange(e)}
+                />
+                <label className="label" htmlFor="email">Email To Edit: </label>
+                <input
+                    className="input"
+                    type="text"
+                    id="email-to-edit"
+                    name="email-to-edit"
+                    required
+                    value="test@test.com"
+                    onChange={(e) => handleChange(e)}
+                />
+                <button className="button" type="submit">Change password</button>
+            </form>
+        </div>
     )
 }
