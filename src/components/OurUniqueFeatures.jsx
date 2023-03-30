@@ -1,23 +1,32 @@
 import React from 'react';
-import '../scss/_ourUniqueFeatures.scss';
+import '../scss/layout/_our-unique-features.scss';
+import freeShippingIcon from '../images/icons/free_shoping.svg';
+import quickPaymentIcon from '../images/icons/quick_payment.svg';
+import supportIcon from '../images/icons/24_support.svg';
 
 export const OurUniqueFeatures = () => {
   return (
     <div className="our-unique-features">
       <div className="our-unique-features__item">
-        <img src="./10.svg" alt="Free shoping Icon" />   
-        <p className="our-unique-features__title">Free Shoping</p>
-        <p className="our-unique-features__description">No charge for each delivery</p>
+        <img src={freeShippingIcon} alt="Free shoping Icon" />
+        <div className="text-content">
+          <p className="our-unique-features__title">Free Shipping</p>
+          <p className="our-unique-features__description">No charge for each delivery</p>
+        </div>
       </div>
       <div className="our-unique-features__item">
-        <img src="../images/icons/quick_payment.png" alt="Quick payment Icon" /> 
-        <p className="our-unique-features__title">Quick Payment</p>
-        <p className="our-unique-features__description">100% secure payment</p>
+        <img src={quickPaymentIcon} alt="Quick payment Icon" />
+        <div className="text-content">
+          <p className="our-unique-features__title">Quick Payment</p>
+          <p className="our-unique-features__description">100% secure payment</p>
+        </div>
       </div>
       <div className="our-unique-features__item">
-        <img src="../images/icons/24_support.svg" alt="24-7 Support Icon" />
-        <p className="our-unique-features__title">24/7 Support</p>
-        <p className="our-unique-features__description">Quick support</p>
+        <img src={supportIcon} alt="24-7 Support Icon" />
+        <div className="text-content">
+          <p className="our-unique-features__title">24/7 Support</p>
+          <p className="our-unique-features__description">Quick support</p>
+        </div>
       </div>
     </div>
   );
