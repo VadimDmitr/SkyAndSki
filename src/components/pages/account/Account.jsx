@@ -61,10 +61,10 @@ export const Account = () => {
             <div className="account desktop">
                 <div className="account__sidebar">
                     <h2 className="account__greeting">Hello, {userData.user.name}</h2>
-                    <p className="account__heading pointer" onClick={() => changeView("order-history")}>Order history</p>
-                    <p className="account__heading pointer" onClick={() => changeView("change-password")}>Change password</p>
-                    <p className="account__heading pointer" onClick={() => changeView("delete-account")}>Delete account</p>
-                    <Link to="/" className="account__heading"  onClick={() => logout()}>Log out</Link>
+                    <p className="account__sidebar-heading pointer" onClick={() => changeView("order-history")}>Order history</p>
+                    <p className="account__sidebar-heading pointer" onClick={() => changeView("change-password")}>Change password</p>
+                    <p className="account__sidebar-heading pointer" onClick={() => changeView("delete-account")}>Delete account</p>
+                    <Link to="/" className="account__sidebar-heading"  onClick={() => logout()}>Log out</Link>
                 </div>
                 <div className="account__switch-section desktop">
                     { view === "order-history" ?
