@@ -1,11 +1,12 @@
-/* selecting each and every element on the page and applying reset to it */
-*,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
-	/*border box inherited from body*/
-	box-sizing: inherit;
+ /* selecting each and every element on the page and applying reset to it */
+ 
+ *,
+ *::after,
+ *::before {
+    margin: 0;
+    padding: 0;
+    //border box inherited from body
+    box-sizing: inherit;
 }
 
 html {
@@ -15,19 +16,17 @@ html {
 }
 
 body {
-	/*easier to calculate props: total  width and height will include paddings */
-	box-sizing: border-box;
-	font-family: "Gilroy", "Inter", sans-serif;
+    //easier to calculate props: total  width and height will include paddings 
+    box-sizing: border-box;
+    font-family: 'Gilroy', 'Inter', sans-serif;
 }
 
-/*
-    Below is part of reset.css
-    http://meyerweb.com/eric/tools/css/reset/
-    v2.0 | 20110126
-    License: none (public domain)
-*/
+// Below is part of reset.css
+// http://meyerweb.com/eric/tools/css/reset/
+// v2.0 | 20110126
+// License: none (public domain)
 
-/* HTML5 display-role reset for older browsers */
+// HTML5 display-role reset for older browsers
 article,
 aside,
 details,
@@ -70,5 +69,6 @@ table {
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
+
