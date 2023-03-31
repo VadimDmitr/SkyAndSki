@@ -5,13 +5,17 @@ import { BASEAUTHURL } from "../../../api/index";
 const URL = BASEAUTHURL + "removeuser";
 
 export const DeleteAccount = () => {
-	const { userData, setUserData } = useContext(userDataContext);
+	const { userData, setUserData } =
+		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
 		email: "test@test.com",
 	});
 
 	const handleChange = (event) => {
-		setUserFormData({ ...userFormData, [event.target.name]: event.target.value });
+		setUserFormData({
+			...userFormData,
+			[event.target.name]: event.target.value,
+		});
 	};
 
 	const handleSubmit = async (event) => {
@@ -38,8 +42,13 @@ export const DeleteAccount = () => {
 
 	return (
 		<div className="account__section-content">
-			<h2 className="account__section-heading">Delete account</h2>
-			<form className="form" onSubmit={(e) => handleSubmit(e)}>
+			<h2 className="account__section-heading">
+				Delete account
+			</h2>
+			<form
+				className="form"
+				onSubmit={(e) => handleSubmit(e)}
+			>
 				<label className="label" htmlFor="email">
 					Enter your password to delete your account.{" "}
 				</label>

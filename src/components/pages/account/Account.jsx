@@ -10,7 +10,8 @@ import { DeleteAccount } from "./DeleteAccount";
 export const Account = () => {
 	const [view, setView] = useState("order-history");
 	const navigate = useNavigate();
-	const { userData, setUserData } = useContext(userDataContext);
+	const { userData, setUserData } =
+		useContext(userDataContext);
 
 	useEffect(() => {
 		console.log("userData =====> ", userData);
@@ -61,7 +62,9 @@ export const Account = () => {
 				</div>
 				<div className="account desktop">
 					<div className="account__sidebar">
-						<h2 className="account__greeting">Hello, {userData.user.name}</h2>
+						<h2 className="account__greeting">
+							Hello, {userData.user.name}
+						</h2>
 						<p
 							className="account__sidebar-heading pointer"
 							onClick={() => changeView("order-history")}
@@ -80,7 +83,11 @@ export const Account = () => {
 						>
 							Delete account
 						</p>
-						<Link to="/" className="account__sidebar-heading" onClick={() => logout()}>
+						<Link
+							to="/"
+							className="account__sidebar-heading"
+							onClick={() => logout()}
+						>
 							Log out
 						</Link>
 					</div>

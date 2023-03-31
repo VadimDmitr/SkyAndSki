@@ -9,7 +9,8 @@ const Ul = styled.ul`
 	background-color: #dcdcdc;
 	position: fixed;
 	z-index: 10;
-	transform: ${({ openMobileMenu }) => (openMobileMenu ? "translateX(0)" : "translateX(100%)")};
+	transform: ${({ openMobileMenu }) =>
+		openMobileMenu ? "translateX(0)" : "translateX(100%)"};
 	top: 0;
 	right: 0;
 	height: 100vh;
@@ -29,12 +30,21 @@ const Ul = styled.ul`
 	li:hover {
 		font-weight: 800;
 		border-bottom: 1px solid #fff;
-		transition: font-weight 0.25s ease-in-out, border-bottom 0.25s ease-in-out;
+		transition: font-weight 0.25s ease-in-out,
+			border-bottom 0.25s ease-in-out;
 	}
 `;
 
-export const MobileMenu = ({ openMobileMenu, setOpenMobileMenu }) => {
-	const navLinksData = ["home", "register", "login", "account"];
+export const MobileMenu = ({
+	openMobileMenu,
+	setOpenMobileMenu,
+}) => {
+	const navLinksData = [
+		"home",
+		"register",
+		"login",
+		"account",
+	];
 
 	const navLinks = navLinksData.map((navLink, index) => (
 		<NavLink
@@ -50,5 +60,7 @@ export const MobileMenu = ({ openMobileMenu, setOpenMobileMenu }) => {
 		</NavLink>
 	));
 
-	return <Ul openMobileMenu={openMobileMenu}>{navLinks}</Ul>;
+	return (
+		<Ul openMobileMenu={openMobileMenu}>{navLinks}</Ul>
+	);
 };

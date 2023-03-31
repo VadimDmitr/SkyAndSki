@@ -4,7 +4,8 @@ import styled from "styled-components";
 const Div = styled.div`
   width: 3.3rem;
   height: 2rem;
-  position: ${({ openMobileMenu }) => (openMobileMenu ? "fixed" : "absolute")};
+  position: ${({ openMobileMenu }) =>
+		openMobileMenu ? "fixed" : "absolute"};
   top: 2.5rem;
   right: 2rem;
   z-index: 20;
@@ -21,17 +22,24 @@ const Div = styled.div`
 
     &:nth-child(1) {
       transform: ${({ openMobileMenu }) =>
-				openMobileMenu ? "translateY(5px) rotate(45deg)" : "translateY(0) rotate(0)"};
+				openMobileMenu
+					? "translateY(5px) rotate(45deg)"
+					: "translateY(0) rotate(0)"};
     }
 
     &:nth-child(2) {
       transform: ${({ openMobileMenu }) =>
-				openMobileMenu ? "translateY(-5px) rotate(-45deg)" : "rotate(0)"};
+				openMobileMenu
+					? "translateY(-5px) rotate(-45deg)"
+					: "rotate(0)"};
     }
   }
 `;
 
-export const Hamburger = ({ openMobileMenu, setOpenMobileMenu }) => {
+export const Hamburger = ({
+	openMobileMenu,
+	setOpenMobileMenu,
+}) => {
 	return (
 		<Div
 			className="pointer"

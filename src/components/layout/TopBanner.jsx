@@ -20,8 +20,13 @@ const styles = {
 const TopBanner = () => {
 	return (
 		<div style={styles.topBanner}>
-			<h1 style={styles.title}>Welcome to Our eSchop Store</h1>
-			<p style={styles.subTitle}>Discover our wide range of products and enjoy exclusive deals!</p>
+			<h1 style={styles.title}>
+				Welcome to Our eSchop Store
+			</h1>
+			<p style={styles.subTitle}>
+				Discover our wide range of products and enjoy
+				exclusive deals!
+			</p>
 		</div>
 	);
 };

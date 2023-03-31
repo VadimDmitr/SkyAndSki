@@ -1,12 +1,12 @@
- /* selecting each and every element on the page and applying reset to it */
- 
- *,
- *::after,
- *::before {
-    margin: 0;
-    padding: 0;
-    //border box inherited from body
-    box-sizing: inherit;
+/* selecting each and every element on the page and applying reset to it */
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	//border box inherited from body
+	box-sizing: inherit;
 }
 
 html {
@@ -16,9 +16,9 @@ html {
 }
 
 body {
-    //easier to calculate props: total  width and height will include paddings 
-    box-sizing: border-box;
-    font-family: 'Gilroy', 'Inter', sans-serif;
+	//easier to calculate props: total  width and height will include paddings
+	box-sizing: border-box;
+	font-family: "Gilroy", "Inter", sans-serif;
 }
 
 // Below is part of reset.css
@@ -69,6 +69,5 @@ table {
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
-

@@ -7,7 +7,8 @@ const URL = BASEAUTHURL + "register";
 
 export const Register = () => {
 	const navigate = useNavigate();
-	const { userData, setUserData } = useContext(userDataContext);
+	const { userData, setUserData } =
+		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
 		name: "test@test.com",
 		email: "test@test.com",
@@ -16,7 +17,10 @@ export const Register = () => {
 	});
 
 	const handleChange = (event) => {
-		setUserFormData({ ...userFormData, [event.target.name]: event.target.value });
+		setUserFormData({
+			...userFormData,
+			[event.target.name]: event.target.value,
+		});
 	};
 
 	const handleSubmit = async (event) => {
@@ -36,14 +40,20 @@ export const Register = () => {
 				console.log(result);
 				console.log("type of result ====> ", typeof result);
 				console.log(JSON.parse(result));
-				console.log("JSON.parse(result).token ====> ", JSON.parse(result).token);
+				console.log(
+					"JSON.parse(result).token ====> ",
+					JSON.parse(result).token
+				);
 				// setUserData({ ...userData, token: JSON.parse(result).token})
 				// setUserData({ ...userData, name: JSON.parse(result).name})
 				const userDateFromBackend = {
 					token: JSON.parse(result).token,
 					user: JSON.parse(result).user,
 				};
-				setUserData({ ...userData, ...userDateFromBackend });
+				setUserData({
+					...userData,
+					...userDateFromBackend,
+				});
 				console.log("userData ====> ", userData);
 				if (userData) {
 					navigate("/account");

@@ -21,7 +21,8 @@ export const Account = () => {
 					<></>
 				) : (
 					<h1>
-						User name: {userData.user.name} <br /> Token: {userData.token}
+						User name: {userData.user.name} <br /> Token:{" "}
+						{userData.token}
 					</h1>
 				)}
 			</>

@@ -7,14 +7,18 @@ const URL = BASEAUTHURL + "login";
 
 export const Login = () => {
 	const navigate = useNavigate();
-	const { userData, setUserData } = useContext(userDataContext);
+	const { userData, setUserData } =
+		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
 		email: "test@test.com",
 		password: "test@test.com",
 	});
 
 	const handleChange = (event) => {
-		setUserFormData({ ...userFormData, [event.target.name]: event.target.value });
+		setUserFormData({
+			...userFormData,
+			[event.target.name]: event.target.value,
+		});
 	};
 
 	const handleSubmit = (event) => {
@@ -34,12 +38,18 @@ export const Login = () => {
 				console.log(result);
 				console.log("type of result ====> ", typeof result);
 				console.log(JSON.parse(result));
-				console.log("JSON.parse(result).token ====> ", JSON.parse(result).token);
+				console.log(
+					"JSON.parse(result).token ====> ",
+					JSON.parse(result).token
+				);
 				const userDateFromBackend = {
 					token: JSON.parse(result).token,
 					user: JSON.parse(result).user,
 				};
-				setUserData({ ...userData, ...userDateFromBackend });
+				setUserData({
+					...userData,
+					...userDateFromBackend,
+				});
 				// setUserData({ ...userData, name: JSON.parse(result).name})
 				console.log("userData ====> ", userData);
 				if (userData) {

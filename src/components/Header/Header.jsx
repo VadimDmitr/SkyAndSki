@@ -5,14 +5,21 @@ import { Hamburger } from "../layout/header/Hamburger";
 import { MobileMenu } from "../layout/header/MobileMenu";
 
 export const Header = () => {
-	const [openMobileMenu, setOpenMobileMenu] = useState(false);
+	const [openMobileMenu, setOpenMobileMenu] =
+		useState(false);
 
 	return (
 		<header className="header">
 			<nav className="header__nav header__nav--mobile">
 				<Logo className="header__logo" />
-				<Hamburger openMobileMenu={openMobileMenu} setOpenMobileMenu={setOpenMobileMenu} />
-				<MobileMenu openMobileMenu={openMobileMenu} setOpenMobileMenu={setOpenMobileMenu} />
+				<Hamburger
+					openMobileMenu={openMobileMenu}
+					setOpenMobileMenu={setOpenMobileMenu}
+				/>
+				<MobileMenu
+					openMobileMenu={openMobileMenu}
+					setOpenMobileMenu={setOpenMobileMenu}
+				/>
 			</nav>
 			<nav className="header__nav header__nav--desktop">
 				<div className="header__logo-group">
@@ -30,24 +37,42 @@ export const Header = () => {
 					>
 						<p>About</p>
 					</NavLink>
-					<NavLink activeClassName="header__nav-link--active" to={"/shop"}>
+					<NavLink
+						activeClassName="header__nav-link--active"
+						to={"/shop"}
+					>
 						<p>Shop</p>
 					</NavLink>
-					<NavLink activeClassName="header__nav-link--active" to={"/contact"}>
+					<NavLink
+						activeClassName="header__nav-link--active"
+						to={"/contact"}
+					>
 						<p>Contact</p>
 					</NavLink>
 				</div>
 				<div className="header__right-group">
-					<NavLink activeClassName="header__nav-link--active" to={"/language"}>
+					<NavLink
+						activeClassName="header__nav-link--active"
+						to={"/language"}
+					>
 						<p>Language</p>
 					</NavLink>
-					<NavLink activeClassName="header__nav-link--active" to={"/search"}>
+					<NavLink
+						activeClassName="header__nav-link--active"
+						to={"/search"}
+					>
 						<p>Search</p>
 					</NavLink>
-					<NavLink activeClassName="header__nav-link--active" to={"/cart"}>
+					<NavLink
+						activeClassName="header__nav-link--active"
+						to={"/cart"}
+					>
 						<p>Cart</p>
 					</NavLink>
-					<NavLink activeClassName="header__nav-link--active" to={"/account"}>
+					<NavLink
+						activeClassName="header__nav-link--active"
+						to={"/account"}
+					>
 						<p>Account</p>
 					</NavLink>
 				</div>

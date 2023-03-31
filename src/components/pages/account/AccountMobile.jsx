@@ -8,7 +8,8 @@ import { DeleteAccount } from "./DeleteAccount";
 
 export const AccountMobile = () => {
 	const navigate = useNavigate();
-	const { userData, setUserData } = useContext(userDataContext);
+	const { userData, setUserData } =
+		useContext(userDataContext);
 
 	useEffect(() => {
 		console.log("userData =====> ", userData);
@@ -33,9 +34,17 @@ export const AccountMobile = () => {
 				{/* {userData.token === "" ? <></> : <h1>Account</h1>} */}
 				{/* {userData.token === null ? <></> : <h1>{JSON.stringify(userData, null, 4)}</h1>} */}
 				{/* {userData.token === null ? <></> : <h1>User name: {userData.user.name} <br/> Token: {userData.token}</h1>} */}
-				<h1 className="account__greeting">Hello, {userData.user.name}</h1>
+				<h1 className="account__greeting">
+					Hello, {userData.user.name}
+				</h1>
 				<Accordion title="Order history">
-					<p style={{ fontSize: "1.6rem", padding: "1rem", color: "var(--color-neutral-grey)" }}>
+					<p
+						style={{
+							fontSize: "1.6rem",
+							padding: "1rem",
+							color: "var(--color-neutral-grey)",
+						}}
+					>
 						In development
 					</p>
 				</Accordion>
@@ -48,7 +57,11 @@ export const AccountMobile = () => {
 				{/* <Accordion title="Log out">
                 <Logout />
             </Accordion> */}
-				<Link className="accordion accordion--link" to="/" onClick={() => logout()}>
+				<Link
+					className="accordion accordion--link"
+					to="/"
+					onClick={() => logout()}
+				>
 					Log out
 				</Link>
 			</section>

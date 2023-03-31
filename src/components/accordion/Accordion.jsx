@@ -6,7 +6,9 @@ export const Accordion = (props) => {
 	const contentRef = useRef(null);
 
 	useEffect(() => {
-		contentRef.current.style.maxHeight = active ? `${contentRef.current.scrollHeight}px` : "0px";
+		contentRef.current.style.maxHeight = active
+			? `${contentRef.current.scrollHeight}px`
+			: "0px";
 	}, [contentRef, active]);
 
 	const toggleActive = () => {
@@ -16,12 +18,20 @@ export const Accordion = (props) => {
 	return (
 		<>
 			<button
-				className={active ? "accordion accordion--active" : "accordion"}
+				className={
+					active
+						? "accordion accordion--active"
+						: "accordion"
+				}
 				onClick={toggleActive}
 			>
 				<p>{props.title}</p>
 				<Chevron
-					className={active ? "accordion__icon accordion__icon--rotate" : "accordion__icon"}
+					className={
+						active
+							? "accordion__icon accordion__icon--rotate"
+							: "accordion__icon"
+					}
 					width={10}
 					fill={"#777"}
 				/>

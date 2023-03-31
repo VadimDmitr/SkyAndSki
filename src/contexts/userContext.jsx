@@ -12,7 +12,9 @@ export default ({ children }) => {
 	};
 
 	return (
-		<userDataContext.Provider value={userDataFromContext}>{children}</userDataContext.Provider>
+		<userDataContext.Provider value={userDataFromContext}>
+			{children}
+		</userDataContext.Provider>
 	);
 };
 /* eslint-disable import/no-anonymous-default-export */
