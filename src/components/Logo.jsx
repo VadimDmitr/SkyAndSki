@@ -1,5 +1,3 @@
 export const Logo = () => {
-    return (
-        <p>Sky&SkiLogo</p>
-    )
-}
+	return <p>Sky&SkiLogo</p>;
+};

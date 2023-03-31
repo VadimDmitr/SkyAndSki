@@ -11,6 +11,8 @@ export default ({ children }) => {
 		setUserData,
 	};
 
-    return <userDataContext.Provider value={userDataFromContext}>{ children }</userDataContext.Provider>
-}
+	return (
+		<userDataContext.Provider value={userDataFromContext}>{children}</userDataContext.Provider>
+	);
+};
 /* eslint-disable import/no-anonymous-default-export */

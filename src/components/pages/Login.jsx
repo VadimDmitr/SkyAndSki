@@ -22,32 +22,32 @@ export const Login = () => {
 
 		// fetchData(URL, "POST", userInfo);
 
-        fetch(URL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(userFormData),
-        })
-        .then(response => response.text())
-        .then(result => {
-            console.log(result)
-            console.log("type of result ====> ", typeof result);
-            console.log(JSON.parse(result))
-            console.log("JSON.parse(result).token ====> ", JSON.parse(result).token);
-            const userDateFromBackend = {
-                token: JSON.parse(result).token,
-                user: JSON.parse(result).user
-            }
-            setUserData({ ...userData, ...userDateFromBackend})
-            // setUserData({ ...userData, name: JSON.parse(result).name})
-            console.log("userData ====> ", userData);
-            if (userData) {
-                navigate("/account");
-            }
-        })
-        .catch(error => console.log('error', error))
-    }
+		fetch(URL, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(userFormData),
+		})
+			.then((response) => response.text())
+			.then((result) => {
+				console.log(result);
+				console.log("type of result ====> ", typeof result);
+				console.log(JSON.parse(result));
+				console.log("JSON.parse(result).token ====> ", JSON.parse(result).token);
+				const userDateFromBackend = {
+					token: JSON.parse(result).token,
+					user: JSON.parse(result).user,
+				};
+				setUserData({ ...userData, ...userDateFromBackend });
+				// setUserData({ ...userData, name: JSON.parse(result).name})
+				console.log("userData ====> ", userData);
+				if (userData) {
+					navigate("/account");
+				}
+			})
+			.catch((error) => console.log("error", error));
+	};
 
 	return (
 		<form onSubmit={(e) => handleSubmit(e)}>

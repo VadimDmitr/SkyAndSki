@@ -37,32 +37,6 @@ export const ChangePassword = () => {
 			.catch((error) => console.log("error", error));
 	};
 
-<<<<<<< HEAD:src/components/UpdateAccount.jsx
-	return (
-		<form onSubmit={(e) => handleSubmit(e)}>
-			<label htmlFor="email">Email: </label>
-			<input
-				type="text"
-				id="email"
-				name="email"
-				required
-				value="tests@test.com"
-				onChange={(e) => handleChange(e)}
-			/>
-			<label htmlFor="email">Email To Edit: </label>
-			<input
-				type="text"
-				id="email-to-edit"
-				name="email-to-edit"
-				required
-				value="test@test.com"
-				onChange={(e) => handleChange(e)}
-			/>
-			<button type="submit">Update account</button>
-		</form>
-	);
-};
-=======
     return (
         <div className="account__section-content">
             <h2 className="account__section-heading">Password</h2>
@@ -92,4 +66,3 @@ export const ChangePassword = () => {
         </div>
     )
 }
->>>>>>> dev:src/components/pages/account/ChangePassword.jsx

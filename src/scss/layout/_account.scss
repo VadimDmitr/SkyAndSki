@@ -1,64 +1,64 @@
 .account {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    &__greeting {
-        padding: 3rem 0;
-        font-size: 3rem;
-    }
+	&__greeting {
+		padding: 3rem 0;
+		font-size: 3rem;
+	}
 }
 
 @media only screen and (min-width: 768px) {
-    .account {
-        flex-direction: row;
-        gap: 7rem;
+	.account {
+		flex-direction: row;
+		gap: 7rem;
 
-        &__sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
+		&__sidebar {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+		}
 
-        &__greeting {
-            padding: 3rem 0;
-            font-size: 3.5rem;
-        }
+		&__greeting {
+			padding: 3rem 0;
+			font-size: 3.5rem;
+		}
 
-        // &__heading {
-        //     font-size: 1.6rem;
-        //     color: var(--color-neutral-black);
-        // }
-    }
+		// &__heading {
+		//     font-size: 1.6rem;
+		//     color: var(--color-neutral-black);
+		// }
+	}
 }
 
 @media only screen and (min-width: 1920px) {
-    .account {
-        flex-direction: row;
-        gap: 14rem;
+	.account {
+		flex-direction: row;
+		gap: 14rem;
 
-        &__sidebar {
-            display: flex;
-            flex-direction: column;
+		&__sidebar {
+			display: flex;
+			flex-direction: column;
 
-            &-heading {
-                font-size: 3.2rem;
-                color: var(--color-neutral-black);
-            }
-        }
+			&-heading {
+				font-size: 3.2rem;
+				color: var(--color-neutral-black);
+			}
+		}
 
-        &__greeting {
-            padding-bottom: 9rem;
-            font-size: 6.5rem;
-        }
+		&__greeting {
+			padding-bottom: 9rem;
+			font-size: 6.5rem;
+		}
 
-        &__section-content {
-            width: 73.8rem;
-            display: flex;
-            flex-direction: column;
-        }
+		&__section-content {
+			width: 73.8rem;
+			display: flex;
+			flex-direction: column;
+		}
 
-        &__section-heading {
-            font-size: 14rem;
-        }
-    }
+		&__section-heading {
+			font-size: 14rem;
+		}
+	}
 }

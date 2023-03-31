@@ -1,56 +1,55 @@
 .footer {
-    &__main-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-    }
-  
-    &__logo-container {
-        &--top-left {
-        /* Styling for the logo container positioned on the top-left */
-        }
-    }
-  
-    &__subscription {
-        margin: 0 1rem;
-    }
-  
-    &__subscription-title {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-  
-    &__company-info {
-        margin: 0 10rem;
-    }
-  
-    &__company-title {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-  
-    &__company-link {
-        &-text {
-        display: block;
-        margin-bottom: 0.25rem;
-        }
-    }
-  
-    &__support-info {
-        margin: 0 1rem;
-    }
-  
-    &__support-title {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-  
-    &__support-link {
-        &-text {
-        display: block;
-        margin-bottom: 0.25rem;
-        }
-    }
-  }
-  
+	&__main-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+	}
+
+	&__logo-container {
+		&--top-left {
+			/* Styling for the logo container positioned on the top-left */
+		}
+	}
+
+	&__subscription {
+		margin: 0 1rem;
+	}
+
+	&__subscription-title {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	&__company-info {
+		margin: 0 10rem;
+	}
+
+	&__company-title {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	&__company-link {
+		&-text {
+			display: block;
+			margin-bottom: 0.25rem;
+		}
+	}
+
+	&__support-info {
+		margin: 0 1rem;
+	}
+
+	&__support-title {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	&__support-link {
+		&-text {
+			display: block;
+			margin-bottom: 0.25rem;
+		}
+	}
+}

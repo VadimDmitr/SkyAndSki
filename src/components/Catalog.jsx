@@ -1,5 +1,3 @@
 export const Catalog = () => {
-    return (
-        <div>catalog</div>
-    )
-}
+	return <div>catalog</div>;
+};
