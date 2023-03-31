@@ -24,14 +24,14 @@
             font-size: 3.5rem;
         }
 
-        &__heading {
-            font-size: 1.6rem;
-            color: var(--color-neutral-black);
-        }
+        // &__heading {
+        //     font-size: 1.6rem;
+        //     color: var(--color-neutral-black);
+        // }
     }
 }
 
-@media only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1920px) {
     .account {
         flex-direction: row;
         gap: 14rem;
@@ -39,17 +39,26 @@
         &__sidebar {
             display: flex;
             flex-direction: column;
+
+            &-heading {
+                font-size: 3.2rem;
+                color: var(--color-neutral-black);
+            }
         }
 
         &__greeting {
-            padding: 3rem 0;
+            padding-bottom: 9rem;
             font-size: 6.5rem;
         }
 
+        &__section-content {
+            width: 73.8rem;
+            display: flex;
+            flex-direction: column;
+        }
 
-
-        &__heading {
-            font-size: 3.2rem;
+        &__section-heading {
+            font-size: 14rem;
         }
     }
 }
