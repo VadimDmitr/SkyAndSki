@@ -1,5 +1,8 @@
+import logo from '../images/icons/logo.svg';
+
+
 export const Logo = () => {
     return (
-        <p>Sky&SkiLogo</p>
+        <img className="header__logo-img" src={logo} alt="logo" />
     )
 }
