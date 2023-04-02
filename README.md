@@ -1,6 +1,6 @@
 # BB Practicum Team 4 Front-end
 
-This is the front-end repository for the BB Practicum Team 4 project. 
+This is the front-end repository for the BB Practicum Team 4 project.
 
 - Make sure to set up the back-end server first by following the instructions in the [back-end README](https://github.com/Code-the-Dream-School/bb-practicum-team-4-back/blob/readme/README.md).
 
@@ -34,10 +34,10 @@ Navigate to `http://localhost:3000`
 ## User stories
 
 - User should be able to
-    - login or create an account
-    - see a list of products
-    - search for a product
-    - add product to cart
+  - login or create an account
+  - see a list of products
+  - search for a product
+  - add product to cart
 - For MVP - the cart will not persist
 - User should be able to checkout
 - Checkout page takes shipping and billing info
@@ -46,4 +46,3 @@ Navigate to `http://localhost:3000`
 - After an order is placed it automatically goes into “completed” status
 - A logged in user is able to access order history
 - User should not be able to access order history if not logged in
-
