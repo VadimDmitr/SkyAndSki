@@ -8,6 +8,9 @@ import cart from '../../../images/icons/cart.svg';
 import account from '../../../images/icons/account.svg';
 import language from '../../../images/icons/language.svg';
 
+
+
+
 export const Header = () => {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
