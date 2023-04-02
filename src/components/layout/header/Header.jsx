@@ -27,13 +27,13 @@ export const Header = () => {
             </NavLink>
             </div>
             <div className="header__middle-group">
-            <NavLink className="header__nav-link" activeClassName="header__nav-link--active" to={"/about"}>
+            <NavLink className="header__about" to={"/about"}>
             <p>About</p>
             </NavLink>
-            <NavLink activeClassName="header__nav-link--active" to={"/shop"}>
+            <NavLink className="header__shop" to={"/shop"}>
             <p>Shop</p>
             </NavLink>
-            <NavLink activeClassName="header__nav-link--active" to={"/contact"}>
+            <NavLink className="header__contact" to={"/contact"}>
             <p>Contact</p>
             </NavLink>
             </div>
