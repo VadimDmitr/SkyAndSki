@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import { Logo } from "../../Logo";
 import { Hamburger } from "./Hamburger";
 import { MobileMenu } from "./MobileMenu";
+import search from '../../../images/icons/search.svg';
+import cart from '../../../images/icons/cart.svg';
+import account from '../../../images/icons/account.svg';
 
 export const Header = () => {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -38,13 +41,13 @@ export const Header = () => {
             <p>Language</p>
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/search"}>
-            <p>Search</p>
+            <img className="header__navigate-img" src={search} alt="search" />
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/cart"}>
-            <p>Cart</p>
+            <img className="header__navigate-img" src={cart} alt="cart" />
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/account"}>
-            <p>Account</p>
+            <img className="header__navigate-img" src={account} alt="account" />
             </NavLink>
         </div>
         </nav>
