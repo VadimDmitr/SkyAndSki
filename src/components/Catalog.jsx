@@ -1,3 +1,6 @@
+// import { Button } from "./utils/Button";
+import snowboard from "../images/snowboard.png";
+
 export const Catalog = () => {
     return (
         <div className="catalog">
@@ -12,8 +15,26 @@ export const Catalog = () => {
                 <p>Other</p>
             </div>
             <div className="products">
-                <div className="product"></div>
+                <div className="product">
+                    <img src={snowboard} alt="snowboard" />
+                    <div className="product__text">
+                        <p className="product__title">Sardinia White</p>
+                        <p className="product__price">312.49 SAR</p>
+                    </div>
+                    <img src={snowboard} alt="snowboard" />
+                    <div className="product__text">
+                        <p className="product__title">Sardinia White</p>
+                        <p className="product__price">312.49 SAR</p>
+                    </div>
+                    <img src={snowboard} alt="snowboard" />
+                    <div className="product__text">
+                        <p className="product__title">Sardinia White</p>
+                        <p className="product__price">312.49 SAR</p>
+                    </div>
+                </div>
             </div>
+            {/* <Button /> */}
+            <div className="button">More products</div>
         </div>
     )
 }
