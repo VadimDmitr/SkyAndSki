@@ -1,0 +1,26 @@
+.catalog-header-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &__horizontal-line {
+        width: 4.7rem;
+        border: .1rem solid var(--color-primary);
+        border-radius: 1px;
+    }
+
+    &__heading {
+        color: var(--color-primary);
+        font-size: 2rem;
+    }
+}
+
+.catalog {
+    &__filters {
+        display: flex;
+    }
+
+    &__filter {
+        padding: 1rem;
+    }
+}

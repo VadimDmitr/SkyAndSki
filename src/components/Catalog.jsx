@@ -4,15 +4,17 @@ import snowboard from "../images/snowboard.png";
 export const Catalog = () => {
     return (
         <div className="catalog">
-            <hr />
-            <p>Catalog</p>
+            <div className="catalog-header-container">
+                <hr className="catalog-header-container__horizontal-line" />
+                <p className="catalog-header-container__heading">Catalog</p>
+            </div>
             <h2>Our Most Popular Board category</h2>
             <div className="catalog__filters">
-                <p>All</p>
-                <p>Sky</p>
-                <p>Ski</p>
-                <p>Boards</p>
-                <p>Other</p>
+                <p className="catalog__filter">All</p>
+                <p className="catalog__filter">Sky</p>
+                <p className="catalog__filter">Ski</p>
+                <p className="catalog__filter">Boards</p>
+                <p className="catalog__filter">Other</p>
             </div>
             <div className="products">
                 <div className="product">
