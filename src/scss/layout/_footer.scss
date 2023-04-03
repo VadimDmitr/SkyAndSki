@@ -1,3 +1,90 @@
+.footer {
+  background-color: var(--color-neutral-black);
+  width: 100%;
+  padding: 1.6rem;
+}
+
+.footer__main-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__logo-container {
+  flex: 1;
+  align-self: center;
+  margin-right: 2rem;
+}
+
+.footer__info-container {
+  display: flex;
+  flex: 4;
+  justify-content: flex-start;
+}
+
+.footer__company-info {
+  flex: 1;
+  margin-right: 0; 
+}
+
+.footer__support-info {
+  flex: 1;
+}
+
+
+.footer__company-title,
+.footer__support-title {
+  width: 137px;
+  height: 30px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--color-secondary);
+}
+
+.footer__company-link-text,
+.footer__support-link-text {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 33px;
+  color: var(--color-secondary);
+}
+
+.footer__subscription-input {
+  display: flex;
+  width: 358px;
+  height: 40px;
+  left: 19px;
+  bottom: 92.53px;
+  background: #F9F9F9;
+  opacity: 0.56;
+}
+
+.footer__subscription-button {
+  left: 40rem;
+  top: 31rem;
+  background: #100f0f;
+}
+
+.footer__social-icons {
+  display: flex;
+  gap: 4rem;
+  padding: 1rem;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr); 
@@ -57,7 +144,7 @@
 }
 
 .footer__subscription-button{
-  position: absolute;
+ 
   left: 40rem;
   top: 31rem;
   background: #100f0f;
@@ -67,4 +154,6 @@
   display: flex;
   gap: 4rem;
   padding: 1rem;
+}
+
 }
