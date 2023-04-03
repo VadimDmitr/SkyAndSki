@@ -13,26 +13,22 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__main-container">
-        <div className="footer__logo-container footer__logo-container--top-left">
-          <div className="footer__media-links">
-            <h3 className="footer__media-title">Subscription</h3>
-            <div>
-            <div className="footer__social-icons" >
-              <ExternalLink className="footer__social-link1" href="https://instagram.com/">
-                <img className="footer__social-img" src={instagram} alt="instagram" />
-              </ExternalLink>
-              <ExternalLink className="footer__social-link2" href="https://dribbble.com/">
-                <img className="footer__social-img" src={dribbble} alt="dribbble" />
-              </ExternalLink>
-              <ExternalLink className="footer__social-link3" href="https://twitter.com/">
-                <img className="footer__social-img" src={twitter} alt="twitter" />
-              </ExternalLink>
-              <ExternalLink className="footer__social-link4" href="https://youtube.com/">
-                <img className="footer__social-img" src={youtube} alt="youtube" />
-              </ExternalLink>
-              </div>
-            </div>
+        <div className="footer__logo-container footer__logo-container--top-left"></div>
+        <div className="footer__media-links">
+          <h3 className="footer__media-title">Subscription</h3>
+          {/* have to put it then
+          <div>
+            <ExternalLink className="footer__social-link" href="https://facebook.com/">
+              <img className="footer__social-img" src={facebook} alt="facebook" />
+            </ExternalLink>
+            <ExternalLink className="footer__social-link" href="https://twitter.com/">
+              <img className="footer__social-img" src={twitter} alt="twitter" />
+            </ExternalLink>
+            <ExternalLink className="footer__social-link" href="https://instagram.com/">
+              <img className="footer__social-img" src={instagram} alt="instagram" />
+            </ExternalLink>
           </div>
+          */}
         </div>
         <div className="footer__company-info">
           <h3 className="footer__company-title">Company</h3>
@@ -53,25 +49,50 @@ export const Footer = () => {
           </Link>
           </div>
 
-          <div className="footer__support-info">
-          <h3 className="footer__support-title">Support</h3>
-          <Link className="footer__support-link" to={"/help"}>
-            <p className="footer__support-link-text">Help Center</p>
-          </Link>
-          <Link className="footer__support-link" to={"/service"}>
-            <p className="footer__support-link-text">Terms of Service</p>
-          </Link>
-          <Link className="footer__support-link" to={"/legal"}>
-            <p className="footer__support-link-text">Legal</p>
-          </Link>
-          <Link className="footer__support-link" to={"/privacy-policy"}>
-            <p className="footer__support-link-text">Privacy Policy</p>
-          </Link>
-          <Link className="footer__support-link" to={"/status"}>
-            <p className="footer__support-link-text">Status</p>
-          </Link>
-        </div>
-      </div>
-    </footer>
-  );
-}
+				<div className="footer__support-info">
+					<h3 className="footer__support-title">Support</h3>
+					<Link
+						className="footer__support-link"
+						to={"/help"}
+					>
+						<p className="footer__support-link-text">
+							Help Center
+						</p>
+					</Link>
+					<Link
+						className="footer__support-link"
+						to={"/service"}
+					>
+						<p className="footer__support-link-text">
+							Terms of Service
+						</p>
+					</Link>
+					<Link
+						className="footer__support-link"
+						to={"/legal"}
+					>
+						<p className="footer__support-link-text">
+							Legal
+						</p>
+					</Link>
+					<Link
+						className="footer__support-link"
+						to={"/privacy-policy"}
+					>
+						<p className="footer__support-link-text">
+							Privacy Policy
+						</p>
+					</Link>
+					<Link
+						className="footer__support-link"
+						to={"/status"}
+					>
+						<p className="footer__support-link-text">
+							Status
+						</p>
+					</Link>
+				</div>
+			</div>
+		</footer>
+	);
+};

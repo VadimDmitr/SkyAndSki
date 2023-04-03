@@ -8,7 +8,8 @@ import cart from '../../../images/icons/cart.svg';
 import account from '../../../images/icons/account.svg';
 
 export const Header = () => {
-    const [openMobileMenu, setOpenMobileMenu] = useState(false);
+	const [openMobileMenu, setOpenMobileMenu] =
+		useState(false);
 
     return (
         <header className="header">
