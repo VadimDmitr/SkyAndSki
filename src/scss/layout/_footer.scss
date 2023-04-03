@@ -38,12 +38,33 @@
 
 .footer__company-link-text,
 .footer__support-link-text {
-  width: 217.78px;
-  height: 33px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 33px;
   color: var(--color-secondary);
+}
+
+.footer__subscription-input{
+  display: flex;
+  width: 358px;
+  height: 40px;
+  left: 19px;
+  bottom: 92.53px;
+  background: #F9F9F9;
+  opacity: 0.56;
+}
+
+.footer__subscription-button{
+  position: absolute;
+  left: 40rem;
+  top: 31rem;
+  background: #100f0f;
+}
+
+.footer__social-icons{
+  display: flex;
+  gap: 4rem;
+  padding: 1rem;
 }
