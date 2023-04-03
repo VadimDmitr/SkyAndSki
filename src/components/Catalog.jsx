@@ -1,9 +1,7 @@
 import { useState } from "react";
-// import { Button } from "./utils/Button";
-// import Data from "./Data";
 import { Filters } from "./Filters";
-import { Products } from "./Products"
-// import Card from "./Card";
+import { Products } from "./Products";
+// import { Button } from "./utils/Button";
 import snowboard from "../images/snowboard.png";
 
 export const Catalog = () => {
@@ -33,6 +31,7 @@ export const Catalog = () => {
 
 	const [products, setProducts] = useState(productsData);
 
+
 	const categories = [
 		...new Set(
 			productsData.map((product) => product.category)
@@ -46,18 +45,6 @@ export const Catalog = () => {
 		setProducts(newProducts);
 	};
 
-	// const productsList = products.map((card) => {
-	// 	return (
-	// 		<div className="product">
-	// 			<img src={card.img} alt="snowboard" />
-	// 			<div className="product__text">
-	// 				<p className="product__title">{card.title}</p>
-	// 				<p className="product__price">{card.price}</p>
-	// 			</div>
-	// 		</div>
-	// 	);
-	// });
-
 	return (
 		<div className="catalog">
 			<div className="catalog-header-container">
@@ -67,22 +54,20 @@ export const Catalog = () => {
 				</p>
 			</div>
 			<h2>Our Most Popular Board category</h2>
-			<div className="catalog__filters">
+			{/* <div className="catalog__filters">
 				<p className="catalog__filter">All</p>
 				<p className="catalog__filter">Sky</p>
 				<p className="catalog__filter">Ski</p>
 				<p className="catalog__filter">Boards</p>
 				<p className="catalog__filter">Other</p>
-			</div>
+			</div> */}
 			<Filters
 				filterItems={filterItems}
 				setItems={setProducts}
 				categories={categories}
 				productsData={productsData}
 			/>
-            <Products products={products} />
-			{/* <Card items={products} /> */}
-			{/* <div className="products">{productsList}</div> */}
+			<Products products={products} />
 			{/* <Button /> */}
 			<div className="button">More products</div>
 		</div>
