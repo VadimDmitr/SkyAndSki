@@ -9,12 +9,11 @@ import subscbutton from '../../images/icons/subscbutton.svg';
 // import { NavLink } from "react-router-dom";
 
 
-
 export const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__main-container">
-        <div className="footer__logo-container footer__logo-container--top-left">
+      <div className="footer__main-container footer__grid">
+        <div className="footer__logo-container footer__logo-container--bottom-left">
           <div className="footer__media-links">
           <form className="footer__subscription-form">
               <input
@@ -30,21 +29,20 @@ export const Footer = () => {
             <div>
             <div className="footer__social-icons" >
               <ExternalLink className="footer__social-link1" href="https://instagram.com/">
-                <img className="footer__social-img" src={instagram} alt="instagram" />
+                <img className="footer__social-img" src={instagram} alt="Instagram" />
               </ExternalLink>
               <ExternalLink className="footer__social-link2" href="https://dribbble.com/">
-                <img className="footer__social-img" src={dribbble} alt="dribbble" />
+                <img className="footer__social-img" src={dribbble} alt="Dribbble" />
               </ExternalLink>
               <ExternalLink className="footer__social-link3" href="https://twitter.com/">
-                <img className="footer__social-img" src={twitter} alt="twitter" />
+                <img className="footer__social-img" src={twitter} alt="Twitter" />
               </ExternalLink>
               <ExternalLink className="footer__social-link4" href="https://youtube.com/">
-                <img className="footer__social-img" src={youtube} alt="youtube" />
+                <img className="footer__social-img" src={youtube} alt="Youtube" />
               </ExternalLink>
               </div>
             </div>
           </div>
-          */}
         </div>
         <div className="footer__company-info">
           <h3 className="footer__company-title">Company</h3>
@@ -108,7 +106,7 @@ export const Footer = () => {
 						</p>
 					</Link>
 				</div>
-			</div>
+      </div>
 		</footer>
 	);
 };
