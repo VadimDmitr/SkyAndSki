@@ -2,7 +2,11 @@ import { useState } from "react";
 import { Filters } from "./Filters";
 import { Products } from "./Products";
 // import { Button } from "./utils/Button";
-import snowboard from "../images/snowboard.png";
+import snowboardLight from "../images/snowboard_light.png";
+import snowboardDark from "../images/snowboard_dark.png";
+import goggles from "../images/goggles.png";
+import boots from "../images/boots.png";
+
 
 export const Catalog = () => {
 	const productsData = [
@@ -11,21 +15,28 @@ export const Catalog = () => {
 			title: "Sardinia White",
 			category: "board",
 			price: "312.49 SAR",
-			img: snowboard,
+			img: snowboardLight,
 		},
 		{
 			id: "1",
-			title: "Sardinia White",
+			title: "Sicily Grey ",
 			category: "ski",
 			price: "312.49 SAR",
-			img: snowboard,
+			img: snowboardDark,
 		},
 		{
 			id: "2",
-			title: "Sardinia White",
+			title: "Sicily Grey",
 			category: "other",
 			price: "312.49 SAR",
-			img: snowboard,
+			img: goggles,
+		},
+		{
+			id: "3",
+			title: "Sicily Grey Décor 30×60",
+			category: "other",
+			price: "312.49 SAR",
+			img: boots,
 		},
 	];
 
