@@ -1,27 +1,27 @@
 .footer__grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Создаем пять колонок с равной шириной */
-  grid-template-rows: auto auto; /* Создаем две строки */
-  grid-gap: 1rem; /* Расстояние между элементами сетки */
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: auto auto; 
+  grid-gap: 1rem; 
   grid-template-areas:
-    ". company . support ." /* Определяем области сетки */
-    ". logo logo logo ."; /* Расположение logo-container внизу */
+    ". company . support ." 
+    ". logo logo logo ."; 
   background-color: var(--color-neutral-black);
-  width: 100%; /* Задаем ширину сетки на всю ширину контейнера */
+  width: 100%; 
   padding: 1.6rem;
 }
 
 .footer__company-info {
-  grid-area: company; /* Устанавливаем область сетки для блока "Компани" */
+  grid-area: company; 
 }
 
 .footer__support-info {
-  grid-area: support; /* Устанавливаем область сетки для блока "Суппорт" */
+  grid-area: support; 
 }
   
 .footer__logo-container {
-  grid-area: logo; /* Устанавливаем область сетки для блока "logo-container" */
-  margin: 0 auto; /* Выравниваем блок "logo-container" по горизонтали */
+  grid-area: logo; 
+  margin: 0 auto; 
 }
 
 .footer__company-title,
