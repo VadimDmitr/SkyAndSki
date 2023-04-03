@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
+// import { useEffect, useRef } from "react";
 
 export const Filters = ({
 	categories,
@@ -6,19 +7,20 @@ export const Filters = ({
 	setItems,
 	productsData,
 }) => {
-	const elementRef = useRef();
+	// const elementRef = useRef();
 
-	const fireEvent = (el, eventName) => {
-		const event = new Event(eventName, { bubbles: true });
-		el.dispatchEvent(event);
-	};
+	// const fireEvent = (el, eventName) => {
+	// 	const event = new Event(eventName, { bubbles: true });
+	// 	el.dispatchEvent(event);
+	// };
 
-	useEffect(() => {
-		const buttonElement = elementRef.current;
-		console.log("buttonElement =>> ", buttonElement);
-		fireEvent(buttonElement, "click");
-		// elementRef.current.focus();
-	}, []);
+	// useEffect(() => {
+	// 	// const buttonElement = elementRef.current;
+	// 	// console.log("buttonElement =>> ", buttonElement);
+	// 	// fireEvent(buttonElement, "click");
+	// 	// // elementRef.current.focus();
+	// 	// document.getElementById("filter-all-button").click();
+	// }, []);
 
     const capitalize = (word) => {
         return word.charAt(0).toUpperCase()
@@ -30,7 +32,8 @@ export const Filters = ({
 			<button
 				className="catalog__filter pointer"
 				onClick={() => setItems(productsData)}
-				ref={elementRef}
+				// id="filter-all-button"
+				// ref={elementRef}
 			>
 				All
 			</button>
