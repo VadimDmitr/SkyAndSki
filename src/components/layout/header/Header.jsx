@@ -6,6 +6,10 @@ import { MobileMenu } from "./MobileMenu";
 import search from '../../../images/icons/search.svg';
 import cart from '../../../images/icons/cart.svg';
 import account from '../../../images/icons/account.svg';
+import language from '../../../images/icons/language.svg';
+
+
+
 
 export const Header = () => {
 	const [openMobileMenu, setOpenMobileMenu] =
@@ -27,28 +31,28 @@ export const Header = () => {
             </NavLink>
             </div>
             <div className="header__middle-group">
-            <NavLink className="header__nav-link" activeClassName="header__nav-link--active" to={"/about"}>
+            <NavLink className="header__about" to={"/about"}>
             <p>About</p>
             </NavLink>
-            <NavLink activeClassName="header__nav-link--active" to={"/shop"}>
+            <NavLink className="header__shop" to={"/shop"}>
             <p>Shop</p>
             </NavLink>
-            <NavLink activeClassName="header__nav-link--active" to={"/contact"}>
+            <NavLink className="header__contact" to={"/contact"}>
             <p>Contact</p>
             </NavLink>
             </div>
             <div className="header__right-group">
             <NavLink activeClassName="header__nav-link--active" to={"/language"}>
-            <p>Language</p>
+            <img className="header__navigate-language" src={language} alt="language" />
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/search"}>
-            <img className="header__navigate-img" src={search} alt="search" />
+            <img className="header__navigate-search" src={search} alt="search" />
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/cart"}>
-            <img className="header__navigate-img" src={cart} alt="cart" />
+            <img className="header__navigate-cart" src={cart} alt="cart" />
             </NavLink>
             <NavLink activeClassName="header__nav-link--active" to={"/account"}>
-            <img className="header__navigate-img" src={account} alt="account" />
+            <img className="header__navigate-account" src={account} alt="account" />
             </NavLink>
         </div>
         </nav>

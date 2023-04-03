@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 
 .our-unique-features {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 1284px;
+  height: 72.53px;
+  left: 287px;
+  top: 1272px;
+
 
 	&__item {
 		display: flex;

@@ -3,7 +3,7 @@
         width: 1920px;
         height: 617px;
         left: 0px;
-        bottom: 0px;
+        top: 9257px;
         background-color: var(--color-neutral-black);
 
  //   &__main-container {
@@ -20,18 +20,64 @@
         }
     }
 
+    .footer__subscription-form { 
+        position: absolute;
+        left: 19.25%;
+        right: 55.98%;
+        top: 96.06%;
+        bottom: 3.3%;
+    }
+
+    .footer__subscription-input {
+        position: absolute;
+        width: 475.5px;
+        height: 63.47px;
+        left: -140px;
+        bottom: 188.81px;
+        /* neutral/white */
+        background: var(--color-secondary);
+        opacity: 0.2;
+      }
+      
+    .footer__subscription-button {
+        position: absolute;
+        left: 27rem;
+        right: 4.17%;
+        top: -23rem;
+        bottom: 4.17%;
+    }
+      
+      .footer__subscription-input::placeholder {
+        color: rgb(73, 75, 74);
+        background-color: var(--color-secondary);
+        width: 160.85px;
+        height: 39px;
+        left: 250.63px;
+        bottom: 336px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 254%;
+        /* or 254% */
+        font-feature-settings: 'liga' off;
+      }
+      
+     // .footer__subscription-button:hover {
+     //   background-color: #088e5b;
+     // }
+
     &__social-icons {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         padding: 0px;
         gap: 25.39px;
-        
         position: absolute;
         width: 278.96px;
         height: 50.77px;
-        left: 295.62px;
-        bottom: 166.5px;
+        left: -50px;
+        bottom: 94.5px;
         }
 
     &__company-info {
