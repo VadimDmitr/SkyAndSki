@@ -2,7 +2,7 @@ import { useState } from "react";
 // import { Button } from "./utils/Button";
 // import Data from "./Data";
 import { Filters } from "./Filters";
-import { Product } from "./Product"
+import { Products } from "./Products"
 // import Card from "./Card";
 import snowboard from "../images/snowboard.png";
 
@@ -46,17 +46,17 @@ export const Catalog = () => {
 		setProducts(newProducts);
 	};
 
-	const productsList = products.map((card) => {
-		return (
-			<div className="product">
-				<img src={card.img} alt="snowboard" />
-				<div className="product__text">
-					<p className="product__title">{card.title}</p>
-					<p className="product__price">{card.price}</p>
-				</div>
-			</div>
-		);
-	});
+	// const productsList = products.map((card) => {
+	// 	return (
+	// 		<div className="product">
+	// 			<img src={card.img} alt="snowboard" />
+	// 			<div className="product__text">
+	// 				<p className="product__title">{card.title}</p>
+	// 				<p className="product__price">{card.price}</p>
+	// 			</div>
+	// 		</div>
+	// 	);
+	// });
 
 	return (
 		<div className="catalog">
@@ -80,8 +80,9 @@ export const Catalog = () => {
 				categories={categories}
 				productsData={productsData}
 			/>
+            <Products products={products} />
 			{/* <Card items={products} /> */}
-			<div className="products">{productsList}</div>
+			{/* <div className="products">{productsList}</div> */}
 			{/* <Button /> */}
 			<div className="button">More products</div>
 		</div>
