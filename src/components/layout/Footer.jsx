@@ -14,7 +14,6 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__main-container">
-<<<<<<< HEAD
         <div className="footer__logo-container footer__logo-container--top-left">
           <div className="footer__media-links">
           <form className="footer__subscription-form">
@@ -44,22 +43,6 @@ export const Footer = () => {
               </ExternalLink>
               </div>
             </div>
-=======
-        <div className="footer__logo-container footer__logo-container--top-left"></div>
-        <div className="footer__media-links">
-          <h3 className="footer__media-title">Subscription</h3>
-          {/* have to put it then
-          <div>
-            <ExternalLink className="footer__social-link" href="https://facebook.com/">
-              <img className="footer__social-img" src={facebook} alt="facebook" />
-            </ExternalLink>
-            <ExternalLink className="footer__social-link" href="https://twitter.com/">
-              <img className="footer__social-img" src={twitter} alt="twitter" />
-            </ExternalLink>
-            <ExternalLink className="footer__social-link" href="https://instagram.com/">
-              <img className="footer__social-img" src={instagram} alt="instagram" />
-            </ExternalLink>
->>>>>>> dev
           </div>
           */}
         </div>

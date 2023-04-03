@@ -24,7 +24,6 @@
 		}
 	}
 
-<<<<<<< HEAD
         &__nav-link {
         &--active {
             font-weight: bold;
@@ -197,54 +196,3 @@
     }
 }*/
   
-=======
-	&__nav-link {
-		&--active {
-			font-weight: bold;
-		}
-	}
-
-	&__logo-group {
-		display: flex;
-	}
-
-	&__middle-group {
-		display: flex;
-		gap: 10px;
-		color: #ffffff;
-		text-decoration: none;
-		font-family: "Poppins";
-		font-style: normal;
-		font-weight: 600;
-		font-size: 24px;
-		line-height: 120%;
-		background-color: #0aa967;
-	}
-
-	&__right-group {
-		display: flex;
-		gap: 10px;
-		color: #ffffff;
-		text-decoration: none;
-	}
-
-	&__middle-group a:hover,
-	&__right-group a:hover {
-		color: #0aa967;
-	}
-}
-
-@media (min-width: 768px) {
-	.header {
-		&__nav {
-			&--mobile {
-				display: none;
-			}
-
-			&--desktop {
-				display: flex;
-			}
-		}
-	}
-}
->>>>>>> dev
