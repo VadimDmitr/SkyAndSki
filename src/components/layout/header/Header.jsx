@@ -12,7 +12,8 @@ import language from '../../../images/icons/language.svg';
 
 
 export const Header = () => {
-    const [openMobileMenu, setOpenMobileMenu] = useState(false);
+	const [openMobileMenu, setOpenMobileMenu] =
+		useState(false);
 
     return (
         <header className="header">

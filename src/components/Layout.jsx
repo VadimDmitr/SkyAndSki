@@ -5,11 +5,11 @@ import { Header } from "../components/layout/header/Header";
 import { Footer } from "../components/layout/Footer";
 
 export const Layout = () => {
-    return (
-        <main>
-            <Header />
-            <Outlet />
-            <Footer />
-        </main>
-    )
-}
+	return (
+		<main>
+			<Header />
+			<Outlet />
+			<Footer />
+		</main>
+	);
+};
