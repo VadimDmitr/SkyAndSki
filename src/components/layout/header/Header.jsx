@@ -17,9 +17,9 @@ export const Header = () => {
 			<nav className="nav-mobile mobile">
 				<Logo />
 				<div className="nav-mobile__right-group">
-                    <img src={search} alt="search" />
-                    <img src={cart} alt="cart" />
-                    <img src={account} alt="account" />
+                    <img className="pointer" src={search} alt="search" />
+                    <img className="pointer" src={cart} alt="cart" />
+                    <img className="pointer" src={account} alt="account" />
                     <Hamburger
                         openMobileMenu={openMobileMenu}
                         setOpenMobileMenu={setOpenMobileMenu}
@@ -31,64 +31,60 @@ export const Header = () => {
 				/>
 			</nav>
 			<nav className="nav desktop">
-				<div className="header__logo-group">
-					<NavLink to={"/"}>
-						<h1>
-							<Logo className="header__logo" />
-						</h1>
-					</NavLink>
-				</div>
-				<div className="header__middle-group">
-					<NavLink className="header__about" to={"/about"}>
+                <NavLink to={"/"}>
+                    <Logo />
+                </NavLink>
+				<div className="nav__middle-group">
+					<NavLink className="nav__link" to={"/about"}>
 						<p>About</p>
 					</NavLink>
-					<NavLink className="header__shop" to={"/shop"}>
+					<NavLink className="nav__link" to={"/shop"}>
 						<p>Shop</p>
 					</NavLink>
 					<NavLink
-						className="header__contact"
+						className="nav__link"
 						to={"/contact"}
 					>
 						<p>Contact</p>
 					</NavLink>
 				</div>
-				<div className="header__right-group">
+				<div className="nav__right-group">
 					<NavLink
-						activeClassName="header__nav-link--active"
+						activeClassName="nav__nav-link--active"
 						to={"/language"}
 					>
 						<img
-							className="header__navigate-language"
+							className="nav__navigate-language"
 							src={language}
 							alt="language"
 						/>
 					</NavLink>
 					<NavLink
-						activeClassName="header__nav-link--active"
+						activeClassName="nav__nav-link--active"
 						to={"/search"}
 					>
 						<img
-							className="header__navigate-search"
+							className="nav__navigate-search"
 							src={search}
 							alt="search"
 						/>
 					</NavLink>
 					<NavLink
-						activeClassName="header__nav-link--active"
+						activeClassName="nav__nav-link--active"
 						to={"/cart"}
 					>
 						<img
-							className="header__navigate-cart"
+							className="nav__navigate-cart"
 							src={cart}
 							alt="cart"
 						/>
 					</NavLink>
 					<NavLink
-						activeClassName="header__nav-link--active"
+						activeClassName="nav__nav-link--active"
 						to={"/account"}
 					>
 						<img
-							className="header__navigate-account"
+							className="nav__navigate-account"
 							src={account}
 							alt="account"
 						/>
