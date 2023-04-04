@@ -1,0 +1,564 @@
+/* selecting each and every element on the page and applying reset to it */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Gilroy", "Inter", sans-serif;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --color-primary: #eb4c56;
+  --color-secondary: #f9f9f9;
+  --color-neutral-black: #1b1a1f;
+  --color-neutral-grey: #4f4f4f;
+  --color-neutral-lightgrey: #8e8e8e;
+}
+
+.mobile {
+  display: flex;
+}
+
+.desktop {
+  display: none !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile {
+    display: none !important;
+  }
+  .desktop {
+    display: flex !important;
+  }
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.8rem;
+  border: none;
+  outline: none;
+  background-color: #eee;
+  color: #444;
+  transition: background-color 0.6s ease;
+}
+.accordion--link {
+  font-size: 1.3rem;
+}
+.accordion__tiltle {
+  font-weight: 600;
+}
+.accordion__icon {
+  margin-left: auto;
+  transition: 0.6s ease;
+}
+.accordion__icon--rotate {
+  transform: rotate(90deg);
+}
+.accordion__content {
+  background-color: #fff;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+.accordion__text {
+  font-weight: 400;
+}
+.accordion--active {
+  background-color: #ccc;
+}
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.button {
+  max-width: 73.5rem;
+  padding: 1.35rem 1.5rem;
+  font-size: 2.2rem;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.4rem 0;
+}
+
+.label {
+  font-size: 1.6rem;
+}
+
+.input {
+  padding: 1.5rem 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 3rem 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .wrapper {
+    flex-direction: row;
+    padding: 0 30rem;
+  }
+}
+.account {
+  display: flex;
+  flex-direction: column;
+}
+.account__greeting {
+  padding: 3rem 0;
+  font-size: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .account {
+    flex-direction: row;
+    gap: 7rem;
+  }
+  .account__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .account__greeting {
+    padding: 3rem 0;
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .account {
+    flex-direction: row;
+    gap: 14rem;
+  }
+  .account__sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  .account__sidebar-heading {
+    font-size: 3.2rem;
+    color: var(--color-neutral-black);
+  }
+  .account__greeting {
+    padding-bottom: 9rem;
+    font-size: 6.5rem;
+  }
+  .account__section-content {
+    width: 73.8rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .account__section-heading {
+    font-size: 14rem;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: absolute;
+  width: 1920px;
+  height: 164px;
+  left: 0px;
+  top: 27px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__nav--mobile {
+  display: none;
+}
+.header__nav--desktop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header__nav-link--active {
+  font-weight: bold;
+}
+.header__logo-img {
+  position: absolute;
+  width: 98.81px;
+  height: 56.29px;
+  left: 76px;
+  top: 5px;
+}
+.header__middle-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 69.24px;
+  position: absolute;
+  width: 375.03px;
+  height: 34px;
+  left: 743.42px;
+  top: 38px;
+}
+.header__about {
+  width: 74px;
+  height: 29px;
+  /* text/menu */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 0%;
+  /* identical to box height, or 29px */
+  color: #FFFFFF;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.header__shop {
+  width: 63px;
+  height: 29px;
+  /* text/menu */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 0%;
+  /* identical to box height, or 29px */
+  color: #FFFFFF;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.header__contact {
+  width: 99px;
+  height: 20px;
+  /* text/menu */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 0%;
+  /* identical to box height, or 29px */
+  color: #FFFFFF;
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+.header__navigate-language {
+  position: absolute;
+  width: 40px;
+  height: 29px;
+  left: 1599px;
+  top: 20%;
+  bottom: 99.36%;
+}
+.header__navigate-search {
+  position: absolute;
+  left: 86.77%;
+  right: 11.56%;
+  top: 20%;
+  bottom: 99.36%;
+}
+.header__navigate-cart {
+  position: absolute;
+  left: 89.83%;
+  right: 8.5%;
+  top: 19%;
+  bottom: 99.36%;
+}
+.header__navigate-account {
+  position: absolute;
+  left: 92.9%;
+  right: 5.43%;
+  top: 18%;
+  bottom: 99.36%;
+}
+.header__line {
+  position: absolute;
+  width: 1920px;
+  height: 0px;
+  left: 0px;
+  top: 106.52px;
+  border: 1.33151px solid #FFFFFF;
+}
+.header__skyski {
+  position: absolute;
+  width: 968px;
+  height: 230px;
+  left: 470px;
+  top: 347px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 140%;
+  /* or 280px */
+  color: #FFFFFF;
+}
+.header__webuild {
+  position: absolute;
+  width: 948px;
+  height: 36px;
+  left: 492px;
+  top: 582px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  /* identical to box height, or 36px */
+  color: #FFFFFF;
+}
+
+/* @media (min-width: 768px) {
+        .header {
+        &__nav {
+            &--mobile {
+                display: none;
+        }
+
+        &--desktop {
+            display: flex;
+        }
+    }
+    }
+}*/
+.footer {
+  position: absolute;
+  width: 1920px;
+  height: 617px;
+  left: 0px;
+  top: 9257px;
+  background-color: var(--color-neutral-black);
+}
+.footer__logo-container--top-left {
+  position: absolute;
+  width: 475.5px;
+  height: 140.77px;
+  left: 369.62px;
+  top: 340.72px;
+}
+.footer .footer__subscription-form {
+  position: absolute;
+  left: 19.25%;
+  right: 55.98%;
+  top: 96.06%;
+  bottom: 3.3%;
+}
+.footer .footer__subscription-input {
+  position: absolute;
+  width: 475.5px;
+  height: 63.47px;
+  left: -140px;
+  bottom: 188.81px;
+  /* neutral/white */
+  background: var(--color-secondary);
+  opacity: 0.2;
+}
+.footer .footer__subscription-button {
+  position: absolute;
+  left: 27rem;
+  right: 4.17%;
+  top: -23rem;
+  bottom: 4.17%;
+}
+.footer .footer__subscription-input::-moz-placeholder {
+  color: rgb(73, 75, 74);
+  background-color: var(--color-secondary);
+  width: 160.85px;
+  height: 39px;
+  left: 250.63px;
+  bottom: 336px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 254%;
+  /* or 254% */
+  font-feature-settings: "liga" off;
+}
+.footer .footer__subscription-input::placeholder {
+  color: rgb(73, 75, 74);
+  background-color: var(--color-secondary);
+  width: 160.85px;
+  height: 39px;
+  left: 250.63px;
+  bottom: 336px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 254%;
+  /* or 254% */
+  font-feature-settings: "liga" off;
+}
+.footer__social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 25.39px;
+  position: absolute;
+  width: 278.96px;
+  height: 50.77px;
+  left: -50px;
+  bottom: 94.5px;
+}
+.footer__company-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32.67px;
+  position: absolute;
+  width: 217.78px;
+  height: 305px;
+  left: 1007.95px;
+  bottom: 160.28px;
+}
+.footer__company-title {
+  width: 217.78px;
+  height: 42px;
+  /* text/2 */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  /* identical to box height */
+  /* neutral/white */
+  color: var(--color-secondary);
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.footer__company-link-text {
+  width: 217.78px;
+  height: 33px;
+  /* text/6 */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  /* identical to box height, or 150% */
+  /* neutral/white */
+  color: var(--color-secondary);
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.footer__support-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32.67px;
+  position: absolute;
+  width: 217.78px;
+  height: 305px;
+  left: 1383.56px;
+  bottom: 162.28px;
+}
+.footer__support-title {
+  width: 217.78px;
+  height: 42px;
+  /* text/2 */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  /* identical to box height */
+  /* neutral/white */
+  color: var(--color-secondary);
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.footer__support-link-text {
+  width: 217.78px;
+  height: 33px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  color: var(--color-secondary);
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}/*# sourceMappingURL=main.css.map */

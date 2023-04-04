@@ -1,8 +1,13 @@
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        position: absolute;
+        width: 1920px;
+        height: 164px;
+        left: 0px;
+        top: 27px;
 
 	&__nav {
 		display: flex;
@@ -19,52 +24,175 @@
 		}
 	}
 
-	&__nav-link {
-		&--active {
-			font-weight: bold;
-		}
-	}
+        &__nav-link {
+        &--active {
+            font-weight: bold;
+        }
+    }
+  
+        &__logo-img {
+            position: absolute;
+            width: 98.81px;
+            height: 56.29px;
+            left: 76px;
+            top: 5px;
+    }
+        
+        &__middle-group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 69.24px;
 
-	&__logo-group {
-		display: flex;
-	}
+            position: absolute;
+            width: 375.03px;
+            height: 34px;
+            left: 743.42px;
+            top: 38px;
+    }
+        
+        &__about {
+            width: 74px;
+            height: 29px;
+            /* text/menu */
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 0%;
+            /* identical to box height, or 29px */
+            color: #FFFFFF;
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+    }
 
-	&__middle-group {
-		display: flex;
-		gap: 10px;
-		color: #ffffff;
-		text-decoration: none;
-		font-family: "Poppins";
-		font-style: normal;
-		font-weight: 600;
-		font-size: 24px;
-		line-height: 120%;
-		background-color: #0aa967;
-	}
-
-	&__right-group {
-		display: flex;
-		gap: 10px;
-		color: #ffffff;
-		text-decoration: none;
-	}
-
-	&__middle-group a:hover,
-	&__right-group a:hover {
-		color: #0aa967;
-	}
+        &__shop {
+            width: 63px;
+            height: 29px;
+            /* text/menu */
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 0%;
+            /* identical to box height, or 29px */
+            color: #FFFFFF;
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
 }
 
-@media (min-width: 768px) {
-	.header {
-		&__nav {
-			&--mobile {
-				display: none;
-			}
-
-			&--desktop {
-				display: flex;
-			}
-		}
-	}
+        &__contact {
+            width: 99px;
+            height: 20px;
+            /* text/menu */
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 0%;
+            /* identical to box height, or 29px */
+            color: #FFFFFF;
+            /* Inside auto layout */
+            flex: none;
+            order: 2;
+            flex-grow: 0;
 }
+    
+        &__navigate-language {
+            position: absolute;
+            width: 40px;
+            height: 29px;
+            left: 1599px;
+            top: 20%;
+            bottom: 99.36%;
+    }
+
+        &__navigate-search {
+            position: absolute;
+            left: 86.77%;
+            right: 11.56%;
+            top: 20%;
+            bottom: 99.36%;
+        }
+        
+        &__navigate-cart {
+            position: absolute;
+            left: 89.83%;
+            right: 8.5%;
+            top: 19%;
+            bottom: 99.36%;
+
+        }
+
+        &__navigate-account {
+            position: absolute;
+            left: 92.9%;
+            right: 5.43%;
+            top: 18%;
+            bottom: 99.36%;
+        }
+        
+        &__line {
+            position: absolute;
+            width: 1920px;
+            height: 0px;
+            left: 0px;
+            top: 106.52px;
+            border: 1.33151px solid #FFFFFF;
+        }
+
+        &__skyski {
+            position: absolute;
+            width: 968px;
+            height: 230px;
+            left: 470px;
+            top: 347px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 200px;
+            line-height: 140%;
+            /* or 280px */
+            color: #FFFFFF;
+}
+
+        &__webuild {
+            position: absolute;
+            width: 948px;
+            height: 36px;
+            left: 492px;
+            top: 582px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 120%;
+            /* identical to box height, or 36px */
+            color: #FFFFFF;
+        }
+
+        //&__middle-group a:hover,
+        //&__right-group a:hover {
+        //color: #0aa967; 
+        //}
+} 
+
+ /* @media (min-width: 768px) {
+        .header {
+        &__nav {
+            &--mobile {
+                display: none;
+        }
+  
+        &--desktop {
+            display: flex;
+        }
+    }
+    }
+}*/
+  
