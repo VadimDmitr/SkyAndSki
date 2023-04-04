@@ -5,10 +5,13 @@ export const userDataContext = createContext({});
 /* eslint-disable import/no-anonymous-default-export */
 export default ({ children }) => {
 	const [userData, setUserData] = useState(null);
+	const [cart, setCart] = useState(null);
 
 	const userDataFromContext = {
 		userData,
 		setUserData,
+		cart,
+		setCart
 	};
 
 	return (

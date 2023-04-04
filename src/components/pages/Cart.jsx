@@ -1,7 +1,11 @@
 import snowboard from "../../images/snowboard_light.png";
 import cross from "../../images/icons/cross.svg";
+import { userDataContext } from "../../contexts/userContext";
+import { useContext } from "react";
 
 export const Cart = () => {
+    const { cart, setCart } = useContext(userDataContext);
+
 	return (
 		<div className="wrapper">
 			<div className="cart">
@@ -22,9 +26,9 @@ export const Cart = () => {
 							/>
 							<p>120$</p>
 							<div className="cart-item">
-								<p>-</p>
+								<p className="pointer">-</p>
 								<p>1</p>
-								<p>+</p>
+								<p className="pointer">+</p>
 							</div>
 						</div>
 					</div>
