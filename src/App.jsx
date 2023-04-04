@@ -7,6 +7,7 @@ import { Layout } from "./components/Layout";
 import { Home } from "./components/pages/Home";
 import { About } from "./components/About";
 import { Account } from "./components/pages/account/Account";
+import { Cart } from "./components/pages/Cart";
 import { Login } from "./components/pages/Login";
 import { Logout } from "./components/pages/account/Logout";
 import { Register } from "./components/pages/Register";
@@ -23,6 +24,7 @@ function App() {
 					<Route path="/home" element={<Home />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/account" element={<Account />} />
+					<Route path="/cart" element={<Cart />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/logout" element={<Logout />} />
 					<Route path="/register" element={<Register />} />

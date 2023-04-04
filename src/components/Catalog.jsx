@@ -7,7 +7,6 @@ import snowboardDark from "../images/snowboard_dark.png";
 import goggles from "../images/goggles.png";
 import boots from "../images/boots.png";
 
-
 export const Catalog = () => {
 	const productsData = [
 		{
@@ -41,7 +40,6 @@ export const Catalog = () => {
 	];
 
 	const [products, setProducts] = useState(productsData);
-
 
 	const categories = [
 		...new Set(

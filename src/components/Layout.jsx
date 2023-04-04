@@ -7,7 +7,7 @@ import { Footer } from "../components/layout/Footer";
 export const Layout = () => {
 	return (
 		<main>
-			<Header />
+			{/* <Header /> */}
 			<Outlet />
 			<Footer />
 		</main>
