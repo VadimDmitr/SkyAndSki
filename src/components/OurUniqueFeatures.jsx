@@ -7,8 +7,8 @@ export const OurUniqueFeatures = () => {
   return (
     <div className="our-unique-features">
       <div className="our-unique-features__item">
-        <img src={freeShippingIcon} alt="Free shoping Icon" />
-        <div className="text-content">
+        <img src={freeShippingIcon} alt="Free shipping Icon" />
+        <div className="text-content-shipping">
           <p className="our-unique-features__title">Free Shipping</p>
           <p className="our-unique-features__description">
             No charge for each delivery
@@ -17,7 +17,7 @@ export const OurUniqueFeatures = () => {
       </div>
       <div className="our-unique-features__item">
         <img src={quickPaymentIcon} alt="Quick payment Icon" />
-        <div className="text-content">
+        <div className="text-content-payment">
           <p className="our-unique-features__title">Quick Payment</p>
           <p className="our-unique-features__description">
             100% secure payment
@@ -26,7 +26,7 @@ export const OurUniqueFeatures = () => {
       </div>
       <div className="our-unique-features__item">
         <img src={supportIcon} alt="24-7 Support Icon" />
-        <div className="text-content">
+        <div className="text-content-support">
           <p className="our-unique-features__title">24/7 Support</p>
           <p className="our-unique-features__description">Quick support</p>
         </div>
