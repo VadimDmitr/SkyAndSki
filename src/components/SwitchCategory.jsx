@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Product } from "./Product";
+import { ProductCard } from "./ProductCard";
 
 // Refactor categories object
 const categories = [
@@ -44,7 +44,7 @@ export const SwitchCategory = ({ products }) => {
 			</div>
 			<div className="products">
 				{filteredProducts.map((product) => {
-					return <Product product={product} />;
+					return <ProductCard product={product} />;
 				})}
 			</div>
 		</>
