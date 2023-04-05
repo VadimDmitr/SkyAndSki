@@ -13,28 +13,28 @@ export const Catalog = () => {
 	const productsData = [
 		{
 			id: "0",
-			title: "Sardinia White",
+			name: "Sardinia White",
 			category: "board",
 			price: "312.49 SAR",
 			img: snowboardLight,
 		},
 		{
 			id: "1",
-			title: "Sicily Grey ",
+			name: "Sicily Grey ",
 			category: "ski",
 			price: "312.49 SAR",
 			img: snowboardDark,
 		},
 		{
 			id: "2",
-			title: "Sicily Grey",
+			name: "Sicily Grey",
 			category: "other",
 			price: "312.49 SAR",
 			img: goggles,
 		},
 		{
 			id: "3",
-			title: "Sicily Grey Décor 30×60",
+			name: "Sicily Grey Décor 30×60",
 			category: "other",
 			price: "312.49 SAR",
 			img: boots,
@@ -53,7 +53,7 @@ export const Catalog = () => {
 
 	const handleCategoryChange = (category) => {
 		setCurrentCategory(category);
-	  };
+	};
 
 	const filterItems = (currentCategory) => {
 		const newProducts = productsData.filter((product) => {
@@ -79,6 +79,7 @@ export const Catalog = () => {
 				<p className="catalog__filter">Other</p>
 			</div> */}
 			<SwitchCategory
+				products={products}
 				categories={categories}
 				currentCategory={currentCategory}
 				onCategoryChange={handleCategoryChange}
