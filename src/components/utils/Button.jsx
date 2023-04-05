@@ -1,7 +1,3 @@
 export const Button = () => {
-    return (
-        <button>
-            text
-        </button>
-    )
-}
+	return <button>text</button>;
+};

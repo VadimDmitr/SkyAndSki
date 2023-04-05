@@ -1,56 +1,171 @@
-.footer {
-    &__main-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-    }
-  
-    &__logo-container {
-        &--top-left {
-        /* Styling for the logo container positioned on the top-left */
-        }
-    }
-  
-    &__subscription {
-        margin: 0 1rem;
-    }
-  
-    &__subscription-title {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-  
-    &__company-info {
-        margin: 0 10rem;
-    }
-  
-    &__company-title {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-  
-    &__company-link {
-        &-text {
-        display: block;
-        margin-bottom: 0.25rem;
-        }
-    }
-  
-    &__support-info {
-        margin: 0 1rem;
-    }
-  
-    &__support-title {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-  
-    &__support-link {
-        &-text {
-        display: block;
-        margin-bottom: 0.25rem;
-        }
-    }
-  }
-  
+.footer__grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto auto;
+	grid-gap: 3.2rem;
+	grid-template-areas:
+		"company support"
+		"logo logo";
+	background-color: var(--color-neutral-black);
+	width: 100%;
+	padding: 1.6rem;
+	height: 617px;
+	left: 0px;
+	bottom: 0px;
+}
+
+.footer__company-info {
+	grid-area: company;
+	padding-left: 7rem;
+}
+
+.footer__support-info {
+	grid-area: support;
+}
+
+.footer__logo-container {
+	grid-area: logo;
+	margin: 0 auto;
+}
+
+.footer__company-title,
+.footer__support-title {
+	width: 13, 7rem;
+	height: 3rem;
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 2rem;
+	line-height: 3rem;
+	color: var(--color-secondary);
+}
+
+.footer__company-link-text,
+.footer__support-link-text {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 3.3rem;
+	color: var(--color-secondary);
+}
+
+.footer__subscription-input,
+.footer__subscription-form {
+	display: flex;
+	width: 20rem;
+	height: 4rem;
+	left: 1.9rem;
+	bottom: 9.253rem;
+	width: 100%;
+	background: #f9f9f9;
+	opacity: 0.56;
+}
+
+.footer__subscription-button {
+	left: 40rem;
+	top: 31rem;
+	background: #f4f2f2;
+}
+
+.footer__social-icons {
+	display: flex;
+	gap: 0.5rem;
+	width: 100%;
+	padding: 1rem;
+	flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+	.footer {
+		background-color: var(--color-neutral-black);
+		width: 100%;
+		padding: 1.6rem;
+	}
+
+	.footer__main-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		max-width: 120rem;
+		margin: 0 auto;
+	}
+
+	.footer__grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto auto;
+		grid-gap: 1rem;
+		grid-template-areas: "logo logo company support";
+	}
+
+	.footer__logo-container {
+		flex: 1;
+		align-self: center;
+		margin-right: 2rem;
+	}
+
+	.footer__info-container {
+		display: flex;
+		flex: 4;
+		justify-content: flex-start;
+	}
+
+	.footer__company-info {
+		flex: 1;
+		margin-right: 0;
+		padding-top: 5rem;
+	}
+
+	.footer__support-info {
+		flex: 1;
+		padding-top: 5rem;
+	}
+
+	.footer__company-title,
+	.footer__support-title {
+		width: 21.8rem;
+		height: 4.2rem;
+		font-family: "Poppins";
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2.8rem;
+		line-height: 4.2rem;
+		color: var(--color-secondary);
+	}
+
+	.footer__company-link-text,
+	.footer__support-link-text {
+		width: 21.8rem;
+		height: 3.3rem;
+		font-family: "Poppins";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 2.2rem;
+		line-height: 3.3rem;
+		color: var(--color-secondary);
+	}
+
+	.footer__subscription-input {
+		display: flex;
+		width: 35.8rem;
+		height: 4rem;
+		left: 1.9rem;
+		bottom: 9.253rem;
+		background: #f9f9f9;
+		opacity: 0.56;
+	}
+
+	.footer__subscription-button {
+		left: 40rem;
+		top: 31rem;
+		background: #100f0f;
+	}
+
+	.footer__social-icons {
+		display: flex;
+		gap: 4rem;
+		padding: 2.5rem;
+	}
+}
