@@ -90,7 +90,7 @@ export const Catalog = () => {
 				categories={categories}
 				productsData={productsData}
 			/> */}
-			<Products products={products} />
+			{/* <Products products={products} /> */}
 			{/* <Button /> */}
 			<div className="button">More products</div>
 		</div>
