@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Filters } from "./Filters";
-import { Products } from "./Products";
 import { SwitchCategory } from "./SwitchCategory";
 // import { Button } from "./utils/Button";
 import snowboardLight from "../images/snowboard_light.png";
@@ -40,27 +38,7 @@ export const Catalog = () => {
 		},
 	];
 
-	const [currentCategory, setCurrentCategory] =
-		useState("All");
-	const categories = ["All", "Board", "Ski", "Other"];
-	// const categories = [
-	// 	...new Set(
-	// 		productsData.map((product) => product.category)
-	// 	),
-	// ];
-
-	const [products, setProducts] = useState(productsData);
-
-	const handleCategoryChange = (category) => {
-		setCurrentCategory(category);
-	};
-
-	const filterItems = (currentCategory) => {
-		const newProducts = productsData.filter((product) => {
-			return product.category === currentCategory;
-		});
-		setProducts(newProducts);
-	};
+	const [products] = useState(productsData);
 
 	return (
 		<div className="catalog">
@@ -71,26 +49,9 @@ export const Catalog = () => {
 				</p>
 			</div>
 			<h2>Our Most Popular Board category</h2>
-			{/* <div className="catalog__filters">
-				<p className="catalog__filter">All</p>
-				<p className="catalog__filter">Sky</p>
-				<p className="catalog__filter">Ski</p>
-				<p className="catalog__filter">Boards</p>
-				<p className="catalog__filter">Other</p>
-			</div> */}
 			<SwitchCategory
 				products={products}
-				categories={categories}
-				currentCategory={currentCategory}
-				onCategoryChange={handleCategoryChange}
 			/>
-			{/* <Filters
-				filterItems={filterItems}
-				setItems={setProducts}
-				categories={categories}
-				productsData={productsData}
-			/> */}
-			{/* <Products products={products} /> */}
 			{/* <Button /> */}
 			<div className="button">More products</div>
 		</div>
