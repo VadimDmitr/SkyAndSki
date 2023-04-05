@@ -2,7 +2,41 @@
 
 .our-unique-features {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+		&__item {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 0px;
+			gap: 20.72px;
+			width: 347.26px;
+			height: 82.82px;
+		}
+
+		.our-unique-features__title {
+      width: 218px;
+      height: 42px;
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 27px;
+		}
+
+		.our-unique-features__description {
+		  font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 27px;
+			/* identical to box height */
+      color: #828282;
+		}
 }
+
 
 
 
@@ -15,55 +49,51 @@
 		flex-wrap: wrap;
 		
 
-		&__item {
+	&__item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 0px;
+		gap: 20.72px;
+		width: 347.26px;
+		height: 82.82px;
+		/* Inside auto layout */
+		flex: none;
+		order: 0;
+		flex-grow: 0;
+
+		img {
+			margin-right: 1rem;
+		}
+
+		.text-content {
 			display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 20.72px;
+			flex-direction: column;
+		}
 
-width: 347.26px;
-height: 82.82px;
+		.our-unique-features__title {
+			width: auto;
+			height: 41px;
+			font-family: "Poppins", sans-serif;
+			font-style: normal;
+			font-weight: 100;
+			font-size: 27.6315px;
+			line-height: 41px;
+			color: #081323;
+			margin: 0.4rem;
+		}
 
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-
-			img {
-				margin-right: 1rem;
-			}
-
-			.text-content {
-				display: flex;
-				flex-direction: column;
-			}
-
-			.our-unique-features__title {
-				width: auto;
-				height: 41px;
-				font-family: "Poppins", sans-serif;
-				font-style: normal;
-				font-weight: 100;
-				font-size: 27.6315px;
-				line-height: 41px;
-				color: #081323;
-				margin: 0.4rem;
-			}
-
-			.our-unique-features__description {
-				width: auto;
-				height: 26px;
-				font-family: "Poppins", sans-serif;
-				font-style: normal;
-				font-weight: 100;
-				font-size: 17.2697px;
-				line-height: 26px;
-				color: #828282;
-				margin: 0.4rem;
-			}
+		.our-unique-features__description {
+			width: auto;
+			height: 26px;
+			font-family: "Poppins", sans-serif;
+			font-style: normal;
+			font-weight: 100;
+			font-size: 17.2697px;
+			line-height: 26px;
+			color: #828282;
+			margin: 0.4rem;
 		}
 	}
+}
 }
