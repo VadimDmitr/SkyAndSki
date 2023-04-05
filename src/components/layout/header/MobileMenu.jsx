@@ -6,7 +6,7 @@ const Ul = styled.ul`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #dcdcdc;
+	background-color: var(--color-neutral-black);
 	position: fixed;
 	z-index: 10;
 	transform: ${({ openMobileMenu }) =>
@@ -20,6 +20,7 @@ const Ul = styled.ul`
 
 	li {
 		width: fit-content;
+		color: var(--color-white);
 		padding-bottom: 4px;
 		text-align: center;
 		font-size: 1.6rem;
@@ -53,6 +54,7 @@ export const MobileMenu = ({
 				padding: "2.2rem 3.5rem",
 				display: "flex",
 				justifyContent: "center",
+				color: "white",
 			}}
 			to={"/" + navLink}
 		>

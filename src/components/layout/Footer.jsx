@@ -11,8 +11,8 @@ import subscbutton from "../../images/icons/subscbutton.svg";
 export const Footer = () => {
 	return (
 		<footer className="footer">
-			<div className="footer__main-container">
-				<div className="footer__logo-container footer__logo-container--top-left">
+			<div className="footer__main-container footer__grid">
+				<div className="footer__logo-container footer__logo-container--bottom-left">
 					<div className="footer__media-links">
 						<form className="footer__subscription-form">
 							<input
@@ -38,7 +38,7 @@ export const Footer = () => {
 									<img
 										className="footer__social-img"
 										src={instagram}
-										alt="instagram"
+										alt="Instagram"
 									/>
 								</ExternalLink>
 								<ExternalLink
@@ -48,7 +48,7 @@ export const Footer = () => {
 									<img
 										className="footer__social-img"
 										src={dribbble}
-										alt="dribbble"
+										alt="Dribbble"
 									/>
 								</ExternalLink>
 								<ExternalLink
@@ -58,7 +58,7 @@ export const Footer = () => {
 									<img
 										className="footer__social-img"
 										src={twitter}
-										alt="twitter"
+										alt="Twitter"
 									/>
 								</ExternalLink>
 								<ExternalLink
@@ -68,13 +68,12 @@ export const Footer = () => {
 									<img
 										className="footer__social-img"
 										src={youtube}
-										alt="youtube"
+										alt="Youtube"
 									/>
 								</ExternalLink>
 							</div>
 						</div>
 					</div>
-					*/}
 				</div>
 				<div className="footer__company-info">
 					<h3 className="footer__company-title">Company</h3>

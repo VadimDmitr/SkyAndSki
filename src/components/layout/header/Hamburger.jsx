@@ -5,9 +5,11 @@ const Div = styled.div`
   width: 3.3rem;
   height: 2rem;
   position: ${({ openMobileMenu }) =>
-		openMobileMenu ? "fixed" : "absolute"};
-  top: 2.5rem;
-  right: 2rem;
+		openMobileMenu ? "fixed" : "relative"};
+  top: ${({ openMobileMenu }) =>
+		openMobileMenu ? "2.5rem" : "unset"};
+  right: ${({ openMobileMenu }) =>
+		openMobileMenu ? "2rem" : "unset"};
   z-index: 20;
   display: flex;
   justify-content: space-around;
@@ -16,7 +18,7 @@ const Div = styled.div`
   div {
     width: 3.3rem;
     height: 0.25rem;
-    background-color #000;
+    background-color #FFF;
     border-radius: 10px;
     transition: all 0.3s linear;
 
