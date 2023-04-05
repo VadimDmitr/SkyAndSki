@@ -1,6 +1,7 @@
 import { OurUniqueFeatures } from "../OurUniqueFeatures";
 import { Catalog } from "../Catalog"; 
 
+
 export const Home = () => {
 	return (
 		<>
