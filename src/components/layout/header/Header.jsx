@@ -17,23 +17,31 @@ export const Header = () => {
 			<nav className="nav-mobile mobile">
 				<Logo />
 				<div className="nav-mobile__right-group">
-                    <img className="pointer" src={search} alt="search" />
-                    <img className="pointer" src={cart} alt="cart" />
-                    <img className="pointer" src={account} alt="account" />
-                    <Hamburger
-                        openMobileMenu={openMobileMenu}
-                        setOpenMobileMenu={setOpenMobileMenu}
-                    />
-                </div>
+					<img
+						className="pointer"
+						src={search}
+						alt="search"
+					/>
+					<img className="pointer" src={cart} alt="cart" />
+					<img
+						className="pointer"
+						src={account}
+						alt="account"
+					/>
+					<Hamburger
+						openMobileMenu={openMobileMenu}
+						setOpenMobileMenu={setOpenMobileMenu}
+					/>
+				</div>
 				<MobileMenu
 					openMobileMenu={openMobileMenu}
 					setOpenMobileMenu={setOpenMobileMenu}
 				/>
 			</nav>
 			<nav className="nav desktop">
-                <NavLink to={"/"}>
-                    <Logo />
-                </NavLink>
+				<NavLink to={"/"}>
+					<Logo />
+				</NavLink>
 				<div className="nav__middle-group">
 					<NavLink className="nav__link" to={"/about"}>
 						<p>About</p>
@@ -41,10 +49,7 @@ export const Header = () => {
 					<NavLink className="nav__link" to={"/shop"}>
 						<p>Shop</p>
 					</NavLink>
-					<NavLink
-						className="nav__link"
-						to={"/contact"}
-					>
+					<NavLink className="nav__link" to={"/contact"}>
 						<p>Contact</p>
 					</NavLink>
 				</div>

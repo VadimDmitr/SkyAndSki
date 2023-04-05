@@ -49,9 +49,7 @@ export const Catalog = () => {
 				</p>
 			</div>
 			<h2>Our Most Popular Board category</h2>
-			<SwitchCategory
-				products={products}
-			/>
+			<SwitchCategory products={products} />
 			{/* <Button /> */}
 			<div className="button">More products</div>
 		</div>

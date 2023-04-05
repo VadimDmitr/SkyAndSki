@@ -22,7 +22,7 @@ export const SwitchCategory = ({ products }) => {
 			? products
 			: products.filter(
 					(product) => product.category === selectedCategory
-			);
+			  );
 
 	return (
 		<>
@@ -40,13 +40,11 @@ export const SwitchCategory = ({ products }) => {
 					>
 						{category.name}
 					</button>
-			))}
+				))}
 			</div>
 			<div className="products">
-			{filteredProducts.map((product) => {
-				return (
-						<Product product={product} />
-					);
+				{filteredProducts.map((product) => {
+					return <Product product={product} />;
 				})}
 			</div>
 		</>

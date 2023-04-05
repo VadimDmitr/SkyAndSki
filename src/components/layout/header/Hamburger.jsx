@@ -6,10 +6,10 @@ const Div = styled.div`
   height: 2rem;
   position: ${({ openMobileMenu }) =>
 		openMobileMenu ? "fixed" : "relative"};
-  top: ${({ openMobileMenu}) =>
-    openMobileMenu ? "2.5rem" : "unset"};
-  right: ${({ openMobileMenu}) =>
-    openMobileMenu ? "2rem" : "unset"};
+  top: ${({ openMobileMenu }) =>
+		openMobileMenu ? "2.5rem" : "unset"};
+  right: ${({ openMobileMenu }) =>
+		openMobileMenu ? "2rem" : "unset"};
   z-index: 20;
   display: flex;
   justify-content: space-around;

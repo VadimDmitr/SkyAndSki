@@ -9,14 +9,14 @@
 	background-color: var(--color-neutral-black);
 	width: 100%;
 	padding: 1.6rem;
-  height: 617px;
-  left: 0px;
-  bottom: 0px;
+	height: 617px;
+	left: 0px;
+	bottom: 0px;
 }
 
 .footer__company-info {
 	grid-area: company;
-  padding-left: 7rem;
+	padding-left: 7rem;
 }
 
 .footer__support-info {
@@ -30,7 +30,7 @@
 
 .footer__company-title,
 .footer__support-title {
-	width: 13,7rem;
+	width: 13, 7rem;
 	height: 3rem;
 	font-family: "Poppins";
 	font-style: normal;
@@ -57,7 +57,7 @@
 	height: 4rem;
 	left: 1.9rem;
 	bottom: 9.253rem;
-  width: 100%;
+	width: 100%;
 	background: #f9f9f9;
 	opacity: 0.56;
 }
@@ -71,11 +71,10 @@
 .footer__social-icons {
 	display: flex;
 	gap: 0.5rem;
-  width: 100%;
-  padding: 1rem;
-  flex-wrap: wrap;
+	width: 100%;
+	padding: 1rem;
+	flex-wrap: wrap;
 }
-
 
 @media only screen and (min-width: 768px) {
 	.footer {
@@ -93,14 +92,13 @@
 		margin: 0 auto;
 	}
 
-  .footer__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
-    grid-gap: 1rem;
-    grid-template-areas:
-      "logo logo company support";
-  }
+	.footer__grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto auto;
+		grid-gap: 1rem;
+		grid-template-areas: "logo logo company support";
+	}
 
 	.footer__logo-container {
 		flex: 1;
@@ -117,35 +115,35 @@
 	.footer__company-info {
 		flex: 1;
 		margin-right: 0;
-    padding-top: 5rem;
+		padding-top: 5rem;
 	}
 
 	.footer__support-info {
 		flex: 1;
-    padding-top: 5rem;
+		padding-top: 5rem;
 	}
 
 	.footer__company-title,
 	.footer__support-title {
 		width: 21.8rem;
-    height: 4.2rem;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2.8rem;
-    line-height: 4.2rem;
+		height: 4.2rem;
+		font-family: "Poppins";
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2.8rem;
+		line-height: 4.2rem;
 		color: var(--color-secondary);
 	}
 
 	.footer__company-link-text,
 	.footer__support-link-text {
 		width: 21.8rem;
-    height: 3.3rem;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.2rem;
-    line-height: 3.3rem;
+		height: 3.3rem;
+		font-family: "Poppins";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 2.2rem;
+		line-height: 3.3rem;
 		color: var(--color-secondary);
 	}
 

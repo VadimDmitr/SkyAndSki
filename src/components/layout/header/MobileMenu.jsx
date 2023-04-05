@@ -54,7 +54,7 @@ export const MobileMenu = ({
 				padding: "2.2rem 3.5rem",
 				display: "flex",
 				justifyContent: "center",
-				color: "white"
+				color: "white",
 			}}
 			to={"/" + navLink}
 		>
