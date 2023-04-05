@@ -8,7 +8,6 @@ import snowboardDark from "../images/snowboard_dark.png";
 import goggles from "../images/goggles.png";
 import boots from "../images/boots.png";
 
-
 export const Catalog = () => {
 	const productsData = [
 		{
@@ -41,8 +40,9 @@ export const Catalog = () => {
 		},
 	];
 
-	const [currentCategory, setCurrentCategory] = useState('All');
-	const categories = ['All', 'Board', 'Ski', 'Other'];
+	const [currentCategory, setCurrentCategory] =
+		useState("All");
+	const categories = ["All", "Board", "Ski", "Other"];
 	// const categories = [
 	// 	...new Set(
 	// 		productsData.map((product) => product.category)
