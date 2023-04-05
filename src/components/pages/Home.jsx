@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { OurUniqueFeatures } from "../OurUniqueFeatures";
 // import upper from "../../images/upper_main.svg";
 // import skyski from "../../images/skyski.svg";
@@ -34,6 +35,15 @@ export const Home = () => {
     <div className="product"></div>*
             </div>
     </div>*/}
+=======
+import { Catalog } from "../Catalog";
+
+export const Home = () => {
+	return (
+		<div className="wrapper">
+			{/* not sure if i should use h1, h2, or h3 here */}
+			<Catalog />
+>>>>>>> 83d97e10aeee0504a80f2c3f7b6e53b16619fea5
 		</div>
 	);
 };
