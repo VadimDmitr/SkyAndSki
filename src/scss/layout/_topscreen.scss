@@ -6,8 +6,6 @@
   background-size: cover;
   background-position: center;
   z-index: -1;
-  background-color: aquamarine;
-  color: aqua;
 
 //&__main {}
 
@@ -24,8 +22,7 @@
   font-size: 200px;
   line-height: 140%;
   /* or 280px */
-  color: #FFFFFF;
-  background-color: black;
+  color: var(--color-secondary);
 }
 
 &__webuild {
@@ -40,8 +37,7 @@
   font-size: 30px;
   line-height: 120%;
   /* identical to box height, or 36px */
-  color: #FFFFFF;
-  background-color: black;
+  color: var(--color-secondary);
 }
 
 &__line {
@@ -51,6 +47,5 @@
   left: 0px;
   top: 106.52px;
   border: 1.33151px solid #FFFFFF;
-  background-color: black;
 }
 }
