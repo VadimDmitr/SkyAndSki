@@ -13,7 +13,6 @@ export const Home = () => {
 				{/* not sure if i should use h1, h2, or h3 here */}
 				<Catalog />
 			</div>
-			
 		</>
 	);
 };
