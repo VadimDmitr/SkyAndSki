@@ -11,7 +11,7 @@ export default ({ children }) => {
 		userData,
 		setUserData,
 		cart,
-		setCart
+		setCart,
 	};
 
 	return (

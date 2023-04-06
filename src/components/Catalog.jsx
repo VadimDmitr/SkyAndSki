@@ -10,28 +10,28 @@ export const Catalog = () => {
 	const productsData = [
 		{
 			id: "0",
-			name: "Sardinia White",
+			title: "Sardinia White",
 			category: "board",
 			price: "312.49 SAR",
 			img: snowboardLight,
 		},
 		{
 			id: "1",
-			name: "Sicily Grey ",
+			title: "Sicily Grey ",
 			category: "ski",
 			price: "312.49 SAR",
 			img: snowboardDark,
 		},
 		{
 			id: "2",
-			name: "Sicily Grey",
+			title: "Sicily Grey",
 			category: "other",
 			price: "312.49 SAR",
 			img: goggles,
 		},
 		{
 			id: "3",
-			name: "Sicily Grey Décor 30×60",
+			title: "Sicily Grey Décor 30×60",
 			category: "other",
 			price: "312.49 SAR",
 			img: boots,
@@ -51,7 +51,7 @@ export const Catalog = () => {
 			<h2>Our Most Popular Board category</h2>
 			<SwitchCategory products={products} />
 			{/* <Button /> */}
-			<div className="button">More products</div>
+			<div className="button pointer">More products</div>
 		</div>
 	);
 };

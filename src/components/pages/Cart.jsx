@@ -4,7 +4,7 @@ import { userDataContext } from "../../contexts/userContext";
 import { useContext } from "react";
 
 export const Cart = () => {
-    const { cart, setCart } = useContext(userDataContext);
+	const { cart, setCart } = useContext(userDataContext);
 
 	return (
 		<div className="wrapper">
