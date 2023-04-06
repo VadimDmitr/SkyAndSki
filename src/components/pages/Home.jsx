@@ -6,10 +6,9 @@ import { TopScreen } from "../TopScreen";
 export const Home = () => {
 	return (
 		<>
-		  <div className="our-unique-features">
+		<div className="top-screen">
 				<TopScreen />
 			</div>
-
 			<div className="our-unique-features">
 				<OurUniqueFeatures />
 			</div>
