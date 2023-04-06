@@ -1,10 +1,15 @@
 import { OurUniqueFeatures } from "../OurUniqueFeatures";
 import { Catalog } from "../Catalog"; 
+import { TopScreen } from "../TopScreen";
 
 
 export const Home = () => {
 	return (
 		<>
+		  <div className="our-unique-features">
+				<TopScreen />
+			</div>
+
 			<div className="our-unique-features">
 				<OurUniqueFeatures />
 			</div>

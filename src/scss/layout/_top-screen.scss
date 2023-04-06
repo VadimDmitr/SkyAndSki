@@ -1,0 +1,38 @@
+&__line {
+  position: absolute;
+  width: 1920px;
+  height: 0px;
+  left: 0px;
+  top: 106.52px;
+  border: 1.33151px solid #FFFFFF;
+}
+
+&__skyski {
+  position: absolute;
+  width: 968px;
+  height: 230px;
+  left: 470px;
+  top: 347px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 140%;
+  /* or 280px */
+  color: #FFFFFF;
+}
+
+&__webuild {
+  position: absolute;
+  width: 948px;
+  height: 36px;
+  left: 492px;
+  top: 582px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  /* identical to box height, or 36px */
+  color: #FFFFFF;
+}
