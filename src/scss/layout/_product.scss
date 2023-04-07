@@ -23,6 +23,32 @@
 
 	&__change-quantity-container {
 		display: flex;
+		width: fit-content;
+		width: -moz-fit-content;
+		font-size: 2rem;
 		border: 1px solid black;
+	}
+
+	&__change-quantity {
+		padding: 3.2rem 0;
+
+		&--left {
+			padding-left: 2.4rem;
+			padding-right: 2.4rem;
+		}
+
+		&--right {
+			padding-left: 2.4rem;
+			padding-right: 2.4rem;
+		}
+
+		&:hover {
+			background-color: color-mix(in srgb, white 90%, black);
+			// background-color: black;
+		}
+	}
+
+	&__quantity {
+		padding: 3.2rem;
 	}
 }
