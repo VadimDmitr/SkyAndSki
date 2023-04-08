@@ -1,6 +1,6 @@
 import { OurUniqueFeatures } from "../OurUniqueFeatures";
-import { Catalog } from "../Catalog"; 
 import { TopScreen } from "../TopScreen";
+import { Catalog } from "components/Catalog";
 
 
 export const Home = () => {
@@ -20,4 +20,3 @@ export const Home = () => {
 		</>
 	);
 };
-

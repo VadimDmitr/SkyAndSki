@@ -1,8 +1,6 @@
-import React from "react";
-import "../scss/layout/_our-unique-features.scss";
-import freeShippingIcon from "../images/icons/free_shoping.svg";
-import quickPaymentIcon from "../images/icons/quick_payment.svg";
-import supportIcon from "../images/icons/24_support.svg";
+import freeShippingIcon from "images/icons/free_shoping.svg";
+import quickPaymentIcon from "images/icons/quick_payment.svg";
+import supportIcon from "images/icons/24_support.svg";
 
 export const OurUniqueFeatures = () => {
 	return (
@@ -10,9 +8,9 @@ export const OurUniqueFeatures = () => {
 			<div className="our-unique-features__item">
 				<img
 					src={freeShippingIcon}
-					alt="Free shoping Icon"
+					alt="Free shipping Icon"
 				/>
-				<div className="text-content">
+				<div className="text-content-shipping">
 					<p className="our-unique-features__title">
 						Free Shipping
 					</p>
@@ -26,7 +24,7 @@ export const OurUniqueFeatures = () => {
 					src={quickPaymentIcon}
 					alt="Quick payment Icon"
 				/>
-				<div className="text-content">
+				<div className="text-content-payment">
 					<p className="our-unique-features__title">
 						Quick Payment
 					</p>
@@ -37,7 +35,7 @@ export const OurUniqueFeatures = () => {
 			</div>
 			<div className="our-unique-features__item">
 				<img src={supportIcon} alt="24-7 Support Icon" />
-				<div className="text-content">
+				<div className="text-content-support">
 					<p className="our-unique-features__title">
 						24/7 Support
 					</p>

@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { userDataContext } from "../../contexts/userContext";
-import { BASEAUTHURL } from "../../api/index";
+import { userDataContext } from "contexts/userContext";
+import { BASEAUTHURL } from "api/index";
 
 const URL = BASEAUTHURL + "login";
 

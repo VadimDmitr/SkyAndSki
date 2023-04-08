@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Logo } from "../../Logo";
-import { Hamburger } from "./Hamburger";
-import { MobileMenu } from "./MobileMenu";
-import search from "../../../images/icons/search.svg";
-import cart from "../../../images/icons/cart.svg";
-import account from "../../../images/icons/account.svg";
-import language from "../../../images/icons/language.svg";
+import { Logo } from "components/Logo";
+import { Hamburger } from "components/layout/header/Hamburger";
+import { MobileMenu } from "components/layout/header/MobileMenu";
+import search from "images/icons/search.svg";
+import cart from "images/icons/cart.svg";
+import account from "images/icons/account.svg";
+import language from "images/icons/language.svg";
 
 export const Header = () => {
 	const [openMobileMenu, setOpenMobileMenu] =

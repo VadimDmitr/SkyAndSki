@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { userDataContext } from "../../../contexts/userContext";
-import { AccountMobile } from "./AccountMobile";
-import { OrderHistory } from "./orders/OrderHistory";
-import { ChangePassword } from "./ChangePassword";
-import { DeleteAccount } from "./DeleteAccount";
+import { userDataContext } from "contexts/userContext";
+import { AccountMobile } from "components/pages/account/AccountMobile";
+import { OrderHistory } from "components/pages/account/orders/OrderHistory";
+import { ChangePassword } from "components/pages/account/ChangePassword";
+import { DeleteAccount } from "components/pages/account/DeleteAccount";
 // import { Logout } from "./Logout";
 
 export const Account = () => {
