@@ -52,18 +52,24 @@
   }
 
     &__button {
-      display: flex;
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 20px 40px;
-    gap: 14px;
-
+    padding: 2rem 4rem;
+    gap: 1.4rem;
     position: absolute;
-    width: 203px;
-    height: 67px;
-    left: 847px;
-    top: 707px;
+    width: 20.3rem;
+    height: 6.7rem;
+    left: 77.2rem;
+    top: 58.2rem;
     background: var(--color-primary);
+    color: var(--color-secondary);
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 120%;
   }
 }
 
