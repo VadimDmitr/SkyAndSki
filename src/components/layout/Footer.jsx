@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ExternalLink } from "react-external-link";
-import twitter from "../../images/icons/twitter.svg";
-import youtube from "../../images/icons/youtube.svg";
-import dribbble from "../../images/icons/dribbble.svg";
-import instagram from "../../images/icons/instagram.svg";
-import subscbutton from "../../images/icons/subscbutton.svg";
 // import { NavLink } from "react-router-dom";
+import { ExternalLink } from "react-external-link";
+import twitter from "images/icons/twitter.svg";
+import youtube from "images/icons/youtube.svg";
+import dribbble from "images/icons/dribbble.svg";
+import instagram from "images/icons/instagram.svg";
+import subscbutton from "images/icons/subscbutton.svg";
 
 export const Footer = () => {
 	return (

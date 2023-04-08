@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Product } from "./Product";
+import { Product } from "components/Product";
 
 // Refactor categories object
 const categories = [
