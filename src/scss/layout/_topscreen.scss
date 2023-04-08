@@ -102,20 +102,47 @@
 }
 
 
-@media (max-width: 1281px) {
-  .top-screen {
-  &__skyski,
-  &__webuild {
-    left: 45%;
-    }
-  }
-}
 
 @media (max-width: 1281px) {
   .top-screen {
   &__skyski,
   &__webuild {
     left: 50%;
+    }
+
+  &__button {
+    width: 21rem;
+    left: 55.2rem;
+    top: 51.2rem;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+
+  .top-screen {
+  &__button {
+    left: 43.2rem;
+    top: 47.2rem;
+    }
+  }
+}
+
+@media (max-width: 821px) {
+  .top-screen {
+  &__skyski {
+    top: 8rem;
+    width: 90%;
+    }
+
+  &__webuild {
+    top: 28rem;
+    width: 90%;
+      }
+
+  &__button {
+    left: 31.2rem;
+    top: 34.2rem;
     }
   }
 }
@@ -127,10 +154,15 @@
     width: 90%;
     }
 
-    &__webuild {
-      top: 30rem;
-      width: 90%;
-      }
+  &__webuild {
+    top: 30rem;
+    width: 90%;
+    }
+
+  &__button {
+    left: 31.2rem;
+    top: 35.2rem;
+    }
   }
 }
 
