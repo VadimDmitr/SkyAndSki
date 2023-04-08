@@ -58,14 +58,14 @@
 	left: 1.9rem;
 	bottom: 9.253rem;
 	width: 100%;
-	background: #f9f9f9;
+	background: var(--color-secondary);
 	opacity: 0.56;
 }
 
 .footer__subscription-button {
 	left: 40rem;
 	top: 31rem;
-	background: #f4f2f2;
+	background: var(--color-secondary);
 }
 
 .footer__social-icons {
