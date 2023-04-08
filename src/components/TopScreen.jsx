@@ -9,9 +9,11 @@ export const TopScreen = () => {
   <div>
     <div className="top-screen">
       <img className="top-screen__main" src={home} alt="home" />
+      <img className="top-screen__line" src={line} alt="line" />
       <img className="top-screen__skyski" src={skyski} alt="sky&ski" />
       <img className="top-screen__webuild" src={build} alt="We build only the best" />
-      <img className="top-screen__line" src={line} alt="line" />
+      <button className="top-screen__button">SHOP NOW</button>
+     
     </div>
   </div>
   )

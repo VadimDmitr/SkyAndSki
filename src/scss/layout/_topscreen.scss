@@ -50,8 +50,22 @@
     top: 10.652rem;
     border: 1.33151px solid #FFFFFF;
   }
-}
 
+    &__button {
+      display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 40px;
+    gap: 14px;
+
+    position: absolute;
+    width: 203px;
+    height: 67px;
+    left: 847px;
+    top: 707px;
+    background: var(--color-primary);
+  }
+}
 
 @media (max-width: 767px) {
   .top-screen {
