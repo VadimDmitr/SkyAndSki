@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { userDataContext } from "../../../contexts/userContext";
+import { userDataContext } from "contexts/userContext";
 
 export const Logout = () => {
 	const { userData, setUserData } =
