@@ -12,9 +12,9 @@ export default ({ children }) => {
 	};
 
 	return (
-		<cart.Provider value={cartDataFromContext}>
+		<cartDataContext.Provider value={cartDataFromContext}>
 			{children}
-		</cart.Provider>
+		</cartDataContext.Provider>
 	);
 };
 /* eslint-disable import/no-anonymous-default-export */
