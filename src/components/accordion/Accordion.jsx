@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Chevron } from "components/accordion/Chevron";
 
-
 export const Accordion = (props) => {
 	const [active, setActive] = useState(false);
 	const contentRef = useRef(null);
