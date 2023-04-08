@@ -1,5 +1,5 @@
 import { OurUniqueFeatures } from "../OurUniqueFeatures";
-import { Catalog } from "../Catalog"; 
+import { Catalog } from "components/Catalog"; 
 
 
 export const Home = () => {
