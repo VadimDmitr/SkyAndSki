@@ -1,9 +1,7 @@
-import freeShippingIcon from "../images/icons/free_shoping.svg";
-import quickPaymentIcon from "../images/icons/quick_payment.svg";
-import supportIcon from "../images/icons/24_support.svg";
 import freeShippingIcon from "images/icons/free_shoping.svg";
 import quickPaymentIcon from "images/icons/quick_payment.svg";
 import supportIcon from "images/icons/24_support.svg";
+
 
 export const OurUniqueFeatures = () => {
 	return (

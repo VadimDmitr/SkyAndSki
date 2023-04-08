@@ -1,5 +1,5 @@
 import { OurUniqueFeatures } from "../OurUniqueFeatures";
-import { Catalog } from "../Catalog"; 
+
 import { TopScreen } from "../TopScreen";
 import { Catalog } from "components/Catalog";
 
@@ -13,7 +13,6 @@ export const Home = () => {
 			<div className="our-unique-features">
 				<OurUniqueFeatures />
 			</div>
-
 			<div className="wrapper">
 				{/* not sure if i should use h1, h2, or h3 here */}
 				<Catalog />
