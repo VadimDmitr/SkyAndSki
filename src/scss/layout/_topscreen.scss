@@ -58,7 +58,7 @@
     &__skyski {
       width: 40%; // Adjust the width to fit mobile screens
       height: auto; // Keep the aspect ratio
-      left: 30%; // Adjust the position
+      left: 50%; // Adjust the position
       top: 30%; // Adjust the position
       font-size: 10rem; // Adjust the font size
     }
@@ -66,7 +66,7 @@
     &__webuild {
       width: 40%; // Adjust the width to fit mobile screens
       height: auto; // Keep the aspect ratio
-      left: 30%; // Adjust the position
+      left: 50%; // Adjust the position
       top: 50%; // Adjust the position
       font-size: 2rem; // Adjust the font size
     }
@@ -75,8 +75,75 @@
       width: 100%; // Adjust the width to fit mobile screens
       height: 0rem;
       left: 0rem;
-      top: 8rem; // Adjust the position
+      top: 3rem; // Adjust the position
       border: 0.1rem solid #FFFFFF;
     }
+  }
+}
+
+
+@media (max-width: 1281px) {
+  .top-screen {
+  &__skyski,
+  &__webuild {
+    left: 45%;
+    }
+  }
+}
+
+@media (max-width: 1281px) {
+  .top-screen {
+  &__skyski,
+  &__webuild {
+    left: 50%;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .top-screen {
+  &__skyski {
+    top: 10rem;
+    width: 90%;
+    }
+
+    &__webuild {
+      top: 30rem;
+      width: 90%;
+      }
+  }
+}
+
+@media (max-width: 541px) {
+    .top-screen {
+      &__webuild {
+        top:19rem
+      }
+    }
+  }
+
+@media (max-width: 415px) {
+  .top-screen {
+  &__skyski {
+    top: 10rem;
+    width: 90%;
+    }
+
+  &__webuild {
+    top:17rem
+    }  
+  }
+}
+
+@media (max-width: 281px) {
+  .top-screen {
+  &__skyski {
+    top: 5rem;
+    width: 90%;
+    }
+
+  &__webuild {
+    top:10.5rem
+    }  
   }
 }
