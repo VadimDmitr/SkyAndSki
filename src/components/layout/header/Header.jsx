@@ -38,7 +38,9 @@ export const Header = () => {
 					setOpenMobileMenu={setOpenMobileMenu}
 				/>
 			</nav>
+
 			<nav className="nav desktop">
+			
 				<NavLink to={"/"}>
 					<Logo />
 				</NavLink>
