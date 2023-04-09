@@ -3,11 +3,10 @@ import { OurUniqueFeatures } from "../OurUniqueFeatures";
 import { TopScreen } from "../TopScreen";
 import { Catalog } from "components/Catalog";
 
-
 export const Home = () => {
 	return (
 		<>
-		<div className="top-screen">
+			<div className="top-screen">
 				<TopScreen />
 			</div>
 			<div className="our-unique-features">
