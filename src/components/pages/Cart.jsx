@@ -1,10 +1,10 @@
-import snowboard from "../../images/snowboard_light.png";
-import cross from "../../images/icons/cross.svg";
-import { userDataContext } from "../../contexts/userContext";
-import { useContext } from "react";
+// import { useContext } from "react";
+// import { userDataContext } from "contexts/userContext";
+import snowboard from "images/snowboard_light.png";
+import cross from "images/icons/cross.svg";
 
 export const Cart = () => {
-	const { cart, setCart } = useContext(userDataContext);
+	// const { cart, setCart } = useContext(userDataContext);
 
 	return (
 		<div className="wrapper">
@@ -15,6 +15,7 @@ export const Cart = () => {
 						<img
 							className="cart-item__img"
 							src={snowboard}
+							alt="snowboard"
 						/>
 						<div className="cart-item__content">
 							<p className="cart-item__title">

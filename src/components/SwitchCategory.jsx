@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ProductCard } from "./ProductCard";
-import { Product } from "components/Product";
+import { ProductCard } from "components/ProductCard";
+// import { Product } from "components/Product";
 
 // Refactor categories object
 const categories = [

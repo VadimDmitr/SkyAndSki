@@ -25,7 +25,7 @@ export const Product = () => {
 			cartLocal[item.name] = { ...item, quantity };
 		}
 		console.log("cartLocal ====> ", cartLocal);
-		setCart({...cart, cartLocal});
+		setCart({ ...cart, cartLocal });
 		console.log("cart ====> ", cart);
 	};
 
@@ -55,7 +55,7 @@ export const Product = () => {
 							+
 						</span>
 					</div>
-					<p>Add to cart</p>
+					<button className="button">Add to cart</button>
 				</div>
 			</div>
 		</div>

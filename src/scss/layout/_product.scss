@@ -1,3 +1,5 @@
+// product page
+// e.g. localhost:3000/product/1
 .product {
 	display: flex;
 	flex-direction: column;
@@ -43,7 +45,11 @@
 		}
 
 		&:hover {
-			background-color: color-mix(in srgb, white 90%, black);
+			background-color: color-mix(
+				in srgb,
+				white 90%,
+				black
+			);
 			// background-color: black;
 		}
 	}
