@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Home } from "./components/pages/Home";
-import { About } from "./components/About";
+import { About } from "./components/pages/About";
 import { Cart } from "./components/pages/Cart";
 import { Product } from "./components/Product";
 import { Account } from "./components/pages/account/Account";
