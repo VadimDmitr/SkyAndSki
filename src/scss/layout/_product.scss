@@ -58,3 +58,28 @@
 		padding: 3.2rem;
 	}
 }
+
+
+@media only screen and (min-width: 1440px) {
+	.product {
+		flex-direction: row;
+		gap: 14.6rem;
+
+		&__img {
+			max-width: 57.9rem;
+		}
+
+		&__title {
+			font-size: 6.369rem;
+		}
+
+		&__price {
+			font-size: 3rem;
+		}
+
+		&__description {
+			font-size: 2rem;
+		}
+	}
+
+}

@@ -40,7 +40,7 @@ export const Product = () => {
 				<div className="product__content">
 					<p className="product__title">Sardinia White</p>
 					<p className="product__price">312.49 SAR</p>
-					<p>description</p>
+					<p className="product__description">Product Short Description senectus et netus et malesuada fames ac turpis egestas. Vesitbulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend </p>
 					<div className="product__change-quantity-container">
 						<span className="product__change-quantity product__change-quantity--left pointer">
 							-
@@ -55,7 +55,7 @@ export const Product = () => {
 							+
 						</span>
 					</div>
-					<button className="button">Add to cart</button>
+					<button className="button pointer">Add to cart</button>
 				</div>
 			</div>
 		</div>
