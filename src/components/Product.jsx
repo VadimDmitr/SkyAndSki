@@ -19,19 +19,49 @@ export const Product = () => {
 		setQuantityBox(quantityBox + 1);
 	};
 
+	// const addItemToCart = (item, quantity) => {
+	// 	// TODO
+	// 	// REFACTOR THIS
+	// 	// Check if the item already exists in the cart
+	// 	if (cart) {
+	// 		if (cart[item.title]) {
+	// 			// If the item exists, update its quantity
+	// 			cart[item.title].quantity += quantity;
+	// 		} else {
+	// 			// If the item doesn't exist, add it to the cartLocal with the specified quantity
+	// 			cart[item.title] = { ...item, quantity };
+	// 		}
+	// 	}
+	// };
+
 	const addItemToCart = (item, quantity) => {
 		// Check if the item already exists in the cart
 		if (cart) {
 			if (cart[item.title]) {
 				// If the item exists, update its quantity
-				cart[item.title].quantity += quantity;
+				const updatedCart = {
+					...cart,
+					[item.title]: {
+						...cart[item.title],
+						quantity: cart[item.title].quantity + quantity,
+					},
+				};
+				setCart(updatedCart);
 			} else {
-				// If the item doesn't exist, add it to the cartLocal with the specified quantity
-				cart[item.title] = { ...item, quantity };
+				// If the item doesn't exist, add it to the cart with the specified quantity
+				const updatedCart = {
+					...cart,
+					[item.title]: {
+						...item,
+						quantity,
+					},
+				};
+				setCart(updatedCart);
 			}
 		}
+
 		// console.log("cart before setCart ====> ", cart);
-		setCart({ ...cart, ...cart });
+		// setCart({ ...cart, ...cart });
 		console.log("cart after setCart ====> ", cart);
 	};
 

@@ -1,10 +1,14 @@
-// import { useContext } from "react";
-// import { userDataContext } from "contexts/userContext";
+import { useContext } from "react";
+import { cartDataContext } from "contexts/cartContext";
 import snowboard from "images/snowboard_light.png";
 import cross from "images/icons/cross.svg";
 
 export const Cart = () => {
-	// const { cart, setCart } = useContext(userDataContext);
+	const { cart, setCart } = useContext(cartDataContext);
+
+	const getCartValue = () => {
+		console.log("cart =====> ", cart);
+	}
 
 	return (
 		<div className="wrapper">
@@ -34,6 +38,7 @@ export const Cart = () => {
 						</div>
 					</div>
 				</div>
+				<butto onClick={() => getCartValue()}>Click</butto>
 			</div>
 		</div>
 	);
