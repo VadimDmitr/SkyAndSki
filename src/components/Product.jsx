@@ -19,6 +19,13 @@ export const Product = () => {
 		setQuantityBox(quantityBox + 1);
 	};
 
+	const decreaseQuantityToAdd = () => {
+		if (quantityBox > 1) {
+			console.log("quantityBox ===> ", quantityBox);
+			setQuantityBox(quantityBox - 1);
+		}
+	};
+
 	// const addItemToCart = (item, quantity) => {
 	// 	// TODO
 	// 	// REFACTOR THIS
@@ -85,7 +92,8 @@ export const Product = () => {
 						est. Mauris placerat eleifend{" "}
 					</p>
 					<div className="product__change-quantity-container">
-						<button className="product__change-quantity product__change-quantity--left pointer">
+						<button className="product__change-quantity product__change-quantity--left pointer"
+						onClick={() => decreaseQuantityToAdd()}>
 							<svg
 								width="17"
 								height="17"
@@ -129,7 +137,7 @@ export const Product = () => {
 					</div>
 					<button
 						className="button pointer"
-						onClick={() => addItemToCart(item, 1)}
+						onClick={() => addItemToCart(item, quantityBox)}
 					>
 						Add to cart
 					</button>
