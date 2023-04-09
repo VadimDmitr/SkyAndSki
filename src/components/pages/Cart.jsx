@@ -6,8 +6,46 @@ import cross from "images/icons/cross.svg";
 export const Cart = () => {
 	const { cart, setCart } = useContext(cartDataContext);
 
+	const item = {
+		id: "0",
+		title: "Sardinia White",
+		category: "board",
+		price: "312.49 SAR",
+		img: snowboard,
+	};
+
 	const getCartValue = () => {
 		console.log("cart =====> ", cart);
+	}
+
+	const increaseQuantity = (item, quantity) => {
+		if (cart) {
+			if (cart[item.title]) {
+				// If the item exists, update its quantity
+				const updatedCart = {
+					...cart,
+					[item.title]: {
+						...cart[item.title],
+						quantity: cart[item.title].quantity + quantity,
+					},
+				};
+				setCart(updatedCart);
+			} else {
+				// If the item doesn't exist, add it to the cart with the specified quantity
+				const updatedCart = {
+					...cart,
+					[item.title]: {
+						...item,
+						quantity,
+					},
+				};
+				setCart(updatedCart);
+			}
+		}
+
+		// console.log("cart before setCart ====> ", cart);
+		// setCart({ ...cart, ...cart });
+		console.log("cart after setCart ====> ", cart);
 	}
 
 	return (
@@ -33,12 +71,12 @@ export const Cart = () => {
 							<div className="cart-item">
 								<p className="pointer">-</p>
 								<p>1</p>
-								<p className="pointer">+</p>
+								<p className="pointer" onClick={() => increaseQuantity(item, 1)}>+</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<butto onClick={() => getCartValue()}>Click</butto>
+				<button onClick={() => getCartValue()}>Click</button>
 			</div>
 		</div>
 	);
