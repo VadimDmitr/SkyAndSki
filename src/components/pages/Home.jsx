@@ -1,6 +1,5 @@
 import { OurUniqueFeatures } from "../OurUniqueFeatures";
-import { Catalog } from "../Catalog"; 
-
+import { Catalog } from "components/Catalog";
 
 export const Home = () => {
 	return (
@@ -13,8 +12,6 @@ export const Home = () => {
 				{/* not sure if i should use h1, h2, or h3 here */}
 				<Catalog />
 			</div>
-			
 		</>
 	);
 };
-

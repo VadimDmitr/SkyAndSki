@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { SwitchCategory } from "./SwitchCategory";
-// import { Button } from "./utils/Button";
-import snowboardLight from "../images/snowboard_light.png";
-import snowboardDark from "../images/snowboard_dark.png";
-import goggles from "../images/goggles.png";
-import boots from "../images/boots.png";
+import { SwitchCategory } from "components/SwitchCategory";
+// import { Button } from "utils/Button";
+import snowboardLight from "images/snowboard_light.png";
+import snowboardDark from "images/snowboard_dark.png";
+import goggles from "images/goggles.png";
+import boots from "images/boots.png";
 
 export const Catalog = () => {
 	const productsData = [

@@ -1,9 +1,9 @@
 import { useEffect, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { userDataContext } from "../../../contexts/userContext";
+import { userDataContext } from "contexts/userContext";
 import { Accordion } from "../../accordion/Accordion";
-import { ChangePassword } from "./ChangePassword";
-import { DeleteAccount } from "./DeleteAccount";
+import { ChangePassword } from "components/pages/account/ChangePassword";
+import { DeleteAccount } from "components/pages/account/DeleteAccount";
 // import { Logout } from "./Logout";
 
 export const AccountMobile = () => {

@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import { userDataContext } from "../../../contexts/userContext";
-import { BASEAUTHURL } from "../../../api/index";
+import { userDataContext } from "contexts/userContext";
+import { BASEAUTHURL } from "api/index";
 
 const URL = BASEAUTHURL + "removeuser";
 
