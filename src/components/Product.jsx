@@ -1,9 +1,10 @@
-import { useContext } from "react";
-import { userDataContext } from "../contexts/userContext";
+import { useState, useContext } from "react";
+import { cartDataContext } from "../contexts/cartContext";
 import snowboard from "../images/snowboard_light.png";
 
 export const Product = () => {
-	const { cart, setCart } = useContext(userDataContext);
+	const { cart, setCart } = useContext(cartDataContext);
+	const [quantityBox, setQuantityBox] = useState(1);
 
 	const item = {
 		id: "0",
@@ -13,20 +14,25 @@ export const Product = () => {
 		img: snowboard,
 	};
 
-	let cartLocal = {};
+	const increaseQuantityToAdd = () => {
+		console.log("quantityBox ===> ", quantityBox);
+		setQuantityBox(quantityBox + 1);
+	};
 
 	const addItemToCart = (item, quantity) => {
 		// Check if the item already exists in the cart
-		if (cartLocal[item.name]) {
-			// If the item exists, update its quantity
-			cartLocal[item.name].quantity += quantity;
-		} else {
-			// If the item doesn't exist, add it to the cartLocal with the specified quantity
-			cartLocal[item.name] = { ...item, quantity };
+		if (cart) {
+			if (cart[item.title]) {
+				// If the item exists, update its quantity
+				cart[item.title].quantity += quantity;
+			} else {
+				// If the item doesn't exist, add it to the cartLocal with the specified quantity
+				cart[item.title] = { ...item, quantity };
+			}
 		}
-		console.log("cartLocal ====> ", cartLocal);
-		setCart({ ...cart, cartLocal });
-		console.log("cart ====> ", cart);
+		// console.log("cart before setCart ====> ", cart);
+		setCart({ ...cart, ...cart });
+		console.log("cart after setCart ====> ", cart);
 	};
 
 	return (
@@ -67,11 +73,11 @@ export const Product = () => {
 							</svg>
 						</button>
 						<span className="product__quantity pointer">
-							1
+							{quantityBox}
 						</span>
 						<button
 							className="product__change-quantity product__change-quantity--right pointer"
-							onClick={() => addItemToCart(item, 1)}
+							onClick={() => increaseQuantityToAdd()}
 						>
 							<svg
 								width="17"
@@ -91,7 +97,10 @@ export const Product = () => {
 							</svg>
 						</button>
 					</div>
-					<button className="button pointer">
+					<button
+						className="button pointer"
+						onClick={() => addItemToCart(item, 1)}
+					>
 						Add to cart
 					</button>
 				</div>

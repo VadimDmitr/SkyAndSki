@@ -4,7 +4,7 @@ export const cartDataContext = createContext({});
 
 /* eslint-disable import/no-anonymous-default-export */
 export default ({ children }) => {
-	const [cart, setCart] = useState(null);
+	const [cart, setCart] = useState([]);
 
 	const cartDataFromContext = {
 		cart,
