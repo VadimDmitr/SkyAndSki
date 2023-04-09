@@ -40,22 +40,60 @@ export const Product = () => {
 				<div className="product__content">
 					<p className="product__title">Sardinia White</p>
 					<p className="product__price">312.49 SAR</p>
-					<p className="product__description">Product Short Description senectus et netus et malesuada fames ac turpis egestas. Vesitbulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend </p>
+					<p className="product__description">
+						Product Short Description senectus et netus et
+						malesuada fames ac turpis egestas. Vesitbulum
+						tortor quam, feugiat vitae, ultricies eget,
+						tempor sit amet, ante. Donec eu libero sit amet
+						quam egestas semper. Aenean ultricies mi vitae
+						est. Mauris placerat eleifend{" "}
+					</p>
 					<div className="product__change-quantity-container">
-						<span className="product__change-quantity product__change-quantity--left pointer">
-							-
-						</span>
+						<button className="product__change-quantity product__change-quantity--left pointer">
+							<svg
+								width="17"
+								height="17"
+								viewBox="0 0 17 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<line
+									x1="1"
+									y1="8.5"
+									x2="16"
+									y2="8.5"
+									stroke="black"
+								/>
+							</svg>
+						</button>
 						<span className="product__quantity pointer">
 							1
 						</span>
-						<span
+						<button
 							className="product__change-quantity product__change-quantity--right pointer"
 							onClick={() => addItemToCart(item, 1)}
 						>
-							+
-						</span>
+							<svg
+								width="17"
+								height="17"
+								viewBox="0 0 17 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path d="M8.5 1L8.5 16" stroke="black" />
+								<line
+									x1="1"
+									y1="8.5"
+									x2="16"
+									y2="8.5"
+									stroke="black"
+								/>
+							</svg>
+						</button>
 					</div>
-					<button className="button pointer">Add to cart</button>
+					<button className="button pointer">
+						Add to cart
+					</button>
 				</div>
 			</div>
 		</div>
