@@ -71,6 +71,7 @@ export const Cart = () => {
 							<div className="cart-item">
 								<p className="pointer">-</p>
 								<p>1</p>
+								{/* <p>{cart["Sardinia White"].cart.quantity}</p> */}
 								<p className="pointer" onClick={() => increaseQuantity(item, 1)}>+</p>
 							</div>
 						</div>
