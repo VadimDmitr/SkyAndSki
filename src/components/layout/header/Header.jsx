@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import { Logo } from "components/Logo";
 import { Hamburger } from "components/layout/header/Hamburger";
 import { MobileMenu } from "components/layout/header/MobileMenu";
@@ -40,7 +40,6 @@ export const Header = () => {
 			</nav>
 
 			<nav className="nav desktop">
-			
 				<NavLink to={"/"}>
 					<Logo />
 				</NavLink>
