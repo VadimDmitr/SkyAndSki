@@ -40,7 +40,6 @@ export const Header = () => {
 			</nav>
 
 			<nav className="nav desktop">
-			
 				<NavLink to={"/"}>
 					<Logo />
 				</NavLink>
@@ -57,7 +56,7 @@ export const Header = () => {
 				</div>
 				<div className="nav__right-group">
 					<NavLink
-						activeClassName="nav__nav-link--active"
+						className="nav__nav-link--active"
 						to={"/language"}
 					>
 						<img
@@ -67,7 +66,7 @@ export const Header = () => {
 						/>
 					</NavLink>
 					<NavLink
-						activeClassName="nav__nav-link--active"
+						className="nav__nav-link--active"
 						to={"/search"}
 					>
 						<img
@@ -77,7 +76,7 @@ export const Header = () => {
 						/>
 					</NavLink>
 					<NavLink
-						activeClassName="nav__nav-link--active"
+						className="nav__nav-link--active"
 						to={"/cart"}
 					>
 						<img
@@ -87,7 +86,7 @@ export const Header = () => {
 						/>
 					</NavLink>
 					<NavLink
-						activeClassName="nav__nav-link--active"
+						className="nav__nav-link--active"
 						to={"/account"}
 					>
 						<img
