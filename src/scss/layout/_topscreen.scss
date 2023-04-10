@@ -1,249 +1,268 @@
-.top-screen {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: center;
 
-	&__main {
-		width: 100%;
-		height: auto;
-		top: 0;
-		left: 0;
-	}
 
-	&__skyski {
-		position: absolute;
-		width: 76.8rem;
-		height: 23rem;
-		left: 85rem;
-		top: 18.7rem;
-		transform: translateX(-50%);
-		font-family: "Poppins";
-		font-style: normal;
-		font-weight: 700;
-		font-size: 20rem;
-		line-height: 140%;
-		color: var(--color-secondary);
-	}
 
-	&__webuild {
-		position: absolute;
-		width: 74.8rem;
-		height: 3.6rem;
-		left: 85rem;
-		top: 40rem;
-		transform: translateX(-50%);
-		font-family: "Poppins";
-		font-style: normal;
-		font-weight: 700;
-		font-size: 3rem;
-		line-height: 120%;
-		color: var(--color-secondary);
-	}
 
-	&__line {
-		position: absolute;
-		width: 100%;
-		height: 0rem;
-		left: 0rem;
-		top: 10.652rem;
-		border: 1.33151px solid #ffffff;
-	}
 
-	&__button {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-		padding: 2rem 4rem;
-		gap: 1.4rem;
-		position: absolute;
-		width: 20.3rem;
-		height: 8.7rem;
-		left: 77.2rem;
-		top: 58.2rem;
-		background: var(--color-primary);
-		color: var(--color-secondary);
 
-		font-family: "Poppins";
-		font-style: normal;
-		font-weight: 700;
-		font-size: 2.2rem;
-		line-height: 120%;
-	}
-}
 
-@media (max-width: 767px) {
-	.top-screen {
-		&__skyski {
-			width: 40%; // Adjust the width to fit mobile screens
-			height: auto; // Keep the aspect ratio
-			left: 50%; // Adjust the position
-			top: 30%; // Adjust the position
-			font-size: 10rem; // Adjust the font size
-		}
 
-		&__webuild {
-			width: 40%; // Adjust the width to fit mobile screens
-			height: auto; // Keep the aspect ratio
-			left: 50%; // Adjust the position
-			top: 50%; // Adjust the position
-			font-size: 2rem; // Adjust the font size
-		}
+// .top-screen {
+// 	position: relative;
+// 	width: 100%;
+// 	height: 100%;
+// 	background-size: cover;
+// 	background-position: center;
 
-		&__line {
-			width: 100%; // Adjust the width to fit mobile screens
-			height: 0rem;
-			left: 0rem;
-			top: 3rem; // Adjust the position
-			border: 0.1rem solid #ffffff;
-		}
-	}
-}
+// 	&__main {
+// 		width: 100%;
+// 		height: auto;
+// 		top: 0;
+// 		left: 0;
+// 	}
 
-@media (max-width: 1281px) {
-	.top-screen {
-		&__skyski,
-		&__webuild {
-			left: 50%;
-		}
+// 	&__skyski {
+// 		position: absolute;
+// 		width: 97.8rem;
+// 		height: 23rem;
+// 		left: 85rem;
+// 		top: 18.7rem;
+// 		transform: translateX(-50%);
+// 		font-family: "Poppins";
+// 		font-style: normal;
+// 		font-weight: 700;
+// 		font-size: 20rem;
+// 		line-height: 140%;
+// 		color: var(--color-secondary);
+// 	}
 
-		&__button {
-			width: 21rem;
-			left: 55.2rem;
-			top: 51.2rem;
-		}
-	}
-}
+// 	&__webuild {
+// 		position: absolute;
+// 		width: 95.8rem;
+// 		height: 3.6rem;
+// 		left: 85rem;
+// 		top: 43rem;
+// 		transform: translateX(-50%);
+// 		font-family: "Poppins";
+// 		font-style: normal;
+// 		font-weight: 700;
+// 		font-size: 3rem;
+// 		line-height: 120%;
+// 		color: var(--color-secondary);
+// 	}
 
-@media (max-width: 1025px) {
-	.top-screen {
-		&__button {
-			left: 43.2rem;
-			top: 47.2rem;
-		}
-	}
-}
+// 	&__line {
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 0rem;
+// 		left: 0rem;
+// 		top: 10.652rem;
+// 		border: 1.33151px solid #ffffff;
+// 	}
 
-@media (max-width: 913px) {
-	.top-screen {
-		&__button {
-			left: 37.2rem;
-			top: 42.9rem;
-		}
-	}
-}
+// 	&__button {
+// 		// display: flex;
+// 		// flex-direction: row;
+// 		// align-items: flex-start;
+// 		// padding: 2rem 4rem;
+// 		// gap: 1.4rem;
+// 		// position: absolute;
+// 		// width: 21.8rem;
+// 		// height: 8.7rem;
+// 		// left: 77.2rem;
+// 		// top: 58.2rem;
+// 		// background: var(--color-primary);
+// 		// color: var(--color-secondary);
 
-@media (max-width: 821px) {
-	.top-screen {
-		&__skyski {
-			top: 8rem;
-			width: 90%;
-		}
+// 		// font-family: "Poppins";
+// 		// font-style: normal;
+// 		// font-weight: 700;
+// 		// font-size: 2.2rem;
+// 		// line-height: 120%;
 
-		&__webuild {
-			top: 28rem;
-			width: 90%;
-		}
 
-		&__button {
-			left: 31.2rem;
-			top: 34.2rem;
-		}
-	}
-}
+//     font-family: "Poppins";
+// 		font-style: normal;
+// 		font-weight: 700;
+//     max-width: 73.5rem;
+// 	padding: 1.35rem 1.5rem;
+// 	font-size: 2.2rem;
+// 	border: none;
+// 	background-color: var(--color-primary);
+// 	color: var(--color-secondary);
+// 	}
+// }
 
-@media (max-width: 769px) {
-	.top-screen {
-		&__skyski {
-			top: 10rem;
-			width: 90%;
-		}
+// @media (max-width: 767px) {
+// 	.top-screen {
+// 		&__skyski {
+// 			width: 40%; // Adjust the width to fit mobile screens
+// 			height: auto; // Keep the aspect ratio
+// 			left: 50%; // Adjust the position
+// 			top: 30%; // Adjust the position
+// 			font-size: 10rem; // Adjust the font size
+// 		}
 
-		&__webuild {
-			top: 30rem;
-			width: 90%;
-		}
+// 		&__webuild {
+// 			width: 40%; // Adjust the width to fit mobile screens
+// 			height: auto; // Keep the aspect ratio
+// 			left: 50%; // Adjust the position
+// 			top: 50%; // Adjust the position
+// 			font-size: 2rem; // Adjust the font size
+// 		}
 
-		&__button {
-			left: 31.2rem;
-			top: 34.2rem;
-		}
-	}
-}
+// 		&__line {
+// 			width: 100%; // Adjust the width to fit mobile screens
+// 			height: 0rem;
+// 			left: 0rem;
+// 			top: 3rem; // Adjust the position
+// 			border: 0.1rem solid #ffffff;
+// 		}
+// 	}
+// }
 
-@media (max-width: 541px) {
-	.top-screen {
-		&__webuild {
-			top: 19rem;
-		}
+// @media (max-width: 1281px) {
+// 	.top-screen {
+// 		&__skyski,
+// 		&__webuild {
+// 			left: 53%;
+// 		}
 
-		&__button {
-			left: 19.2rem;
-			top: 21.2rem;
-		}
-	}
-}
+// 		&__button {
+// 			width: 21rem;
+// 			left: 55.2rem;
+// 			top: 51.2rem;
+// 		}
+// 	}
+// }
 
-@media (max-width: 415px) {
-	.top-screen {
-		&__skyski {
-			top: 7rem;
-			width: 90%;
-		}
+// @media (max-width: 1025px) {
+// 	.top-screen {
+// 		&__button {
+// 			left: 43.2rem;
+// 			top: 47.2rem;
+// 		}
+// 	}
+// }
 
-		&__webuild {
-			top: 14rem;
-		}
+// @media (max-width: 913px) {
+// 	.top-screen {
+// 		&__button {
+// 			left: 37.2rem;
+// 			top: 42.9rem;
+// 		}
+// 	}
+// }
 
-		&__button {
-			width: 10.3rem;
-			height: 6.7rem;
-			font-size: 1.1rem;
-			left: 14.2rem;
-			top: 16.2rem;
-		}
-	}
-}
+// @media (max-width: 821px) {
+// 	.top-screen {
+// 		&__skyski {
+// 			top: 8rem;
+// 			width: 90%;
+// 		}
 
-@media (max-width: 393px) {
-	.top-screen {
-		&__skyski {
-			top: 4rem;
-			width: 90%;
-		}
+// 		&__webuild {
+// 			top: 28rem;
+// 			width: 90%;
+// 		}
 
-		&__webuild {
-			top: 11rem;
-		}
+// 		&__button {
+// 			left: 31.2rem;
+// 			top: 34.2rem;
+// 		}
+// 	}
+// }
 
-		&__button {
-			width: 12.3rem;
-			height: 6.7rem;
-			font-size: 1.3rem;
-			left: 13.2rem;
-			top: 13.2rem;
-		}
-	}
-}
+// @media (max-width: 769px) {
+// 	.top-screen {
+// 		&__skyski {
+// 			top: 10rem;
+// 			width: 90%;
+// 		}
 
-@media (max-width: 281px) {
-	.top-screen {
-		&__skyski {
-			top: 5rem;
-			width: 90%;
-		}
+// 		&__webuild {
+// 			top: 30rem;
+// 			width: 90%;
+// 		}
 
-		&__webuild {
-			top: 10.5rem;
-		}
+// 		&__button {
+// 			left: 31.2rem;
+// 			top: 34.2rem;
+// 		}
+// 	}
+// }
 
-		&__button {
-			width: 10.3rem;
-			height: 6.7rem;
-			font-size: 1.2rem;
-			left: 8.2rem;
-			top: 8.2rem;
-		}
-	}
-}
+// @media (max-width: 541px) {
+// 	.top-screen {
+// 		&__webuild {
+// 			top: 19rem;
+// 		}
+
+// 		&__button {
+// 			left: 19.2rem;
+// 			top: 21.2rem;
+// 		}
+// 	}
+// }
+
+// @media (max-width: 415px) {
+// 	.top-screen {
+// 		&__skyski {
+// 			top: 7rem;
+// 			width: 90%;
+// 		}
+
+// 		&__webuild {
+// 			top: 14rem;
+// 		}
+
+// 		&__button {
+// 			width: 10.3rem;
+// 			height: 6.7rem;
+// 			font-size: 1.1rem;
+// 			left: 14.2rem;
+// 			top: 16.2rem;
+// 		}
+// 	}
+// }
+
+// @media (max-width: 393px) {
+// 	.top-screen {
+// 		&__skyski {
+// 			top: 4rem;
+// 			width: 90%;
+// 		}
+
+// 		&__webuild {
+// 			top: 11rem;
+// 		}
+
+// 		&__button {
+// 			width: 12.3rem;
+// 			height: 6.7rem;
+// 			font-size: 1.3rem;
+// 			left: 13.2rem;
+// 			top: 13.2rem;
+// 		}
+// 	}
+// }
+
+// @media (max-width: 281px) {
+// 	.top-screen {
+// 		&__skyski {
+// 			top: 5rem;
+// 			width: 90%;
+// 		}
+
+// 		&__webuild {
+// 			top: 10.5rem;
+// 		}
+
+// 		&__button {
+// 			width: 10.3rem;
+// 			height: 6.7rem;
+// 			font-size: 1.2rem;
+// 			left: 8.2rem;
+// 			top: 8.2rem;
+// 		}
+// 	}
+// }
