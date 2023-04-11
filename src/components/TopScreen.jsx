@@ -15,15 +15,18 @@ export const TopScreen = () => {
 					src={line}
 					alt="line"
 				/>
-        <div className="top-screen__text-and-button-container">
-          <p className="top-screen__skyski">SKY & SKI </p>
+				<div className="top-screen__text-and-button-container">
+					<p className="top-screen__skyski">SKY & SKI </p>
 
-          <p className="top-screen__webuild">We build only the best, customized to your exacting demands</p>
-      
-          <button className="top-screen__button">
-            SHOP NOW
-          </button>
-        </div>
+					<p className="top-screen__webuild">
+						We build only the best, customized to your
+						exacting demands
+					</p>
+
+					<button className="top-screen__button">
+						SHOP NOW
+					</button>
+				</div>
 			</div>
 		</div>
 	);
