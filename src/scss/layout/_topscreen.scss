@@ -1,4 +1,116 @@
-@media only screen and (max-width: 769px) {
+.top-screen {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+
+	&__main {
+		width: 100%;
+		height: auto;
+		top: 0;
+		left: 0;
+	}
+
+	&__text-and-button-container {
+		display: flex;
+		position: absolute;
+		top: 15rem;
+		flex-direction: column;
+		align-items: center;
+		font-family: "Poppins";
+		font-style: normal;
+	}
+
+	&__skyski {
+		position: absolute;
+		width: 97.8rem;
+		height: 23rem;
+		left: 46rem;
+		top: 18.7rem;
+		font-size: 20rem;
+		line-height: 140%;
+		color: var(--color-secondary);
+	}
+
+	&__webuild {
+		position: absolute;
+		width: 95.8rem;
+		height: 3.6rem;
+		left: 47rem;
+		top: 43rem;
+		//transform: translateX(-50%);
+		font-weight: 700;
+		font-size: 3rem;
+		line-height: 120%;
+		color: var(--color-secondary);
+	}
+
+	&__button {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		align-content: center;
+		padding: 2rem 4rem;
+		position: absolute;
+		width: 21.8rem;
+		height: 5.7rem;
+		left: 74.2rem;
+		top: 58.2rem;
+		max-width: 73.5rem;
+		padding: 1.35rem 1.5rem;
+		font-size: 2.2rem;
+		border: none;
+		background-color: var(--color-primary);
+		color: var(--color-secondary);
+	}
+
+	&__line {
+		position: absolute;
+		width: 100%;
+		height: 0rem;
+		left: 0rem;
+		top: 6.652rem;
+		border: 0.13rem solid #ffffff;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.top-screen__text-and-button-container {
+		top: 0rem;
+		left: -28rem;
+	}
+}
+
+@media only screen and (max-width: 1025px) {
+	.top-screen__text-and-button-container {
+		top: -9rem;
+		left: -28rem;
+	}
+}
+
+@media only screen and (max-width: 913px) {
+	.top-screen {
+		&__text-and-button-container {
+			top: -16rem;
+			left: -37rem;
+		}
+
+		&__skyski {
+			font-size: 14rem;
+			line-height: 180%;
+		}
+
+		&__webuild {
+			font-size: 2rem;
+		}
+
+		&__button {
+			left: 66.2rem;
+			top: 53.2rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
 	.top-screen {
 		position: relative;
 		width: 100%;
@@ -16,7 +128,8 @@
 		&__text-and-button-container {
 			display: flex;
 			position: absolute;
-			top: 5rem;
+			top: 6rem;
+			left: 1rem;
 			flex-direction: column;
 			align-items: center;
 		}
@@ -42,7 +155,7 @@
 			font-size: 2.2rem;
 			border: none;
 			height: 57px;
-			width: 19.7rem;
+			width: 15.7rem;
 			left: 100px;
 			top: 83px;
 			background-color: var(--color-primary);
@@ -75,89 +188,9 @@
 	}
 }
 
-// .top-screen {
-// 	position: relative;
-// c
-// 	background-size: cover;
-// 	background-position: center;
 
-// 	&__main {
-// 		width: 100%;
-// 		height: auto;
-// 		top: 0;
-// 		left: 0;
-// 	}
 
-// 	&__skyski {
-// 		position: absolute;
-// 		width: 97.8rem;
-// 		height: 23rem;
-// 		left: 85rem;
-// 		top: 18.7rem;
-// 		transform: translateX(-50%);
-// 		font-family: "Poppins";
-// 		font-style: normal;
-// 		font-weight: 700;
-// 		font-size: 20rem;
-// 		line-height: 140%;
-// 		color: var(--color-secondary);
-// 	}
 
-// 	&__webuild {
-// 		position: absolute;
-// 		width: 95.8rem;
-// 		height: 3.6rem;
-// 		left: 85rem;
-// 		top: 43rem;
-// 		transform: translateX(-50%);
-// 		font-family: "Poppins";
-// 		font-style: normal;
-// 		font-weight: 700;
-// 		font-size: 3rem;
-// 		line-height: 120%;
-// 		color: var(--color-secondary);
-// 	}
-
-// 	&__line {
-// 		position: absolute;
-// 		width: 100%;
-// 		height: 0rem;
-// 		left: 0rem;
-// 		top: 10.652rem;
-// 		border: 1.33151px solid #ffffff;
-// 	}
-
-// 	&__button {
-// 		// display: flex;
-// 		// flex-direction: row;
-// 		// align-items: flex-start;
-// 		// padding: 2rem 4rem;
-// 		// gap: 1.4rem;
-// 		// position: absolute;
-// 		// width: 21.8rem;
-// 		// height: 8.7rem;
-// 		// left: 77.2rem;
-// 		// top: 58.2rem;
-// 		// background: var(--color-primary);
-// 		// color: var(--color-secondary);
-
-// 		// font-family: "Poppins";
-// 		// font-style: normal;
-// 		// font-weight: 700;
-// 		// font-size: 2.2rem;
-// 		// line-height: 120%;
-
-//     font-family: "Poppins";
-// 		font-style: normal;
-// 		font-weight: 700;
-//     max-width: 73.5rem;
-// 	padding: 1.35rem 1.5rem;
-// 	font-size: 2.2rem;
-// 	border: none;
-// 	background-color: var(--color-primary);
-// 	color: var(--color-secondary);
-// 	}
-// }
 
 // @media (max-width: 767px) {
 // 	.top-screen {
