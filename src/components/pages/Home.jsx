@@ -1,6 +1,5 @@
-import { OurUniqueFeatures } from "../OurUniqueFeatures";
-
-import { TopScreen } from "../TopScreen";
+import { OurUniqueFeatures } from "components/OurUniqueFeatures";
+import { TopScreen } from "components/TopScreen";
 import { Catalog } from "components/Catalog";
 
 export const Home = () => {
