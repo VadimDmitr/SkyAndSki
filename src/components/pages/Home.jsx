@@ -1,5 +1,4 @@
 import { OurUniqueFeatures } from "components/OurUniqueFeatures";
-
 import { TopScreen } from "components/TopScreen";
 import { Catalog } from "components/Catalog";
 
