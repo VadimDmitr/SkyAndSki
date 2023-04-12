@@ -15,7 +15,7 @@ export const AccountMobile = () => {
 		console.log("userData =====> ", userData);
 		if (userData === null) navigate("/");
 		// if (userData.token === null) navigate ("/");
-	});
+	}, []);
 
 	const logout = () => {
 		const userDataNull = {
