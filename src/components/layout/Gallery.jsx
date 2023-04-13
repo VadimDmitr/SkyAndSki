@@ -18,7 +18,9 @@ export const Gallery = () => {
 	return (
 		<div className="gallery">
 			<div className="carousel">
-      <p className="carousel-images__title">Our Gallery</p>
+				<p className="carousel-images__title">
+					Our Gallery
+				</p>
 				<Slider {...settings}>
 					<div>
 						<img
@@ -47,17 +49,17 @@ export const Gallery = () => {
 				<p className="laptop-images__title">Our Gallery</p>
 				<img
 					src={snowboarderDescending}
-          alt="Snowboarder descending"
+					alt="Snowboarder descending"
 					className="laptop-images__image laptop-images__image--1"
 				/>
 				<img
 					src={snowboarderWhiteJacket}
-          alt="Snowboarder White Jacket"
+					alt="Snowboarder White Jacket"
 					className="laptop-images__image laptop-images__image--2"
 				/>
 				<img
 					src={snowboarderYellowJacket}
-          alt="Snowboarder Yellow Jacket"
+					alt="Snowboarder Yellow Jacket"
 					className="laptop-images__image laptop-images__image--3"
 				/>
 			</div>
