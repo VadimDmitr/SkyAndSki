@@ -8,9 +8,11 @@
 .carousel {
 	width: 100%;
 	max-width: 600px;
+  max-height: 655px!important;
 	margin: 0 auto;
 	padding: 20px;
 	display: none;
+	background: #f8f8f8;
 }
 
 .carousel__image {
@@ -20,13 +22,26 @@
 	display: block;
 }
 
+.carousel-images__title {
+	position: relative;
+	width: 184px;
+	height: 42px;
+	left: -1px;
+	top: -8px;
+	/* headlines/h5 */
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 140%;
+}
+
 .laptop-images {
 	display: flex;
 	width: auto;
 	height: 1009px;
 	left: 0px;
 	top: 0px;
-
 	background: #f8f8f8;
 }
 
@@ -77,6 +92,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .gallery {
+    
+    height: 655px;
+  }
+
 	.carousel {
 		display: block;
 	}

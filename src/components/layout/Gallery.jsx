@@ -18,7 +18,7 @@ export const Gallery = () => {
 	return (
 		<div className="gallery">
 			<div className="carousel">
-      <p className="laptop-images__title">Our Gallery</p>
+      <p className="carousel-images__title">Our Gallery</p>
 				<Slider {...settings}>
 					<div>
 						<img
