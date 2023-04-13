@@ -7,7 +7,7 @@ import { Layout } from "./components/Layout";
 import { Home } from "./components/pages/Home";
 import { About } from "./components/pages/About";
 import { Cart } from "./components/pages/Cart";
-import { Product } from "./components/Product";
+import { Product } from "./components/pages/Product";
 import { Account } from "./components/pages/account/Account";
 import { Login } from "./components/pages/Login";
 import { Logout } from "./components/pages/account/Logout";

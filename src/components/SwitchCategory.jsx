@@ -45,7 +45,11 @@ export const SwitchCategory = ({ products }) => {
 			</div>
 			<div className="products">
 				{filteredProducts.map((product) => {
-					return <ProductCard product={product} />;
+					return
+					<ProductCard product={product} />
+					// <a href={`/product/${product.productId}`}>
+					// 	<ProductCard product={product} />
+					// </a>;
 				})}
 			</div>
 		</>

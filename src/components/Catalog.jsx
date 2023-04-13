@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { SwitchCategory } from "components/SwitchCategory";
 import { BASEPRODUCTSURL } from "api/index";
+import {Component } from "./Component";
+import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
 // import snowboardLight from "images/snowboard_light.png";
 // import snowboardDark from "images/snowboard_dark.png";
@@ -40,9 +42,9 @@ export const Catalog = () => {
 	// ];
 
 	// const [products] = useState(productsData);
-	let products = [];
+	// let products = [];
 
-	// const [products, setProducts] = useState([]);
+	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
 		fetch(BASEPRODUCTSURL, {
@@ -59,16 +61,31 @@ export const Catalog = () => {
 				const productsFromBackend = JSON.parse(result).products;
 				// console.log("productsFromBackend ===> ", productsFromBackend);
 				// setProducts([...products, productsFromBackend]);
-				// setProducts([...productsFromBackend]);
-				products = productsFromBackend;
-				console.log("azaza ====> ", products);
+				setProducts([...productsFromBackend]);
+				console.log(productsFromBackend, "THIS IS THE PRODUCTS")
+				// products = productsFromBackend;
+				// console.log("products ====> ", products);
 			})
 			.catch((error) => console.log("error", error));
-	}, [products]);
+	}, []);
 
-	// const getProductsCurrentValue = () => {
-	// 	console.log("azaza ====> ", azaza);
-	// }
+	const getProductsCurrentValue = () => {
+		console.log("products ====> ", products);
+	}
+
+	// const productsRender = products.map((product) => {
+	// 	<div className="product-card">
+	// 		{/* <img src={product.img} alt={product.title} /> */}
+	// 		<div className="product-card__text">
+	// 			<p className="product-card__title">
+	// 				{product.productName}
+	// 			</p>
+	// 			<p className="product-card__price">
+	// 				{product.productPrice}
+	// 			</p>
+	// 		</div>
+	// 	</div>
+	// })
 
 	return (
 		<div className="catalog">
@@ -79,8 +96,23 @@ export const Catalog = () => {
 				</p>
 			</div>
 			<h2>Our Most Popular Board category</h2>
-			{/* <button onClick={() => getProductsCurrentValue()}>Click</button> */}
+			<button onClick={() => getProductsCurrentValue()}>Click</button>
 			<SwitchCategory products={products} />
+			{/* <Component products={products} /> */}
+			{/* <div className="products">
+			{products.map(prod => <ProductCard product={prod} id={prod.id} />)}
+			</div> */}
+			{/* {productsRender} */}
+			{/* <div className="product-card">
+				<div className="product-card__text">
+					<p className="product-card__title">
+						{products[0].productName}
+					</p>
+					<p className="product-card__price">
+						{products[0].productPrice}
+					</p>
+				</div>
+			</div> */}
 			{/* <Button /> */}
 			<div className="button pointer">More products</div>
 		</div>

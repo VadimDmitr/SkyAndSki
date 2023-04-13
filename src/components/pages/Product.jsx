@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import { cartDataContext } from "../contexts/cartContext";
-import snowboard from "../images/snowboard_light.png";
+import { cartDataContext } from "../../contexts/cartContext";
+import snowboard from "images/snowboard_light.png";
 
 export const Product = () => {
 	const { cart, setCart } = useContext(cartDataContext);
