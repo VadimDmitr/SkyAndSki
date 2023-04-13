@@ -16,7 +16,7 @@ export const Gallery = () => {
 	};
 
 	return (
-		<div>
+		<div className="gallery">
 			<div className="carousel">
       <p className="laptop-images__title">Our Gallery</p>
 				<Slider {...settings}>
