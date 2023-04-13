@@ -1,5 +1,5 @@
 .gallery {
-	width: 1440px;
+	width: auto;
 	height: 1009px;
 	left: 0px;
 	top: 0px;
@@ -22,27 +22,30 @@
 
 .laptop-images {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin: 0 auto;
-	max-width: 854px;
+	width: auto;
+	height: 1009px;
+	left: 0px;
+	top: 0px;
+
+	background: #f8f8f8;
 }
 
 .laptop-images__title {
+	position: relative;
 	width: 854px;
 	height: 77px;
-	margin: 0 auto;
+	left: 460px;
+	top: 250px;
+
 	font-family: "Poppins";
 	font-style: normal;
 	font-weight: 700;
 	font-size: 55px;
 	line-height: 140%;
-	/* identical to box height, or 77px */
-
-	color: var(--color-neutral-black);
 }
 
 .laptop-images__image {
+	position: relative;
 	width: 100%;
 	max-width: 300px;
 	height: auto;
@@ -50,15 +53,27 @@
 }
 
 .laptop-images__image--1 {
-	order: 2;
+	order: 1;
+	width: 432px;
+	height: 470px;
+	left: -340px;
+	top: 361px;
 }
 
 .laptop-images__image--2 {
-	order: 1;
+	order: 2;
+	width: 571px;
+	height: 260px;
+	left: -309px;
+	top: 252px;
 }
 
 .laptop-images__image--3 {
 	order: 3;
+	width: 572px;
+	height: 260px;
+	left: -633px;
+	top: 571px;
 }
 
 @media screen and (max-width: 768px) {
