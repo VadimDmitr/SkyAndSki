@@ -6,24 +6,10 @@ export const Accordion = (props) => {
 	const contentRef = useRef(null);
 
 	useEffect(() => {
-
-
-
-
-
 		contentRef.current.style.maxHeight = active
-
-
-
-
 			? `${contentRef.current.scrollHeight}px`
 			: "0px";
 	}, [contentRef, active]);
-
-
-
-
-	                         
 
 	const toggleActive = () => {
 		setActive(!active);

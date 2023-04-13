@@ -16,12 +16,12 @@ export const TopScreen = () => {
 					alt="line"
 				/>
 				<div className="top-screen__text-and-button-container">
-					<p className="top-screen__skyski">SKY & SKI </p>
+					<h1 className="top-screen__skyski">SKY & SKI </h1>
 
-					<p className="top-screen__webuild">
+					<h2 className="top-screen__webuild">
 						We build only the best, customized to your
 						exacting demands
-					</p>
+					</h2>
 
 					<button className="top-screen__button">
 						SHOP NOW
