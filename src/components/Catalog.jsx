@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { SwitchCategory } from "components/SwitchCategory";
 import { BASEPRODUCTSURL } from "api/index";
-import {Component } from "./Component";
+import { Component } from "./Component";
 import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
 // import snowboardLight from "images/snowboard_light.png";
@@ -58,11 +58,15 @@ export const Catalog = () => {
 				// console.log(result);
 				// console.log("type of result ====> ", typeof result);
 				// console.log(JSON.parse(result));
-				const productsFromBackend = JSON.parse(result).products;
+				const productsFromBackend =
+					JSON.parse(result).products;
 				// console.log("productsFromBackend ===> ", productsFromBackend);
 				// setProducts([...products, productsFromBackend]);
 				setProducts([...productsFromBackend]);
-				console.log(productsFromBackend, "THIS IS THE PRODUCTS")
+				console.log(
+					productsFromBackend,
+					"THIS IS THE PRODUCTS"
+				);
 				// products = productsFromBackend;
 				// console.log("products ====> ", products);
 			})
@@ -71,7 +75,7 @@ export const Catalog = () => {
 
 	const getProductsCurrentValue = () => {
 		console.log("products ====> ", products);
-	}
+	};
 
 	// const productsRender = products.map((product) => {
 	// 	<div className="product-card">
@@ -96,12 +100,16 @@ export const Catalog = () => {
 				</p>
 			</div>
 			<h2>Our Most Popular Board category</h2>
-			<button onClick={() => getProductsCurrentValue()}>Click</button>
+			{/* <button onClick={() => getProductsCurrentValue()}>Click</button> */}
 			<SwitchCategory products={products} />
 			{/* <Component products={products} /> */}
-			{/* <div className="products">
-			{products.map(prod => <ProductCard product={prod} id={prod.id} />)}
-			</div> */}
+			<div className="products">
+				{products.map((product) => (
+					<a href={`/product/${product.productId}`}>
+						<ProductCard product={product} id={product.id} />
+					</a>
+				))}
+			</div>
 			{/* {productsRender} */}
 			{/* <div className="product-card">
 				<div className="product-card__text">

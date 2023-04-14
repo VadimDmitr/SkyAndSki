@@ -11,23 +11,27 @@ const categories = [
 ];
 
 export const SwitchCategory = ({ products }) => {
-	const [selectedCategory, setSelectedCategory] =
-		useState("all");
+	// const [selectedCategory, setSelectedCategory] =
+	// 	useState("all");
 
-	const handleClick = (category) => {
-		setSelectedCategory(category);
-	};
+	const getProductsCurrentValue = () => {
+		console.log("products ====> ", products);
+	}
 
-	const filteredProducts =
-		selectedCategory === "all"
-			? products
-			: products.filter(
-					(product) => product.category === selectedCategory
-			  );
+	// const handleClick = (category) => {
+	// 	setSelectedCategory(category);
+	// };
+
+	// const filteredProducts =
+	// 	selectedCategory === "all"
+	// 		? products
+	// 		: products.filter(
+	// 				(product) => product.category === selectedCategory
+	// 		  );
 
 	return (
 		<>
-			<div className="catalog__filters">
+			{/* <div className="catalog__filters">
 				{categories.map((category) => (
 					<button
 						className="catalog__filter pointer"
@@ -42,11 +46,23 @@ export const SwitchCategory = ({ products }) => {
 						{category.name}
 					</button>
 				))}
-			</div>
-			<div className="products">
+			</div> */}
+			{/* <div className="products">
 				{filteredProducts.map((product) => {
 					return
 					<ProductCard product={product} />
+					// <a href={`/product/${product.productId}`}>
+					// 	<ProductCard product={product} />
+					// </a>;
+				})}
+			</div> */}
+			<button onClick={() => getProductsCurrentValue()}>Click</button>
+			<div className="products">
+				{products.map((product) => {
+					<div>
+						<p>{product.productName}</p>
+					</div>
+					// <ProductCard product={product} />
 					// <a href={`/product/${product.productId}`}>
 					// 	<ProductCard product={product} />
 					// </a>;
