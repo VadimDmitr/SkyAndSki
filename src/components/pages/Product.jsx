@@ -11,15 +11,11 @@ export const Product = (props) => {
 	const location = useLocation();
 	const { cart, setCart } = useContext(cartDataContext);
 	const [product, setProduct] = useState({});
-	// let product = {};
 	const [quantityBox, setQuantityBox] = useState(1);
 
 	useEffect(() => {
-		// console.log("queryParameters ===> ", queryParameters);
-		console.log(location.pathname);
 		const productIdFromURL =
 			location.pathname.split("/")[2];
-		console.log("productIdFromURL ===> ", productIdFromURL);
 
 		fetch(BASEPRODUCTSURL + productIdFromURL, {
 			method: "GET",
@@ -36,20 +32,10 @@ export const Product = (props) => {
 					productFromBackend
 				);
 				setProduct({...product, ...productFromBackend});
-				// setProduct((prevState) => ({ ...prevState, productFromBackend }));
-				// product = {...product, ...productFromBackend};
 				console.log("product ====> ", product);
 			})
 			.catch((error) => console.log("error", error));
 	}, product);
-
-	// const item = {
-	// 	id: "0",
-	// 	title: "Sardinia White",
-	// 	category: "board",
-	// 	price: "312.49 SAR",
-	// 	img: snowboard,
-	// };
 
 	const increaseQuantityToAdd = () => {
 		console.log("quantityBox ===> ", quantityBox);
@@ -63,9 +49,8 @@ export const Product = (props) => {
 		}
 	};
 
-	const getProductsCurrentValue = () => {
-		console.log("props ===> ", props);
-		console.log("props.location =====> ", location);
+	const getCartCurrentValue = () => {
+		console.log("cart =====> ", cart);
 	};
 
 	// const addItemToCart = (item, quantity) => {
@@ -86,13 +71,13 @@ export const Product = (props) => {
 	const addItemToCart = (item, quantity) => {
 		// Check if the item already exists in the cart
 		if (cart) {
-			if (cart[item.title]) {
+			if (cart[item.productName]) {
 				// If the item exists, update its quantity
 				const updatedCart = {
 					...cart,
-					[item.title]: {
-						...cart[item.title],
-						quantity: cart[item.title].quantity + quantity,
+					[item.productName]: {
+						...cart[item.productName],
+						quantity: cart[item.productName].quantity + quantity,
 					},
 				};
 				setCart(updatedCart);
@@ -100,7 +85,7 @@ export const Product = (props) => {
 				// If the item doesn't exist, add it to the cart with the specified quantity
 				const updatedCart = {
 					...cart,
-					[item.title]: {
+					[item.productName]: {
 						...item,
 						quantity,
 					},
@@ -109,8 +94,6 @@ export const Product = (props) => {
 			}
 		}
 
-		// console.log("cart before setCart ====> ", cart);
-		// setCart({ ...cart, ...cart });
 		console.log("cart after setCart ====> ", cart);
 	};
 
@@ -179,15 +162,15 @@ export const Product = (props) => {
 							</svg>
 						</button>
 					</div>
-					<button onClick={() => getProductsCurrentValue()}>
+					<button onClick={() => getCartCurrentValue()}>
 						Click
 					</button>
-					{/* <button
+					<button
 						className="button pointer"
-						onClick={() => addItemToCart(item, quantityBox)}
+						onClick={() => addItemToCart(product, quantityBox)}
 					>
 						Add to cart
-					</button> */}
+					</button>
 				</div>
 			</div>
 		</div>

@@ -60,27 +60,11 @@ export const Catalog = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				// console.log(result);
-				// console.log("type of result ====> ", typeof result);
-				// console.log(JSON.parse(result));
-				const productsFromBackend =
-					JSON.parse(result).products;
-				// console.log("productsFromBackend ===> ", productsFromBackend);
-				// setProducts([...products, productsFromBackend]);
-				setProducts([...productsFromBackend]);
-				console.log(
-					productsFromBackend,
-					"THIS IS THE PRODUCTS"
-				);
-				// products = productsFromBackend;
-				// console.log("products ====> ", products);
+				setProducts([...JSON.parse(result).products]);
 			})
 			.catch((error) => console.log("error", error));
 	}, []);
 
-	const getProductsCurrentValue = () => {
-		console.log("products ====> ", products);
-	};
 
 	// const productsRender = products.map((product) => {
 	// 	<div className="product-card">
@@ -105,14 +89,10 @@ export const Catalog = () => {
 				</p>
 			</div>
 			<h2>Our Most Popular Board category</h2>
-			<button onClick={() => getProductsCurrentValue()}>Click</button>
 			<SwitchCategory products={products} />
 			{/* <Component products={products} /> */}
 			<div className="products">
 				{products.map((product) => (
-					// <Link to={`/product/${product.productId}`} state: { userDetails:'Name'}>
-					// 	<ProductCard product={product} id={product.id} />
-					// </Link>
 					<Link
 						to={`/product/${product._id}`}
 					>
@@ -121,16 +101,6 @@ export const Catalog = () => {
 				))}
 			</div>
 			{/* {productsRender} */}
-			{/* <div className="product-card">
-				<div className="product-card__text">
-					<p className="product-card__title">
-						{products[0].productName}
-					</p>
-					<p className="product-card__price">
-						{products[0].productPrice}
-					</p>
-				</div>
-			</div> */}
 			{/* <Button /> */}
 			<div className="button pointer">More products</div>
 		</div>

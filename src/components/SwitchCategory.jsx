@@ -56,7 +56,7 @@ export const SwitchCategory = ({ products }) => {
 					// </a>;
 				})}
 			</div> */}
-			<button onClick={() => getProductsCurrentValue()}>Click</button>
+			{/* <button onClick={() => getProductsCurrentValue()}>Click</button> */}
 			<div className="products">
 				{products.map((product) => {
 					<div>
