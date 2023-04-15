@@ -13,6 +13,8 @@ export const Gallery = () => {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 4000,
 	};
 
 	return (
