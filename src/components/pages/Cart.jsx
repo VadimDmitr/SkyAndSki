@@ -6,17 +6,17 @@ import cross from "images/icons/cross.svg";
 export const Cart = () => {
 	const { cart, setCart } = useContext(cartDataContext);
 
-	const item = {
-		id: "0",
-		title: "Sardinia White",
-		category: "board",
-		price: "312.49 SAR",
-		img: snowboard,
-	};
+	// const item = {
+	// 	id: "0",
+	// 	title: "Sardinia White",
+	// 	category: "board",
+	// 	price: "312.49 SAR",
+	// 	img: snowboard,
+	// };
 
 	const getCartValue = () => {
 		console.log("cart =====> ", cart);
-	}
+	};
 
 	const increaseQuantity = (item, quantity) => {
 		if (cart) {
@@ -46,14 +46,24 @@ export const Cart = () => {
 		// console.log("cart before setCart ====> ", cart);
 		// setCart({ ...cart, ...cart });
 		console.log("cart after setCart ====> ", cart);
-	}
+	};
+
+	const cartEntries = Object.entries(cart).map(
+		(item, i) => {
+			<p>{item.productName}</p>;
+			<p>{JSON.stringify(item)}</p>
+		}
+	);
 
 	return (
 		<div className="wrapper">
 			<div className="cart">
 				<h2>Cart</h2>
 				<div className="cart__items">
-					<div className="cart-item">
+					{/* {cart.map((item) => (
+					))} */}
+					{cartEntries}
+					{/* <div className="cart-item">
 						<img
 							className="cart-item__img"
 							src={snowboard}
@@ -61,7 +71,7 @@ export const Cart = () => {
 						/>
 						<div className="cart-item__content">
 							<p className="cart-item__title">
-								Sardinia White
+								{item.productName}
 							</p>
 							<img
 								src={cross}
@@ -71,13 +81,22 @@ export const Cart = () => {
 							<div className="cart-item">
 								<p className="pointer">-</p>
 								<p>1</p>
-								{/* <p>{cart["Sardinia White"].cart.quantity}</p> */}
-								<p className="pointer" onClick={() => increaseQuantity(item, 1)}>+</p>
+								<p>{cart["Sardinia White"].cart.quantity}</p>
+								<p
+									className="pointer"
+									// onClick={() =>
+									// 	increaseQuantity(item, 1)
+									// }
+								>
+									+
+								</p>
 							</div>
 						</div>
-					</div>
+					</div> */}
 				</div>
-				<button onClick={() => getCartValue()}>Click</button>
+				<button onClick={() => getCartValue()}>
+					Click
+				</button>
 			</div>
 		</div>
 	);

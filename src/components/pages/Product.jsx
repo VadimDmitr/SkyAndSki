@@ -71,8 +71,8 @@ export const Product = (props) => {
 	const addItemToCart = (item, quantity) => {
 		// Check if the item already exists in the cart
 		if (cart) {
-			if (cart[item.productName]) {
-				// If the item exists, update its quantity
+			if (cart.some(cartItem => cartItem.productName === item.productName)) {
+				/* vendors contains the element we're looking for */
 				const updatedCart = {
 					...cart,
 					[item.productName]: {
@@ -81,7 +81,19 @@ export const Product = (props) => {
 					},
 				};
 				setCart(updatedCart);
-			} else {
+			}
+			// if (cart[item.productName]) {
+			// 	// If the item exists, update its quantity
+			// 	const updatedCart = {
+			// 		...cart,
+			// 		[item.productName]: {
+			// 			...cart[item.productName],
+			// 			quantity: cart[item.productName].quantity + quantity,
+			// 		},
+			// 	};
+			// 	setCart(updatedCart);
+			// }
+			else {
 				// If the item doesn't exist, add it to the cart with the specified quantity
 				const updatedCart = {
 					...cart,
@@ -107,7 +119,7 @@ export const Product = (props) => {
 				/>
 				<div className="product__content">
 					<p className="product__title">{product.productName}</p>
-					<p className="product__price">312.49 SAR</p>
+					<p className="product__price">{product.productPrice}</p>
 					<p className="product__description">
 						Product Short Description senectus et netus et
 						malesuada fames ac turpis egestas. Vesitbulum
