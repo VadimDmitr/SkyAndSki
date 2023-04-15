@@ -1,18 +1,55 @@
-import { useState, useContext } from "react";
-import { cartDataContext } from "../../contexts/cartContext";
+import { useState, useEffect, useContext } from "react";
+import {
+	useLocation,
+	useSearchParams,
+} from "react-router-dom";
+import { BASEPRODUCTSURL } from "api/index";
+import { cartDataContext } from "contexts/cartContext";
 import snowboard from "images/snowboard_light.png";
 
-export const Product = () => {
+export const Product = (props) => {
+	const location = useLocation();
 	const { cart, setCart } = useContext(cartDataContext);
+	const [product, setProduct] = useState({});
+	// let product = {};
 	const [quantityBox, setQuantityBox] = useState(1);
 
-	const item = {
-		id: "0",
-		title: "Sardinia White",
-		category: "board",
-		price: "312.49 SAR",
-		img: snowboard,
-	};
+	useEffect(() => {
+		// console.log("queryParameters ===> ", queryParameters);
+		console.log(location.pathname);
+		const productIdFromURL =
+			location.pathname.split("/")[2];
+		console.log("productIdFromURL ===> ", productIdFromURL);
+
+		fetch(BASEPRODUCTSURL + productIdFromURL, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => response.text())
+			.then((result) => {
+				const productFromBackend =
+					JSON.parse(result).product;
+				console.log(
+					"productsFromBackend ===> ",
+					productFromBackend
+				);
+				setProduct({...product, ...productFromBackend});
+				// setProduct((prevState) => ({ ...prevState, productFromBackend }));
+				// product = {...product, ...productFromBackend};
+				console.log("product ====> ", product);
+			})
+			.catch((error) => console.log("error", error));
+	}, product);
+
+	// const item = {
+	// 	id: "0",
+	// 	title: "Sardinia White",
+	// 	category: "board",
+	// 	price: "312.49 SAR",
+	// 	img: snowboard,
+	// };
 
 	const increaseQuantityToAdd = () => {
 		console.log("quantityBox ===> ", quantityBox);
@@ -24,6 +61,11 @@ export const Product = () => {
 			console.log("quantityBox ===> ", quantityBox);
 			setQuantityBox(quantityBox - 1);
 		}
+	};
+
+	const getProductsCurrentValue = () => {
+		console.log("props ===> ", props);
+		console.log("props.location =====> ", location);
 	};
 
 	// const addItemToCart = (item, quantity) => {
@@ -81,7 +123,7 @@ export const Product = () => {
 					alt="snowboard"
 				/>
 				<div className="product__content">
-					<p className="product__title">Sardinia White</p>
+					<p className="product__title">{product.productName}</p>
 					<p className="product__price">312.49 SAR</p>
 					<p className="product__description">
 						Product Short Description senectus et netus et
@@ -92,8 +134,10 @@ export const Product = () => {
 						est. Mauris placerat eleifend{" "}
 					</p>
 					<div className="product__change-quantity-container">
-						<button className="product__change-quantity product__change-quantity--left pointer"
-						onClick={() => decreaseQuantityToAdd()}>
+						<button
+							className="product__change-quantity product__change-quantity--left pointer"
+							onClick={() => decreaseQuantityToAdd()}
+						>
 							<svg
 								width="17"
 								height="17"
@@ -135,12 +179,15 @@ export const Product = () => {
 							</svg>
 						</button>
 					</div>
-					<button
+					<button onClick={() => getProductsCurrentValue()}>
+						Click
+					</button>
+					{/* <button
 						className="button pointer"
 						onClick={() => addItemToCart(item, quantityBox)}
 					>
 						Add to cart
-					</button>
+					</button> */}
 				</div>
 			</div>
 		</div>

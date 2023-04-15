@@ -1,18 +1,20 @@
+import { Link, Redirect } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { SwitchCategory } from "components/SwitchCategory";
 import { BASEPRODUCTSURL } from "api/index";
 import { Component } from "./Component";
 import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
-// import snowboardLight from "images/snowboard_light.png";
-// import snowboardDark from "images/snowboard_dark.png";
-// import goggles from "images/goggles.png";
-// import boots from "images/boots.png";
+import snowboardLight from "images/snowboard_light.png";
+import snowboardDark from "images/snowboard_dark.png";
+import goggles from "images/goggles.png";
+import boots from "images/boots.png";
 
 export const Catalog = () => {
-	// const productsData = [
+	// const products = [
 	// 	{
 	// 		id: "0",
+	// 		productId: "0",
 	// 		title: "Sardinia White",
 	// 		category: "board",
 	// 		price: "312.49 SAR",
@@ -20,6 +22,7 @@ export const Catalog = () => {
 	// 	},
 	// 	{
 	// 		id: "1",
+	// 		productId: "1",
 	// 		title: "Sicily Grey ",
 	// 		category: "ski",
 	// 		price: "312.49 SAR",
@@ -27,6 +30,7 @@ export const Catalog = () => {
 	// 	},
 	// 	{
 	// 		id: "2",
+	// 		productId: "2",
 	// 		title: "Sicily Grey",
 	// 		category: "other",
 	// 		price: "312.49 SAR",
@@ -34,6 +38,7 @@ export const Catalog = () => {
 	// 	},
 	// 	{
 	// 		id: "3",
+	// 		productId: "3",
 	// 		title: "Sicily Grey Décor 30×60",
 	// 		category: "other",
 	// 		price: "312.49 SAR",
@@ -100,14 +105,19 @@ export const Catalog = () => {
 				</p>
 			</div>
 			<h2>Our Most Popular Board category</h2>
-			{/* <button onClick={() => getProductsCurrentValue()}>Click</button> */}
+			<button onClick={() => getProductsCurrentValue()}>Click</button>
 			<SwitchCategory products={products} />
 			{/* <Component products={products} /> */}
 			<div className="products">
 				{products.map((product) => (
-					<a href={`/product/${product.productId}`}>
+					// <Link to={`/product/${product.productId}`} state: { userDetails:'Name'}>
+					// 	<ProductCard product={product} id={product.id} />
+					// </Link>
+					<Link
+						to={`/product/${product._id}`}
+					>
 						<ProductCard product={product} id={product.id} />
-					</a>
+					</Link>
 				))}
 			</div>
 			{/* {productsRender} */}
