@@ -10,6 +10,13 @@ export const Cart = () => {
 		console.log("cart inside getCartValue =====> ", cart);
 	};
 
+	const removeProductFromCart = (item) => {
+		let updatedCart = cart;
+		const index = updatedCart.indexOf(item);
+		const x = updatedCart.splice(index, 1);
+		setCart([...updatedCart]);
+	}
+
 	const increaseQuantity = (item, quantity) => {
 		if (
 			cart.some(
@@ -67,10 +74,12 @@ export const Cart = () => {
 									{item.productName}
 								</p>
 								<img
+									className="pointer"
 									src={cross}
 									alt="remove item from cart"
+									onClick={() => removeProductFromCart(item)}
 								/>
-								<p>120$</p>
+								<p>{item.productName}</p>
 								<div className="cart-item">
 									<p
 										className="pointer"
