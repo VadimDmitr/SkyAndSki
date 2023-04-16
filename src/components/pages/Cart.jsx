@@ -6,9 +6,9 @@ import cross from "images/icons/cross.svg";
 export const Cart = () => {
 	const { cart, setCart } = useContext(cartDataContext);
 
-	const getCartValue = () => {
-		console.log("cart inside getCartValue =====> ", cart);
-	};
+	// const getCartValue = () => {
+	// 	console.log("cart inside getCartValue =====> ", cart);
+	// };
 
 	const removeProductFromCart = (item) => {
 		let updatedCart = cart;
@@ -108,9 +108,9 @@ export const Cart = () => {
 							</div>
 						))}
 					</div>
-					<button onClick={() => getCartValue()}>
+					{/* <button onClick={() => getCartValue()}>
 						Click
-					</button>
+					</button> */}
 				</div>
 			) : (
 				<div

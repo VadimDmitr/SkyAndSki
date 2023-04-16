@@ -43,12 +43,12 @@ export const Product = () => {
 		}
 	};
 
-	const getCartCurrentValue = () => {
-		console.log(
-			"cart inside getCartCurrentValue =====> ",
-			cart
-		);
-	};
+	// const getCartCurrentValue = () => {
+	// 	console.log(
+	// 		"cart inside getCartCurrentValue =====> ",
+	// 		cart
+	// 	);
+	// };
 
 	const addItemToCart = (item, quantity) => {
 		// Check if the item already exists in the cart
@@ -90,7 +90,7 @@ export const Product = () => {
 						{product.productName}
 					</p>
 					<p className="product__price">
-						{product.productPrice}
+						${product.productPrice}
 					</p>
 					<p className="product__description">
 						Product Short Description senectus et netus et
@@ -146,9 +146,9 @@ export const Product = () => {
 							</svg>
 						</button>
 					</div>
-					<button onClick={() => getCartCurrentValue()}>
+					{/* <button onClick={() => getCartCurrentValue()}>
 						Click
-					</button>
+					</button> */}
 					<button
 						className="button pointer"
 						onClick={() =>
