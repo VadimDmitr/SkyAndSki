@@ -1,6 +1,52 @@
 .cart {
 	display: flex;
 	flex-direction: column;
+
+	&__heading {
+		margin: 3rem 0;
+		font-size: 4.5rem;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	&__checkout-container {
+		display: flex;
+		flex-direction: column;
+		padding: 2.4rem 1.6rem;
+		background-color: var(--color-secondary);
+	}
+}
+
+.cart-checkout-container {
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		&:first-of-type {
+			margin-bottom: 0.9rem;
+		}
+
+		&:nth-of-type(2) {
+			margin-bottom: 2.2rem;
+		}
+
+		&:last-of-type {
+			margin-bottom: 2.2rem;
+		}
+	}
+
+	&__before-total {
+		font-size: 2rem;
+	}
+
+	&__total {
+		font-size: 2rem;
+		font-weight: bold;
+	}
 }
 
 .cart-item {
@@ -14,12 +60,88 @@
 
 	&__content {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(15, 1fr);
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+			"t t t t t t t t t t t t t t cross"
+			"c c c c c c c c c c c c c c c"
+			"p p p p p p p p p q q q q q q";
 		justify-content: space-between;
 		justify-items: end;
 	}
 
+	&__title-container {
+		width: 100%;
+		grid-area: t;
+	}
+
 	&__title {
 		font-size: 2rem;
+	}
+
+	&__cross {
+		grid-area: cross;
+	}
+
+	&__category-container {
+		width: 100%;
+		grid-area: c;
+	}
+
+	&__category {
+		font-size: 1.6rem;
+	}
+
+	&__price-container {
+		display: flex;
+		align-items: flex-end;
+		width: 100%;
+		grid-area: p;
+	}
+
+	&__price {
+		font-size: 2rem;
+		text-align: left;
+	}
+
+	&__quantity-container-outer {
+		display: flex;
+		justify-content: flex-end;
+		grid-area: q;
+	}
+}
+
+.cart-item-quantity-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 10rem;
+	height: max-content;
+	border: 1px solid var(--color-neutral-black);
+
+	&__change {
+		padding: 1.4rem 1rem;
+		background-color: transparent;
+		border: none;
+
+		&:active {
+			background-color: color-mix(
+				in srgb,
+				white 90%,
+				black
+			);
+			// background-color: black;
+		}
+	}
+
+	&__quantity {
+		width: 1rem;
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.cart {
+		flex-direction: row;
 	}
 }

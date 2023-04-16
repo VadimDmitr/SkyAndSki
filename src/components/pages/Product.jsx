@@ -28,7 +28,7 @@ export const Product = () => {
 				setProduct({ ...product, ...productFromBackend });
 			})
 			.catch((error) => console.log("error", error));
-	}, product);
+	}, [product]);
 	/* eslint-disable react-hooks/exhaustive-deps */
 
 	const increaseQuantityToAdd = () => {
