@@ -1,44 +1,27 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { SwitchCategory } from "components/SwitchCategory";
+import { BASEPRODUCTSURL } from "api/index";
+// import { Component } from "./Component";
+import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
-import snowboardLight from "images/snowboard_light.png";
-import snowboardDark from "images/snowboard_dark.png";
-import goggles from "images/goggles.png";
-import boots from "images/boots.png";
 
 export const Catalog = () => {
-	const productsData = [
-		{
-			id: "0",
-			name: "Sardinia White",
-			category: "board",
-			price: "312.49 SAR",
-			img: snowboardLight,
-		},
-		{
-			id: "1",
-			name: "Sicily Grey ",
-			category: "ski",
-			price: "312.49 SAR",
-			img: snowboardDark,
-		},
-		{
-			id: "2",
-			name: "Sicily Grey",
-			category: "other",
-			price: "312.49 SAR",
-			img: goggles,
-		},
-		{
-			id: "3",
-			name: "Sicily Grey Décor 30×60",
-			category: "other",
-			price: "312.49 SAR",
-			img: boots,
-		},
-	];
+	const [products, setProducts] = useState([]);
 
-	const [products] = useState(productsData);
+	useEffect(() => {
+		fetch(BASEPRODUCTSURL, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => response.text())
+			.then((result) => {
+				setProducts([...JSON.parse(result).products]);
+			})
+			.catch((error) => console.log("error", error));
+	}, []);
 
 	return (
 		<div className="catalog">
@@ -50,8 +33,20 @@ export const Catalog = () => {
 			</div>
 			<h2>Our Most Popular Board category</h2>
 			<SwitchCategory products={products} />
+			{/* <Component products={products} /> */}
+			<div className="products">
+				{products.map((product) => (
+					<Link to={`/product/${product._id}`}>
+						<ProductCard
+							product={product}
+							id={product.id}
+						/>
+					</Link>
+				))}
+			</div>
+			{/* {productsRender} */}
 			{/* <Button /> */}
-			<div className="button">More products</div>
+			<div className="button pointer">More products</div>
 		</div>
 	);
 };

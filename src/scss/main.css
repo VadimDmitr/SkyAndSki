@@ -220,6 +220,30 @@ a {
 		font-size: 14rem;
 	}
 }
+
+.cart {
+	display: flex;
+	flex-direction: column;
+}
+
+.cart-item {
+	display: flex;
+	gap: 1rem;
+}
+.cart-item__img {
+	width: 10rem;
+	height: auto;
+}
+.cart-item__content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	justify-items: end;
+}
+.cart-item__title {
+	font-size: 2rem;
+}
+
 .header {
 	display: flex;
 	justify-content: space-between;

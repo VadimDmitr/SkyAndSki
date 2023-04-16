@@ -11,11 +11,13 @@ export const AccountMobile = () => {
 	const { userData, setUserData } =
 		useContext(userDataContext);
 
+	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
 		console.log("userData =====> ", userData);
 		if (userData === null) navigate("/");
 		// if (userData.token === null) navigate ("/");
-	});
+	}, [userData]);
+	/* eslint-disable react-hooks/exhaustive-deps */
 
 	const logout = () => {
 		const userDataNull = {

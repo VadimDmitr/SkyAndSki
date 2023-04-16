@@ -1,40 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
-
-const ProductCard = ({ product }) => {
+export const ProductCard = ({ product }) => {
+	// this is used in switch category
 	return (
-		<div className="product-card">
-			<div className="product-image">
-				<img src={product.imageUrl} alt={product.name} />
-			</div>
-			<div className="product-details">
-				<h3 className="product-name">{product.name}</h3>
-				<p className="product-brand">
-					Brand: {product.brand}
+		<div className="product-card" key={product.id}>
+			{/* <img src={product.img} alt={product.title} /> */}
+			<div className="product-card__text">
+				<p className="product-card__title">
+					{product?.productName}
 				</p>
-				<p className="product-price">
-					Price: ${product.price.toFixed(2)}
+				<p className="product-card__price">
+					{product?.productPrice}
 				</p>
-				<button
-					className="add-to-cart-btn"
-					disabled={!product.stock}
-				>
-					Add to Cart
-				</button>
 			</div>
 		</div>
+		// <div className="product-card" key={product.id}>
+		// 	{/* <img src={product.img} alt={product.title} /> */}
+		// 	<div className="product-card__text">
+		// 		<p className="product-card__title">
+		// 			{product.title}
+		// 		</p>
+		// 		<p className="product-card__price">
+		// 			{product.price}
+		// 		</p>
+		// 	</div>
+		// </div>
 	);
 };
-
-ProductCard.propTypes = {
-	product: PropTypes.shape({
-		id: PropTypes.string.isRequired,
-		name: PropTypes.string.isRequired,
-		brand: PropTypes.string.isRequired,
-		imageUrl: PropTypes.string.isRequired,
-		price: PropTypes.number.isRequired,
-		stock: PropTypes.number.isRequired,
-	}).isRequired,
-};
-
-export default ProductCard;

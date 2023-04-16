@@ -5,7 +5,9 @@ import {
 } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Home } from "./components/pages/Home";
-import { About } from "./components/About";
+import { About } from "./components/pages/About";
+import { Cart } from "./components/pages/Cart";
+import { Product } from "./components/pages/Product";
 import { Account } from "./components/pages/account/Account";
 import { Login } from "./components/pages/Login";
 import { Logout } from "./components/pages/account/Logout";
@@ -23,6 +25,11 @@ function App() {
 					<Route path="/home" element={<Home />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/account" element={<Account />} />
+					<Route path="/cart" element={<Cart />} />
+					<Route
+						path="/product/:id"
+						element={<Product />}
+					/>
 					<Route path="/login" element={<Login />} />
 					<Route path="/logout" element={<Logout />} />
 					<Route path="/register" element={<Register />} />
