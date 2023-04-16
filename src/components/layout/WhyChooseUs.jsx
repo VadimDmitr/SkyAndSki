@@ -60,23 +60,71 @@ export const WhyChooseUs = () => {
 						className="middle-section__image"
 					/>
 				</div>
-				<div>
-					<h1 className="middle-section__title">
-						{" "}
-						Why choose US{" "}
-					</h1>
+				<div className="middle-section__title-text">
+					<div>
+						<h1 className="middle-section__title">
+							{" "}
+							Why choose US{" "}
+						</h1>
+					</div>
+					<div>
+						<h2 classname="middle-section__text">
+							{" "}
+							Amet minim mollit non deserunt ullamco est sit
+							aliqua dolor do amet sint. Velit officia
+							consequat duis enim velit mollit.{" "}
+						</h2>
+					</div>
+				</div>{" "}
+				<NavLink
+					className="middle-section__link"
+					to={"/read more"}
+				>
+					<p>Read more</p>
+				</NavLink>
+				<div className="bottom-section__title-text">
+					<div>
+						<h1 className="bottom-section__title">
+							Service Repair
+						</h1>
+					</div>
+					<div>
+						<h2 classname="bottom-section__text">
+							Amet minim mollit non deserunt ullamco est sit
+							aliqua dolor do amet sint. Velit officia
+							consequat duis enim velit mollit.
+						</h2>
+					</div>
 				</div>
-				<div></div>{" "}
-				<h2 classname="middle-section__text">
-					{" "}
-					Amet minim mollit non deserunt ullamco est sit
-					aliqua dolor do amet sint. Velit officia consequat
-					duis enim velit mollit.{" "}
-				</h2>
+				<div className="bottom-section__title-text">
+					<div>
+						<h1 className="bottom-section__title">
+							Board Accessories
+						</h1>
+					</div>
+					<div>
+						<h2 classname="bottom-section__text">
+							Amet minim mollit non deserunt ullamco est sit
+							aliqua dolor do amet sint. Velit officia
+							consequat duis enim velit mollit.
+						</h2>
+					</div>
+				</div>
+				<div className="bottom-section__title-text">
+					<div>
+						<h1 className="bottom-section__title">
+							Warranty & Guarantee
+						</h1>
+					</div>
+					<div>
+						<h2 classname="bottom-section__text">
+							Amet minim mollit non deserunt ullamco est sit
+							aliqua dolor do amet sint. Velit officia
+							consequat duis enim velit mollit.
+						</h2>
+					</div>
+				</div>
 			</div>
-			<NavLink className="middle-section__link" to={"/read more"}>
-				<p>Read more</p>
-			</NavLink>
 		</div>
 	</div>;
 };
