@@ -33,7 +33,16 @@
 	}
 }
 
-// @media only screen and (min-width: 768px) {
-// 	.products {
-// 	}
-// }
+@media only screen and (min-width: 600px) {
+	.products {
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.products {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+	}
+}

@@ -60,57 +60,100 @@ export const Cart = () => {
 	};
 
 	return (
-		<div className="wrapper">
+		<>
 			{cart.length > 0 ? (
-				<div className="cart">
-					<h2>Cart</h2>
-					<div className="cart__items">
-						{cart.map((item) => (
-							<div className="cart-item">
-								<img
-									className="cart-item__img"
-									src={snowboard}
-									alt="snowboard"
-								/>
-								<div className="cart-item__content">
-									<p className="cart-item__title">
-										{item.productName}
-									</p>
+				<div className="wrapper">
+					<div className="cart">
+						<h2 className="cart__heading">Cart</h2>
+						<div className="cart__items">
+							{cart.map((item) => (
+								<div className="cart-item">
 									<img
-										className="pointer"
-										src={cross}
-										alt="remove item from cart"
-										onClick={() =>
-											removeProductFromCart(item)
-										}
+										className="cart-item__img"
+										src={snowboard}
+										alt="snowboard"
 									/>
-									<p>{item.productName}</p>
-									<div className="cart-item">
-										<p
-											className="pointer"
+									<div className="cart-item__content">
+										<div className="cart-item__title-container">
+											<p className="cart-item__title">
+												{item.productName}
+											</p>
+										</div>
+										<img
+											className="cart-item__cross pointer"
+											src={cross}
+											alt="remove item from cart"
 											onClick={() =>
-												decreaseQuantity(item, 1)
+												removeProductFromCart(item)
 											}
-										>
-											-
-										</p>
-										<p>{item.quantity}</p>
-										<p
-											className="pointer"
-											onClick={() =>
-												increaseQuantity(item, 1)
-											}
-										>
-											+
-										</p>
+										/>
+										<div className="cart-item__category-container">
+											<p className="cart-item__category">
+												category
+											</p>
+										</div>
+										<div className="cart-item__price-container">
+											<p className="cart-item__price">
+												$ {item.productPrice}
+											</p>
+										</div>
+										<div className="cart-item__quantity-container-outer">
+											<div className="cart-item-quantity-container">
+												<button
+													className="cart-item-quantity-container__change pointer"
+													onClick={() =>
+														decreaseQuantity(item, 1)
+													}
+												>
+													<svg
+														width="16"
+														height="16"
+														viewBox="0 0 16 16"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<path
+															d="M1 8L15 8"
+															stroke="#4F4F4F"
+															stroke-width="2"
+															stroke-linecap="round"
+														/>
+													</svg>
+												</button>
+												<p className="cart-item-quantity-container__quantity">
+													{item.quantity}
+												</p>
+												<button
+													className="cart-item-quantity-container__change pointer"
+													onClick={() =>
+														increaseQuantity(item, 1)
+													}
+												>
+													<svg
+														width="16"
+														height="16"
+														viewBox="0 0 16 16"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<path
+															d="M8 14V8M8 8V2M8 8L14 8M8 8H2"
+															stroke="#4F4F4F"
+															stroke-width="2"
+															stroke-linecap="round"
+														/>
+													</svg>
+												</button>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-						))}
-					</div>
-					{/* <button onClick={() => getCartValue()}>
+							))}
+						</div>
+						{/* <button onClick={() => getCartValue()}>
 						Click
 					</button> */}
+					</div>
 				</div>
 			) : (
 				<div
@@ -129,6 +172,6 @@ export const Cart = () => {
 					</a>
 				</div>
 			)}
-		</div>
+		</>
 	);
 };
