@@ -14,6 +14,9 @@ export const Cart = () => {
 		let updatedCart = cart;
 		const index = updatedCart.indexOf(item);
 		const x = updatedCart.splice(index, 1);
+		// TO DO
+		// need to figure out how to remove item from cart without creating variable X that we will not use again
+		console.log("x => ", x);
 		setCart([...updatedCart]);
 	};
 

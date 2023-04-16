@@ -1,8 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import {
-	useLocation,
-	useSearchParams,
-} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { BASEPRODUCTSURL } from "api/index";
 import { cartDataContext } from "contexts/cartContext";
 import snowboard from "images/snowboard_light.png";
@@ -13,6 +10,7 @@ export const Product = () => {
 	const [product, setProduct] = useState({});
 	const [quantityBox, setQuantityBox] = useState(1);
 
+	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
 		const productIdFromURL =
 			location.pathname.split("/")[2];
@@ -31,6 +29,7 @@ export const Product = () => {
 			})
 			.catch((error) => console.log("error", error));
 	}, product);
+	/* eslint-disable react-hooks/exhaustive-deps */
 
 	const increaseQuantityToAdd = () => {
 		console.log("quantityBox ===> ", quantityBox);
