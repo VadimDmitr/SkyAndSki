@@ -15,19 +15,31 @@ export const Header = () => {
 	return (
 		<header className="header">
 			<nav className="nav-mobile mobile">
-				<Logo />
+				<NavLink className="nav__link" to={"/"}>
+					<Logo />
+				</NavLink>
 				<div className="nav-mobile__right-group">
-					<img
-						className="pointer"
-						src={search}
-						alt="search"
-					/>
-					<img className="pointer" src={cart} alt="cart" />
-					<img
-						className="pointer"
-						src={account}
-						alt="account"
-					/>
+					<NavLink className="nav__link" to={"/search"}>
+						<img
+							className="pointer"
+							src={search}
+							alt="search"
+						/>
+					</NavLink>
+					<NavLink className="nav__link" to={"/cart"}>
+						<img
+							className="pointer"
+							src={cart}
+							alt="cart"
+						/>
+					</NavLink>
+					<NavLink className="nav__link" to={"/account"}>
+						<img
+							className="pointer"
+							src={account}
+							alt="account"
+						/>
+					</NavLink>
 					<Hamburger
 						openMobileMenu={openMobileMenu}
 						setOpenMobileMenu={setOpenMobileMenu}
@@ -40,7 +52,7 @@ export const Header = () => {
 			</nav>
 
 			<nav className="nav desktop">
-				<NavLink to={"/"}>
+				<NavLink className="nav__link" to={"/"}>
 					<Logo />
 				</NavLink>
 				<div className="nav__middle-group">
@@ -55,40 +67,28 @@ export const Header = () => {
 					</NavLink>
 				</div>
 				<div className="nav__right-group">
-					<NavLink
-						className="nav__nav-link--active"
-						to={"/language"}
-					>
+					<NavLink className="nav__link" to={"/language"}>
 						<img
 							className="nav__navigate-language"
 							src={language}
 							alt="language"
 						/>
 					</NavLink>
-					<NavLink
-						className="nav__nav-link--active"
-						to={"/search"}
-					>
+					<NavLink className="nav__link" to={"/search"}>
 						<img
 							className="nav__navigate-search"
 							src={search}
 							alt="search"
 						/>
 					</NavLink>
-					<NavLink
-						className="nav__nav-link--active"
-						to={"/cart"}
-					>
+					<NavLink className="nav__link" to={"/cart"}>
 						<img
 							className="nav__navigate-cart"
 							src={cart}
 							alt="cart"
 						/>
 					</NavLink>
-					<NavLink
-						className="nav__nav-link--active"
-						to={"/account"}
-					>
+					<NavLink className="nav__link" to={"/account"}>
 						<img
 							className="nav__navigate-account"
 							src={account}
