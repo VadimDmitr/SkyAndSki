@@ -8,6 +8,7 @@ import discord from "images/icons/why_choose_us/discord.svg";
 import whyUs from "images/why_choose_us.png";
 
 export const WhyChooseUs = () => {
+	return (
 	<div className="why-choose-us-container">
 		<div className="company-icons">
 			<div>
@@ -68,7 +69,7 @@ export const WhyChooseUs = () => {
 						</h1>
 					</div>
 					<div>
-						<h2 classname="middle-section__text">
+						<h2 className="middle-section__text">
 							{" "}
 							Amet minim mollit non deserunt ullamco est sit
 							aliqua dolor do amet sint. Velit officia
@@ -89,7 +90,7 @@ export const WhyChooseUs = () => {
 						</h1>
 					</div>
 					<div>
-						<h2 classname="bottom-section__text">
+						<h2 className="bottom-section__text">
 							Amet minim mollit non deserunt ullamco est sit
 							aliqua dolor do amet sint. Velit officia
 							consequat duis enim velit mollit.
@@ -103,7 +104,7 @@ export const WhyChooseUs = () => {
 						</h1>
 					</div>
 					<div>
-						<h2 classname="bottom-section__text">
+						<h2 className="bottom-section__text">
 							Amet minim mollit non deserunt ullamco est sit
 							aliqua dolor do amet sint. Velit officia
 							consequat duis enim velit mollit.
@@ -117,7 +118,7 @@ export const WhyChooseUs = () => {
 						</h1>
 					</div>
 					<div>
-						<h2 classname="bottom-section__text">
+						<h2 className="bottom-section__text">
 							Amet minim mollit non deserunt ullamco est sit
 							aliqua dolor do amet sint. Velit officia
 							consequat duis enim velit mollit.
@@ -126,5 +127,6 @@ export const WhyChooseUs = () => {
 				</div>
 			</div>
 		</div>
-	</div>;
+	</div>
+	);
 };
