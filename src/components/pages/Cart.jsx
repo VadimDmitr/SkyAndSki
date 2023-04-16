@@ -51,7 +51,8 @@ export const Cart = () => {
 
 	return (
 		<div className="wrapper">
-			<div className="cart">
+			{(cart.length > 0) ?
+			(<div className="cart">
 				<h2>Cart</h2>
 				<div className="cart__items">
 					{cart.map((item) => (
@@ -93,10 +94,16 @@ export const Cart = () => {
 						</div>
 					))}
 				</div>
-				<button onClick={() => getCartValue()}>
-					Click
-				</button>
-			</div>
+				<button onClick={() => getCartValue()}>Click</button>
+			</div>) : (
+				<div className={{display: "flex", flexDirection: "column"}}>
+					<h1>Cart is empty</h1>
+					<br />
+					<a
+						style={{display: "block", fontSize: "1.6rem"}}
+						href="/">Go back to shopping</a>
+				</div>
+			)}
 		</div>
 	);
 };
