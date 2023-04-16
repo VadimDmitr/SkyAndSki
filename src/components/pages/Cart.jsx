@@ -15,7 +15,7 @@ export const Cart = () => {
 		const index = updatedCart.indexOf(item);
 		const x = updatedCart.splice(index, 1);
 		setCart([...updatedCart]);
-	}
+	};
 
 	const increaseQuantity = (item, quantity) => {
 		if (
@@ -58,59 +58,72 @@ export const Cart = () => {
 
 	return (
 		<div className="wrapper">
-			{(cart.length > 0) ?
-			(<div className="cart">
-				<h2>Cart</h2>
-				<div className="cart__items">
-					{cart.map((item) => (
-						<div className="cart-item">
-							<img
-								className="cart-item__img"
-								src={snowboard}
-								alt="snowboard"
-							/>
-							<div className="cart-item__content">
-								<p className="cart-item__title">
-									{item.productName}
-								</p>
+			{cart.length > 0 ? (
+				<div className="cart">
+					<h2>Cart</h2>
+					<div className="cart__items">
+						{cart.map((item) => (
+							<div className="cart-item">
 								<img
-									className="pointer"
-									src={cross}
-									alt="remove item from cart"
-									onClick={() => removeProductFromCart(item)}
+									className="cart-item__img"
+									src={snowboard}
+									alt="snowboard"
 								/>
-								<p>{item.productName}</p>
-								<div className="cart-item">
-									<p
-										className="pointer"
-										onClick={() =>
-											decreaseQuantity(item, 1)
-										}
-									>
-										-
+								<div className="cart-item__content">
+									<p className="cart-item__title">
+										{item.productName}
 									</p>
-									<p>{item.quantity}</p>
-									<p
+									<img
 										className="pointer"
+										src={cross}
+										alt="remove item from cart"
 										onClick={() =>
-											increaseQuantity(item, 1)
+											removeProductFromCart(item)
 										}
-									>
-										+
-									</p>
+									/>
+									<p>{item.productName}</p>
+									<div className="cart-item">
+										<p
+											className="pointer"
+											onClick={() =>
+												decreaseQuantity(item, 1)
+											}
+										>
+											-
+										</p>
+										<p>{item.quantity}</p>
+										<p
+											className="pointer"
+											onClick={() =>
+												increaseQuantity(item, 1)
+											}
+										>
+											+
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-					))}
+						))}
+					</div>
+					<button onClick={() => getCartValue()}>
+						Click
+					</button>
 				</div>
-				<button onClick={() => getCartValue()}>Click</button>
-			</div>) : (
-				<div className={{display: "flex", flexDirection: "column"}}>
+			) : (
+				<div
+					className={{
+						display: "flex",
+						flexDirection: "column",
+					}}
+				>
 					<h1>Cart is empty</h1>
 					<br />
 					<a
-						style={{display: "block", fontSize: "1.6rem"}}
-						href="/">Go back to shopping</a>
+						style={{ display: "block", fontSize: "1.6rem" }}
+						href="/"
+					>
+						Go back to shopping
+					</a>
 				</div>
 			)}
 		</div>

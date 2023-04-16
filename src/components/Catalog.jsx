@@ -65,7 +65,6 @@ export const Catalog = () => {
 			.catch((error) => console.log("error", error));
 	}, []);
 
-
 	// const productsRender = products.map((product) => {
 	// 	<div className="product-card">
 	// 		{/* <img src={product.img} alt={product.title} /> */}
@@ -93,10 +92,11 @@ export const Catalog = () => {
 			{/* <Component products={products} /> */}
 			<div className="products">
 				{products.map((product) => (
-					<Link
-						to={`/product/${product._id}`}
-					>
-						<ProductCard product={product} id={product.id} />
+					<Link to={`/product/${product._id}`}>
+						<ProductCard
+							product={product}
+							id={product.id}
+						/>
 					</Link>
 				))}
 			</div>

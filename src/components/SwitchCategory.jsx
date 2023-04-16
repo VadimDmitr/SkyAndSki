@@ -16,7 +16,7 @@ export const SwitchCategory = ({ products }) => {
 
 	const getProductsCurrentValue = () => {
 		console.log("products ====> ", products);
-	}
+	};
 
 	// const handleClick = (category) => {
 	// 	setSelectedCategory(category);
@@ -61,7 +61,7 @@ export const SwitchCategory = ({ products }) => {
 				{products.map((product) => {
 					<div>
 						<p>{product.productName}</p>
-					</div>
+					</div>;
 					// <ProductCard product={product} />
 					// <a href={`/product/${product.productId}`}>
 					// 	<ProductCard product={product} />

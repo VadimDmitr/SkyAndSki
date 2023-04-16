@@ -27,7 +27,7 @@ export const Product = () => {
 			.then((result) => {
 				const productFromBackend =
 					JSON.parse(result).product;
-				setProduct({...product, ...productFromBackend});
+				setProduct({ ...product, ...productFromBackend });
 			})
 			.catch((error) => console.log("error", error));
 	}, product);
@@ -45,15 +45,26 @@ export const Product = () => {
 	};
 
 	const getCartCurrentValue = () => {
-		console.log("cart inside getCartCurrentValue =====> ", cart);
+		console.log(
+			"cart inside getCartCurrentValue =====> ",
+			cart
+		);
 	};
 
 	const addItemToCart = (item, quantity) => {
 		// Check if the item already exists in the cart
 		if (cart) {
-			if (cart.some((cartItem) => cartItem.productName === item.productName)) {
+			if (
+				cart.some(
+					(cartItem) =>
+						cartItem.productName === item.productName
+				)
+			) {
 				let updatedCart = cart;
-				updatedCart.find(cartItemLocal => cartItemLocal.productName === item.productName).quantity += quantityBox;
+				updatedCart.find(
+					(cartItemLocal) =>
+						cartItemLocal.productName === item.productName
+				).quantity += quantityBox;
 				setCart([...updatedCart]);
 			}
 			// If the item doesn't exist, add it to the cart with the specified quantity
@@ -61,7 +72,7 @@ export const Product = () => {
 				const updatedCart = {
 					...item,
 					quantity,
-				}
+				};
 				setCart([...cart, updatedCart]);
 			}
 		}
@@ -76,8 +87,12 @@ export const Product = () => {
 					alt="snowboard"
 				/>
 				<div className="product__content">
-					<p className="product__title">{product.productName}</p>
-					<p className="product__price">{product.productPrice}</p>
+					<p className="product__title">
+						{product.productName}
+					</p>
+					<p className="product__price">
+						{product.productPrice}
+					</p>
 					<p className="product__description">
 						Product Short Description senectus et netus et
 						malesuada fames ac turpis egestas. Vesitbulum
@@ -137,7 +152,9 @@ export const Product = () => {
 					</button>
 					<button
 						className="button pointer"
-						onClick={() => addItemToCart(product, quantityBox)}
+						onClick={() =>
+							addItemToCart(product, quantityBox)
+						}
 					>
 						Add to cart
 					</button>
