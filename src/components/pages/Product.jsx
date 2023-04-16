@@ -7,7 +7,7 @@ import { BASEPRODUCTSURL } from "api/index";
 import { cartDataContext } from "contexts/cartContext";
 import snowboard from "images/snowboard_light.png";
 
-export const Product = (props) => {
+export const Product = () => {
 	const location = useLocation();
 	const { cart, setCart } = useContext(cartDataContext);
 	const [product, setProduct] = useState({});
@@ -27,12 +27,7 @@ export const Product = (props) => {
 			.then((result) => {
 				const productFromBackend =
 					JSON.parse(result).product;
-				console.log(
-					"productsFromBackend ===> ",
-					productFromBackend
-				);
 				setProduct({...product, ...productFromBackend});
-				console.log("product ====> ", product);
 			})
 			.catch((error) => console.log("error", error));
 	}, product);
@@ -53,21 +48,6 @@ export const Product = (props) => {
 		console.log("cart inside getCartCurrentValue =====> ", cart);
 	};
 
-	// const addItemToCart = (item, quantity) => {
-	// 	// TODO
-	// 	// REFACTOR THIS
-	// 	// Check if the item already exists in the cart
-	// 	if (cart) {
-	// 		if (cart[item.title]) {
-	// 			// If the item exists, update its quantity
-	// 			cart[item.title].quantity += quantity;
-	// 		} else {
-	// 			// If the item doesn't exist, add it to the cartLocal with the specified quantity
-	// 			cart[item.title] = { ...item, quantity };
-	// 		}
-	// 	}
-	// };
-
 	const addItemToCart = (item, quantity) => {
 		// Check if the item already exists in the cart
 		if (cart) {
@@ -76,6 +56,7 @@ export const Product = (props) => {
 				updatedCart.find(cartItemLocal => cartItemLocal.productName === item.productName).quantity += quantityBox;
 				setCart([...updatedCart]);
 			}
+			// If the item doesn't exist, add it to the cart with the specified quantity
 			else {
 				const updatedCart = {
 					...item,
@@ -84,8 +65,6 @@ export const Product = (props) => {
 				setCart([...cart, updatedCart]);
 			}
 		}
-
-		console.log("cart after setCart ====> ", cart);
 	};
 
 	return (

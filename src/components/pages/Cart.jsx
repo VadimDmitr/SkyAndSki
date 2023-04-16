@@ -11,30 +11,42 @@ export const Cart = () => {
 	};
 
 	const increaseQuantity = (item, quantity) => {
-		if (cart) {
-			if (cart[item.title]) {
-				// If the item exists, update its quantity
-				const updatedCart = {
-					...cart,
-					[item.title]: {
-						...cart[item.title],
-						quantity: cart[item.title].quantity + quantity,
-					},
-				};
-				setCart(updatedCart);
-			} else {
-				// If the item doesn't exist, add it to the cart with the specified quantity
-				const updatedCart = {
-					...cart,
-					[item.title]: {
-						...item,
-						quantity,
-					},
-				};
-				setCart(updatedCart);
-			}
+		if (
+			cart.some(
+				(cartItem) =>
+					cartItem.productName === item.productName
+			)
+		) {
+			let updatedCart = cart;
+			updatedCart.find(
+				(cartItemLocal) =>
+					cartItemLocal.productName === item.productName
+			).quantity += quantity;
+			setCart([...updatedCart]);
 		}
 		console.log("cart after setCart ====> ", cart);
+	};
+
+	const decreaseQuantity = (item, quantity) => {
+		if (
+			cart.some(
+				(cartItem) =>
+					cartItem.productName === item.productName
+			)
+		) {
+			let updatedCart = cart;
+			let cartItemQuantity = updatedCart.find(
+				(cartItemLocal) =>
+					cartItemLocal.productName === item.productName
+			).quantity;
+			if (cartItemQuantity > 1) {
+				updatedCart.find(
+					(cartItemLocal) =>
+						cartItemLocal.productName === item.productName
+				).quantity -= quantity;
+				setCart([...updatedCart]);
+			}
+		}
 	};
 
 	return (
@@ -59,10 +71,15 @@ export const Cart = () => {
 								/>
 								<p>120$</p>
 								<div className="cart-item">
-									<p className="pointer">-</p>
-									<p>
-										{item.quantity}
+									<p
+										className="pointer"
+										onClick={() =>
+											decreaseQuantity(item, 1)
+										}
+									>
+										-
 									</p>
+									<p>{item.quantity}</p>
 									<p
 										className="pointer"
 										onClick={() =>
