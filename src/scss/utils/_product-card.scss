@@ -29,20 +29,20 @@
 	&__price {
 		font-size: 1.6rem;
 		color: var(--color-neutral-grey);
-		opacity: .5;
+		opacity: 0.5;
 	}
 }
 
 @media only screen and (min-width: 600px) {
 	.products {
 		display: grid;
-		grid-template-columns: repeat(3,1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
 @media only screen and (min-width: 1024px) {
 	.products {
 		display: grid;
-		grid-template-columns: repeat(4,1fr);
+		grid-template-columns: repeat(4, 1fr);
 	}
 }

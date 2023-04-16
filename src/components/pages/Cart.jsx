@@ -170,7 +170,7 @@ export const Cart = () => {
 								Price
 							</p>
 							<p className="cart-checkout-container__before-total">
-							${estimate}
+								${estimate}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">

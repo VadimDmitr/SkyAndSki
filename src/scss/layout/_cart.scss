@@ -27,7 +27,7 @@
 		justify-content: space-between;
 
 		&:first-of-type {
-			margin-bottom: .9rem;
+			margin-bottom: 0.9rem;
 		}
 
 		&:nth-of-type(2) {
@@ -63,9 +63,9 @@
 		grid-template-columns: repeat(15, 1fr);
 		grid-template-rows: auto auto auto;
 		grid-template-areas:
-		"t t t t t t t t t t t t t t cross"
-		"c c c c c c c c c c c c c c c"
-		"p p p p p p p p p q q q q q q";
+			"t t t t t t t t t t t t t t cross"
+			"c c c c c c c c c c c c c c c"
+			"p p p p p p p p p q q q q q q";
 		justify-content: space-between;
 		justify-items: end;
 	}
