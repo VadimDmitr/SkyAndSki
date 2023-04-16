@@ -50,7 +50,7 @@ export const Product = (props) => {
 	};
 
 	const getCartCurrentValue = () => {
-		console.log("cart =====> ", cart);
+		console.log("cart inside getCartCurrentValue =====> ", cart);
 	};
 
 	// const addItemToCart = (item, quantity) => {
@@ -71,38 +71,17 @@ export const Product = (props) => {
 	const addItemToCart = (item, quantity) => {
 		// Check if the item already exists in the cart
 		if (cart) {
-			if (cart.some(cartItem => cartItem.productName === item.productName)) {
-				/* vendors contains the element we're looking for */
-				const updatedCart = {
-					...cart,
-					[item.productName]: {
-						...cart[item.productName],
-						quantity: cart[item.productName].quantity + quantity,
-					},
-				};
-				setCart(updatedCart);
+			if (cart.some((cartItem) => cartItem.productName === item.productName)) {
+				let updatedCart = cart;
+				updatedCart.find(cartItemLocal => cartItemLocal.productName === item.productName).quantity += quantityBox;
+				setCart([...updatedCart]);
 			}
-			// if (cart[item.productName]) {
-			// 	// If the item exists, update its quantity
-			// 	const updatedCart = {
-			// 		...cart,
-			// 		[item.productName]: {
-			// 			...cart[item.productName],
-			// 			quantity: cart[item.productName].quantity + quantity,
-			// 		},
-			// 	};
-			// 	setCart(updatedCart);
-			// }
 			else {
-				// If the item doesn't exist, add it to the cart with the specified quantity
 				const updatedCart = {
-					...cart,
-					[item.productName]: {
-						...item,
-						quantity,
-					},
-				};
-				setCart(updatedCart);
+					...item,
+					quantity,
+				}
+				setCart([...cart, updatedCart]);
 			}
 		}
 
