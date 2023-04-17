@@ -2,6 +2,7 @@ import { OurUniqueFeatures } from "components/OurUniqueFeatures";
 import { TopScreen } from "components/TopScreen";
 import { Catalog } from "components/Catalog";
 import { Gallery } from "../layout/Gallery";
+import { WhyChooseUs } from "../layout/WhyChooseUs";
 
 export const Home = () => {
 	return (
@@ -18,6 +19,9 @@ export const Home = () => {
 			</div>
 			<div className="gallery">
 				<Gallery />
+			</div>
+			<div className="why-choose-us-container">
+				<WhyChooseUs />
 			</div>
 		</>
 	);
