@@ -73,16 +73,16 @@ export const WhyChooseUs = () => {
 								Amet minim mollit non deserunt ullamco est
 								sit aliqua dolor do amet sint. Velit officia
 								consequat duis enim velit mollit.
+								<NavLink
+									className="middle-section__link"
+									to={"/read more"}
+								>
+									<p>Read more</p>
+								</NavLink>
 							</h2>
 						</div>
 					</div>
 				</div>
-				<NavLink
-					className="middle-section__link"
-					to={"/read more"}
-				>
-					<p>Read more</p>
-				</NavLink>
 			</div>
 			<div className="bottom-section">
 				<div className="bottom-section__title-text">
