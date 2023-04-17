@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { SwitchCategory } from "components/SwitchCategory";
 import { BASEPRODUCTSURL } from "api/index";
-// import { Component } from "./Component";
 import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
 
@@ -22,7 +21,7 @@ export const Catalog = () => {
 				setProducts([...JSON.parse(result).products]);
 			})
 			.catch((error) => console.log("error", error));
-	}, [products]);
+	}, []);
 
 	return (
 		<div className="catalog">

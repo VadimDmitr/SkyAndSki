@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { BASEPRODUCTSURL } from "api/index";
 import { cartDataContext } from "contexts/cartContext";
-import snowboard from "images/snowboard_light.png";
 
 export const Product = () => {
 	const location = useLocation();
@@ -82,15 +81,15 @@ export const Product = () => {
 			<div className="product">
 				<img
 					className="product__img"
-					src={snowboard}
+					src={product.img}
 					alt="snowboard"
 				/>
 				<div className="product__content">
 					<p className="product__title">
-						{product.productName}
+						{product.title}
 					</p>
 					<p className="product__price">
-						${product.productPrice}
+						${product.price}
 					</p>
 					<p className="product__description">
 						Product Short Description senectus et netus et
@@ -98,7 +97,8 @@ export const Product = () => {
 						tortor quam, feugiat vitae, ultricies eget,
 						tempor sit amet, ante. Donec eu libero sit amet
 						quam egestas semper. Aenean ultricies mi vitae
-						est. Mauris placerat eleifend{" "}
+						est. Mauris placerat eleifend.
+						{/* {product.description} */}
 					</p>
 					<div className="product__change-quantity-container">
 						<button

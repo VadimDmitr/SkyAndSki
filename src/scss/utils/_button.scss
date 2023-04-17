@@ -5,4 +5,8 @@
 	border: none;
 	background-color: var(--color-primary);
 	color: var(--color-secondary);
+
+	&:active {
+		background: darken(#eb4c56, 15%);
+	}
 }
