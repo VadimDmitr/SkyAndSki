@@ -1,5 +1,3 @@
-import snowboard from "images/snowboard_light.png";
-
 export const ProductCard = ({ product }) => {
 	// this is used in SwitchCategory or Catalog components
 	return (
