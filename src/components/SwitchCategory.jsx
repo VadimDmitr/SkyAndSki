@@ -55,10 +55,10 @@ export const SwitchCategory = ({ products }) => {
 								/>
 							</Link>
 						))}
-						<div className="button pointer">
+					</div>
+					<div className="button pointer">
 							More products
 						</div>
-					</div>
 				</>
 			) : (
 				<h2>
