@@ -65,7 +65,7 @@ export const WhyChooseUs = () => {
 					<div className="middle-section__title-text">
 						<div>
 							<h1 className="middle-section__title">
-								Why choose US
+								Why choose US?
 							</h1>
 						</div>
 						<div>
@@ -94,8 +94,7 @@ export const WhyChooseUs = () => {
 					<div>
 						<h2 className="bottom-section__text">
 							Amet minim mollit non deserunt ullamco est sit
-							aliqua dolor do amet sint. Velit officia
-							consequat duis enim velit mollit.
+							aliqua dolor do amet sint Velit officia.
 						</h2>
 					</div>
 				</div>
@@ -108,8 +107,7 @@ export const WhyChooseUs = () => {
 					<div>
 						<h2 className="bottom-section__text">
 							Amet minim mollit non deserunt ullamco est sit
-							aliqua dolor do amet sint. Velit officia
-							consequat duis enim velit mollit.
+							aliqua dolor do amet sint Velit officia.
 						</h2>
 					</div>
 				</div>
@@ -122,8 +120,7 @@ export const WhyChooseUs = () => {
 					<div>
 						<h2 className="bottom-section__text">
 							Amet minim mollit non deserunt ullamco est sit
-							aliqua dolor do amet sint. Velit officia
-							consequat duis enim velit mollit.
+							aliqua dolor do amet sint Velit officia.
 						</h2>
 					</div>
 				</div>
