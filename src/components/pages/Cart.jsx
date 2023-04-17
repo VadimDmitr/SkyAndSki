@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { cartDataContext } from "contexts/cartContext";
 import snowboard from "images/snowboard_light.png";
 import cross from "images/icons/cross.svg";
@@ -175,6 +176,14 @@ export const Cart = () => {
 						</div>
 						<div className="cart-checkout-container__row">
 							<p className="cart-checkout-container__before-total">
+								Price
+							</p>
+							<p className="cart-checkout-container__before-total">
+								${estimate}
+							</p>
+						</div>
+						<div className="cart-checkout-container__row">
+							<p className="cart-checkout-container__before-total">
 								Tax
 							</p>
 							{/* <p>Tax</p> */}
@@ -190,9 +199,11 @@ export const Cart = () => {
 								${finalPrice.toFixed(2)}
 							</p>
 						</div>
-						<button className="button pointer">
-							Go to checkout
-						</button>
+						<Link to={"/checkout"}>
+							<button className="button pointer">
+								Go to checkout
+							</button>
+						</Link>
 					</div>
 				</>
 			) : (

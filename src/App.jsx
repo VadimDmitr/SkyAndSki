@@ -7,6 +7,7 @@ import { Layout } from "components/Layout";
 import { Home } from "components/pages/Home";
 import { About } from "components/pages/About";
 import { Cart } from "components/pages/Cart";
+import { Checkout } from "components/pages/Checkout";
 import { Contact } from "components/pages/Contact";
 import { Product } from "components/pages/Product";
 import { Shop } from "components/pages/Shop";
@@ -28,6 +29,7 @@ function App() {
 					<Route path="/about" element={<About />} />
 					<Route path="/account" element={<Account />} />
 					<Route path="/cart" element={<Cart />} />
+					<Route path="/checkout" element={<Checkout />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route
 						path="/product/:id"

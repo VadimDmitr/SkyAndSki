@@ -18,10 +18,11 @@ export const Catalog = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
+				console.log("products ====> ", products);
 				setProducts([...JSON.parse(result).products]);
 			})
 			.catch((error) => console.log("error", error));
-	}, []);
+	}, [products]);
 
 	return (
 		<div className="catalog">
@@ -35,14 +36,21 @@ export const Catalog = () => {
 			<SwitchCategory products={products} />
 			{/* <Component products={products} /> */}
 			<div className="products">
-				{products.map((product) => (
-					<Link to={`/product/${product._id}`}>
-						<ProductCard
-							product={product}
-							id={product.id}
-						/>
-					</Link>
-				))}
+				{products.length > 0 ? (
+					products.map((product) => (
+						<Link to={`/product/${product._id}`}>
+							<ProductCard
+								product={product}
+								id={product.id}
+							/>
+						</Link>
+					))
+				) : (
+					<h2>
+						There are no products available at this moment.
+						Please come back later.
+					</h2>
+				)}
 			</div>
 			{/* {productsRender} */}
 			{/* <Button /> */}
