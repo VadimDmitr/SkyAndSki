@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 3rem 4rem;
+	padding: 6rem 4rem 15rem;
 }
 
 .company-icons {
@@ -87,6 +87,10 @@
 }
 
 @media (max-width: 767px) {
+	.why-choose-us-container {
+		padding: 0rem;
+	}
+
 	.company-icons {
 		padding-bottom: 5rem;
 		gap: 1rem;
@@ -131,9 +135,13 @@
 
 	.bottom-section__title-text {
 		text-align: left;
-		width: 100%;
+		width: 92%;
 		margin-bottom: 2rem;
 		align-items: flex-start;
+	}
+
+	.middle-section__title-text {
+		padding: 0rem 2rem 2rem 2rem;
 	}
 
 	.bottom-section__title {
