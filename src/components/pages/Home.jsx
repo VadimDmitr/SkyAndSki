@@ -20,7 +20,7 @@ export const Home = () => {
 			<div className="gallery">
 				<Gallery />
 			</div>
-			<div className="why-choose-us">
+			<div className="why-choose-us-container">
 				<WhyChooseUs />
 			</div>
 		</>

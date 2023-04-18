@@ -1,0 +1,160 @@
+.why-choose-us-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 6rem 4rem 15rem;
+}
+
+.company-icons {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 4rem;
+}
+
+.middle-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.middle-section__content {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.middle-section__image {
+	width: 38%;
+	object-fit: cover;
+	padding: 5rem;
+}
+
+.middle-section__title-text {
+	width: 50%;
+}
+
+.middle-section__title {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 4.5rem;
+	line-height: 140%;
+}
+
+.middle-section__text {
+	width: 51.8rem;
+	height: 10.2rem;
+	font-weight: 700;
+	font-size: 2.4rem;
+	line-height: 140%;
+}
+
+.middle-section__link {
+	font-size: 2.4rem;
+	line-height: 140%;
+	text-decoration-line: underline;
+}
+
+.bottom-section {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.bottom-section__title-text {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+}
+
+.bottom-section__title {
+	font-size: 3rem;
+	line-height: 140%;
+	margin-bottom: 0rem;
+}
+
+.bottom-section__text {
+	font-size: 2.4rem;
+	line-height: 140%;
+	padding: 0rem;
+	width: 67%;
+}
+
+@media (max-width: 767px) {
+	.why-choose-us-container {
+		padding: 0rem;
+	}
+
+	.company-icons {
+		padding-bottom: 5rem;
+		gap: 1rem;
+	}
+	.middle-section__content {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.middle-section__image {
+		padding-bottom: 3rem;
+	}
+
+	.middle-section__title {
+		padding-bottom: 1rem;
+		text-align: left;
+		font-size: 3rem;
+	}
+
+	.middle-section__text {
+		font-weight: 400;
+		font-size: 1.8rem;
+		width: 35.8rem;
+		height: 10rem;
+	}
+
+	.middle-section__link {
+		padding: 1rem;
+		font-family: "Poppins";
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.6rem;
+		line-height: 2.7rem;
+		text-decoration-line: underline;
+	}
+
+	.middle-section__image,
+	.middle-section__title-text {
+		width: 100%;
+		padding: 2rem 0rem 1rem 0rem;
+	}
+
+	.bottom-section__title-text {
+		text-align: left;
+		width: 92%;
+		margin-bottom: 2rem;
+		align-items: flex-start;
+	}
+
+	.middle-section__title-text {
+		padding: 0rem 2rem 2rem 2rem;
+	}
+
+	.bottom-section__title {
+		text-align: left;
+		padding-bottom: 1rem;
+		font-size: 3rem;
+		line-height: 140%;
+	}
+
+	.bottom-section__text {
+		font-weight: 400;
+		font-size: 1.8rem;
+		line-height: 140%;
+		width: 100%;
+	}
+}
