@@ -1,0 +1,24 @@
+.checkout {
+    &__address-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        background-color: var(--color-secondary);
+    }
+
+    &__address-form-container {
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+    }
+
+    &__address-form-label {
+        font-size: 2rem;
+        color: var(--color-neutral-black);
+    }
+
+    &__address-form-input {
+        font-size: 2rem;
+        padding: 1.7rem;
+    }
+}
