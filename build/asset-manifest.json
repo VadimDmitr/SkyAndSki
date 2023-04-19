@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9dd1b7a7.css",
+    "main.js": "/static/js/main.fd0cab59.js",
+    "static/js/787.e74c80d6.chunk.js": "/static/js/787.e74c80d6.chunk.js",
+    "static/media/upper_main.png": "/static/media/upper_main.72a3942490917997db73.png",
+    "static/media/snowboard_light.png": "/static/media/snowboard_light.e645b49a4ff83111fc67.png",
+    "static/media/goggles.png": "/static/media/goggles.ab3948996ddb6eb1048c.png",
+    "static/media/snowboard_dark.png": "/static/media/snowboard_dark.54404986c41ccf5c7611.png",
+    "static/media/boots.png": "/static/media/boots.f56f7cd8ff775747d5b9.png",
+    "static/media/webuild.svg": "/static/media/webuild.56a305ae50ee46266c9f5e6500d542be.svg",
+    "static/media/cart.svg": "/static/media/cart.db152c6309ffdf4c6a746ae9149f0d12.svg",
+    "static/media/skyski.svg": "/static/media/skyski.80ab3e6a98e805d66c92b3852d75e7d9.svg",
+    "static/media/instagram.svg": "/static/media/instagram.c1457321b6960478bb5fcceefa05e66d.svg",
+    "static/media/dribbble.svg": "/static/media/dribbble.c6b76dd8ee2a293f05ff1187282c6d9a.svg",
+    "static/media/quick_payment.svg": "/static/media/quick_payment.54ab0b46b8423c7af3481416b3d07e2f.svg",
+    "static/media/search.svg": "/static/media/search.7c1acb36301aaef0fbd83beee80ddff4.svg",
+    "static/media/twitter.svg": "/static/media/twitter.880b349d615d9ff932070bc4ff144810.svg",
+    "static/media/logo.svg": "/static/media/logo.4fb4f77e9fe00ac9199c4858c1c2ee84.svg",
+    "static/media/24_support.svg": "/static/media/24_support.3bbd240ae393717da6f09790f2556dc2.svg",
+    "static/media/free_shoping.svg": "/static/media/free_shoping.6994278736243f21dd895982d9a22adf.svg",
+    "static/media/youtube.svg": "/static/media/youtube.d4246d1ddc36a8e24269bed7c1ca1ec1.svg",
+    "static/media/language.svg": "/static/media/language.cd24a323426910f71eca1ae44bfee829.svg",
+    "static/media/account.svg": "/static/media/account.d65cef96db624e41bf09a4c90d7658de.svg",
+    "static/media/subscbutton.svg": "/static/media/subscbutton.e4b228c470dce488e92e284d6e99788e.svg",
+    "index.html": "/index.html",
+    "static/media/line.svg": "/static/media/line.b8dfe69ea58a403822fbaa9e827ce3ad.svg",
+    "main.9dd1b7a7.css.map": "/static/css/main.9dd1b7a7.css.map",
+    "main.fd0cab59.js.map": "/static/js/main.fd0cab59.js.map",
+    "787.e74c80d6.chunk.js.map": "/static/js/787.e74c80d6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9dd1b7a7.css",
+    "static/js/main.fd0cab59.js"
+  ]
+}
