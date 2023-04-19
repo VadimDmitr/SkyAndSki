@@ -7,16 +7,28 @@ import cross from "images/icons/cross.svg";
 export const Cart = () => {
 	const { cart, setCart } = useContext(cartDataContext);
 
-	const estimate = cart.reduce(
-		(total, current) =>
-			total + current.quantity * current.productPrice,
-		0
-	);
-	const tax = (estimate / 100) * 10.1;
-	const finalPrice = estimate + tax;
+	// let estimate = 0;
+	// let tax = 0;
+	// let finalPrice = 0;
+	// if (cart.length > 0) {
+		const estimate = cart.reduce(
+			(total, current) =>
+				total + current.quantity * current.productPrice
+		);
+		const tax = (estimate / 100) * 10.1;
+		const finalPrice = estimate + tax;
+	// }
+
+	// const estimate = cart.reduce(
+	// 	(total, current) =>
+	// 		total + current.quantity * current.productPrice
+	// );
+	// const tax = (estimate / 100) * 10.1;
+	// const finalPrice = estimate + tax;
 
 	// const getCartValue = () => {
 	// 	console.log("cart inside getCartValue =====> ", cart);
+	// 	console.log("cart.length =====> ", cart.length);
 	// };
 
 	const removeProductFromCart = (item) => {
@@ -160,18 +172,15 @@ export const Cart = () => {
 									</div>
 								))}
 							</div>
-							{/* <button onClick={() => getCartValue()}>
-								Click
-							</button> */}
 						</div>
 					</div>
 					<div className="cart__checkout-container cart-checkout-container">
 						<div className="cart-checkout-container__row">
 							<p className="cart-checkout-container__before-total">
-								Price
+								Shipping & Handling
 							</p>
 							<p className="cart-checkout-container__before-total">
-								${estimate}
+								Free
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -179,7 +188,7 @@ export const Cart = () => {
 								Price
 							</p>
 							<p className="cart-checkout-container__before-total">
-								${estimate}
+								${cart.length > 0 ? estimate : <></>}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -188,7 +197,8 @@ export const Cart = () => {
 							</p>
 							{/* <p>Tax</p> */}
 							<p className="cart-checkout-container__before-total">
-								${tax.toFixed(2)}
+								{/* ${tax.toFixed(2)}$ */}
+								{cart.length > 0 ? tax : <></>}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -196,7 +206,8 @@ export const Cart = () => {
 								GRAND TOTAL
 							</p>
 							<p className="cart-checkout-container__total">
-								${finalPrice.toFixed(2)}
+								{/* ${finalPrice.toFixed(2)}$ */}
+								{cart.length > 0 ? finalPrice : <></>}
 							</p>
 						</div>
 						<Link to={"/checkout"}>
@@ -223,6 +234,7 @@ export const Cart = () => {
 					</a>
 				</div>
 			)}
+			{/* <button onClick={() => getCartValue()}>Click</button> */}
 		</div>
 	);
 };

@@ -2,22 +2,41 @@
 	display: flex;
 	flex-direction: column;
 	padding: 0 1.6rem 3rem 1.6rem;
+
+	&-mobile-full-screen {
+		display: flex;
+		flex-direction: column;
+	}
 }
+
+
 
 @media only screen and (min-width: 768px) {
 	.wrapper {
 		flex-direction: row;
+
+		&-mobile-full-screen {
+			flex-direction: row;
+		}
 	}
 }
 
 @media only screen and (min-width: 1440px) {
 	.wrapper {
 		padding: 0 9rem;
+
+		&-mobile-full-screen {
+			padding: 0 9rem;
+		}
 	}
 }
 
 @media only screen and (min-width: 1920px) {
 	.wrapper {
 		padding: 0 30rem;
+
+		&-mobile-full-screen {
+			padding: 0 30rem;
+		}
 	}
 }

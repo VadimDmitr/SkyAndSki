@@ -1,37 +1,38 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { SwitchCategory } from "components/SwitchCategory";
 import { BASEPRODUCTSURL } from "api/index";
-import { ProductCard } from "components/ProductCard.jsx";
+// import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
 
-const categories = [
-	{ name: "All", value: "all" },
-	{ name: "Board", value: "board" },
-	{ name: "Ski", value: "ski" },
-	{ name: "Other", value: "other" },
-];
+// const categories = [
+// 	{ name: "All", value: "all" },
+// 	{ name: "Board", value: "board" },
+// 	{ name: "Ski", value: "ski" },
+// 	{ name: "Other", value: "other" },
+// ];
 
 export const Catalog = () => {
 	const [products, setProducts] = useState([]);
 
-	const [selectedCategory, setSelectedCategory] =
-		useState("all");
+	// const [selectedCategory, setSelectedCategory] =
+	// 	useState("all");
 
-	console.log("selectedCategory ===> ", selectedCategory);
-	console.log("products ===> ", products);
+	// console.log("selectedCategory ===> ", selectedCategory);
+	// console.log("products ===> ", products);
 
-	const handleClick = (category) => {
-		setSelectedCategory(category);
-	};
+	// const handleClick = (category) => {
+	// 	setSelectedCategory(category);
+	// };
 
-	const filteredProducts =
-		selectedCategory === "all"
-			? products
-			: products.filter(
-					(product) => product.category === selectedCategory
-			  );
+	// const filteredProducts =
+	// 	selectedCategory === "all"
+	// 		? products
+	// 		: products.filter(
+	// 				(product) => product.category === selectedCategory
+	// 		  );
 
+	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
 		fetch(BASEPRODUCTSURL, {
 			method: "GET",
@@ -46,6 +47,7 @@ export const Catalog = () => {
 			})
 			.catch((error) => console.log("error", error));
 	}, []);
+	/* eslint-disable react-hooks/exhaustive-deps */
 
 	return (
 		<div className="catalog">
