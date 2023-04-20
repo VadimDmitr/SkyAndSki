@@ -139,6 +139,11 @@
 		border: 1.33151px solid #ffffff;
 	}
 }
+@media only screen and (max-width: 398px) {
+	.middle-section__image {
+		width: 98%;
+	}
+}
 
 // @media (max-width: 767px) {
 // 	.top-screen {
