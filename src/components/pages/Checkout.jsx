@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 // import { cartDataContext } from "contexts/cartContext";
 
 export const Checkout = () => {
-	const [state, setState] = useState({
+	const [formData, setFormData] = useState({
 		firstName: "",
 		lastName: "",
 		email: "",
@@ -14,11 +14,11 @@ export const Checkout = () => {
 
 	function handleChange(evt) {
 		const value = evt.target.value;
-		setState({
-			...state,
+		setFormData({
+			...formData,
 			[evt.target.name]: value,
 		});
-		console.log("state ===> ", state);
+		console.log("state ===> ", formData);
 	}
 	// const { cart } = useContext(cartDataContext);
 
@@ -35,7 +35,7 @@ export const Checkout = () => {
 			<div className="checkout">
 				<h1>Checkout</h1>
 				<div className="checkout__address-container">
-					<h2>1. Your Address</h2>
+					<h2 className="checkout__address-header">1. Your Address</h2>
 					<form className="checkout__address-form">
 						<div className="checkout__address-form-container">
 							<label className="checkout__address-form-label">
@@ -134,6 +134,50 @@ export const Checkout = () => {
 						<p>CVV/CVC</p>
 						<p>HTTPS/SSL - Secure connection</p>
 					</form>
+				</div>
+				<div>
+					<div className="cart__checkout-container cart-checkout-container">
+						<div className="cart-checkout-container__row">
+							<p className="cart-checkout-container__before-total">
+								Shipping & Handling
+							</p>
+							<p className="cart-checkout-container__before-total">
+								Free
+							</p>
+						</div>
+						<div className="cart-checkout-container__row">
+							<p className="cart-checkout-container__before-total">
+								Price
+							</p>
+							<p className="cart-checkout-container__before-total">
+								{/* ${cart.length > 0 ? estimate : <></>} */}
+							</p>
+						</div>
+						<div className="cart-checkout-container__row">
+							<p className="cart-checkout-container__before-total">
+								Tax
+							</p>
+							{/* <p>Tax</p> */}
+							<p className="cart-checkout-container__before-total">
+								{/* ${tax.toFixed(2)}$ */}
+								{/* {cart.length > 0 ? tax : <></>} */}
+							</p>
+						</div>
+						<div className="cart-checkout-container__row">
+							<p className="cart-checkout-container__total">
+								GRAND TOTAL
+							</p>
+							<p className="cart-checkout-container__total">
+								{/* ${finalPrice.toFixed(2)}$ */}
+								{/* {cart.length > 0 ? finalPrice : <></>} */}
+							</p>
+						</div>
+						{/* <Link to={"/checkout"ijuh */}
+					</div>
+					<div>
+						<button className="button">Complete payment</button>
+						<p>By placing your order you agree to our Terms & Conditions and you understand that we will process your personal data on the basis of our Privacy Policy.</p>
+					</div>
 				</div>
 			</div>
 		</div>

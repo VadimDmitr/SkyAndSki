@@ -1,9 +1,21 @@
 .checkout {
+    display: grid;
+    gap: 3rem;
+
+    &__address-container {
+        padding: 2.8rem 1.6rem;
+        background-color: var(--color-secondary);
+    }
+
+    &__address-header {
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
     &__address-form {
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
-        background-color: var(--color-secondary);
     }
 
     &__address-form-container {
@@ -20,5 +32,16 @@
     &__address-form-input {
         font-size: 2rem;
         padding: 1.7rem;
+    }
+
+    &__payment-form {
+        background-color: var(--color-neutral-grey);
+        color: var(--color-secondary);
+        padding: 2.6rem 2.1rem;
+        border-radius: 25px;
+    }
+
+    &__payment-container {
+        background-color: var(--color-secondary);
     }
 }
