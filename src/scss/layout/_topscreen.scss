@@ -1,377 +1,146 @@
 .top-screen {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background-size: cover;
 	background-position: center;
+}
 
-	&__main {
-		width: 100%;
-		height: auto;
-		top: 0;
-		left: 0;
-	}
+.top-screen__main {
+	width: 100%;
+	height: auto;
+}
 
-	&__text-and-button-container {
-		display: flex;
-		position: absolute;
-		top: 15rem;
-		flex-direction: column;
-		align-items: center;
-		font-family: "Poppins";
-		font-style: normal;
-	}
+.top-screen__text-and-button-container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: "Poppins";
+	font-style: normal;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
 
-	&__skyski {
-		position: absolute;
-		width: 97.8rem;
-		height: 23rem;
-		left: 46rem;
-		top: 18.7rem;
-		font-size: 20rem;
-		line-height: 140%;
-		color: var(--color-secondary);
-	}
+.top-screen__skyski {
+	font-size: 20rem;
+	line-height: 140%;
+	color: var(--color-secondary);
+}
 
-	&__webuild {
-		position: absolute;
-		width: 95.8rem;
-		height: 3.6rem;
-		left: 47rem;
-		top: 43rem;
-		//transform: translateX(-50%);
-		font-weight: 700;
-		font-size: 3rem;
-		line-height: 120%;
-		color: var(--color-secondary);
-	}
+.top-screen__webuild {
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 120%;
+	color: var(--color-secondary);
+	margin-top: 1rem;
+}
 
-	&__button {
-		display: flex;
-		flex-direction: column;
-		align-items: stretch;
-		align-content: center;
-		padding: 2rem 4rem;
-		position: absolute;
-		width: 21.8rem;
-		height: 5.7rem;
-		left: 74.2rem;
-		top: 58.2rem;
-		max-width: 73.5rem;
-		padding: 1.35rem 1.5rem;
-		font-size: 2.2rem;
-		border: none;
-		background-color: var(--color-primary);
-		color: var(--color-secondary);
-	}
+.top-screen__button {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	align-content: center;
+	padding: 1.5rem 4rem;
+	max-width: 73.5rem;
 
-	&__line {
-		position: absolute;
-		width: 100%;
-		height: 0rem;
-		left: 0rem;
-		top: 6.652rem;
-		border: 0.13rem solid #ffffff;
-	}
+	font-size: 2.2rem;
+	border: none;
+	background-color: var(--color-primary);
+	color: var(--color-secondary);
+	margin-top: 1rem;
+}
+
+.top-screen__line {
+	position: absolute;
+	width: 100%;
+	height: 0rem;
+	left: 0rem;
+	top: 6.652rem;
+	border: 0.13rem solid #ffffff;
 }
 
 @media only screen and (max-width: 1280px) {
 	.top-screen__text-and-button-container {
-		top: 0rem;
-		left: -28rem;
+		top: 45%;
 	}
 }
 
 @media only screen and (max-width: 1025px) {
 	.top-screen__text-and-button-container {
-		top: -9rem;
-		left: -28rem;
-	}
-
-	.top-screen__skyski {
-		width: 95.8rem;
-		left: 29rem;
-	}
-
-	.top-screen__webuild {
-		left: 30rem;
+		top: 40%;
 	}
 }
 
-@media only screen and (max-width: 913px) {
-	.top-screen {
-		&__text-and-button-container {
-			top: -16rem;
-			left: -37rem;
-		}
+@media only screen and (min-width: 768px) and (max-width: 942px) {
+	.top-screen__text-and-button-container {
+		top: 50%;
+	}
 
-		&__skyski {
-			font-size: 14rem;
-			line-height: 180%;
-			width: 67.8rem;
-			left: 42rem;
-		}
+	.top-screen__skyski {
+		font-size: 12rem;
+	}
 
-		&__webuild {
-			font-size: 2rem;
-			width: 71.8rem;
-			left: 42rem;
-		}
+	.top-screen__webuild {
+		font-size: 2rem;
+		line-height: 2.4rem;
+		text-align: center;
+	}
 
-		&__button {
-			left: 66.2rem;
-			top: 53.2rem;
-		}
+	.top-screen__button {
+		max-width: 33.5rem;
+		padding: 1.35rem 1.5rem;
+		font-size: 2rem;
+		border: none;
+		height: 4.5rem;
+		width: 17.7rem;
+	}
+	.top-screen__line {
+		position: absolute;
+		width: 100%;
+		height: 0rem;
+		left: 0rem;
+		top: 4rem;
+		border: 1.33151px solid #ffffff;
 	}
 }
 
 @media only screen and (max-width: 767px) {
-	.top-screen {
-		position: relative;
+	.top-screen__text-and-button-container {
+		top: 50%;
+	}
+
+	.top-screen__skyski {
+		font-size: 6.5rem;
+	}
+
+	.top-screen__webuild {
+		font-size: 1rem;
+		line-height: 2.4rem;
+		text-align: center;
+	}
+
+	.top-screen__button {
+		max-width: 33.5rem;
+		padding: 1.35rem 1.5rem;
+		font-size: 2.2rem;
+		border: none;
+		height: 4.5rem;
+		width: 17.7rem;
+	}
+	.top-screen__line {
+		position: absolute;
 		width: 100%;
-		height: 100%;
-		background-size: cover;
-		background-position: center;
-
-		&__main {
-			width: 100%;
-			height: auto;
-			top: 0;
-			left: 0;
-		}
-
-		&__text-and-button-container {
-			display: flex;
-			position: absolute;
-			top: 6rem;
-			left: 1rem;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		&__skyski {
-			position: absolute;
-			height: 9.2rem;
-			width: 33.8rem;
-			left: 1.6rem;
-			top: -3.3rem;
-			font-family: "Poppins";
-			font-style: normal;
-			font-weight: 600;
-			font-size: 6.5rem;
-			line-height: 140%;
-			color: var(--color-secondary);
-		}
-
-		&__button {
-			position: absolute;
-			max-width: 33.5rem;
-			padding: 1.35rem 1.5rem;
-			font-size: 2.2rem;
-			border: none;
-			height: 4.5rem;
-			width: 15.7rem;
-			left: 10rem;
-			top: 8.3rem;
-			background-color: var(--color-primary);
-			color: var(--color-secondary);
-		}
-
-		&__webuild {
-			position: absolute;
-			width: 33rem;
-			height: 4.8rem;
-			left: 1.2rem;
-			top: 51px;
-			font-family: "Poppins";
-			font-style: normal;
-			font-weight: 600;
-			font-size: 1rem;
-			line-height: 2.4rem;
-			text-align: center;
-			color: var(--color-secondary);
-		}
-
-		&__line {
-			position: absolute;
-			width: 100%;
-			height: 0rem;
-			left: 0rem;
-			top: 1.652rem;
-			border: 1.33151px solid #ffffff;
-		}
+		height: 0rem;
+		left: 0rem;
+		top: 1.652rem;
+		border: 1.33151px solid #ffffff;
 	}
 }
-
-// @media (max-width: 767px) {
-// 	.top-screen {
-// 		&__skyski {
-// 			width: 40%; // Adjust the width to fit mobile screens
-// 			height: auto; // Keep the aspect ratio
-// 			left: 50%; // Adjust the position
-// 			top: 30%; // Adjust the position
-// 			font-size: 10rem; // Adjust the font size
-// 		}
-
-// 		&__webuild {
-// 			width: 40%; // Adjust the width to fit mobile screens
-// 			height: auto; // Keep the aspect ratio
-// 			left: 50%; // Adjust the position
-// 			top: 50%; // Adjust the position
-// 			font-size: 2rem; // Adjust the font size
-// 		}
-
-// 		&__line {
-// 			width: 100%; // Adjust the width to fit mobile screens
-// 			height: 0rem;
-// 			left: 0rem;
-// 			top: 3rem; // Adjust the position
-// 			border: 0.1rem solid #ffffff;
-// 		}
-// 	}
-// }
-
-// @media (max-width: 1281px) {
-// 	.top-screen {
-// 		&__skyski,
-// 		&__webuild {
-// 			left: 53%;
-// 		}
-
-// 		&__button {
-// 			width: 21rem;
-// 			left: 55.2rem;
-// 			top: 51.2rem;
-// 		}
-// 	}
-// }
-
-// @media (max-width: 1025px) {
-// 	.top-screen {
-// 		&__button {
-// 			left: 43.2rem;
-// 			top: 47.2rem;
-// 		}
-// 	}
-// }
-
-// @media (max-width: 913px) {
-// 	.top-screen {
-// 		&__button {
-// 			left: 37.2rem;
-// 			top: 42.9rem;
-// 		}
-// 	}
-// }
-
-// @media (max-width: 821px) {
-// 	.top-screen {
-// 		&__skyski {
-// 			top: 8rem;
-// 			width: 90%;
-// 		}
-
-// 		&__webuild {
-// 			top: 28rem;
-// 			width: 90%;
-// 		}
-
-// 		&__button {
-// 			left: 31.2rem;
-// 			top: 34.2rem;
-// 		}
-// 	}
-// }
-
-// @media (max-width: 769px) {
-// 	.top-screen {
-// 		&__skyski {
-// 			top: 10rem;
-// 			width: 90%;
-// 		}
-
-// 		&__webuild {
-// 			top: 30rem;
-// 			width: 90%;
-// 		}
-
-// 		&__button {
-// 			left: 31.2rem;
-// 			top: 34.2rem;
-// 		}
-// 	}
-// }
-
-// @media (max-width: 541px) {
-// 	.top-screen {
-// 		&__webuild {
-// 			top: 19rem;
-// 		}
-
-// 		&__button {
-// 			left: 19.2rem;
-// 			top: 21.2rem;
-// 		}
-// 	}
-// }
-
-// @media (max-width: 415px) {
-// 	.top-screen {
-// 		&__skyski {
-// 			top: 7rem;
-// 			width: 90%;
-// 		}
-
-// 		&__webuild {
-// 			top: 14rem;
-// 		}
-
-// 		&__button {
-// 			width: 10.3rem;
-// 			height: 6.7rem;
-// 			font-size: 1.1rem;
-// 			left: 14.2rem;
-// 			top: 16.2rem;
-// 		}
-// 	}
-// }
-
-// @media (max-width: 393px) {
-// 	.top-screen {
-// 		&__skyski {
-// 			top: 4rem;
-// 			width: 90%;
-// 		}
-
-// 		&__webuild {
-// 			top: 11rem;
-// 		}
-
-// 		&__button {
-// 			width: 12.3rem;
-// 			height: 6.7rem;
-// 			font-size: 1.3rem;
-// 			left: 13.2rem;
-// 			top: 13.2rem;
-// 		}
-// 	}
-// }
-
-// @media (max-width: 281px) {
-// 	.top-screen {
-// 		&__skyski {
-// 			top: 5rem;
-// 			width: 90%;
-// 		}
-
-// 		&__webuild {
-// 			top: 10.5rem;
-// 		}
-
-// 		&__button {
-// 			width: 10.3rem;
-// 			height: 6.7rem;
-// 			font-size: 1.2rem;
-// 			left: 8.2rem;
-// 			top: 8.2rem;
-// 		}
-// 	}
-// }
+@media only screen and (max-width: 398px) {
+	.middle-section__image {
+		width: 98%;
+	}
+}
