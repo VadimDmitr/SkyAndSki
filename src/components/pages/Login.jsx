@@ -1,8 +1,9 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
-import { BASEAUTHURL } from "api/index";
+import { URL } from "api/index";
 
+const BASEAUTHURL = URL + "auth";
 const URL = BASEAUTHURL + "login";
 
 export const Login = () => {

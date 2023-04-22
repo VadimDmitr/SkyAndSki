@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 // import { cartDataContext } from "contexts/cartContext";
+import { BASEAUTHURL } from "api/index";
 import cardChip from "images/icons/chip.svg";
 import shield from "images/icons/shield.svg";
 
@@ -19,6 +20,24 @@ export const Checkout = () => {
 		cvv: "",
 	});
 
+	const order = {
+		"products": [
+			{
+				"productId": "1",
+				"name": "NewProduct",
+				"quantity": "4",
+				"price": "400"
+			},
+			{
+				"productId": "2",
+				"name": "NewProduct2",
+				"quantity": "2",
+				"price": "150"
+			}
+		],
+		"bill": "550"
+	}
+
 	const handleChange = (evt) => {
 		const value = evt.target.value;
 		setFormData({
@@ -30,7 +49,18 @@ export const Checkout = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		// alert(`The name you entered was: ${name}`);
+		fetch(BASEPRODUCTSURL, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => response.text())
+			.then((result) => {
+				console.log("products ====> ", products);
+				setProducts([...JSON.parse(result).products]);
+			})
+			.catch((error) => console.log("error", error));
 		console.log("azaza");
 	};
 	// const { cart } = useContext(cartDataContext);

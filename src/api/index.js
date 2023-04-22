@@ -1,8 +1,9 @@
 import axios from "axios";
 
-const BASEAUTHURL = "http://localhost:8000/api/v1/auth/";
-const BASEPRODUCTSURL =
-	"http://localhost:8000/api/v1/products/";
+const BASEURL = "http://localhost:8000/api/v1/auth/";
+// const BASEAUTHURL = "http://localhost:8000/api/v1/auth/";
+// const BASEPRODUCTSURL =
+// 	"http://localhost:8000/api/v1/products/";
 // const BASEPRODUCTSURL = "http://localhost:3000/products";
 
 // note: not used, but could be used with GET with params
@@ -43,8 +44,7 @@ const fetchData = async (url, method, body) => {
 };
 
 export {
-	BASEAUTHURL,
-	BASEPRODUCTSURL,
+	BASEURL,
 	getData,
 	getAllData,
 	fetchData,

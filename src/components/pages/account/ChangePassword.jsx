@@ -1,7 +1,8 @@
 import { useState, useContext } from "react";
 import { userDataContext } from "contexts/userContext";
-import { BASEAUTHURL } from "api/index";
+import { URL } from "api/index";
 
+const BASEAUTHURL = URL + "auth";
 const URL = BASEAUTHURL + "removeuser";
 
 export const ChangePassword = () => {
