@@ -1,47 +1,138 @@
 .checkout {
-    display: grid;
-    gap: 3rem;
+	display: grid;
+	row-gap: 3rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+    "address"
+    "payment"
+    "estimate"
+    "complete";
 
-    &__address-container {
-        padding: 2.8rem 1.6rem;
-        background-color: var(--color-secondary);
-    }
+	&__header {
+		grid-area: header;
+	}
 
-    &__address-header {
-        text-align: center;
-        font-size: 2.4rem;
-    }
+	&__address-container {
+		grid-area: address;
+		padding: 2.8rem 1.6rem;
+		background-color: var(--color-secondary);
+	}
 
-    &__address-form {
+	&__header {
+		text-align: center;
+		font-size: 2.4rem;
+	}
+
+	&__address-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+	}
+
+	&__address-form-container {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+
+	&__address-form-label {
+		font-size: 2rem;
+		color: var(--color-neutral-black);
+	}
+
+	&__address-form-input {
+		font-size: 2rem;
+		padding: 1.7rem;
+	}
+
+	&__payment-container {
+		grid-area: payment;
+		padding: 2.8rem 1.6rem;
+		background-color: var(--color-secondary);
+	}
+
+	&__payment-form-row-outer {
+		display: flex;
+		justify-content: space-between;
+        // align-items: end;
+
+        &--exp {
+            gap: .6rem;
+        }
+	}
+
+    // &__payment-form-row-double {
+    //     display: flex;
+    // }
+
+	&__payment-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+		background-color: var(--color-neutral-grey);
+		color: var(--color-secondary);
+		padding: 2.6rem 2.1rem;
+		border-radius: 25px;
+	}
+
+	&__payment-form-row {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+
+	&__payment-form-label {
+		font-size: 1.6rem;
+	}
+
+	&__payment-form-input {
+		padding: 1.25rem;
+		font-size: 1.9rem;
+		background-color: var(--color-neutral-lightgrey);
+		border: 1px solid var(--color-neutral-lightgrey);
+		// color of the placeholder is #cacaca
+		border-radius: 11px;
+
+        &--exp {
+            width: 6rem;
+        }
+
+        &--cvv {
+            width: 7.5rem;
+        }
+	}
+
+    &__payment-form-info-container {
         display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
+        justify-content:flex-start;
+        align-items: center;
     }
 
-    &__address-form-container {
-        display: flex;
-        flex-direction: column;
-        gap: .6rem;
+    &__payment-form-info {
+        font-size: 1.6rem;
     }
 
-    &__address-form-label {
-        font-size: 2rem;
-        color: var(--color-neutral-black);
-    }
+	&__estimate-container {
+		grid-area: estimate;
+		display: flex;
+		flex-direction: column;
+	}
 
-    &__address-form-input {
-        font-size: 2rem;
-        padding: 1.7rem;
-    }
+	&__complete-container {
+		grid-area: complete;
+		display: flex;
+		flex-direction: column;
+	}
+}
 
-    &__payment-form {
-        background-color: var(--color-neutral-grey);
-        color: var(--color-secondary);
-        padding: 2.6rem 2.1rem;
-        border-radius: 25px;
-    }
-
-    &__payment-container {
-        background-color: var(--color-secondary);
-    }
+@media only screen and (min-width: 768px) {
+	.checkout {
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2.3rem;
+		grid-template-areas:
+			"header header"
+			"address estimate"
+			"payment estimate"
+			"complete estimate";
+	}
 }

@@ -9,14 +9,13 @@
 	}
 }
 
-
-
 @media only screen and (min-width: 768px) {
 	.wrapper {
 		flex-direction: row;
 
 		&-mobile-full-screen {
 			flex-direction: row;
+			padding: 10rem 5rem;
 		}
 	}
 }

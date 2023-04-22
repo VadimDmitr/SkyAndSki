@@ -1,5 +1,7 @@
 import { useState, useContext } from "react";
 // import { cartDataContext } from "contexts/cartContext";
+import cardChip from "images/icons/chip.svg";
+import shield from "images/icons/shield.svg";
 
 export const Checkout = () => {
 	const [formData, setFormData] = useState({
@@ -10,16 +12,27 @@ export const Checkout = () => {
 		zip: "",
 		city: "",
 		address: "",
+		cardNumber: "",
+		cardHolder: "",
+		expirationMonth: "",
+		expirationYear: "",
+		cvv: "",
 	});
 
-	function handleChange(evt) {
+	const handleChange = (evt) => {
 		const value = evt.target.value;
 		setFormData({
 			...formData,
 			[evt.target.name]: value,
 		});
 		console.log("state ===> ", formData);
-	}
+	};
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		// alert(`The name you entered was: ${name}`);
+		console.log("azaza");
+	};
 	// const { cart } = useContext(cartDataContext);
 
 	// const estimate = cart.reduce(
@@ -32,11 +45,16 @@ export const Checkout = () => {
 
 	return (
 		<div className="wrapper-mobile-full-screen">
-			<div className="checkout">
-				<h1>Checkout</h1>
+			<form
+				className="checkout"
+				onSubmit={() => handleSubmit()}
+			>
+				<h1 className="checkout__header">Checkout</h1>
 				<div className="checkout__address-container">
-					<h2 className="checkout__address-header">1. Your Address</h2>
-					<form className="checkout__address-form">
+					<h2 className="checkout__header">
+						1. Your Address
+					</h2>
+					<div className="checkout__address-form">
 						<div className="checkout__address-form-container">
 							<label className="checkout__address-form-label">
 								First Name
@@ -121,21 +139,87 @@ export const Checkout = () => {
 								onChange={(event) => handleChange(event)}
 							/>
 						</div>
-					</form>
+					</div>
 				</div>
 				<div className="checkout__payment-container">
-					<h2>2. Payment</h2>
-					<form className="checkout__payment-form">
-						<p>Card number</p>
-						<input required type="text" />
-						<p>Card holder</p>
-						<input required type="text" />
-						<p>Expiration date</p>
-						<p>CVV/CVC</p>
-						<p>HTTPS/SSL - Secure connection</p>
-					</form>
+					<h2 className="checkout__header">2. Payment</h2>
+					<div className="checkout__payment-form">
+						<div className="checkout__payment-form-row-outer align-items-end">
+							<div className="checkout__payment-form-row">
+								<label className="checkout__payment-form-label">
+									Card number
+								</label>
+								<input
+									className="checkout__payment-form-input"
+									required
+									type="text"
+									name="cardNumber"
+									onChange={(event) => handleChange(event)}
+								/>
+							</div>
+							<img src={cardChip} alt="card chip" />
+						</div>
+						<div className="checkout__payment-form-row">
+							<label className="checkout__payment-form-label">
+								Card holder
+							</label>
+							<input
+								className="checkout__payment-form-input"
+								required
+								type="text"
+								name="cardHolder"
+								onChange={(event) => handleChange(event)}
+							/>
+						</div>
+						<div className="checkout__payment-form-row-outer">
+							<div className="checkout__payment-form-row">
+								<label className="checkout__payment-form-label">
+									Expiration date
+								</label>
+								<div className="checkout__payment-form-row-outer checkout__payment-form-row-outer--exp align-items-start">
+									<input
+										className="checkout__payment-form-input checkout__payment-form-input--exp"
+										required
+										type="text"
+										name="expirationMonth"
+										onChange={(event) =>
+											handleChange(event)
+										}
+									/>
+									<input
+										className="checkout__payment-form-input  checkout__payment-form-input--exp"
+										required
+										type="text"
+										name="expirationYear"
+										onChange={(event) =>
+											handleChange(event)
+										}
+									/>
+								</div>
+							</div>
+							<div className="checkout__payment-form-row">
+								<label className="checkout__payment-form-label">
+									CVV/CVC
+								</label>
+								<input
+									className="checkout__payment-form-input  checkout__payment-form-input--cvv"
+									required
+									type="text"
+									name="cvv"
+									onChange={(event) => handleChange(event)}
+								/>
+								<p>3 or 4 digits</p>
+							</div>
+						</div>
+						<div className="checkout__payment-form-info-container">
+							<img src={shield} alt="card shield" />
+							<p className="checkout__payment-form-info">
+								HTTPS/SSL - Secure connection
+							</p>
+						</div>
+					</div>
 				</div>
-				<div>
+				<div className="checkout__estimate-container">
 					<div className="cart__checkout-container cart-checkout-container">
 						<div className="cart-checkout-container__row">
 							<p className="cart-checkout-container__before-total">
@@ -174,12 +258,19 @@ export const Checkout = () => {
 						</div>
 						{/* <Link to={"/checkout"ijuh */}
 					</div>
-					<div>
-						<button className="button">Complete payment</button>
-						<p>By placing your order you agree to our Terms & Conditions and you understand that we will process your personal data on the basis of our Privacy Policy.</p>
-					</div>
 				</div>
-			</div>
+				<div className="checkout__complete-container">
+					<button className="button" type="submit">
+						Complete payment
+					</button>
+					<p>
+						By placing your order you agree to our Terms &
+						Conditions and you understand that we will
+						process your personal data on the basis of our
+						Privacy Policy.
+					</p>
+				</div>
+			</form>
 		</div>
 	);
 };
