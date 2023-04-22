@@ -15,6 +15,7 @@ import { Account } from "components/pages/account/Account";
 import { Login } from "components/pages/Login";
 import { Logout } from "components/pages/account/Logout";
 import { Register } from "components/pages/Register";
+import { Order } from "components/pages/Order";
 import { DeleteAccount } from "components/pages/account/DeleteAccount";
 import { ChangePassword } from "components/pages/account/ChangePassword";
 import { NotFound } from "components/pages/NotFound";
@@ -47,6 +48,7 @@ function App() {
 						path="/change-password"
 						element={<ChangePassword />}
 					/>
+					<Route path="/order" element={<Order />}/>
 					<Route path="*" element={<NotFound />} />
 				</Route>
 			</Routes>
