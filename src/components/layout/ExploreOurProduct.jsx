@@ -9,7 +9,7 @@ export const ExploreOurProduct = () => {
 				aliqua dolor do amet sint. Velit officia consequat
 				duis enim velit mollit.
 			</h2>
-      {/*Products from catalog*/}
+			{/*Products from catalog*/}
 		</div>
 	);
 };
