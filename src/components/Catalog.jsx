@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
 import { SwitchCategory } from "components/SwitchCategory";
-import { BASEPRODUCTSURL } from "api/index";
+import { BASEURL } from "api/index";
 // import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
 
@@ -15,6 +15,7 @@ import { BASEPRODUCTSURL } from "api/index";
 export const Catalog = () => {
 	const [products, setProducts] = useState([]);
 
+	const BASEPRODUCTSURL = BASEURL + "products";
 	// const [selectedCategory, setSelectedCategory] =
 	// 	useState("all");
 

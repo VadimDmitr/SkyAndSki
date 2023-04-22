@@ -1,10 +1,10 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
-import { URL } from "api/index";
+import { BASEURL } from "api/index";
 
-const BASEAUTHURL = URL + "auth";
-const URL = BASEAUTHURL + "register";
+const BASEAUTHURL = BASEURL + "auth";
+const URL = BASEAUTHURL + "login";
 
 export const Register = () => {
 	const navigate = useNavigate();
