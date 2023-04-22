@@ -55,29 +55,31 @@ export const Checkout = () => {
 						1. Your Address
 					</h2>
 					<div className="checkout__address-form">
-						<div className="checkout__address-form-container">
-							<label className="checkout__address-form-label">
-								First Name
-							</label>
-							<input
-								className="checkout__address-form-input"
-								required
-								type="text"
-								name="firstName"
-								onChange={(event) => handleChange(event)}
-							/>
-						</div>
-						<div className="checkout__address-form-container">
-							<label className="checkout__address-form-label">
-								Last Name
-							</label>
-							<input
-								className="checkout__address-form-input"
-								required
-								type="text"
-								name="lastName"
-								onChange={(event) => handleChange(event)}
-							/>
+						<div className="checkout__address-form-row-double">
+							<div className="checkout__address-form-container">
+								<label className="checkout__address-form-label">
+									First Name
+								</label>
+								<input
+									className="checkout__address-form-input"
+									required
+									type="text"
+									name="firstName"
+									onChange={(event) => handleChange(event)}
+								/>
+							</div>
+							<div className="checkout__address-form-container">
+								<label className="checkout__address-form-label">
+									Last Name
+								</label>
+								<input
+									className="checkout__address-form-input"
+									required
+									type="text"
+									name="lastName"
+									onChange={(event) => handleChange(event)}
+								/>
+							</div>
 						</div>
 						<div className="checkout__address-form-container">
 							<label className="checkout__address-form-label">
@@ -103,29 +105,31 @@ export const Checkout = () => {
 								onChange={(event) => handleChange(event)}
 							/>
 						</div>
-						<div className="checkout__address-form-container">
-							<label className="checkout__address-form-label">
-								Zip Code
-							</label>
-							<input
-								className="checkout__address-form-input"
-								required
-								type="text"
-								name="zip"
-								onChange={(event) => handleChange(event)}
-							/>
-						</div>
-						<div className="checkout__address-form-container">
-							<label className="checkout__address-form-label">
-								City
-							</label>
-							<input
-								className="checkout__address-form-input"
-								required
-								type="text"
-								name="city"
-								onChange={(event) => handleChange(event)}
-							/>
+						<div className="checkout__address-form-row-double checkout__address-form-row-double--reverse">
+							<div className="checkout__address-form-container">
+								<label className="checkout__address-form-label">
+									Zip Code
+								</label>
+								<input
+									className="checkout__address-form-input"
+									required
+									type="text"
+									name="zip"
+									onChange={(event) => handleChange(event)}
+								/>
+							</div>
+							<div className="checkout__address-form-container">
+								<label className="checkout__address-form-label">
+									City
+								</label>
+								<input
+									className="checkout__address-form-input"
+									required
+									type="text"
+									name="city"
+									onChange={(event) => handleChange(event)}
+								/>
+							</div>
 						</div>
 						<div className="checkout__address-form-container">
 							<label className="checkout__address-form-label">
@@ -142,7 +146,9 @@ export const Checkout = () => {
 					</div>
 				</div>
 				<div className="checkout__payment-container">
-					<h2 className="checkout__sub-header">2. Payment</h2>
+					<h2 className="checkout__sub-header">
+						2. Payment
+					</h2>
 					<div className="checkout__payment-form">
 						<div className="checkout__payment-form-row-outer align-items-end">
 							<div className="checkout__payment-form-row">

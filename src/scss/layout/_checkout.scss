@@ -17,9 +17,9 @@
 
 	&__address-container {
 		grid-area: address;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
 		padding: 2.8rem 1.6rem;
 		background-color: var(--color-secondary);
 	}
@@ -27,6 +27,11 @@
 	&__sub-header {
 		text-align: center;
 		font-size: 2.4rem;
+	}
+
+	&__address-form-row-double {
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__address-form {
@@ -53,9 +58,9 @@
 
 	&__payment-container {
 		grid-area: payment;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
 		padding: 2.8rem 1.6rem;
 		background-color: var(--color-secondary);
 	}
@@ -132,7 +137,7 @@
 		grid-area: complete;
 		display: flex;
 		flex-direction: column;
-        gap: 2.4rem;
+		gap: 2.4rem;
 		padding: 0 1.6rem 2.4rem 1.6rem;
 	}
 
@@ -155,5 +160,19 @@
 			"address estimate"
 			"payment estimate"
 			"complete estimate";
+
+		&__address-form-row-double {
+			flex-direction: row;
+            gap: 2.3rem;
+
+            &--reverse {
+                flex-direction: row-reverse;
+            }
+		}
+
+		&__estimate-container {
+			height: fit-content;
+			background-color: var(--color-secondary);
+		}
 	}
 }
