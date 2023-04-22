@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASEURL = "http://localhost:8000/api/v1/auth/";
+const BASEURL = "http://localhost:8000/api/v1/";
 // const BASEAUTHURL = "http://localhost:8000/api/v1/auth/";
 // const BASEPRODUCTSURL =
 // 	"http://localhost:8000/api/v1/products/";

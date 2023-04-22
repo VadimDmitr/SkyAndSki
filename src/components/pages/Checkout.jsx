@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 // import { cartDataContext } from "contexts/cartContext";
-import { BASEAUTHURL } from "api/index";
+import { BASEURL } from "api/index";
 import cardChip from "images/icons/chip.svg";
 import shield from "images/icons/shield.svg";
 
@@ -20,23 +20,25 @@ export const Checkout = () => {
 		cvv: "",
 	});
 
+	const URL = BASEURL + "orders";
+
 	const order = {
-		"products": [
+		products: [
 			{
-				"productId": "1",
-				"name": "NewProduct",
-				"quantity": "4",
-				"price": "400"
+				productId: "1",
+				name: "NewProduct",
+				quantity: "4",
+				price: "400",
 			},
 			{
-				"productId": "2",
-				"name": "NewProduct2",
-				"quantity": "2",
-				"price": "150"
-			}
+				productId: "2",
+				name: "NewProduct2",
+				quantity: "2",
+				price: "150",
+			},
 		],
-		"bill": "550"
-	}
+		bill: "550",
+	};
 
 	const handleChange = (evt) => {
 		const value = evt.target.value;
@@ -49,16 +51,22 @@ export const Checkout = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		fetch(BASEPRODUCTSURL, {
-			method: "GET",
-			headers: {
-				"Content-Type": "application/json",
-			},
+		var myHeaders = new Headers();
+		myHeaders.append(
+			"Authorization",
+			process.env.USER_BEARER_TOKEN
+		);
+		myHeaders.append("Content-Type", "application/json");
+
+		fetch(URL, {
+			method: "POST",
+			headers: myHeaders,
+			body: JSON.stringify(order)
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				console.log("products ====> ", products);
-				setProducts([...JSON.parse(result).products]);
+				console.log("result ====> ", result);
+				// setProducts([...JSON.parse(result).products]);
 			})
 			.catch((error) => console.log("error", error));
 		console.log("azaza");
@@ -77,7 +85,7 @@ export const Checkout = () => {
 		<div className="wrapper-mobile-full-screen">
 			<form
 				className="checkout"
-				onSubmit={() => handleSubmit()}
+				onSubmit={(e) => handleSubmit(e)}
 			>
 				<h1 className="checkout__header">Checkout</h1>
 				<div className="checkout__address-container">
@@ -92,7 +100,7 @@ export const Checkout = () => {
 								</label>
 								<input
 									className="checkout__address-form-input"
-									required
+									// required
 									type="text"
 									name="firstName"
 									onChange={(event) => handleChange(event)}
@@ -104,7 +112,7 @@ export const Checkout = () => {
 								</label>
 								<input
 									className="checkout__address-form-input"
-									required
+									// required
 									type="text"
 									name="lastName"
 									onChange={(event) => handleChange(event)}
@@ -117,7 +125,7 @@ export const Checkout = () => {
 							</label>
 							<input
 								className="checkout__address-form-input"
-								required
+								// required
 								type="text"
 								name="email"
 								onChange={(event) => handleChange(event)}
@@ -129,7 +137,7 @@ export const Checkout = () => {
 							</label>
 							<input
 								className="checkout__address-form-input"
-								required
+								// required
 								type="text"
 								name="contry"
 								onChange={(event) => handleChange(event)}
@@ -142,7 +150,7 @@ export const Checkout = () => {
 								</label>
 								<input
 									className="checkout__address-form-input"
-									required
+									// required
 									type="text"
 									name="zip"
 									onChange={(event) => handleChange(event)}
@@ -154,7 +162,7 @@ export const Checkout = () => {
 								</label>
 								<input
 									className="checkout__address-form-input"
-									required
+									// required
 									type="text"
 									name="city"
 									onChange={(event) => handleChange(event)}
@@ -167,7 +175,7 @@ export const Checkout = () => {
 							</label>
 							<input
 								className="checkout__address-form-input"
-								required
+								// required
 								type="text"
 								name="address"
 								onChange={(event) => handleChange(event)}
@@ -187,7 +195,7 @@ export const Checkout = () => {
 								</label>
 								<input
 									className="checkout__payment-form-input"
-									required
+									// required
 									type="text"
 									name="cardNumber"
 									onChange={(event) => handleChange(event)}
@@ -201,7 +209,7 @@ export const Checkout = () => {
 							</label>
 							<input
 								className="checkout__payment-form-input"
-								required
+								// required
 								type="text"
 								name="cardHolder"
 								onChange={(event) => handleChange(event)}
@@ -215,7 +223,7 @@ export const Checkout = () => {
 								<div className="checkout__payment-form-row-outer checkout__payment-form-row-outer--exp align-items-start">
 									<input
 										className="checkout__payment-form-input checkout__payment-form-input--exp"
-										required
+										// required
 										type="text"
 										name="expirationMonth"
 										onChange={(event) =>
@@ -224,7 +232,7 @@ export const Checkout = () => {
 									/>
 									<input
 										className="checkout__payment-form-input  checkout__payment-form-input--exp"
-										required
+										// required
 										type="text"
 										name="expirationYear"
 										onChange={(event) =>
@@ -239,7 +247,7 @@ export const Checkout = () => {
 								</label>
 								<input
 									className="checkout__payment-form-input  checkout__payment-form-input--cvv"
-									required
+									// required
 									type="text"
 									name="cvv"
 									onChange={(event) => handleChange(event)}
