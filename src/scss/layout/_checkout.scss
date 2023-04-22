@@ -1,24 +1,30 @@
 .checkout {
 	display: grid;
 	row-gap: 3rem;
-    grid-template-columns: 1fr;
-    grid-template-areas: "header"
-    "address"
-    "payment"
-    "estimate"
-    "complete";
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"header"
+		"address"
+		"payment"
+		"estimate"
+		"complete";
 
 	&__header {
 		grid-area: header;
+		padding: 3rem 1.6rem 0 1.6rem;
+		font-size: 4.5rem;
 	}
 
 	&__address-container {
 		grid-area: address;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
 		padding: 2.8rem 1.6rem;
 		background-color: var(--color-secondary);
 	}
 
-	&__header {
+	&__sub-header {
 		text-align: center;
 		font-size: 2.4rem;
 	}
@@ -47,6 +53,9 @@
 
 	&__payment-container {
 		grid-area: payment;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
 		padding: 2.8rem 1.6rem;
 		background-color: var(--color-secondary);
 	}
@@ -54,16 +63,16 @@
 	&__payment-form-row-outer {
 		display: flex;
 		justify-content: space-between;
-        // align-items: end;
+		// align-items: end;
 
-        &--exp {
-            gap: .6rem;
-        }
+		&--exp {
+			gap: 0.6rem;
+		}
 	}
 
-    // &__payment-form-row-double {
-    //     display: flex;
-    // }
+	// &__payment-form-row-double {
+	//     display: flex;
+	// }
 
 	&__payment-form {
 		display: flex;
@@ -93,35 +102,47 @@
 		// color of the placeholder is #cacaca
 		border-radius: 11px;
 
-        &--exp {
-            width: 6rem;
-        }
+		&--exp {
+			width: 6rem;
+		}
 
-        &--cvv {
-            width: 7.5rem;
-        }
+		&--cvv {
+			width: 7.5rem;
+		}
 	}
 
-    &__payment-form-info-container {
-        display: flex;
-        justify-content:flex-start;
-        align-items: center;
-    }
+	&__payment-form-info-container {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
 
-    &__payment-form-info {
-        font-size: 1.6rem;
-    }
+	&__payment-form-info {
+		font-size: 1.6rem;
+	}
 
 	&__estimate-container {
 		grid-area: estimate;
 		display: flex;
 		flex-direction: column;
+		padding: 2.4rem 1.6rem 0 1.6rem;
 	}
 
 	&__complete-container {
 		grid-area: complete;
 		display: flex;
 		flex-direction: column;
+        gap: 2.4rem;
+		padding: 0 1.6rem 2.4rem 1.6rem;
+	}
+
+	&__purchase-terms {
+		color: var(--color-neutral-lightgrey);
+		font-size: 1.6rem;
+	}
+
+	&__purchase-terms-link {
+		color: var(--color-neutral-black);
 	}
 }
 

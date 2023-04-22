@@ -51,7 +51,7 @@ export const Checkout = () => {
 			>
 				<h1 className="checkout__header">Checkout</h1>
 				<div className="checkout__address-container">
-					<h2 className="checkout__header">
+					<h2 className="checkout__sub-header">
 						1. Your Address
 					</h2>
 					<div className="checkout__address-form">
@@ -142,7 +142,7 @@ export const Checkout = () => {
 					</div>
 				</div>
 				<div className="checkout__payment-container">
-					<h2 className="checkout__header">2. Payment</h2>
+					<h2 className="checkout__sub-header">2. Payment</h2>
 					<div className="checkout__payment-form">
 						<div className="checkout__payment-form-row-outer align-items-end">
 							<div className="checkout__payment-form-row">
@@ -220,54 +220,64 @@ export const Checkout = () => {
 					</div>
 				</div>
 				<div className="checkout__estimate-container">
-					<div className="cart__checkout-container cart-checkout-container">
-						<div className="cart-checkout-container__row">
-							<p className="cart-checkout-container__before-total">
-								Shipping & Handling
-							</p>
-							<p className="cart-checkout-container__before-total">
-								Free
-							</p>
-						</div>
-						<div className="cart-checkout-container__row">
-							<p className="cart-checkout-container__before-total">
-								Price
-							</p>
-							<p className="cart-checkout-container__before-total">
-								{/* ${cart.length > 0 ? estimate : <></>} */}
-							</p>
-						</div>
-						<div className="cart-checkout-container__row">
-							<p className="cart-checkout-container__before-total">
-								Tax
-							</p>
-							{/* <p>Tax</p> */}
-							<p className="cart-checkout-container__before-total">
-								{/* ${tax.toFixed(2)}$ */}
-								{/* {cart.length > 0 ? tax : <></>} */}
-							</p>
-						</div>
-						<div className="cart-checkout-container__row">
-							<p className="cart-checkout-container__total">
-								GRAND TOTAL
-							</p>
-							<p className="cart-checkout-container__total">
-								{/* ${finalPrice.toFixed(2)}$ */}
-								{/* {cart.length > 0 ? finalPrice : <></>} */}
-							</p>
-						</div>
-						{/* <Link to={"/checkout"ijuh */}
+					<div className="cart-checkout-container__row">
+						<p className="cart-checkout-container__before-total">
+							Shipping & Handling
+						</p>
+						<p className="cart-checkout-container__before-total">
+							Free
+						</p>
 					</div>
+					<div className="cart-checkout-container__row">
+						<p className="cart-checkout-container__before-total">
+							Price
+						</p>
+						<p className="cart-checkout-container__before-total">
+							{/* ${cart.length > 0 ? estimate : <></>} */}
+						</p>
+					</div>
+					<div className="cart-checkout-container__row">
+						<p className="cart-checkout-container__before-total">
+							Tax
+						</p>
+						{/* <p>Tax</p> */}
+						<p className="cart-checkout-container__before-total">
+							{/* ${tax.toFixed(2)}$ */}
+							{/* {cart.length > 0 ? tax : <></>} */}
+						</p>
+					</div>
+					<div className="cart-checkout-container__row">
+						<p className="cart-checkout-container__total">
+							GRAND TOTAL
+						</p>
+						<p className="cart-checkout-container__total">
+							{/* ${finalPrice.toFixed(2)}$ */}
+							{/* {cart.length > 0 ? finalPrice : <></>} */}
+						</p>
+					</div>
+					{/* <Link to={"/checkout"ijuh */}
 				</div>
 				<div className="checkout__complete-container">
 					<button className="button" type="submit">
 						Complete payment
 					</button>
-					<p>
-						By placing your order you agree to our Terms &
-						Conditions and you understand that we will
-						process your personal data on the basis of our
-						Privacy Policy.
+					<p className="checkout__purchase-terms">
+						By placing your order you agree to our{" "}
+						<a
+							className="checkout__purchase-terms-link"
+							href="#"
+						>
+							Terms & Conditions
+						</a>{" "}
+						and you understand that we will process your
+						personal data on the basis of our{" "}
+						<a
+							className="checkout__purchase-terms-link"
+							href="#"
+						>
+							Privacy Policy
+						</a>
+						.
 					</p>
 				</div>
 			</form>

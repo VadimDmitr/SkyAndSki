@@ -174,7 +174,7 @@ export const Cart = () => {
 							</div>
 						</div>
 					</div>
-					<div className="cart__checkout-container cart-checkout-container">
+					<div className="cart__checkout-container">
 						<div className="cart-checkout-container__row">
 							<p className="cart-checkout-container__before-total">
 								Shipping & Handling
