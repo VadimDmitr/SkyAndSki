@@ -9,9 +9,9 @@ export const Home = () => {
 	return (
 		<>
 			<div className="header-top-screen-container">
-        <Header />
-        <TopScreen />
-      </div>
+				<Header />
+				<TopScreen />
+			</div>
 			<div className="our-unique-features">
 				<OurUniqueFeatures />
 			</div>
