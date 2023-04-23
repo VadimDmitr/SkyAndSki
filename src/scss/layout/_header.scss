@@ -1,7 +1,13 @@
+
 .header {
 	display: flex;
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 	align-items: center;
-	background-color: purple;
+	//background-color: purple;
 	font-family: "Poppins";
 	font-style: normal;
 	font-weight: 600;
