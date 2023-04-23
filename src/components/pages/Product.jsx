@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { BASEPRODUCTSURL } from "api/index";
+import { BASEURL } from "api/index";
 import { cartDataContext } from "contexts/cartContext";
 
 export const Product = () => {
@@ -8,6 +8,7 @@ export const Product = () => {
 	const { cart, setCart } = useContext(cartDataContext);
 	const [product, setProduct] = useState({});
 	const [quantityBox, setQuantityBox] = useState(1);
+	const BASEPRODUCTSURL = BASEURL + "products";
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
