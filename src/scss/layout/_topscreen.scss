@@ -4,10 +4,10 @@
 	flex-direction: column;
 	align-items: center;
 	top: 0;
-  left: 0;
-  width: 100%;
+	left: 0;
+	width: 100%;
 	position: relative;
-  margin-top:-9.5rem;
+	margin-top: -9.5rem;
 	background-size: cover;
 	background-position: center;
 }
@@ -107,7 +107,6 @@
 @media only screen and (max-width: 767px) {
 	.top-screen__text-and-button-container {
 		top: 65%;
-		
 	}
 
 	.top-screen__skyski {
@@ -130,33 +129,29 @@
 	}
 	.top-screen__line {
 		top: 8.5rem;
-		
 	}
 }
 @media only screen and (max-width: 500px) {
-  .top-screen__text-and-button-container {
-    top: 75%;
-  }
+	.top-screen__text-and-button-container {
+		top: 75%;
+	}
 
-  .top-screen__skyski {
-    font-size: 3rem;
+	.top-screen__skyski {
+		font-size: 3rem;
 		line-height: 10%;
-  }
+	}
 
-  .top-screen__webuild {
-    font-size: 1rem;
-    line-height: 2rem;
-    text-align: center;
-  }
+	.top-screen__webuild {
+		font-size: 1rem;
+		line-height: 2rem;
+		text-align: center;
+	}
 
-  .top-screen__button {
-    
-    padding: 1.25rem 1.5rem;
-    font-size: 1.3rem;
-    border: none;
-    height: 3rem;
-    width: 10.7rem;
-  }
+	.top-screen__button {
+		padding: 1.25rem 1.5rem;
+		font-size: 1.3rem;
+		border: none;
+		height: 3rem;
+		width: 10.7rem;
+	}
 }
-
-
