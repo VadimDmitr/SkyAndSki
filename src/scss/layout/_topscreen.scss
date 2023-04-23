@@ -6,7 +6,8 @@
 	top: 0;
   left: 0;
   width: 100%;
-  z-index: 1; 
+	position: relative;
+  margin-top:-9.5rem;
 	background-size: cover;
 	background-position: center;
 }
@@ -62,7 +63,7 @@
 	width: 100%;
 	height: 0rem;
 	left: 0rem;
-	top: 10rem;
+	top: 9.5rem;
 	border: 0.13rem solid #ffffff;
 }
 
@@ -74,7 +75,7 @@
 
 @media only screen and (max-width: 1025px) {
 	.top-screen__text-and-button-container {
-		top: 40%;
+		top: 50%;
 	}
 }
 
@@ -101,19 +102,12 @@
 		height: 4.5rem;
 		width: 17.7rem;
 	}
-	.top-screen__line {
-		position: absolute;
-		width: 100%;
-		height: 0rem;
-		left: 0rem;
-		top: 4rem;
-		border: 1.33151px solid #ffffff;
-	}
 }
 
 @media only screen and (max-width: 767px) {
 	.top-screen__text-and-button-container {
-		top: 50%;
+		top: 65%;
+		
 	}
 
 	.top-screen__skyski {
@@ -135,16 +129,34 @@
 		width: 17.7rem;
 	}
 	.top-screen__line {
-		position: absolute;
-		width: 100%;
-		height: 0rem;
-		left: 0rem;
-		top: 1.652rem;
-		border: 1.33151px solid #ffffff;
+		top: 8.5rem;
+		
 	}
 }
-@media only screen and (max-width: 398px) {
-	.middle-section__image {
-		width: 98%;
-	}
+@media only screen and (max-width: 500px) {
+  .top-screen__text-and-button-container {
+    top: 75%;
+  }
+
+  .top-screen__skyski {
+    font-size: 3rem;
+		line-height: 10%;
+  }
+
+  .top-screen__webuild {
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+
+  .top-screen__button {
+    
+    padding: 1.25rem 1.5rem;
+    font-size: 1.3rem;
+    border: none;
+    height: 3rem;
+    width: 10.7rem;
+  }
 }
+
+
