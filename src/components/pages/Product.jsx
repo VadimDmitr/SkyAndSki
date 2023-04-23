@@ -8,7 +8,7 @@ export const Product = () => {
 	const { cart, setCart } = useContext(cartDataContext);
 	const [product, setProduct] = useState({});
 	const [quantityBox, setQuantityBox] = useState(1);
-	const BASEPRODUCTSURL = BASEURL + "products";
+	const BASEPRODUCTSURL = BASEURL + "products/";
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
@@ -23,12 +23,13 @@ export const Product = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
+				console.log("result ===> ", result);
 				const productFromBackend =
 					JSON.parse(result).product;
 				setProduct({ ...product, ...productFromBackend });
 			})
 			.catch((error) => console.log("error", error));
-	}, [product]);
+	}, []);
 	/* eslint-disable react-hooks/exhaustive-deps */
 
 	const increaseQuantityToAdd = () => {
@@ -56,13 +57,13 @@ export const Product = () => {
 			if (
 				cart.some(
 					(cartItem) =>
-						cartItem.productName === item.productName
+						cartItem.title === item.title
 				)
 			) {
 				let updatedCart = cart;
 				updatedCart.find(
 					(cartItemLocal) =>
-						cartItemLocal.productName === item.productName
+						cartItemLocal.title === item.title
 				).quantity += quantityBox;
 				setCart([...updatedCart]);
 			}
@@ -75,6 +76,7 @@ export const Product = () => {
 				setCart([...cart, updatedCart]);
 			}
 		}
+		console.log("cart ====> ", cart);
 	};
 
 	return (

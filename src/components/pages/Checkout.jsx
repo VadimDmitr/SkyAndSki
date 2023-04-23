@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-// import { cartDataContext } from "contexts/cartContext";
+import { cartDataContext } from "contexts/cartContext";
 import { BASEURL } from "api/index";
 import cardChip from "images/icons/chip.svg";
 import shield from "images/icons/shield.svg";
@@ -19,6 +19,21 @@ export const Checkout = () => {
 		expirationYear: "",
 		cvv: "",
 	});
+
+	const { cart } = useContext(cartDataContext);
+
+	let estimate = 0;
+	let tax = 0;
+	let finalPrice = 0;
+	if (cart.length > 0) {
+		const estimate = cart.reduce(
+			(total, current) =>
+				total + current.quantity * current.productPrice,
+			0
+		);
+		const tax = (estimate / 100) * 10.1;
+		const finalPrice = estimate + tax;
+	}
 
 	const URL = BASEURL + "orders";
 
@@ -71,15 +86,6 @@ export const Checkout = () => {
 			.catch((error) => console.log("error", error));
 		console.log("azaza");
 	};
-	// const { cart } = useContext(cartDataContext);
-
-	// const estimate = cart.reduce(
-	// 	(total, current) =>
-	// 		total + current.quantity * current.productPrice,
-	// 	0
-	// );
-	// const tax = (estimate / 100) * 10.1;
-	// const finalPrice = estimate + tax;
 
 	return (
 		<div className="wrapper-mobile-full-screen">
@@ -277,7 +283,7 @@ export const Checkout = () => {
 							Price
 						</p>
 						<p className="cart-checkout-container__before-total">
-							{/* ${cart.length > 0 ? estimate : <></>} */}
+							${cart.length > 0 ? estimate : <></>}
 						</p>
 					</div>
 					<div className="cart-checkout-container__row">
@@ -287,7 +293,7 @@ export const Checkout = () => {
 						{/* <p>Tax</p> */}
 						<p className="cart-checkout-container__before-total">
 							{/* ${tax.toFixed(2)}$ */}
-							{/* {cart.length > 0 ? tax : <></>} */}
+							{cart.length > 0 ? tax : <></>}
 						</p>
 					</div>
 					<div className="cart-checkout-container__row">
@@ -296,7 +302,7 @@ export const Checkout = () => {
 						</p>
 						<p className="cart-checkout-container__total">
 							{/* ${finalPrice.toFixed(2)}$ */}
-							{/* {cart.length > 0 ? finalPrice : <></>} */}
+							{cart.length > 0 ? finalPrice : <></>}
 						</p>
 					</div>
 					{/* <Link to={"/checkout"ijuh */}

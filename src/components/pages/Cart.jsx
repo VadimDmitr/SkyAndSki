@@ -1,23 +1,34 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { cartDataContext } from "contexts/cartContext";
-import snowboard from "images/snowboard_light.png";
+// import snowboard from "images/snowboard_light.png";
 import cross from "images/icons/cross.svg";
 
 export const Cart = () => {
 	const { cart, setCart } = useContext(cartDataContext);
 
-	// let estimate = 0;
-	// let tax = 0;
-	// let finalPrice = 0;
-	// if (cart.length > 0) {
-		const estimate = cart.reduce(
+	let estimate = 0;
+	let tax = 0;
+	let finalPrice = 0;
+	let renderEstimate = 0;
+	let renderTax = 0;
+	let renderFinalPrice = 0;
+	if (cart.length > 0) {
+		console.log("cart ===> ", cart);
+		console.log("cart.length ===> ", cart.length);
+		console.log("typeof cart ====> ", typeof cart);
+		estimate = cart.reduce(
 			(total, current) =>
-				total + current.quantity * current.productPrice
+				total + current.quantity * current.price
 		);
-		const tax = (estimate / 100) * 10.1;
-		const finalPrice = estimate + tax;
-	// }
+		console.log("typeof estimate ====> ", typeof estimate);
+		console.log("estimate ===> ", estimate);
+		tax = (estimate / 100) * 10.1;
+		finalPrice = estimate + tax;
+		renderEstimate = estimate.toFixed(2);
+		renderTax = tax.toFixed(2);
+		renderFinalPrice = finalPrice.toFixed(2);
+	}
 
 	// const estimate = cart.reduce(
 	// 	(total, current) =>
@@ -89,16 +100,16 @@ export const Cart = () => {
 							<h2 className="cart__heading">Cart</h2>
 							<div className="cart__items">
 								{cart.map((item) => (
-									<div className="cart-item">
+									<div className="cart-item" key={item._id}>
 										<img
 											className="cart-item__img"
-											src={snowboard}
+											src={item.img}
 											alt="snowboard"
 										/>
 										<div className="cart-item__content">
 											<div className="cart-item__title-container">
 												<p className="cart-item__title">
-													{item.productName}
+													{item.title}
 												</p>
 											</div>
 											<img
@@ -116,7 +127,7 @@ export const Cart = () => {
 											</div>
 											<div className="cart-item__price-container">
 												<p className="cart-item__price">
-													$ {item.productPrice}
+													$ {item.price}
 												</p>
 											</div>
 											<div className="cart-item__quantity-container-outer">
@@ -137,8 +148,8 @@ export const Cart = () => {
 															<path
 																d="M1 8L15 8"
 																stroke="#4F4F4F"
-																stroke-width="2"
-																stroke-linecap="round"
+																strokeWidth="2"
+																strokeLinecap="round"
 															/>
 														</svg>
 													</button>
@@ -161,8 +172,8 @@ export const Cart = () => {
 															<path
 																d="M8 14V8M8 8V2M8 8L14 8M8 8H2"
 																stroke="#4F4F4F"
-																stroke-width="2"
-																stroke-linecap="round"
+																strokeWidth="2"
+																strokeLinecap="round"
 															/>
 														</svg>
 													</button>
@@ -188,7 +199,7 @@ export const Cart = () => {
 								Price
 							</p>
 							<p className="cart-checkout-container__before-total">
-								${cart.length > 0 ? estimate : <></>}
+								{/* ${cart.length > 0 ? renderEstimate : <></>} */}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -198,7 +209,7 @@ export const Cart = () => {
 							{/* <p>Tax</p> */}
 							<p className="cart-checkout-container__before-total">
 								{/* ${tax.toFixed(2)}$ */}
-								{cart.length > 0 ? tax : <></>}
+								{/* {cart.length > 0 ? renderTax.toFixed(2) : <></>} */}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -207,7 +218,7 @@ export const Cart = () => {
 							</p>
 							<p className="cart-checkout-container__total">
 								{/* ${finalPrice.toFixed(2)}$ */}
-								{cart.length > 0 ? finalPrice : <></>}
+								{/* {cart.length > 0 ? renderFinalPrice.toFixed(2) : <></>} */}
 							</p>
 						</div>
 						<Link to={"/checkout"}>
