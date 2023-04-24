@@ -3,6 +3,7 @@ import { TopScreen } from "components/TopScreen";
 import { Catalog } from "components/Catalog";
 import { Gallery } from "../layout/Gallery";
 import { WhyChooseUs } from "../layout/WhyChooseUs";
+import { VideoAboutUs } from "../layout/VideoAboutUs";
 
 export const Home = () => {
 	return (
@@ -23,6 +24,10 @@ export const Home = () => {
 			<div className="why-choose-us-container">
 				<WhyChooseUs />
 			</div>
+			<div className="">
+				<VideoAboutUs />
+			</div>
+
 		</>
 	);
 };
