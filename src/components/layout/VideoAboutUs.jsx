@@ -3,8 +3,8 @@ import YouTube from "react-youtube";
 export const VideoAboutUs = () => {
 	const videoId = "xGK2rxSr9ig";
 	const opts = {
-		height: "390",
-		width: "640",
+		height: "100%",
+		width: "100%",
 		playerVars: {
 			autoplay: 1,
 		},
@@ -22,13 +22,13 @@ export const VideoAboutUs = () => {
 		<div className="video-section">
 			<div className="video-section__content">
 				<h1 className="video-section__title">
-        Video about us
+					Video about us
 				</h1>
-				<p className="video-section__description">
+				<h2 className="video-section__description">
 					Amet minim mollit non deserunt ullamco est sit
 					aliqua dolor do amet sint. Velit officia consequat
 					duis enim velit mollit.
-				</p>
+				</h2>
 			</div>
 			<div className="video-section__video-wrapper">
 				<YouTube
@@ -42,3 +42,4 @@ export const VideoAboutUs = () => {
 		</div>
 	);
 };
+
