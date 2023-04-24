@@ -7,7 +7,7 @@ import { WhyChooseUs } from "../layout/WhyChooseUs";
 export const Home = () => {
 	return (
 		<>
-			<div className="top-screen">
+			<div className="header-top-screen-container">
 				<TopScreen />
 			</div>
 			<div className="our-unique-features">
