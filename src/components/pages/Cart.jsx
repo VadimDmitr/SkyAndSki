@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { cartDataContext } from "contexts/cartContext";
 // import snowboard from "images/snowboard_light.png";
@@ -6,7 +6,16 @@ import cross from "images/icons/cross.svg";
 
 export const Cart = () => {
 	const { cart, setCart } = useContext(cartDataContext);
+	// const [cart, setCart] = useState([]);
 
+	////////////////////////
+	// PUT PRODUCTS IN CART
+	////////////////////////
+
+
+	console.log("cart ===> ", cart);
+	console.log("cart.length ===> ", cart.length);
+	console.log("typeof cart ====> ", typeof cart);
 	let estimate = 0;
 	let tax = 0;
 	let finalPrice = 0;
