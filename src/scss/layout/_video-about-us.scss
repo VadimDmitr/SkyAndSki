@@ -22,7 +22,7 @@
 }
 
 .video-section__title {
-  display: flex;
+	display: flex;
 	width: 45.598rem;
 	height: 16.3rem;
 	font-family: "Poppins";
@@ -45,14 +45,14 @@
 }
 
 .video-section__video-wrapper {
-	width: 640px;
-	height: 390px;
+	width: 64rem;
+	height: 39rem;
 	position: relative;
 	//padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
+	padding-top: 2.5rem;
 	//height: 0;
 	margin-bottom: 2rem;
-  transform: matrix(1, -0.07, 0, 1, 0, 0);
+	transform: matrix(1, -0.07, 0, 1, 0, 0);
 }
 
 .video-section__video {
@@ -68,14 +68,15 @@
 		padding: 0rem;
 	}
 
-  .video-section__content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1.6rem;
-    flex-wrap: wrap;
-    margin-bottom: 5.5rem;
-  }
+	.video-section__content {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 1.6rem;
+		flex-wrap: wrap;
+		margin-bottom: 5.5rem;
+		padding-left: 1rem;
+	}
 
 	.video-section__title {
 		height: 4.2rem;
@@ -94,6 +95,6 @@
 	.video-section__video-wrapper {
 		width: 100%;
 		height: auto;
-    padding-bottom: 56.25%; /* 16:9 */
+		padding-bottom: 56.25%; /* 16:9 */
 	}
 }
