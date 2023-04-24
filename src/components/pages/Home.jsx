@@ -1,9 +1,9 @@
 import { OurUniqueFeatures } from "components/OurUniqueFeatures";
 import { TopScreen } from "components/TopScreen";
 import { Catalog } from "components/Catalog";
-import { Gallery } from "../layout/Gallery";
-import { WhyChooseUs } from "../layout/WhyChooseUs";
-import { VideoAboutUs } from "../layout/VideoAboutUs";
+import { Gallery } from "components/layout/Gallery";
+import { WhyChooseUs } from "components/layout/WhyChooseUs";
+import { VideoAboutUs } from "components/layout/VideoAboutUs";
 
 export const Home = () => {
 	return (
