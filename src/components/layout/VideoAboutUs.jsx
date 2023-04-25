@@ -42,4 +42,3 @@ export const VideoAboutUs = () => {
 		</div>
 	);
 };
-

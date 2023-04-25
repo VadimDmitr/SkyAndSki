@@ -1,6 +1,3 @@
-
-
-
 export const ExploreOurProduct = () => {
 	return (
 		<div className="explore-our-produc__container">
