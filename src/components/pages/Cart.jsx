@@ -6,50 +6,24 @@ import cross from "images/icons/cross.svg";
 
 export const Cart = () => {
 	const { cart, setCart } = useContext(cartDataContext);
-	// const [cart, setCart] = useState([]);
 
 	////////////////////////
 	// PUT PRODUCTS IN CART
 	////////////////////////
-
-
-	console.log("cart ===> ", cart);
-	console.log("cart.length ===> ", cart.length);
-	console.log("typeof cart ====> ", typeof cart);
 	let estimate = 0;
 	let tax = 0;
 	let finalPrice = 0;
-	let renderEstimate = 0;
-	let renderTax = 0;
-	let renderFinalPrice = 0;
 	if (cart.length > 0) {
-		console.log("cart ===> ", cart);
-		console.log("cart.length ===> ", cart.length);
-		console.log("typeof cart ====> ", typeof cart);
-		estimate = cart.reduce(
-			(total, current) =>
-				total + current.quantity * current.price
-		);
-		console.log("typeof estimate ====> ", typeof estimate);
-		console.log("estimate ===> ", estimate);
+		// console.log("cart ===> ", cart);
+		// console.log("cart.length ===> ", cart.length);
+		// console.log("typeof cart ====> ", typeof cart);
+		estimate = cart.reduce((total, current) => total + current.quantity * current.price, 0);
+		// console.log("typeof estimate ====> ", typeof estimate);
+		// console.log("estimate ===> ", estimate);
 		tax = (estimate / 100) * 10.1;
 		finalPrice = estimate + tax;
-		renderEstimate = estimate.toFixed(2);
-		renderTax = tax.toFixed(2);
-		renderFinalPrice = finalPrice.toFixed(2);
 	}
 
-	// const estimate = cart.reduce(
-	// 	(total, current) =>
-	// 		total + current.quantity * current.productPrice
-	// );
-	// const tax = (estimate / 100) * 10.1;
-	// const finalPrice = estimate + tax;
-
-	// const getCartValue = () => {
-	// 	console.log("cart inside getCartValue =====> ", cart);
-	// 	console.log("cart.length =====> ", cart.length);
-	// };
 
 	const removeProductFromCart = (item) => {
 		let updatedCart = cart;
@@ -208,7 +182,7 @@ export const Cart = () => {
 								Price
 							</p>
 							<p className="cart-checkout-container__before-total">
-								{/* ${cart.length > 0 ? renderEstimate : <></>} */}
+								${cart.length > 0 ? estimate.toFixed(2) : <></>}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -218,7 +192,7 @@ export const Cart = () => {
 							{/* <p>Tax</p> */}
 							<p className="cart-checkout-container__before-total">
 								{/* ${tax.toFixed(2)}$ */}
-								{/* {cart.length > 0 ? renderTax.toFixed(2) : <></>} */}
+								{cart.length > 0 ? tax.toFixed(2) : <></>}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -227,7 +201,7 @@ export const Cart = () => {
 							</p>
 							<p className="cart-checkout-container__total">
 								{/* ${finalPrice.toFixed(2)}$ */}
-								{/* {cart.length > 0 ? renderFinalPrice.toFixed(2) : <></>} */}
+								{cart.length > 0 ? finalPrice.toFixed(2) : <></>}
 							</p>
 						</div>
 						<Link to={"/checkout"}>

@@ -26,13 +26,14 @@ export const Checkout = () => {
 	let tax = 0;
 	let finalPrice = 0;
 	if (cart.length > 0) {
-		const estimate = cart.reduce(
-			(total, current) =>
-				total + current.quantity * current.productPrice,
-			0
-		);
-		const tax = (estimate / 100) * 10.1;
-		const finalPrice = estimate + tax;
+		// console.log("cart ===> ", cart);
+		// console.log("cart.length ===> ", cart.length);
+		// console.log("typeof cart ====> ", typeof cart);
+		estimate = cart.reduce((total, current) => total + current.quantity * current.price, 0);
+		// console.log("typeof estimate ====> ", typeof estimate);
+		// console.log("estimate ===> ", estimate);
+		tax = (estimate / 100) * 10.1;
+		finalPrice = estimate + tax;
 	}
 
 	const URL = BASEURL + "orders";
@@ -76,7 +77,7 @@ export const Checkout = () => {
 		fetch(URL, {
 			method: "POST",
 			headers: myHeaders,
-			body: JSON.stringify(order)
+			body: JSON.stringify(order),
 		})
 			.then((response) => response.text())
 			.then((result) => {
@@ -283,7 +284,7 @@ export const Checkout = () => {
 							Price
 						</p>
 						<p className="cart-checkout-container__before-total">
-							${cart.length > 0 ? estimate : <></>}
+							${cart.length > 0 ? estimate.toFixed(2) : <></>}
 						</p>
 					</div>
 					<div className="cart-checkout-container__row">
@@ -293,7 +294,7 @@ export const Checkout = () => {
 						{/* <p>Tax</p> */}
 						<p className="cart-checkout-container__before-total">
 							{/* ${tax.toFixed(2)}$ */}
-							{cart.length > 0 ? tax : <></>}
+							{cart.length > 0 ? tax.toFixed(2) : <></>}
 						</p>
 					</div>
 					<div className="cart-checkout-container__row">
@@ -302,7 +303,7 @@ export const Checkout = () => {
 						</p>
 						<p className="cart-checkout-container__total">
 							{/* ${finalPrice.toFixed(2)}$ */}
-							{cart.length > 0 ? finalPrice : <></>}
+							{cart.length > 0 ? finalPrice.toFixed(2) : <></>}
 						</p>
 					</div>
 					{/* <Link to={"/checkout"ijuh */}
