@@ -172,4 +172,11 @@
 		line-height: 140%;
 		width: 100%;
 	}
+
+	@media (max-width: 347px) {
+		.middle-section__image {
+			width: 100%;
+			padding: 0.1rem;
+		}
+	}
 }
