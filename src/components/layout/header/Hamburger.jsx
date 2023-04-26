@@ -18,7 +18,8 @@ const Div = styled.div`
   div {
     width: 3.3rem;
     height: 0.25rem;
-    background-color #FFF;
+   background-color var(--color-primary);
+   /* background-color #FFF; */
     border-radius: 10px;
     transition: all 0.3s linear;
 

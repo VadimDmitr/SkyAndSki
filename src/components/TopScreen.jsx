@@ -1,5 +1,6 @@
 import home from "images/upper-main.png";
-import line from "images/icons/line.svg";
+import line from "images/icons/lineRed.svg";
+//import line from "images/icons/line.svg";
 
 export const TopScreen = () => {
 	return (
