@@ -309,7 +309,7 @@ export const Checkout = () => {
 					{/* <Link to={"/checkout"ijuh */}
 				</div>
 				<div className="checkout__complete-container">
-					<button className="button" type="submit">
+					<button className="button pointer" type="submit">
 						Complete payment
 					</button>
 					<p className="checkout__purchase-terms">

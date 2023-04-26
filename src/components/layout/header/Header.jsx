@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
+import { userDataContext } from "contexts/userContext";
+import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { Logo } from "components/Logo";
 import { Hamburger } from "components/layout/header/Hamburger";
@@ -11,6 +13,15 @@ import language from "images/icons/language.svg";
 export const Header = () => {
 	const [openMobileMenu, setOpenMobileMenu] =
 		useState(false);
+
+	const navigate = useNavigate();
+	const { userData } = useContext(userDataContext);
+
+	useEffect(() => {
+		console.log("userData =====> ", userData);
+		if (userData === null) navigate("/");
+		// if (userData.token === null) navigate ("/");
+	});
 
 	return (
 		<header className="header">
@@ -88,13 +99,23 @@ export const Header = () => {
 							alt="cart"
 						/>
 					</NavLink>
-					<NavLink className="nav__link" to={"/account"}>
-						<img
-							className="nav__navigate-account"
-							src={account}
-							alt="account"
-						/>
-					</NavLink>
+					{Object.keys(userData).length  === 0 ? (
+						<NavLink className="nav__link" to={"/login"}>
+							<img
+								className="nav__navigate-account"
+								src={account}
+								alt="account"
+							/>
+						</NavLink>
+					) : (
+						<NavLink className="nav__link" to={"/account"}>
+							<img
+								className="nav__navigate-account"
+								src={account}
+								alt="account"
+							/>
+						</NavLink>
+					)}
 				</div>
 			</nav>
 		</header>
