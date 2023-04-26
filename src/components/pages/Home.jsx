@@ -4,6 +4,7 @@ import { Catalog } from "components/Catalog";
 import { Gallery } from "components/layout/Gallery";
 import { WhyChooseUs } from "components/layout/WhyChooseUs";
 import { VideoAboutUs } from "components/layout/VideoAboutUs";
+import { MapSection } from "components/layout/MapSection";
 
 export const Home = () => {
 	return (
@@ -26,6 +27,9 @@ export const Home = () => {
 			</div>
 			<div className="">
 				<VideoAboutUs />
+			</div>
+			<div className="">
+			<MapSection />
 			</div>
 		</>
 	);
