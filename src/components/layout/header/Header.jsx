@@ -99,7 +99,7 @@ export const Header = () => {
 							alt="cart"
 						/>
 					</NavLink>
-					{Object.keys(userData).length  === 0 ? (
+					{Object.keys(userData).length === 0 ? (
 						<NavLink className="nav__link" to={"/login"}>
 							<img
 								className="nav__navigate-account"

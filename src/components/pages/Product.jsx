@@ -56,8 +56,7 @@ export const Product = () => {
 		if (cart) {
 			if (
 				cart.some(
-					(cartItem) =>
-						cartItem.title === item.title
+					(cartItem) => cartItem.title === item.title
 				)
 			) {
 				let updatedCart = cart;
@@ -88,12 +87,8 @@ export const Product = () => {
 					alt="snowboard"
 				/>
 				<div className="product__content">
-					<p className="product__title">
-						{product.title}
-					</p>
-					<p className="product__price">
-						${product.price}
-					</p>
+					<p className="product__title">{product.title}</p>
+					<p className="product__price">${product.price}</p>
 					<p className="product__description">
 						Product Short Description senectus et netus et
 						malesuada fames ac turpis egestas. Vesitbulum

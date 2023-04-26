@@ -80,8 +80,7 @@ export const Order = () => {
 											</svg>
 										</button> */}
 										<p className="cart-item-quantity-container__quantity">
-											1
-											{/* {item.quantity} */}
+											1{/* {item.quantity} */}
 										</p>
 										{/* <button
 											className="cart-item-quantity-container__change pointer"

@@ -39,9 +39,4 @@ const fetchData = async (url, method, body) => {
 		.catch((error) => console.log("error", error));
 };
 
-export {
-	BASEURL,
-	getData,
-	getAllData,
-	fetchData,
-};
+export { BASEURL, getData, getAllData, fetchData };

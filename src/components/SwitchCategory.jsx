@@ -48,7 +48,10 @@ export const SwitchCategory = ({ products }) => {
 					</div>
 					<div className="products">
 						{filteredProducts.map((product) => (
-							<Link to={`/product/${product._id}`} key={product._id}>
+							<Link
+								to={`/product/${product._id}`}
+								key={product._id}
+							>
 								<ProductCard
 									product={product}
 									id={product.id}
@@ -58,8 +61,8 @@ export const SwitchCategory = ({ products }) => {
 						))}
 					</div>
 					<div className="button pointer">
-							More products
-						</div>
+						More products
+					</div>
 				</>
 			) : (
 				<h2>

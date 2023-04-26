@@ -17,13 +17,16 @@ export const Cart = () => {
 		// console.log("cart ===> ", cart);
 		// console.log("cart.length ===> ", cart.length);
 		// console.log("typeof cart ====> ", typeof cart);
-		estimate = cart.reduce((total, current) => total + current.quantity * current.price, 0);
+		estimate = cart.reduce(
+			(total, current) =>
+				total + current.quantity * current.price,
+			0
+		);
 		// console.log("typeof estimate ====> ", typeof estimate);
 		// console.log("estimate ===> ", estimate);
 		tax = (estimate / 100) * 10.1;
 		finalPrice = estimate + tax;
 	}
-
 
 	const removeProductFromCart = (item) => {
 		let updatedCart = cart;
@@ -182,7 +185,12 @@ export const Cart = () => {
 								Price
 							</p>
 							<p className="cart-checkout-container__before-total">
-								${cart.length > 0 ? estimate.toFixed(2) : <></>}
+								$
+								{cart.length > 0 ? (
+									estimate.toFixed(2)
+								) : (
+									<></>
+								)}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -201,7 +209,11 @@ export const Cart = () => {
 							</p>
 							<p className="cart-checkout-container__total">
 								{/* ${finalPrice.toFixed(2)}$ */}
-								{cart.length > 0 ? finalPrice.toFixed(2) : <></>}
+								{cart.length > 0 ? (
+									finalPrice.toFixed(2)
+								) : (
+									<></>
+								)}
 							</p>
 						</div>
 						<Link to={"/checkout"}>
