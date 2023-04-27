@@ -7,7 +7,7 @@ import {
 } from "@react-google-maps/api";
 
 export const MapSection = () => {
-	const position = { lat: 35.9886, lng: -78.9073 };
+	const position = { lat: 35.99576, lng: -78.90214 };
 	const containerStyle = { width: "100%", height: "400px" };
 
 	const [infoWindowOpen, setInfoWindowOpen] =
@@ -28,7 +28,7 @@ export const MapSection = () => {
 					<GoogleMap
 						mapContainerStyle={containerStyle}
 						center={position}
-						zoom={13}
+						zoom={15}
 					>
 						<Marker
 							position={position}
