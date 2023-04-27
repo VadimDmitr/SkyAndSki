@@ -88,12 +88,12 @@
 
 @media (max-width: 995px) {
 	.middle-section__text {
-		width: 29.799999999999997rem;
+		width: auto;
 		height: 10.2rem;
 		font-weight: 700;
 		font-size: 2.1rem;
 		line-height: 140%;
-		padding-bottom: 20rem;
+		padding-bottom: 16rem;
 	}
 
 	.middle-section__image {
@@ -128,8 +128,9 @@
 	.middle-section__text {
 		font-weight: 400;
 		font-size: 1.8rem;
-		width: 30.8rem;
+		width: auto;
 		height: 10rem;
+		padding-bottom: 12rem;
 	}
 
 	.middle-section__link {
