@@ -1,10 +1,16 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { userDataContext } from "contexts/userContext";
 import { cartDataContext } from "contexts/cartContext";
-// import snowboard from "images/snowboard_light.png";
 import cross from "images/icons/cross.svg";
 
 export const Cart = () => {
+	// let history = useHistory();
+	// const navigate = useNavigate();
+	const currentPath = useLocation().pathname;
+	console.log(currentPath);
+	const { userData } = useContext(userDataContext);
 	const { cart, setCart } = useContext(cartDataContext);
 
 	////////////////////////
@@ -27,6 +33,15 @@ export const Cart = () => {
 		tax = (estimate / 100) * 10.1;
 		finalPrice = estimate + tax;
 	}
+
+	// const redirectToNextPage = () => {
+	// 	if (Object.keys(userData).length === 0) {
+	// 		// history.push(`/device/detail`, { from: 'device detail page' } );
+	// 		history.push('/login', {from: 'test'})
+	// 	} else {
+	// 		history.push('/checkout');
+	// 	}
+	// }
 
 	const removeProductFromCart = (item) => {
 		let updatedCart = cart;
@@ -216,11 +231,22 @@ export const Cart = () => {
 								)}
 							</p>
 						</div>
-						<Link to={"/checkout"}>
-							<button className="button pointer">
-								Go to checkout
-							</button>
-						</Link>
+						{Object.keys(userData).length === 0 ? (
+							<Link
+								to="/login"
+								state={{ prevPath: currentPath }}
+							>
+								<button className="button pointer">
+									Go to checkout
+								</button>
+							</Link>
+						) : (
+							<Link to={"/checkout"}>
+								<button className="button pointer">
+									Go to checkout
+								</button>
+							</Link>
+						)}
 					</div>
 				</>
 			) : (

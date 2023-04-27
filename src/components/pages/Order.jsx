@@ -1,7 +1,27 @@
+import { Link } from "react-router-dom";
 import snowboard from "images/snowboard_light.png";
 // import cross from "images/icons/cross.svg";
 
 export const Order = () => {
+	const order = {
+		products: [
+			{
+				productId: "1",
+				name: "NewProduct",
+				img: "https://i.ibb.co/WPtkVnX/snowboard-light.png",
+				quantity: "4",
+				price: "400",
+			},
+			{
+				productId: "2",
+				name: "NewProduct2",
+				img: "https://i.ibb.co/WPtkVnX/snowboard-light.png",
+				quantity: "2",
+				price: "150",
+			},
+		],
+		bill: "550",
+	};
 	return (
 		<div className="wrapper">
 			<div className="order">
@@ -25,17 +45,17 @@ export const Order = () => {
 				</div>
 				<div className="order__content-container">
 					<div className="order__items">
-						<div className="cart-item">
+						{order.products.map((product) => (
+							<div className="cart-item">
 							<img
 								className="cart-item__img"
-								src={snowboard}
+								src={product.img}
 								alt="snowboard"
 							/>
 							<div className="cart-item__content">
 								<div className="cart-item__title-container">
 									<p className="cart-item__title">
-										title
-										{/* {item.productName} */}
+										{product.title}
 									</p>
 								</div>
 								{/* <img
@@ -53,7 +73,7 @@ export const Order = () => {
 								</div>
 								<div className="cart-item__price-container">
 									<p className="cart-item__price">
-										${/* {item.productPrice} */}
+										${product.price}
 									</p>
 								</div>
 								<div className="cart-item__quantity-container-outer">
@@ -80,7 +100,7 @@ export const Order = () => {
 											</svg>
 										</button> */}
 										<p className="cart-item-quantity-container__quantity">
-											1{/* {item.quantity} */}
+											{product.quantity}
 										</p>
 										{/* <button
 											className="cart-item-quantity-container__change pointer"
@@ -107,6 +127,7 @@ export const Order = () => {
 								</div>
 							</div>
 						</div>
+						))}
 					</div>
 					<div className="checkout__estimate-container">
 						<div className="cart-checkout-container__row">
@@ -144,10 +165,11 @@ export const Order = () => {
 								{/* {cart.length > 0 ? finalPrice : <></>} */}
 							</p>
 						</div>
-						{/* <Link to={"/checkout"ijuh */}
-						<button className="button">
-							Go to order history
-						</button>
+						<Link to="/account">
+							<button className="button pointer">
+								Go to order history
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>

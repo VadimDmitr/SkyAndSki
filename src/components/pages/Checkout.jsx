@@ -1,4 +1,6 @@
-import { useState, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { userDataContext } from "contexts/userContext";
 import { cartDataContext } from "contexts/cartContext";
 import { BASEURL } from "api/index";
 import cardChip from "images/icons/chip.svg";
@@ -20,7 +22,15 @@ export const Checkout = () => {
 		cvv: "",
 	});
 
+	const navigate = useNavigate();
+
 	const { cart } = useContext(cartDataContext);
+	const { userData } = useContext(userDataContext);
+
+	useEffect(() => {
+		console.log("userData =====> ", userData);
+		if (Object.keys(userData).length === 0)  navigate("/");
+	});
 
 	let estimate = 0;
 	let tax = 0;
@@ -70,11 +80,17 @@ export const Checkout = () => {
 	};
 
 	const handleSubmit = (event) => {
+		console.log("process.env.REACT_APP_USER_BEARER_TOKEN ====> ",process.env.REACT_APP_USER_BEARER_TOKEN);
+		console.log("order ===> ", order);
 		event.preventDefault();
+		console.log("userData.token ====> ", userData.token);
+		const token = "Bearer " + userData.token;
+		console.log("token ====> ", token);
 		var myHeaders = new Headers();
 		myHeaders.append(
 			"Authorization",
-			process.env.USER_BEARER_TOKEN
+			token
+			// process.env.REACT_APP_USER_BEARER_TOKEN
 		);
 		myHeaders.append("Content-Type", "application/json");
 
@@ -89,9 +105,11 @@ export const Checkout = () => {
 				// setProducts([...JSON.parse(result).products]);
 			})
 			.catch((error) => console.log("error", error));
-		console.log("azaza");
+
+		navigate("/order");
 	};
 
+	if (Object.keys(userData).length !== 0)
 	return (
 		<div className="wrapper-mobile-full-screen">
 			<form
@@ -347,4 +365,5 @@ export const Checkout = () => {
 			</form>
 		</div>
 	);
+	return <></>;
 };

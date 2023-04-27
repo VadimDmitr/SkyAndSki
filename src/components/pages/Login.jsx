@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
 import { BASEURL } from "api/index";
 
@@ -8,6 +8,8 @@ const URL = BASEAUTHURL + "login";
 
 export const Login = () => {
 	const navigate = useNavigate();
+	let { prevPath } = useLocation();
+	console.log("prevPath ====> ", prevPath);
 	const { userData, setUserData } =
 		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
@@ -54,7 +56,11 @@ export const Login = () => {
 				// setUserData({ ...userData, name: JSON.parse(result).name})
 				console.log("userData ====> ", userData);
 				if (userData) {
-					navigate("/account");
+					if (prevPath === '/checkout') {
+						navigate("/checkout");
+					} else {
+						navigate("/account");
+					}
 				}
 			})
 			.catch((error) => console.log("error", error));
