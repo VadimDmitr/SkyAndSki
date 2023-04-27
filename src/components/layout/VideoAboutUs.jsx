@@ -1,7 +1,7 @@
 import YouTube from "react-youtube";
 
 export const VideoAboutUs = () => {
-	const videoId = "xGK2rxSr9ig";
+	const videoId = "gAGIyKpVsPw";
 	const opts = {
 		height: "100%",
 		width: "100%",
