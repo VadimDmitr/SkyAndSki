@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Logo } from "components/Logo";
 import { Hamburger } from "components/layout/header/Hamburger";
 import { MobileMenu } from "components/layout/header/MobileMenu";
-import search from "images/icons/search.svg";
-import cart from "images/icons/cart.svg";
-import account from "images/icons/account.svg";
-import language from "images/icons/language.svg";
+import { Logo } from "components/Logo";
+import search from "images/icons/searchRed.svg";
+import cart from "images/icons/cartRed.svg";
+import account from "images/icons/accountRed.svg";
+import language from "images/icons/languageRed.svg";
+//import { Logo } from "components/Logo";
+//import search from "images/icons/search.svg";
+//import cart from "images/icons/cart.svg";
+//import account from "images/icons/account.svg";
+//import language from "images/icons/language.svg";
 
 export const Header = () => {
 	const [openMobileMenu, setOpenMobileMenu] =
