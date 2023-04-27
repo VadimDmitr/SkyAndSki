@@ -1,47 +1,67 @@
+import React, { useState } from "react";
 import {
-	MapContainer,
-	TileLayer,
+	GoogleMap,
+	LoadScript,
 	Marker,
-	Popup,
-} from "react-leaflet";
+	InfoWindow,
+} from "@react-google-maps/api";
 
 export const MapSection = () => {
-	const position = [51.505, -0.09]; // Coordinates
+	const position = { lat: 35.9886, lng: -78.9073 };
+	const containerStyle = { width: "100%", height: "400px" };
+
+	const [infoWindowOpen, setInfoWindowOpen] =
+		useState(false);
+
+	const toggleInfoWindow = () => {
+		setInfoWindowOpen(!infoWindowOpen);
+	};
 
 	return (
 		<div className="map-section">
-			<MapContainer
-				center={position}
-				zoom={13}
-				style={{ height: "400px", width: "100%" }}
-			>
-				<TileLayer
-					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-				/>
-				<Marker position={position}>
-					<Popup>
-						<h3>Location our Hotelos</h3>
+			<div className="map-section-content">
+				<LoadScript
+					googleMapsApiKey={
+						process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+					}
+				>
+					<GoogleMap
+						mapContainerStyle={containerStyle}
+						center={position}
+						zoom={13}
+					>
+						<Marker
+							position={position}
+							onClick={toggleInfoWindow}
+						>
+							{infoWindowOpen && (
+								<InfoWindow onCloseClick={toggleInfoWindow}>
+									<div>
+										<h3>Location of our Hotelos</h3>
+										<p>
+											Lorem Ipsum is simply dummy text of
+											the printing and typesetting industry.
+											Lorem Ipsum has been the industry's
+										</p>
+									</div>
+								</InfoWindow>
+							)}
+						</Marker>
+					</GoogleMap>
+				</LoadScript>
+				<div className="map-section-info">
+					<div className="map-section-text">
+						<h3>Location of our Hotelos</h3>
 						<p>
 							Lorem Ipsum is simply dummy text of the
 							printing and typesetting industry. Lorem Ipsum
 							has been the industry's
 						</p>
-					</Popup>
-				</Marker>
-			</MapContainer>
-			<div className="map-section-info">
-				<div className="map-section-text">
-					<h3>Location our Hotelos</h3>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing
-						and typesetting industry. Lorem Ipsum has been
-						the industry's
-					</p>
-				</div>
-				<div className="map-section-contact">
-					<input type="email" placeholder="Email" />
-					<button>Contact</button>
+					</div>
+					<div className="map-section-contact">
+						<input type="email" placeholder="Email" />
+						<button>Contact</button>
+					</div>
 				</div>
 			</div>
 		</div>
