@@ -1,32 +1,31 @@
-
 .map-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .map-section-info {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 20px;
 }
 
 .map-section-contact {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .map-section-contact input {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 
 @media (max-width: 768px) {
-  .map-section-info {
-    flex-direction: column;
-  }
+	.map-section-info {
+		flex-direction: column;
+	}
 
-  .map-section-text {
-    margin-bottom: 20px;
-  }
+	.map-section-text {
+		margin-bottom: 20px;
+	}
 }
