@@ -1,7 +1,9 @@
 import { useState, useEffect, useContext } from "react";
+import { useLocation } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 import { Hamburger } from "components/layout/header/Hamburger";
 import { MobileMenu } from "components/layout/header/MobileMenu";
 import { Logo } from "components/Logo";
@@ -15,21 +17,34 @@ import language from "images/icons/languageRed.svg";
 //import account from "images/icons/account.svg";
 //import language from "images/icons/language.svg";
 
+const HeaderElement = styled.header`
+	// color: ${({currentPath}) => (currentPath === "/") ? "white" : "red"};
+
+	// p {
+	// 	color: ${({currentPath}) => (currentPath === "/") ? "white" : "red"};
+	// }
+	.nav__link-text {
+		color: ${({currentPath}) => (currentPath === "/") ? "white" : "red"};
+	}
+`
+
 export const Header = () => {
+	const currentPath = useLocation().pathname;
+	console.log(currentPath);
 	const [openMobileMenu, setOpenMobileMenu] =
 		useState(false);
 
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 	const { userData } = useContext(userDataContext);
 
 	useEffect(() => {
-		console.log("userData =====> ", userData);
-		if (userData === null) navigate("/");
+		// console.log("userData =====> ", userData);
+		// if (userData === null) navigate("/");
 		// if (userData.token === null) navigate ("/");
 	});
 
 	return (
-		<header className="header">
+		<HeaderElement className="header" currentPath={currentPath}>
 			<nav className="nav-mobile mobile">
 				<NavLink className="nav__link" to={"/"}>
 					<Logo />
@@ -73,13 +88,13 @@ export const Header = () => {
 				</NavLink>
 				<div className="nav__middle-group">
 					<NavLink className="nav__link" to={"/about"}>
-						<p>About</p>
+						<p className="nav__link-text">About</p>
 					</NavLink>
 					<NavLink className="nav__link" to={"/shop"}>
-						<p>Shop</p>
+						<p className="nav__link-text">Shop</p>
 					</NavLink>
 					<NavLink className="nav__link" to={"/contact"}>
-						<p>Contact</p>
+						<p className="nav__link-text">Contact</p>
 					</NavLink>
 				</div>
 				<div className="nav__right-group">
@@ -123,6 +138,6 @@ export const Header = () => {
 					)}
 				</div>
 			</nav>
-		</header>
+		</HeaderElement>
 	);
 };
