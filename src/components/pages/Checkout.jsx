@@ -29,7 +29,7 @@ export const Checkout = () => {
 
 	useEffect(() => {
 		console.log("userData =====> ", userData);
-		if (Object.keys(userData).length === 0)  navigate("/");
+		// if (Object.keys(userData).length === 0)  navigate("/");
 	});
 
 	let estimate = 0;
@@ -347,7 +347,7 @@ export const Checkout = () => {
 						By placing your order you agree to our{" "}
 						<a
 							className="checkout__purchase-terms-link"
-							href="#"
+							href="/terms"
 						>
 							Terms & Conditions
 						</a>{" "}
@@ -355,7 +355,7 @@ export const Checkout = () => {
 						personal data on the basis of our{" "}
 						<a
 							className="checkout__purchase-terms-link"
-							href="#"
+							href="/privacy-policy"
 						>
 							Privacy Policy
 						</a>

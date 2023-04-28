@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import snowboard from "images/snowboard_light.png";
+// import snowboard from "images/snowboard_light.png";
 // import cross from "images/icons/cross.svg";
 
 export const Order = () => {
