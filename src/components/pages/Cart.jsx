@@ -1,22 +1,47 @@
 import { useContext } from "react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { userDataContext } from "contexts/userContext";
 import { cartDataContext } from "contexts/cartContext";
-import snowboard from "images/snowboard_light.png";
 import cross from "images/icons/cross.svg";
 
 export const Cart = () => {
+	// let history = useHistory();
+	// const navigate = useNavigate();
+	const currentPath = useLocation().pathname;
+	console.log(currentPath);
+	const { userData } = useContext(userDataContext);
 	const { cart, setCart } = useContext(cartDataContext);
 
-	const estimate = cart.reduce(
-		(total, current) =>
-			total + current.quantity * current.productPrice,
-		0
-	);
-	const tax = (estimate / 100) * 10.1;
-	const finalPrice = estimate + tax;
+	////////////////////////
+	// PUT PRODUCTS IN CART
+	////////////////////////
+	let estimate = 0;
+	let tax = 0;
+	let finalPrice = 0;
+	if (cart.length > 0) {
+		// console.log("cart ===> ", cart);
+		// console.log("cart.length ===> ", cart.length);
+		// console.log("typeof cart ====> ", typeof cart);
+		estimate = cart.reduce(
+			(total, current) =>
+				total + current.quantity * current.price,
+			0
+		);
+		// console.log("typeof estimate ====> ", typeof estimate);
+		// console.log("estimate ===> ", estimate);
+		tax = (estimate / 100) * 10.1;
+		finalPrice = estimate + tax;
+	}
 
-	// const getCartValue = () => {
-	// 	console.log("cart inside getCartValue =====> ", cart);
-	// };
+	// const redirectToNextPage = () => {
+	// 	if (Object.keys(userData).length === 0) {
+	// 		// history.push(`/device/detail`, { from: 'device detail page' } );
+	// 		history.push('/login', {from: 'test'})
+	// 	} else {
+	// 		history.push('/checkout');
+	// 	}
+	// }
 
 	const removeProductFromCart = (item) => {
 		let updatedCart = cart;
@@ -76,16 +101,16 @@ export const Cart = () => {
 							<h2 className="cart__heading">Cart</h2>
 							<div className="cart__items">
 								{cart.map((item) => (
-									<div className="cart-item">
+									<div className="cart-item" key={item._id}>
 										<img
 											className="cart-item__img"
-											src={snowboard}
+											src={item.img}
 											alt="snowboard"
 										/>
 										<div className="cart-item__content">
 											<div className="cart-item__title-container">
 												<p className="cart-item__title">
-													{item.productName}
+													{item.title}
 												</p>
 											</div>
 											<img
@@ -103,7 +128,7 @@ export const Cart = () => {
 											</div>
 											<div className="cart-item__price-container">
 												<p className="cart-item__price">
-													$ {item.productPrice}
+													$ {item.price}
 												</p>
 											</div>
 											<div className="cart-item__quantity-container-outer">
@@ -124,8 +149,8 @@ export const Cart = () => {
 															<path
 																d="M1 8L15 8"
 																stroke="#4F4F4F"
-																stroke-width="2"
-																stroke-linecap="round"
+																strokeWidth="2"
+																strokeLinecap="round"
 															/>
 														</svg>
 													</button>
@@ -148,8 +173,8 @@ export const Cart = () => {
 															<path
 																d="M8 14V8M8 8V2M8 8L14 8M8 8H2"
 																stroke="#4F4F4F"
-																stroke-width="2"
-																stroke-linecap="round"
+																strokeWidth="2"
+																strokeLinecap="round"
 															/>
 														</svg>
 													</button>
@@ -159,18 +184,28 @@ export const Cart = () => {
 									</div>
 								))}
 							</div>
-							{/* <button onClick={() => getCartValue()}>
-								Click
-							</button> */}
 						</div>
 					</div>
-					<div className="cart__checkout-container cart-checkout-container">
+					<div className="cart__checkout-container">
+						<div className="cart-checkout-container__row">
+							<p className="cart-checkout-container__before-total">
+								Shipping & Handling
+							</p>
+							<p className="cart-checkout-container__before-total">
+								Free
+							</p>
+						</div>
 						<div className="cart-checkout-container__row">
 							<p className="cart-checkout-container__before-total">
 								Price
 							</p>
 							<p className="cart-checkout-container__before-total">
-								${estimate}
+								$
+								{cart.length > 0 ? (
+									estimate.toFixed(2)
+								) : (
+									<></>
+								)}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -179,7 +214,8 @@ export const Cart = () => {
 							</p>
 							{/* <p>Tax</p> */}
 							<p className="cart-checkout-container__before-total">
-								${tax.toFixed(2)}
+								{/* ${tax.toFixed(2)}$ */}
+								{cart.length > 0 ? tax.toFixed(2) : <></>}
 							</p>
 						</div>
 						<div className="cart-checkout-container__row">
@@ -187,12 +223,30 @@ export const Cart = () => {
 								GRAND TOTAL
 							</p>
 							<p className="cart-checkout-container__total">
-								${finalPrice.toFixed(2)}
+								{/* ${finalPrice.toFixed(2)}$ */}
+								{cart.length > 0 ? (
+									finalPrice.toFixed(2)
+								) : (
+									<></>
+								)}
 							</p>
 						</div>
-						<button className="button pointer">
-							Go to checkout
-						</button>
+						{Object.keys(userData).length === 0 ? (
+							<Link
+								to="/login"
+								state={{ prevPath: currentPath }}
+							>
+								<button className="button pointer">
+									Go to checkout
+								</button>
+							</Link>
+						) : (
+							<Link to={"/checkout"}>
+								<button className="button pointer">
+									Go to checkout
+								</button>
+							</Link>
+						)}
 					</div>
 				</>
 			) : (
@@ -212,6 +266,7 @@ export const Cart = () => {
 					</a>
 				</div>
 			)}
+			{/* <button onClick={() => getCartValue()}>Click</button> */}
 		</div>
 	);
 };

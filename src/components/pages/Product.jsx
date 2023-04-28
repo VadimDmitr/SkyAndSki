@@ -1,14 +1,14 @@
 import { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { BASEPRODUCTSURL } from "api/index";
+import { BASEURL } from "api/index";
 import { cartDataContext } from "contexts/cartContext";
-import snowboard from "images/snowboard_light.png";
 
 export const Product = () => {
 	const location = useLocation();
 	const { cart, setCart } = useContext(cartDataContext);
 	const [product, setProduct] = useState({});
 	const [quantityBox, setQuantityBox] = useState(1);
+	const BASEPRODUCTSURL = BASEURL + "products/";
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
@@ -23,12 +23,13 @@ export const Product = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
+				console.log("result ===> ", result);
 				const productFromBackend =
 					JSON.parse(result).product;
 				setProduct({ ...product, ...productFromBackend });
 			})
 			.catch((error) => console.log("error", error));
-	}, [product]);
+	}, []);
 	/* eslint-disable react-hooks/exhaustive-deps */
 
 	const increaseQuantityToAdd = () => {
@@ -55,14 +56,13 @@ export const Product = () => {
 		if (cart) {
 			if (
 				cart.some(
-					(cartItem) =>
-						cartItem.productName === item.productName
+					(cartItem) => cartItem.title === item.title
 				)
 			) {
 				let updatedCart = cart;
 				updatedCart.find(
 					(cartItemLocal) =>
-						cartItemLocal.productName === item.productName
+						cartItemLocal.title === item.title
 				).quantity += quantityBox;
 				setCart([...updatedCart]);
 			}
@@ -75,6 +75,7 @@ export const Product = () => {
 				setCart([...cart, updatedCart]);
 			}
 		}
+		console.log("cart ====> ", cart);
 	};
 
 	return (
@@ -82,23 +83,20 @@ export const Product = () => {
 			<div className="product">
 				<img
 					className="product__img"
-					src={snowboard}
+					src={product.img}
 					alt="snowboard"
 				/>
 				<div className="product__content">
-					<p className="product__title">
-						{product.productName}
-					</p>
-					<p className="product__price">
-						${product.productPrice}
-					</p>
+					<p className="product__title">{product.title}</p>
+					<p className="product__price">${product.price}</p>
 					<p className="product__description">
 						Product Short Description senectus et netus et
 						malesuada fames ac turpis egestas. Vesitbulum
 						tortor quam, feugiat vitae, ultricies eget,
 						tempor sit amet, ante. Donec eu libero sit amet
 						quam egestas semper. Aenean ultricies mi vitae
-						est. Mauris placerat eleifend{" "}
+						est. Mauris placerat eleifend.
+						{/* {product.description} */}
 					</p>
 					<div className="product__change-quantity-container">
 						<button

@@ -15,7 +15,8 @@ export const Account = () => {
 
 	useEffect(() => {
 		console.log("userData =====> ", userData);
-		if (userData === null) navigate("/");
+		if (Object.keys(userData).length === 0)  navigate("/");
+		// if (userData === null) navigate("/");
 		// if (userData.token === null) navigate ("/");
 	});
 
@@ -63,7 +64,7 @@ export const Account = () => {
 				<div className="account desktop">
 					<div className="account__sidebar">
 						<h2 className="account__greeting">
-							Hello, {userData.user.name}
+							Hello, {Object.keys(userData).length === 0 ? userData.user.name : <></>}
 						</h2>
 						<p
 							className="account__sidebar-heading pointer"

@@ -1,4 +1,4 @@
-import logo from "images/icons/logo.svg";
+import logo from "images/icons/logoRed.svg";
 
 export const Logo = () => {
 	return (

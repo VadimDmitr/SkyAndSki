@@ -1,0 +1,51 @@
+.map-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 10rem;
+	padding-bottom: 6rem;
+}
+
+.map-section-info {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 2rem;
+}
+
+.map-section-title {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3.6rem;
+	line-height: 4rem;
+	padding-bottom: 1rem;
+}
+
+.map-section-text {
+	width: auto;
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.9rem;
+	line-height: 2.8rem;
+}
+
+.map-section-contact {
+	display: flex;
+	align-items: center;
+}
+
+.map-section-contact input {
+	margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+	.map-section-info {
+		flex-direction: column;
+	}
+
+	.map-section-text {
+		margin-bottom: 2rem;
+	}
+}

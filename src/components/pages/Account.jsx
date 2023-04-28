@@ -1,3 +1,5 @@
+
+
 import { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
@@ -8,7 +10,8 @@ export const Account = () => {
 
 	useEffect(() => {
 		console.log("userData =====> ", userData);
-		if (userData === null) navigate("/");
+		// if (userData === null) navigate("/");
+		if (Object.keys(userData).length === 0) navigate("/");
 		// if (userData.token === null) navigate ("/");
 	});
 
