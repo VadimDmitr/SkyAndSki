@@ -51,7 +51,9 @@ export const MapSection = () => {
 				</LoadScript>
 				<div className="map-section-info">
 					<div>
-						<h2 className="map-section-title" >Location of our Hotelos</h2>
+						<h2 className="map-section-title">
+							Location of our Hotelos
+						</h2>
 						<h3 className="map-section-text">
 							Lorem Ipsum is simply dummy text of the
 							printing and typesetting industry. Lorem Ipsum
