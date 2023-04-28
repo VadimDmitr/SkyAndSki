@@ -188,7 +188,7 @@
 
 				.laptop-images__image--2 {
 					left: -19.1rem;
-          top: 6rem;
+					top: 6rem;
 					width: 48.1vw;
 				}
 
@@ -211,19 +211,19 @@
 						display: block;
 					}
 
-          .carousel__image {
-            width: 57.8rem;
-          }
+					.carousel__image {
+						width: 57.8rem;
+					}
 
 					.laptop-images {
 						display: none;
 					}
 
-          @media screen and (max-width: 500px) {
-            .carousel__image {
-              width: 37.8rem;
-            }
-          }
+					@media screen and (max-width: 500px) {
+						.carousel__image {
+							width: 37.8rem;
+						}
+					}
 				}
 			}
 		}
