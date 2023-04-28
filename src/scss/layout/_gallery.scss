@@ -63,33 +63,33 @@
 .laptop-images__image {
 	position: relative;
 	width: 100%;
-	max-width: 30rem;
+	//max-width: 30rem;
 	height: auto;
 	margin: 1rem;
 }
 
 .laptop-images__image--1 {
 	order: 1;
-	width: 43.2rem;
-	height: 47rem;
-	left: -34rem;
-	top: 36.1rem;
+	width: auto;
+	height: 51rem;
+	left: -8rem;
+	top: 38rem;
 }
 
 .laptop-images__image--2 {
 	order: 2;
-	width: 57.1rem;
-	height: 26rem;
-	left: -30.9rem;
+	width: auto;
+	height: 30rem;
+	left: -5rem;
 	top: 25.2rem;
 }
 
 .laptop-images__image--3 {
 	order: 3;
-	width: 57.2rem;
-	height: 26rem;
-	left: -63.3rem;
-	top: 57.1rem;
+	width: auto;
+	height: 30rem;
+	left: -52rem;
+	top: 59.1rem;
 }
 
 .slick-dots li button:before {
@@ -101,25 +101,32 @@
 	color: var(--color-primary);
 }
 
+@media screen and (max-width: 1640px) {
+	.laptop-images__title {
+		left: 17rem;
+		top: 23rem;
+	}
+}
+
 @media screen and (max-width: 1280px) {
 	.laptop-images__image--1 {
-		left: 0rem;
-		top: 28rem;
+		left: -8rem;
+		top: 18rem;
 	}
 
 	.laptop-images__image--2 {
-		left: 6rem;
-		top: 19rem;
+		left: -4rem;
+		top: 6rem;
 	}
 
 	.laptop-images__image--3 {
-		left: -26.3rem;
-		top: 48.1rem;
+		left: -51.3rem;
+		top: 39.1rem;
 	}
 
 	.laptop-images__title {
-		left: 26rem;
-		top: 19rem;
+		left: 13rem;
+		top: 2rem;
 	}
 
 	.gallery {
@@ -129,19 +136,33 @@
 	}
 
 	@media screen and (max-width: 1024px) {
+		.laptop-images__image--1 {
+			left: -15rem;
+			top: 19rem;
+		}
+
+		.laptop-images__image--2 {
+			left: -14rem;
+			top: 7rem;
+		}
+
+		.laptop-images__image--3 {
+			left: -61.1rem;
+			top: 40.1rem;
+		}
 		.laptop-images__title {
-			left: 22rem;
-			top: 13rem;
+			left: 7rem;
+			top: 3rem;
 		}
 
 		@media screen and (max-width: 912px) {
 			.laptop-images__image--1 {
-				left: -4rem;
+				left: -15rem;
 				top: 25rem;
 			}
 
 			.laptop-images__image--2 {
-				left: 1.9rem;
+				left: -14rem;
 				top: 16rem;
 			}
 
