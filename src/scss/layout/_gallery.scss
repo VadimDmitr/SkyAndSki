@@ -17,7 +17,7 @@
 }
 
 .carousel__image {
-	width: 35.8rem;
+	//width: 35.8rem;
 	height: 53rem;
 	object-fit: cover;
 	display: block;
@@ -211,9 +211,19 @@
 						display: block;
 					}
 
+          .carousel__image {
+            width: 57.8rem;
+          }
+
 					.laptop-images {
 						display: none;
 					}
+
+          @media screen and (max-width: 500px) {
+            .carousel__image {
+              width: 37.8rem;
+            }
+          }
 				}
 			}
 		}
