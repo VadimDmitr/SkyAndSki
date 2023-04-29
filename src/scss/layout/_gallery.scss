@@ -101,6 +101,27 @@
 	color: var(--color-primary);
 }
 
+@media screen and (min-width: 1640px) and (max-width: 1800px) {
+	.laptop-images__title {
+		left: 30rem;
+		top: 23rem;
+	}
+	.laptop-images__image--1 {
+		left: 1rem;
+		top: 38rem;
+	}
+
+	.laptop-images__image--2 {
+		left: 4rem;
+		top: 25.2rem;
+	}
+
+	.laptop-images__image--3 {
+		left: -43rem;
+		top: 59.1rem;
+	}
+}
+
 @media screen and (max-width: 1640px) {
 	.laptop-images__title {
 		left: 17rem;
