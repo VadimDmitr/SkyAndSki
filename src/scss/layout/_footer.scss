@@ -54,7 +54,7 @@
 .footer__subscription-form {
 	display: flex;
 	width: 20rem;
-	height: 4rem;
+	height: 5rem;
 	left: 1.9rem;
 	bottom: 9.253rem;
 	width: 100%;
@@ -74,6 +74,37 @@
 	width: 100%;
 	padding: 1rem;
 	flex-wrap: wrap;
+}
+@media only screen and (min-width: 769px) and (max-width: 1140px) {
+	.footer__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto;
+		grid-gap: 3.2rem;
+		grid-template-areas:
+			"company support"
+			"logo logo";
+		background-color: var(--color-neutral-black);
+		width: 100%;
+		padding: 1.6rem;
+		height: 617px;
+		left: 0px;
+		bottom: 0px;
+	}
+
+	.footer__company-info {
+		grid-area: company;
+		padding-left: 7rem;
+	}
+
+	.footer__support-info {
+		grid-area: support;
+	}
+
+	.footer__logo-container {
+		grid-area: logo;
+		margin: 0 auto;
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -96,8 +127,10 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: auto auto;
-		grid-gap: 1rem;
+		grid-gap: 3rem;
 		grid-template-areas: "logo logo company support";
+		padding: 12rem;
+		padding-right: 5rem;
 	}
 
 	.footer__logo-container {
@@ -138,34 +171,40 @@
 	.footer__company-link-text,
 	.footer__support-link-text {
 		width: 21.8rem;
-		height: 3.3rem;
+		height: 4.5rem;
 		font-family: "Poppins";
 		font-style: normal;
 		font-weight: 400;
-		font-size: 2.2rem;
-		line-height: 3.3rem;
+		font-size: 2rem;
+		line-height: 5.3rem;
 		color: var(--color-secondary);
 	}
 
 	.footer__subscription-input {
 		display: flex;
-		width: 35.8rem;
-		height: 4rem;
+		width: 40.8rem;
+		height: 5rem;
 		left: 1.9rem;
 		bottom: 9.253rem;
 		background: #f9f9f9;
-		opacity: 0.56;
+		opacity: 2;
+		font-size: 2rem;
+		font-weight: bold;
+		//color: var(--color-secondary);
+		padding: 1rem; /* Add some padding to make the text more readable */
 	}
 
 	.footer__subscription-button {
 		left: 40rem;
 		top: 31rem;
+		height: 4.7rem;
 		background: #100f0f;
 	}
 
 	.footer__social-icons {
 		display: flex;
-		gap: 4rem;
+		gap: 6rem;
 		padding: 2.5rem;
+		padding-top: 5rem;
 	}
 }
