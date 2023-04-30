@@ -1,6 +1,4 @@
 import styled from "styled-components";
-// import logo from "images/icons/logoRed.svg";
-import { useLocation } from "react-router-dom";
 
 const LogoSVG = styled.svg`
 	path {
@@ -12,7 +10,6 @@ const LogoSVG = styled.svg`
 `;
 
 export const Logo = ({currentPath}) => {
-	console.log("currentPath = ", currentPath);
 	return (
 		<LogoSVG
 			currentPath={currentPath}
