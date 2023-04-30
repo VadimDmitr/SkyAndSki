@@ -16,7 +16,7 @@
 
 .footer__company-info {
 	grid-area: company;
-	padding-left: 7rem;
+	padding-left: 6rem;
 	position: relative;
 	top: 5rem;
 }
@@ -87,37 +87,6 @@
 	padding: 1rem;
 	padding-top: 4rem;
 	flex-wrap: wrap;
-}
-@media only screen and (min-width: 769px) and (max-width: 1140px) {
-	.footer__grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto auto;
-		grid-gap: 3.2rem;
-		grid-template-areas:
-			"company support"
-			"logo logo";
-		background-color: var(--color-neutral-black);
-		width: 100%;
-		padding: 1.6rem;
-		height: 617px;
-		left: 0px;
-		bottom: 0px;
-	}
-
-	.footer__company-info {
-		grid-area: company;
-		padding-left: 7rem;
-	}
-
-	.footer__support-info {
-		grid-area: support;
-	}
-
-	.footer__logo-container {
-		grid-area: logo;
-		margin: 0 auto;
-	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -220,5 +189,37 @@
 		width: 45rem;
 		padding: 2.5rem;
 		padding-top: 5rem;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1140px) {
+	.footer__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto;
+		grid-gap: 3.2rem;
+		grid-template-areas:
+			"company support"
+			"logo logo";
+		background-color: var(--color-neutral-black);
+		width: 100%;
+		padding: 1.6rem;
+		height: 617px;
+		left: 0px;
+		bottom: 0px;
+	}
+
+	.footer__company-info {
+		grid-area: company;
+		padding-left: 14rem;
+	}
+
+	.footer__support-info {
+		grid-area: support;
+	}
+
+	.footer__logo-container {
+		grid-area: logo;
+		margin: 0 auto;
 	}
 }
