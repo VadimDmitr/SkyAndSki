@@ -56,7 +56,7 @@ export const Login = () => {
 				// setUserData({ ...userData, name: JSON.parse(result).name})
 				console.log("userData ====> ", userData);
 				if (userData) {
-					if (prevPath === '/checkout') {
+					if (prevPath === "/checkout") {
 						navigate("/checkout");
 					} else {
 						navigate("/account");
