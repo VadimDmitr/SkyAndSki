@@ -17,10 +17,14 @@
 .footer__company-info {
 	grid-area: company;
 	padding-left: 7rem;
+	position: relative;
+	top: 5rem;
 }
 
 .footer__support-info {
 	grid-area: support;
+	position: relative;
+	top: 5rem;
 }
 
 .footer__logo-container {
@@ -28,10 +32,17 @@
 	margin: 0 auto;
 }
 
+.footer__logo-container {
+	position: relative;
+	top: 0rem;
+}
+
 .footer__company-title,
 .footer__support-title {
 	width: 13, 7rem;
 	height: 3rem;
+	position: relative;
+	top: -2rem;
 	font-family: "Poppins";
 	font-style: normal;
 	font-weight: 600;
@@ -53,8 +64,8 @@
 .footer__subscription-input,
 .footer__subscription-form {
 	display: flex;
-	width: 20rem;
-	height: 5rem;
+	width: 25rem;
+	height: 3rem;
 	left: 1.9rem;
 	bottom: 9.253rem;
 	width: 100%;
@@ -65,14 +76,16 @@
 .footer__subscription-button {
 	left: 40rem;
 	top: 31rem;
-	background: var(--color-secondary);
+	background: var(--color-neutral-black);
+	height: 3rem;
 }
 
 .footer__social-icons {
 	display: flex;
-	gap: 0.5rem;
-	width: 100%;
+	gap: 2.5rem;
+	width: 31rem;
 	padding: 1rem;
+	padding-top: 4rem;
 	flex-wrap: wrap;
 }
 @media only screen and (min-width: 769px) and (max-width: 1140px) {
@@ -204,6 +217,7 @@
 	.footer__social-icons {
 		display: flex;
 		gap: 6rem;
+		width: 45rem;
 		padding: 2.5rem;
 		padding-top: 5rem;
 	}
