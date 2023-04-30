@@ -12,7 +12,7 @@ const AccountSVG = styled.svg`
 export const Account = ({ currentPath }) => {
 	return (
 		<AccountSVG
-            currentPath={currentPath}
+			currentPath={currentPath}
 			width="32"
 			height="29"
 			viewBox="0 0 32 29"
