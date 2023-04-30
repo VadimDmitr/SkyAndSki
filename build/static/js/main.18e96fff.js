@@ -23532,15 +23532,13 @@
 								n(e), r(e), a(e), o(e), i(e);
 							});
 				};
-			a
-				.createRoot(document.getElementById("root"))
-				.render(
-					(0, Ze.jsx)(Ar, {
-						children: (0, Ze.jsx)(Nr, {
-							children: (0, Ze.jsx)(ra, {}),
-						}),
-					})
-				),
+			a.createRoot(document.getElementById("root")).render(
+				(0, Ze.jsx)(Ar, {
+					children: (0, Ze.jsx)(Nr, {
+						children: (0, Ze.jsx)(ra, {}),
+					}),
+				})
+			),
 				aa();
 		})();
 })();
