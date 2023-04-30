@@ -67,26 +67,30 @@ export const Login = () => {
 	};
 
 	return (
-		<form onSubmit={(e) => handleSubmit(e)}>
-			<label htmlFor="email">Email: </label>
-			<input
-				type="email"
-				id="email"
-				name="email"
-				value={userFormData.email}
-				required
-				onChange={(e) => handleChange(e)}
-			/>
-			<label htmlFor="password">Password: </label>
-			<input
-				type="text"
-				id="password"
-				name="password"
-				value={userFormData.password}
-				required
-				onChange={(e) => handleChange(e)}
-			/>
-			<button type="submit">Login</button>
-		</form>
+		<div className="block__element">
+			<form onSubmit={(e) => handleSubmit(e)} className="block__form">
+				<label htmlFor="email" className="block__label">Email: </label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					value={userFormData.email}
+					required
+					onChange={(e) => handleChange(e)}
+					className="block__input"
+				/>
+				<label htmlFor="password" className="block__label">Password: </label>
+				<input
+					type="text"
+					id="password"
+					name="password"
+					value={userFormData.password}
+					required
+					onChange={(e) => handleChange(e)}
+					className="block__input"
+				/>
+				<button type="submit" className="block__button">CONTINUE</button>
+			</form>
+		</div>
 	);
 };
