@@ -12,6 +12,11 @@ import { Account } from "components/icons/Account";
 import { Caret } from "components/icons/Caret";
 
 const HeaderElement = styled.header`
+	border-bottom: ${({ currentPath }) =>
+		currentPath === "/" || currentPath === "/login"
+			? "1px solid var(--color-secondary)"
+			: "1px solid var(--color-primary)"};
+
 	.nav__link-text {
 		color: ${({ currentPath }) =>
 			currentPath === "/" || currentPath === "/login"
