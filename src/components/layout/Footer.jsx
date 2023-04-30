@@ -12,7 +12,7 @@ export const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="footer__main-container footer__grid">
-				<div className="footer__logo-container footer__logo-container--bottom-left">
+				<div className="footer__logo-container">
 					<div className="footer__media-links">
 						<form className="footer__subscription-form">
 							<input

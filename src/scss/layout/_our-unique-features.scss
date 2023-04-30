@@ -75,13 +75,14 @@
 		justify-content: space-around;
 		align-items: center;
 		flex-wrap: wrap;
+		padding-left: 7.5rem;
 
 		&__item {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			padding: 0rem;
-			gap: 1rem;
+			gap: 3rem;
 			width: 39rem;
 			height: 8.3rem;
 			/* Inside auto layout */
