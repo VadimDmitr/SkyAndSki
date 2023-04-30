@@ -18,7 +18,7 @@ export const Gallery = () => {
 	};
 
 	return (
-		<div className="gallery">
+		<>
 			<div className="carousel">
 				<p className="carousel-images__title">
 					Our Gallery
@@ -65,6 +65,6 @@ export const Gallery = () => {
 					className="laptop-images__image laptop-images__image--3"
 				/>
 			</div>
-		</div>
+		</>
 	);
 };

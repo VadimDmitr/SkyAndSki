@@ -16,6 +16,10 @@ const HeaderElement = styled.header`
 		currentPath === "/" || currentPath === "/login"
 			? "1px solid var(--color-secondary)"
 			: "1px solid var(--color-primary)"};
+	position: ${({ currentPath }) =>
+		currentPath === "/" || currentPath === "/login"
+			? "absolute"
+			: "static"};
 
 	.nav__link-text {
 		color: ${({ currentPath }) =>
