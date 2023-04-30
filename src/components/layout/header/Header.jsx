@@ -6,25 +6,15 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Hamburger } from "components/layout/header/Hamburger";
 import { MobileMenu } from "components/layout/header/MobileMenu";
-import { Logo } from "components/Logo";
+import { Logo } from "components/icons/Logo";
 import search from "images/icons/searchRed.svg";
 import cart from "images/icons/cartRed.svg";
 import account from "images/icons/accountRed.svg";
 import language from "images/icons/languageRed.svg";
-//import { Logo } from "components/Logo";
-//import search from "images/icons/search.svg";
-//import cart from "images/icons/cart.svg";
-//import account from "images/icons/account.svg";
-//import language from "images/icons/language.svg";
 
 const HeaderElement = styled.header`
-	// color: ${({currentPath}) => (currentPath === "/") ? "white" : "red"};
-
-	// p {
-	// 	color: ${({currentPath}) => (currentPath === "/") ? "white" : "red"};
-	// }
 	.nav__link-text {
-		color: ${({currentPath}) => (currentPath === "/") ? "white" : "red"};
+		color: ${({currentPath}) => (currentPath === "/" || currentPath === "/login") ? "var(--color-secondary)" : "var(--color-primary)"};
 	}
 `
 
@@ -47,7 +37,7 @@ export const Header = () => {
 		<HeaderElement className="header" currentPath={currentPath}>
 			<nav className="nav-mobile mobile">
 				<NavLink className="nav__link" to={"/"}>
-					<Logo />
+					<Logo currentPath={currentPath} />
 				</NavLink>
 				<div className="nav-mobile__right-group">
 					<NavLink className="nav__link" to={"/search"}>
@@ -84,7 +74,7 @@ export const Header = () => {
 
 			<nav className="nav desktop">
 				<NavLink className="nav__link" to={"/"}>
-					<Logo />
+					<Logo currentPath={currentPath} />
 				</NavLink>
 				<div className="nav__middle-group">
 					<NavLink className="nav__link" to={"/about"}>
