@@ -71,6 +71,7 @@
 	width: 100%;
 	background: var(--color-secondary);
 	opacity: 0.56;
+	border: none;
 }
 
 .footer__subscription-button {
@@ -165,7 +166,7 @@
 	.footer__subscription-input {
 		display: flex;
 		width: 40.8rem;
-		height: 5rem;
+		height: 4.5rem;
 		left: 1.9rem;
 		bottom: 9.253rem;
 		background: #f9f9f9;
