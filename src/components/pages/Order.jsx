@@ -47,18 +47,18 @@ export const Order = () => {
 					<div className="order__items">
 						{order.products.map((product) => (
 							<div className="cart-item">
-							<img
-								className="cart-item__img"
-								src={product.img}
-								alt="snowboard"
-							/>
-							<div className="cart-item__content">
-								<div className="cart-item__title-container">
-									<p className="cart-item__title">
-										{product.title}
-									</p>
-								</div>
-								{/* <img
+								<img
+									className="cart-item__img"
+									src={product.img}
+									alt="snowboard"
+								/>
+								<div className="cart-item__content">
+									<div className="cart-item__title-container">
+										<p className="cart-item__title">
+											{product.title}
+										</p>
+									</div>
+									{/* <img
 									className="cart-item__cross pointer"
 									src={cross}
 									alt="remove item from cart"
@@ -66,19 +66,19 @@ export const Order = () => {
 									// 	removeProductFromCart(item)
 									// }
 								/> */}
-								<div className="cart-item__category-container">
-									<p className="cart-item__category">
-										category
-									</p>
-								</div>
-								<div className="cart-item__price-container">
-									<p className="cart-item__price">
-										${product.price}
-									</p>
-								</div>
-								<div className="cart-item__quantity-container-outer">
-									<div className="cart-item-quantity-container">
-										{/* <button
+									<div className="cart-item__category-container">
+										<p className="cart-item__category">
+											category
+										</p>
+									</div>
+									<div className="cart-item__price-container">
+										<p className="cart-item__price">
+											${product.price}
+										</p>
+									</div>
+									<div className="cart-item__quantity-container-outer">
+										<div className="cart-item-quantity-container">
+											{/* <button
 											className="cart-item-quantity-container__change pointer"
 											// onClick={() =>
 											// 	decreaseQuantity(item, 1)
@@ -99,10 +99,10 @@ export const Order = () => {
 												/>
 											</svg>
 										</button> */}
-										<p className="cart-item-quantity-container__quantity">
-											{product.quantity}
-										</p>
-										{/* <button
+											<p className="cart-item-quantity-container__quantity">
+												{product.quantity}
+											</p>
+											{/* <button
 											className="cart-item-quantity-container__change pointer"
 											// onClick={() =>
 											// 	increaseQuantity(item, 1)
@@ -123,10 +123,10 @@ export const Order = () => {
 												/>
 											</svg>
 										</button> */}
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
 						))}
 					</div>
 					<div className="checkout__estimate-container">
