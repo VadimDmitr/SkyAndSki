@@ -1,16 +1,18 @@
-import snowboard from "images/snowboard_light.png";
-
 export const ProductCard = ({ product }) => {
 	// this is used in SwitchCategory or Catalog components
 	return (
 		<div className="product-card" key={product.id}>
-			<img src={snowboard} alt={product.title} />
+			<img
+				className="product-card__img"
+				src={product.img}
+				alt={product.title}
+			/>
 			<div className="product-card__text">
 				<p className="product-card__title">
-					{product?.productName}
+					{product?.title}
 				</p>
 				<p className="product-card__price">
-					${product?.productPrice}
+					${product?.price}
 				</p>
 			</div>
 		</div>

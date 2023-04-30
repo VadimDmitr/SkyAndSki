@@ -1,0 +1,56 @@
+.order {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"header"
+		"info"
+		"content";
+
+	&__header {
+		grid-area: header;
+		font-size: 3rem;
+	}
+
+	&__info-container {
+		grid-area: info;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__info-container-date {
+		font-size: 2rem;
+	}
+
+	&__info-container-order-number {
+		font-size: 3.2rem;
+	}
+
+	&__info-container-delivery-date {
+		font-size: 2rem;
+	}
+
+	&__info-container-delivery-address {
+		font-size: 2rem;
+	}
+
+	&__content-container {
+		grid-area: content;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.order {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"header header"
+			"info content";
+		gap: 6.8rem;
+
+		&__header {
+			grid-area: header;
+			font-size: 6.5rem;
+		}
+	}
+}
