@@ -1,5 +1,5 @@
 import { OurUniqueFeatures } from "components/OurUniqueFeatures";
-import { TopScreen } from "components/TopScreen";
+import { TopScreen } from "components/layout/TopScreen";
 import { Catalog } from "components/Catalog";
 import { Gallery } from "components/layout/Gallery";
 import { WhyChooseUs } from "components/layout/WhyChooseUs";
