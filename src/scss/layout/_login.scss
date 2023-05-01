@@ -28,6 +28,17 @@
 	background-position: center;
 }
 
+.block__link-group {
+  display: flex;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 2rem;
+line-height: 3rem;
+}
+
+
+
 .block__form {
 	display: flex;
 	flex-direction: column;
@@ -41,9 +52,16 @@
 	border-radius: 10px;
 }
 
+.block__link-text{
+color: var(--color-primary);
+padding-left: 0.8rem;
+}
+
 .block__label {
 	margin-bottom: 10px;
 }
+
+
 
 .block__input {
 	margin-bottom: 2rem;

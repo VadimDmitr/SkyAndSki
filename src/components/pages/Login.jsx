@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
 import { BASEURL } from "api/index";
+import { NavLink } from "react-router-dom";
 
 const BASEAUTHURL = BASEURL + "auth/";
 const URL = BASEAUTHURL + "login";
@@ -68,9 +69,21 @@ export const Login = () => {
 
 	return (
 		<div className="block__element">
-			<form onSubmit={(e) => handleSubmit(e)} className="block__form">
-			<h1 className="block__signin-title">Sign in</h1>
-				<label htmlFor="email" className="block__label"></label>
+			<form
+				onSubmit={(e) => handleSubmit(e)}
+				className="block__form"
+			>
+				<h1 className="block__signin-title">Sign in</h1>
+				<div className="block__link-group">
+					<p className="block__text">New user?</p>
+					<NavLink className="block__link" to={"/signUp"}>
+						<p className="block__link-text">Create an account</p>
+					</NavLink>
+				</div>
+				<label
+					htmlFor="email"
+					className="block__label"
+				></label>
 				<input
 					type="email"
 					id="email"
@@ -81,7 +94,10 @@ export const Login = () => {
 					className="block__input"
 					placeholder="Email address"
 				/>
-				<label htmlFor="password" className="block__label"></label>
+				<label
+					htmlFor="password"
+					className="block__label"
+				></label>
 				<input
 					type="password"
 					id="password"
@@ -92,7 +108,9 @@ export const Login = () => {
 					className="block__input"
 					placeholder="Password"
 				/>
-				<button type="submit" className="block__button">CONTINUE</button>
+				<button type="submit" className="block__button">
+					CONTINUE
+				</button>
 			</form>
 		</div>
 	);
