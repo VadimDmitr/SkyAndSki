@@ -77,7 +77,9 @@ export const Login = () => {
 				<div className="block__link-group">
 					<p className="block__text">New user?</p>
 					<NavLink className="block__link" to={"/register"}>
-						<p className="block__link-text">Create an account</p>
+						<p className="block__link-text">
+							Create an account
+						</p>
 					</NavLink>
 				</div>
 				<label
