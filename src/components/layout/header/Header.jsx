@@ -13,17 +13,17 @@ import { Caret } from "components/icons/Caret";
 
 const HeaderElement = styled.header`
 	border-bottom: ${({ currentPath }) =>
-		currentPath === "/" || currentPath === "/login"
+		currentPath === "/" || currentPath === "/login" || currentPath === "/register"
 			? "1px solid var(--color-secondary)"
 			: "1px solid var(--color-primary)"};
 	position: ${({ currentPath }) =>
-		currentPath === "/" || currentPath === "/login"
+		currentPath === "/" || currentPath === "/login" || currentPath === "/register"
 			? "absolute"
 			: "static"};
 
 	.nav__link-text {
 		color: ${({ currentPath }) =>
-			currentPath === "/" || currentPath === "/login"
+			currentPath === "/" || currentPath === "/login" || currentPath === "/register"
 				? "var(--color-secondary)"
 				: "var(--color-primary)"};
 	}
