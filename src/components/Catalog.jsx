@@ -1,37 +1,37 @@
 import { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
-import { SwitchCategory } from "components/SwitchCategory";
+import { Link } from "react-router-dom";
+// import { SwitchCategory } from "components/SwitchCategory";
 import { BASEURL } from "api/index";
-// import { ProductCard } from "components/ProductCard.jsx";
+import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
 
-// const categories = [
-// 	{ name: "All", value: "all" },
-// 	{ name: "Board", value: "board" },
-// 	{ name: "Ski", value: "ski" },
-// 	{ name: "Other", value: "other" },
-// ];
+const categories = [
+	{ name: "All", value: "all" },
+	{ name: "Board", value: "board" },
+	{ name: "Ski", value: "ski" },
+	{ name: "Other", value: "other" },
+];
 
 export const Catalog = () => {
 	const [products, setProducts] = useState([]);
 
 	const BASEPRODUCTSURL = BASEURL + "products";
-	// const [selectedCategory, setSelectedCategory] =
-	// 	useState("all");
+	const [selectedCategory, setSelectedCategory] =
+		useState("all");
 
-	// console.log("selectedCategory ===> ", selectedCategory);
-	// console.log("products ===> ", products);
+	console.log("selectedCategory ===> ", selectedCategory);
+	console.log("products ===> ", products);
 
-	// const handleClick = (category) => {
-	// 	setSelectedCategory(category);
-	// };
+	const handleClick = (category) => {
+		setSelectedCategory(category);
+	};
 
-	// const filteredProducts =
-	// 	selectedCategory === "all"
-	// 		? products
-	// 		: products.filter(
-	// 				(product) => product.category === selectedCategory
-	// 		  );
+	const filteredProducts =
+		selectedCategory === "all"
+			? products
+			: products.filter(
+					(product) => product.category === selectedCategory
+			  );
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
@@ -59,10 +59,26 @@ export const Catalog = () => {
 				</p>
 			</div>
 			<h2>Our Most Popular Board category</h2>
-			<SwitchCategory products={products} />
-			{/* <div className="products">
+			{/* <SwitchCategory products={products} /> */}
+			<div className="catalog__filters">
+				{categories.map((category) => (
+					<button
+						className="catalog__filter pointer"
+						key={category.value}
+						onClick={() => handleClick(category.value)}
+						style={{
+							borderBottom:
+								selectedCategory === category.value &&
+								"1px solid var(--color-primary)",
+						}}
+					>
+						{category.name}
+					</button>
+				))}
+			</div>
+			<div className="products">
 				{products.length > 0 ? (
-					products.map((product) => (
+					filteredProducts.map((product) => (
 						<Link to={`/product/${product._id}`}>
 							<ProductCard
 								product={product}
@@ -76,7 +92,7 @@ export const Catalog = () => {
 						Please come back later.
 					</h2>
 				)}
-			</div> */}
+			</div>
 			{/* {productsRender} */}
 			{/* <Button /> */}
 		</div>
