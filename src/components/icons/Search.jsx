@@ -3,7 +3,9 @@ import styled from "styled-components";
 const SearchSVG = styled.svg`
 	path {
 		fill: ${({ currentPath }) =>
-			currentPath === "/" || currentPath === "/login"
+			currentPath === "/" ||
+			currentPath === "/login" ||
+			currentPath === "/register"
 				? "var(--color-secondary)"
 				: "var(--color-primary)"};
 	}
