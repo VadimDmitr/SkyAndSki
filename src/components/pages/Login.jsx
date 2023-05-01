@@ -13,8 +13,8 @@ export const Login = () => {
 	const { userData, setUserData } =
 		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
-		email: "test@test.com",
-		password: "test@test.com",
+		email: "",
+		password: "",
 	});
 
 	const handleChange = (event) => {
@@ -69,7 +69,8 @@ export const Login = () => {
 	return (
 		<div className="block__element">
 			<form onSubmit={(e) => handleSubmit(e)} className="block__form">
-				<label htmlFor="email" className="block__label">Email: </label>
+			<h1 className="block__signin-title">Sign in</h1>
+				<label htmlFor="email" className="block__label"></label>
 				<input
 					type="email"
 					id="email"
@@ -78,16 +79,18 @@ export const Login = () => {
 					required
 					onChange={(e) => handleChange(e)}
 					className="block__input"
+					placeholder="Email address"
 				/>
-				<label htmlFor="password" className="block__label">Password: </label>
+				<label htmlFor="password" className="block__label"></label>
 				<input
-					type="text"
+					type="password"
 					id="password"
 					name="password"
 					value={userFormData.password}
 					required
 					onChange={(e) => handleChange(e)}
 					className="block__input"
+					placeholder="Password"
 				/>
 				<button type="submit" className="block__button">CONTINUE</button>
 			</form>
