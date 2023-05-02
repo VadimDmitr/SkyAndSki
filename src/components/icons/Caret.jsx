@@ -3,7 +3,9 @@ import styled from "styled-components";
 const CaretSVG = styled.svg`
 	path {
 		stroke: ${({ currentPath }) =>
-			currentPath === "/" || currentPath === "/login"
+			currentPath === "/" ||
+			currentPath === "/login" ||
+			currentPath === "/register"
 				? "var(--color-secondary)"
 				: "var(--color-primary)"};
 	}

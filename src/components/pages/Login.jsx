@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
 import { BASEURL } from "api/index";
+import { NavLink } from "react-router-dom";
 
 const BASEAUTHURL = BASEURL + "auth/";
 const URL = BASEAUTHURL + "login";
@@ -13,8 +14,8 @@ export const Login = () => {
 	const { userData, setUserData } =
 		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
-		email: "test@test.com",
-		password: "test@test.com",
+		email: "",
+		password: "",
 	});
 
 	const handleChange = (event) => {
@@ -67,26 +68,52 @@ export const Login = () => {
 	};
 
 	return (
-		<form onSubmit={(e) => handleSubmit(e)}>
-			<label htmlFor="email">Email: </label>
-			<input
-				type="email"
-				id="email"
-				name="email"
-				value={userFormData.email}
-				required
-				onChange={(e) => handleChange(e)}
-			/>
-			<label htmlFor="password">Password: </label>
-			<input
-				type="text"
-				id="password"
-				name="password"
-				value={userFormData.password}
-				required
-				onChange={(e) => handleChange(e)}
-			/>
-			<button type="submit">Login</button>
-		</form>
+		<div className="block__element">
+			<form
+				onSubmit={(e) => handleSubmit(e)}
+				className="block__form"
+			>
+				<h1 className="block__signin-title">Sign in</h1>
+				<div className="block__link-group">
+					<p className="block__text">New user?</p>
+					<NavLink className="block__link" to={"/register"}>
+						<p className="block__link-text">
+							Create an account
+						</p>
+					</NavLink>
+				</div>
+				<label
+					htmlFor="email"
+					className="block__label"
+				></label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					value={userFormData.email}
+					required
+					onChange={(e) => handleChange(e)}
+					className="block__input"
+					placeholder="Email address"
+				/>
+				<label
+					htmlFor="password"
+					className="block__label"
+				></label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					value={userFormData.password}
+					required
+					onChange={(e) => handleChange(e)}
+					className="block__input"
+					placeholder="Password"
+				/>
+				<button type="submit" className="block__button">
+					CONTINUE
+				</button>
+			</form>
+		</div>
 	);
 };
