@@ -1,6 +1,6 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-// import snowboard from "images/snowboard_light.png";
-// import cross from "images/icons/cross.svg";
+import { cartDataContext } from "contexts/cartContext";
 
 export const Order = () => {
 	const order = {
@@ -20,6 +20,19 @@ export const Order = () => {
 				price: "150",
 			},
 		],
+		firstName: "first",
+		lastName: "last",
+		email: "test@test.com",
+		address: "123 n test",
+		city: "city",
+		state: "state",
+		zipCode: "12345",
+		country: "USA",
+		cardHolder: "card holder",
+		cardNumber: "1234",
+		expirationMonth: "12",
+		expirationYear: "34",
+		ccv: "123",
 		bill: "550",
 	};
 	return (

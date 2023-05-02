@@ -21,6 +21,22 @@ export const Checkout = () => {
 		expirationYear: "",
 		cvv: "",
 	});
+	const data = {
+		firstName: "first",
+		lastName: "last",
+		email: "test@test.com",
+		address: "123 n test",
+		city: "city",
+		state: "state",
+		zipCode: "12345",
+		country: "USA",
+		cardHolder: "card holder",
+		cardNumber: "1234",
+		expirationMonth: "12",
+		expirationYear: "34",
+		ccv: "123",
+		bill: "550"
+	}
 
 	const navigate = useNavigate();
 
@@ -52,7 +68,7 @@ export const Checkout = () => {
 
 	const URL = BASEURL + "orders";
 
-	const order = {
+	const orderData = {
 		products: [
 			{
 				productId: "1",
@@ -68,6 +84,19 @@ export const Checkout = () => {
 			},
 		],
 		bill: "550",
+		firstName: "first",
+		lastName: "last",
+		email: "test@test.com",
+		address: "123 n test",
+		city: "city",
+		state: "state",
+		zipCode: "12345",
+		country: "USA",
+		cardHolder: "card holder",
+		cardNumber: "1234",
+		expirationMonth: "12",
+		expirationYear: "34",
+		ccv: "123",
 	};
 
 	const handleChange = (evt) => {
@@ -84,6 +113,8 @@ export const Checkout = () => {
 			"process.env.REACT_APP_USER_BEARER_TOKEN ====> ",
 			process.env.REACT_APP_USER_BEARER_TOKEN
 		);
+		console.log("cart ===> ", cart);
+		let order = {...{products: [cart[0]]}, ...data, ...{finalPrice: finalPrice}};
 		console.log("order ===> ", order);
 		event.preventDefault();
 		console.log("userData.token ====> ", userData.token);
