@@ -1,6 +1,7 @@
 import React from "react";
-import { MapSection } from "../layout/MapSection";
-class Contact extends React.Component {
+import { MapSection } from "components/layout/MapSection";
+
+export class Contact extends React.Component {
 	render() {
 		return (
 			<div className="map-section">
@@ -20,4 +21,4 @@ class Contact extends React.Component {
 	}
 }
 
-export { Contact };
+
