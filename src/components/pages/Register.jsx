@@ -2,19 +2,19 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
 import { BASEURL } from "api/index";
+import { NavLink } from "react-router-dom";
 
 const BASEAUTHURL = BASEURL + "auth";
-const URL = BASEAUTHURL + "login";
+const URL = BASEAUTHURL + "/register";
 
 export const Register = () => {
 	const navigate = useNavigate();
 	const { userData, setUserData } =
 		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
-		name: "test@test.com",
-		email: "test@test.com",
-		username: "test@test.com",
-		password: "test@test.com",
+		name: "",
+		email: "",
+		password: "",
 	});
 
 	const handleChange = (event) => {
@@ -64,44 +64,66 @@ export const Register = () => {
 	};
 
 	return (
-		<form onSubmit={(e) => handleSubmit(e)}>
-			<label htmlFor="name">Name: </label>
-			<input
-				type="text"
-				id="name"
-				name="name"
-				value={userFormData.name}
-				required
-				onChange={(e) => handleChange(e)}
-			/>
-			<label htmlFor="username">Username: </label>
-			<input
-				type="text"
-				id="username"
-				name="username"
-				value={userFormData.username}
-				required
-				onChange={(e) => handleChange(e)}
-			/>
-			<label htmlFor="email">Email: </label>
-			<input
-				type="text"
-				id="email"
-				name="email"
-				value={userFormData.email}
-				required
-				onChange={(e) => handleChange(e)}
-			/>
-			<label htmlFor="password">Password: </label>
-			<input
-				type="text"
-				id="password"
-				name="password"
-				value={userFormData.password}
-				required
-				onChange={(e) => handleChange(e)}
-			/>
-			<button type="submit">Register</button>
-		</form>
+		<div className="block__element">
+			<form
+				onSubmit={(e) => handleSubmit(e)}
+				className="block__form"
+			>
+				<h1 className="block__signin-title">Sign up</h1>
+				<div className="block__link-group">
+					<p className="block__text">
+						Already have an account?
+					</p>
+					<NavLink className="block__link" to={"/login"}>
+						<p className="block__link-text">Sign in</p>
+					</NavLink>
+				</div>
+				<label
+					htmlFor="name"
+					className="block__label"
+				></label>
+				<input
+					type="text"
+					id="name"
+					name="name"
+					value={userFormData.name}
+					required
+					onChange={(e) => handleChange(e)}
+					className="block__input"
+					placeholder="Name"
+				/>
+				<label
+					htmlFor="email"
+					className="block__label"
+				></label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					value={userFormData.email}
+					required
+					onChange={(e) => handleChange(e)}
+					className="block__input"
+					placeholder="Email address"
+				/>
+				<label
+					htmlFor="password"
+					className="block__label"
+				></label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					value={userFormData.password}
+					required
+					onChange={(e) => handleChange(e)}
+					className="block__input"
+					placeholder="Password"
+				/>
+				<button type="submit" className="block__button">
+					CONTINUE
+				</button>
+			</form>
+		</div>
 	);
 };

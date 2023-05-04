@@ -28,8 +28,16 @@ const HeaderElement = styled.header`
 		currentPath === "/order"
 			? "flex"
 			: "none"};
+	border-bottom: ${({ currentPath }) =>
+		currentPath === "/" ||
+		currentPath === "/login" ||
+		currentPath === "/register"
+			? "1px solid var(--color-secondary)"
+			: "1px solid var(--color-primary)"};
 	position: ${({ currentPath }) =>
-		currentPath === "/" || currentPath === "/login"
+		currentPath === "/" ||
+		currentPath === "/login" ||
+		currentPath === "/register"
 			? "absolute"
 			: "static"};
 	border-bottom: ${({ currentPath }) =>
@@ -39,7 +47,9 @@ const HeaderElement = styled.header`
 
 	.nav__link-text {
 		color: ${({ currentPath }) =>
-			currentPath === "/" || currentPath === "/login"
+			currentPath === "/" ||
+			currentPath === "/login" ||
+			currentPath === "/register"
 				? "var(--color-secondary)"
 				: "var(--color-primary)"};
 	}
