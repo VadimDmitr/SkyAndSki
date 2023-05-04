@@ -5,7 +5,7 @@ import { BASEURL } from "api/index";
 import { NavLink } from "react-router-dom";
 
 const BASEAUTHURL = BASEURL + "auth";
-const URL = BASEAUTHURL + "login";
+const URL = BASEAUTHURL + "/register";
 
 export const Register = () => {
 	const navigate = useNavigate();
@@ -14,7 +14,6 @@ export const Register = () => {
 	const [userFormData, setUserFormData] = useState({
 		name: "",
 		email: "",
-		username: "",
 		password: "",
 	});
 
