@@ -21,12 +21,12 @@ export const Caret = ({ currentPath }) => {
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>
-			<g clip-path="url(#clip0_631_323)">
+			<g clipPath="url(#clip0_631_323)">
 				<path
 					d="M9.375 3.125L5 6.875L0.625 3.125"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 			</g>
 			<defs>

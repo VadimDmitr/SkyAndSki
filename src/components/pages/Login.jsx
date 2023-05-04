@@ -13,10 +13,15 @@ export const Login = () => {
 	console.log("prevPath ====> ", prevPath);
 	const { userData, setUserData } =
 		useContext(userDataContext);
+	// const [userFormData, setUserFormData] = useState({
+	// 	email: "",
+	// 	password: "",
+	// });
 	const [userFormData, setUserFormData] = useState({
-		email: "",
-		password: "",
+		email: "test@test.com",
+		password: "test@test.com",
 	});
+	const [error, setError] = useState(null);
 
 	const handleChange = (event) => {
 		setUserFormData({
@@ -64,7 +69,11 @@ export const Login = () => {
 					}
 				}
 			})
-			.catch((error) => console.log("error", error));
+			.catch((errorResponse) => {
+				setError(errorResponse);
+				console.log("errorResponse ===> ", errorResponse);
+				console.log("error ===> ", error);
+			});
 	};
 
 	return (
@@ -110,6 +119,7 @@ export const Login = () => {
 					className="block__input"
 					placeholder="Password"
 				/>
+				<p>{error}</p>
 				<button type="submit" className="block__button">
 					CONTINUE
 				</button>

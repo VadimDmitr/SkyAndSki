@@ -18,6 +18,23 @@
 	align-items: end;
 }
 
+.error {
+	color: red;
+	font-size: 2rem;
+}
+
+.loader-container {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	margin-left: -50px;
+	top: 50%;
+	margin-top: -50px;
+	display: flex;
+	justify-content: center;
+}
+
 @media only screen and (min-width: 768px) {
 	.mobile {
 		display: none !important;

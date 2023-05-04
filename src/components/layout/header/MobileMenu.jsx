@@ -38,7 +38,7 @@ const Ul = styled.ul`
 
 export const MobileMenu = ({
 	openMobileMenu,
-	setOpenMobileMenu,
+	// setOpenMobileMenu,
 }) => {
 	const navLinksData = [
 		"home",

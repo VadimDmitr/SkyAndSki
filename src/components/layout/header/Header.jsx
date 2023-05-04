@@ -12,6 +12,23 @@ import { Account } from "components/icons/Account";
 import { Caret } from "components/icons/Caret";
 
 const HeaderElement = styled.header`
+	// display: $ {({ currentPath }) =>
+	// 	currentPath === "/" ||
+	// 	currentPath === "/home" ||
+	// 	currentPath === "/about" ||
+	// 	currentPath === "/account" ||
+	// 	currentPath === "/cart" ||
+	// 	currentPath === "/checkout" ||
+	// 	currentPath === "/contact" ||
+	// 	currentPath === "/product" ||
+	// 	currentPath === "/shop" ||
+	// 	currentPath === "/login" ||
+	// 	currentPath === "/logout" ||
+	// 	currentPath === "/register" ||
+	// 	currentPath === "/order"
+	// 		? "flex"
+	// 		: "none"};
+
 	border-bottom: ${({ currentPath }) =>
 		currentPath === "/" ||
 		currentPath === "/login" ||
@@ -24,6 +41,10 @@ const HeaderElement = styled.header`
 		currentPath === "/register"
 			? "absolute"
 			: "static"};
+	border-bottom: ${({ currentPath }) =>
+		currentPath === "/" || currentPath === "/login"
+			? "1px solid var(--color-secondary)"
+			: "1px solid var(--color-primary)"};
 
 	.nav__link-text {
 		color: ${({ currentPath }) =>
@@ -64,12 +85,13 @@ export const Header = () => {
 						<Search currentPath={currentPath} />
 					</NavLink>
 					<NavLink className="nav__link" to={"/cart"}>
-						<Search currentPath={currentPath} />
+						<Cart currentPath={currentPath} />
 					</NavLink>
 					<NavLink className="nav__link" to={"/account"}>
 						<Account currentPath={currentPath} />
 					</NavLink>
 					<Hamburger
+						currentPath={currentPath}
 						openMobileMenu={openMobileMenu}
 						setOpenMobileMenu={setOpenMobileMenu}
 					/>

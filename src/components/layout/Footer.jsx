@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 import { ExternalLink } from "react-external-link";
 import twitter from "images/icons/twitter.svg";
 import youtube from "images/icons/youtube.svg";
@@ -8,9 +8,28 @@ import dribbble from "images/icons/dribbble.svg";
 import instagram from "images/icons/instagram.svg";
 import subscbutton from "images/icons/subscbutton.svg";
 
+const FooterElement = styled.footer`
+// display: $ {({ currentPath }) =>
+// 		currentPath === "/" ||
+// 		currentPath === "/home" ||
+// 		currentPath === "/about" ||
+// 		currentPath === "/account" ||
+// 		currentPath === "/cart" ||
+// 		currentPath === "/checkout" ||
+// 		currentPath === "/contact" ||
+// 		currentPath === "/product" ||
+// 		currentPath === "/shop" ||
+// 		currentPath === "/login" ||
+// 		currentPath === "/logout" ||
+// 		currentPath === "/register" ||
+// 		currentPath === "/order"
+// 			? "flex"
+// 			: "none"};
+`
+
 export const Footer = () => {
 	return (
-		<footer className="footer">
+		<FooterElement className="footer">
 			<div className="footer__main-container footer__grid">
 				<div className="footer__logo-container">
 					<div className="footer__media-links">
@@ -163,6 +182,6 @@ export const Footer = () => {
 					</Link>
 				</div>
 			</div>
-		</footer>
+		</FooterElement>
 	);
 };
