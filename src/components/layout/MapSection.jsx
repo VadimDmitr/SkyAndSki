@@ -19,7 +19,7 @@ export const MapSection = () => {
 
 	return (
 		<div className="map-section">
-			<div className="map-section-content">
+			<div className="map-section__content">
 				<LoadScript
 					googleMapsApiKey={
 						process.env.REACT_APP_GOOGLE_MAPS_API_KEY
@@ -49,12 +49,12 @@ export const MapSection = () => {
 						</Marker>
 					</GoogleMap>
 				</LoadScript>
-				<div className="map-section-info">
+				<div className="map-section__info">
 					<div>
-						<h2 className="map-section-title">
+						<h2 className="map-section__title">
 							Location of our Hotelos
 						</h2>
-						<h3 className="map-section-text">
+						<h3 className="map-section__text">
 							Lorem Ipsum is simply dummy text of the
 							printing and typesetting industry. Lorem Ipsum
 							has been the industry's
