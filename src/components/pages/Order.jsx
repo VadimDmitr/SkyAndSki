@@ -5,7 +5,7 @@ import { userDataContext } from "contexts/userContext";
 
 export const Order = () => {
 	const { userData } = useContext(userDataContext);
-	const [order, setOrder] = useState(null);
+	const [order] = useState(null);
 	const navigate = useNavigate();
 	// const order = {
 	// 	products: [
