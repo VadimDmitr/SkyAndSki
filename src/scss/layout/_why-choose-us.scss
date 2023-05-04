@@ -31,6 +31,11 @@
 	width: 38%;
 	object-fit: cover;
 	padding: 5rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.middle-section__image:hover {
+	transform: scale(1.2);
 }
 
 .middle-section__title-text {
@@ -61,6 +66,7 @@
 
 .bottom-section {
 	display: flex;
+	padding-top: 5rem;
 	justify-content: center;
 	flex-wrap: wrap;
 	width: 100%;
