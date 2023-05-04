@@ -35,8 +35,8 @@ export const Checkout = () => {
 		expirationMonth: "12",
 		expirationYear: "34",
 		ccv: "123",
-		bill: "550"
-	}
+		bill: "550",
+	};
 
 	const navigate = useNavigate();
 
@@ -114,7 +114,11 @@ export const Checkout = () => {
 			process.env.REACT_APP_USER_BEARER_TOKEN
 		);
 		console.log("cart ===> ", cart);
-		let order = {...{products: [cart[0]]}, ...data, ...{bill: finalPrice}};
+		let order = {
+			...{ products: [cart[0]] },
+			...data,
+			...{ bill: finalPrice },
+		};
 		console.log("order ===> ", order);
 		event.preventDefault();
 		console.log("userData.token ====> ", userData.token);
