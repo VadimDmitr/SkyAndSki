@@ -20,5 +20,3 @@ export class Contact extends React.Component {
 		);
 	}
 }
-
-
