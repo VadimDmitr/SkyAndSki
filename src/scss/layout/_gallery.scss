@@ -38,25 +38,25 @@
 }
 
 @keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
 
 .laptop-images {
-  display: flex;
-  width: auto;
-  height: 10.09rem;
-  left: 0rem;
-  top: 0rem;
-  background: #f8f8f8;
-  //transition: transform 0.3s ease, box-shadow 0.3s ease;
-  //animation: slideIn 1s ease forwards;
+	display: flex;
+	width: auto;
+	height: 10.09rem;
+	left: 0rem;
+	top: 0rem;
+	background: #f8f8f8;
+	//transition: transform 0.3s ease, box-shadow 0.3s ease;
+	//animation: slideIn 1s ease forwards;
 }
 
 // .laptop-images img:hover {
