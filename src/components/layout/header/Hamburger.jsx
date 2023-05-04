@@ -20,8 +20,8 @@ const Div = styled.div`
     height: 0.25rem;
     background-color ${({ currentPath }) =>
     currentPath === "/" || currentPath === "/login"
-      ? "var(--color-secondary)"
-      : "var(--color-primary)"};
+      ? "var(--color-primary)"
+      : "var(--color-secondary)"};
     border-radius: 10px;
     transition: all 0.3s linear;
 
