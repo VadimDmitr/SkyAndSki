@@ -10,23 +10,14 @@ export const NotFound = () => {
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
 				backgroundPosition: "center center",
-				width: "98.7vw",
-				height: "40vw",
-				display: "flex",
-				// flexWrap: 'wrap',
-				flexDirection: "column",
-				justifyContent: "center",
-				alignItems: "center",
 			}}
+			className="not-found"
 		>
 			<h1>404 Not Found</h1>
-			<br />
 			<p>Oops... you lost in the mountain.</p>
-			<br />
 			<p>
 				We can't find the page that you are looking for.
 			</p>
-			<br />
 			<Link to="/" className="small-button">
 				Go Home
 			</Link>
