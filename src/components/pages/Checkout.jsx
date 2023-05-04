@@ -114,7 +114,7 @@ export const Checkout = () => {
 			process.env.REACT_APP_USER_BEARER_TOKEN
 		);
 		console.log("cart ===> ", cart);
-		let order = {...{products: [cart[0]]}, ...data, ...{finalPrice: finalPrice}};
+		let order = {...{products: [cart[0]]}, ...data, ...{bill: finalPrice}};
 		console.log("order ===> ", order);
 		event.preventDefault();
 		console.log("userData.token ====> ", userData.token);

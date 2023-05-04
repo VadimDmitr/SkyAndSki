@@ -64,6 +64,7 @@ export const Header = () => {
 						<Account currentPath={currentPath} />
 					</NavLink>
 					<Hamburger
+						currentPath={currentPath}
 						openMobileMenu={openMobileMenu}
 						setOpenMobileMenu={setOpenMobileMenu}
 					/>
