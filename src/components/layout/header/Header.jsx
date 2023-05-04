@@ -85,7 +85,7 @@ export const Header = () => {
 						<Search currentPath={currentPath} />
 					</NavLink>
 					<NavLink className="nav__link" to={"/cart"}>
-						<Search currentPath={currentPath} />
+						<Cart currentPath={currentPath} />
 					</NavLink>
 					<NavLink className="nav__link" to={"/account"}>
 						<Account currentPath={currentPath} />
