@@ -9,22 +9,22 @@ import instagram from "images/icons/instagram.svg";
 import subscbutton from "images/icons/subscbutton.svg";
 
 const FooterElement = styled.footer`
-display: ${({ currentPath }) =>
-		currentPath === "/" ||
-		currentPath === "/home" ||
-		currentPath === "/about" ||
-		currentPath === "/account" ||
-		currentPath === "/cart" ||
-		currentPath === "/checkout" ||
-		currentPath === "/contact" ||
-		currentPath === "/product" ||
-		currentPath === "/shop" ||
-		currentPath === "/login" ||
-		currentPath === "/logout" ||
-		currentPath === "/register" ||
-		currentPath === "/order"
-			? "flex"
-			: "none"};
+// display: $ {({ currentPath }) =>
+// 		currentPath === "/" ||
+// 		currentPath === "/home" ||
+// 		currentPath === "/about" ||
+// 		currentPath === "/account" ||
+// 		currentPath === "/cart" ||
+// 		currentPath === "/checkout" ||
+// 		currentPath === "/contact" ||
+// 		currentPath === "/product" ||
+// 		currentPath === "/shop" ||
+// 		currentPath === "/login" ||
+// 		currentPath === "/logout" ||
+// 		currentPath === "/register" ||
+// 		currentPath === "/order"
+// 			? "flex"
+// 			: "none"};
 `
 
 export const Footer = () => {
