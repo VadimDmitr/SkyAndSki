@@ -1,6 +1,6 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { cartDataContext } from "contexts/cartContext";
+// import { cartDataContext } from "contexts/cartContext";
 
 export const Order = () => {
 	const order = {
