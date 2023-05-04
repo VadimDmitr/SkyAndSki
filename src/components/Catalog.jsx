@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { SwitchCategory } from "components/SwitchCategory";
 import { BASEURL } from "api/index";
+// import { SwitchCategory } from "components/SwitchCategory";
+import { Loader } from "components/icons/Loader";
 import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
 
@@ -14,6 +15,7 @@ const categories = [
 
 export const Catalog = () => {
 	const [products, setProducts] = useState([]);
+	const [error, setError] = useState(null);
 
 	const BASEPRODUCTSURL = BASEURL + "products";
 	const [selectedCategory, setSelectedCategory] =
@@ -46,7 +48,11 @@ export const Catalog = () => {
 				console.log("products ====> ", products);
 				setProducts([...JSON.parse(result).products]);
 			})
-			.catch((error) => console.log("error", error));
+			.catch((errorResponse) => {
+				setError(errorResponse);
+				console.log("errorResponse ===> ", errorResponse);
+				console.log("error ===> ", error);
+			});
 	}, []);
 	/* eslint-disable react-hooks/exhaustive-deps */
 
@@ -86,11 +92,12 @@ export const Catalog = () => {
 							/>
 						</Link>
 					))
+				) : error ? (
+					<p className="error">Error {error.status}</p>
 				) : (
-					<h2>
-						There are no products available at this moment.
-						Please come back later.
-					</h2>
+					<div className="loader-container">
+						<Loader />
+					</div>
 				)}
 			</div>
 			{/* {productsRender} */}
