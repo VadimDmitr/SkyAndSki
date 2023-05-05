@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BASEURL } from "api/index";
-// import { SwitchCategory } from "components/SwitchCategory";
 import { Loader } from "components/icons/Loader";
 import { ProductCard } from "components/ProductCard.jsx";
 // import { Button } from "utils/Button";
@@ -98,6 +97,7 @@ export const Catalog = () => {
 				) : (
 					<div className="loader-container">
 						<Loader />
+						{/* <p>load</p> */}
 					</div>
 				)}
 			</div>
