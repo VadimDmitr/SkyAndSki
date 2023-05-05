@@ -84,7 +84,10 @@ export const Catalog = () => {
 			<div className="products">
 				{products.length > 0 ? (
 					filteredProducts.map((product, index) => (
-						<Link key={index} to={`/product/${product._id}`}>
+						<Link
+							key={index}
+							to={`/product/${product._id}`}
+						>
 							<ProductCard
 								product={product}
 								id={product.id}
