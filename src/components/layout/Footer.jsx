@@ -63,7 +63,7 @@ export const Footer = () => {
 								</ExternalLink>
 								<ExternalLink
 									className="footer__social-link4"
-									href="https://youtube.com/"
+									href="https://www.youtube.com/watch?v=gAGIyKpVsPw&t=66s"
 								>
 									<img
 										className="footer__social-img"
