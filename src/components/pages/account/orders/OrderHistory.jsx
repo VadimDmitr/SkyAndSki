@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { BASEURL } from "api/index";
 import { userDataContext } from "contexts/userContext";
-import { OrderCard } from "components/pages/account/orders/OrderCard"
+import { OrderCard } from "components/pages/account/orders/OrderCard";
 
 export const OrderHistory = () => {
 	const { userData } = useContext(userDataContext);
@@ -38,9 +38,7 @@ export const OrderHistory = () => {
 			{/* double check if he have to do h1, h2, or h3 */}
 			<h2 className="account__section-heading">Orders</h2>
 			{orders.length > 0 ? (
-				orders.map((order) => (
-					<OrderCard order={order} />
-				))
+				orders.map((order) => <OrderCard order={order} />)
 			) : (
 				<></>
 			)}
