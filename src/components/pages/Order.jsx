@@ -60,10 +60,7 @@ export const Order = () => {
 			redirect: "follow",
 		};
 
-		fetch(
-			newURL,
-			requestOptions
-		)
+		fetch(newURL, requestOptions)
 			.then((response) => response.text())
 			.then((result) => console.log(result))
 			.catch((error) => console.log("error", error));

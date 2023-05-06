@@ -14,10 +14,7 @@ export const OrderHistory = () => {
 		const token = "Bearer " + userData.token;
 		console.log("token ====> ", token);
 		let myHeaders = new Headers();
-		myHeaders.append(
-			"Authorization",
-			token
-		);
+		myHeaders.append("Authorization", token);
 		myHeaders.append("Content-Type", "application/json");
 		fetch(URL + userData.id, {
 			method: "GET",
@@ -26,7 +23,10 @@ export const OrderHistory = () => {
 			.then((response) => response.text())
 			.then((result) => {
 				console.log("result ====> ", result);
-				console.log("JSON.parse(result) => ", JSON.parse(result));
+				console.log(
+					"JSON.parse(result) => ",
+					JSON.parse(result)
+				);
 				setOrders([...JSON.parse(result).orders]);
 			})
 			.catch((error) => console.log("error", error));
@@ -47,7 +47,9 @@ export const OrderHistory = () => {
 							<p>{product.title}</p>
 						))}
 						<Link to={`/order/${order._id}`}>
-							<button className="button pointer">MORE INFORMATION</button>
+							<button className="button pointer">
+								MORE INFORMATION
+							</button>
 						</Link>
 					</div>
 				))
