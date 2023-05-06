@@ -2,7 +2,9 @@ import {
 	BrowserRouter,
 	Routes,
 	Route,
+	useLocation,
 } from "react-router-dom";
+import React, { useEffect } from "react";
 import { Layout } from "components/Layout";
 import { Home } from "components/pages/Home";
 import { About } from "components/pages/About";
@@ -19,10 +21,22 @@ import { Order } from "components/pages/Order";
 import { DeleteAccount } from "components/pages/account/DeleteAccount";
 import { ChangePassword } from "components/pages/account/ChangePassword";
 import { NotFound } from "components/pages/NotFound";
+import { ReadMore } from "components/pages/ReadMore";
+
+function ScrollToTop() {
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+
+	return null;
+}
 
 function App() {
 	return (
 		<BrowserRouter>
+			<ScrollToTop />
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
@@ -32,6 +46,7 @@ function App() {
 					<Route path="/cart" element={<Cart />} />
 					<Route path="/checkout" element={<Checkout />} />
 					<Route path="/contact" element={<Contact />} />
+					<Route path="/read more" element={<ReadMore />} />
 					<Route
 						path="/product/:id"
 						element={<Product />}

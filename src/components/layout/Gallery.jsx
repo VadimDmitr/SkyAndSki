@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,6 +10,21 @@ import snowboarderWhiteJacket from "images/snowboarder_white_jacket.png";
 import snowboarderYellowJacket from "images/snowboarder_yellow_jacket.png";
 
 export const Gallery = () => {
+	const location = useLocation();
+
+	useEffect(() => {
+		AOS.init({
+			duration: 1000,
+			once: false,
+			mirror: true,
+		});
+		AOS.refresh();
+
+		return () => {
+			AOS.refreshHard();
+		};
+	}, [location]);
+
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -14,7 +33,7 @@ export const Gallery = () => {
 		slidesToScroll: 1,
 		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 3000,
 	};
 
 	return (
@@ -53,16 +72,25 @@ export const Gallery = () => {
 					src={snowboarderDescending}
 					alt="Snowboarder descending"
 					className="laptop-images__image laptop-images__image--1"
+					data-aos="fade-right"
+					// data-aos-once="true"
+					// data-aos-delay="500"
 				/>
 				<img
 					src={snowboarderWhiteJacket}
 					alt="Snowboarder White Jacket"
 					className="laptop-images__image laptop-images__image--2"
+					data-aos="fade-left"
+					data-aos-once="true"
+					data-aos-delay="500"
 				/>
 				<img
 					src={snowboarderYellowJacket}
 					alt="Snowboarder Yellow Jacket"
 					className="laptop-images__image laptop-images__image--3"
+					data-aos="fade-up"
+					// data-aos-once="true"
+					// data-aos-delay="500"
 				/>
 			</div>
 		</>

@@ -82,7 +82,7 @@ export const Footer = () => {
 								</ExternalLink>
 								<ExternalLink
 									className="footer__social-link4"
-									href="https://youtube.com/"
+									href="https://youtube.com/@videoproduction7283/videos"
 								>
 									<img
 										className="footer__social-img"
