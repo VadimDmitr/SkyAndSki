@@ -48,7 +48,8 @@ function App() {
 						path="/change-password"
 						element={<ChangePassword />}
 					/>
-					<Route path="/order" element={<Order />} />
+					{/* <Route path="/order/" element={<Order />} /> */}
+					<Route path="/order/:id" element={<Order />} />
 					<Route path="*" element={<NotFound />} />
 				</Route>
 			</Routes>

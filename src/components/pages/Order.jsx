@@ -1,10 +1,12 @@
 import { useEffect, useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { BASEURL } from "api/index";
 // import { cartDataContext } from "contexts/cartContext";
 import { userDataContext } from "contexts/userContext";
 
 export const Order = () => {
 	const { userData } = useContext(userDataContext);
+	const URL = BASEURL + "orders/";
 	const [order] = useState(null);
 	const navigate = useNavigate();
 	// const order = {
@@ -41,34 +43,29 @@ export const Order = () => {
 	// };
 
 	useEffect(() => {
-		console.log("userData =====> ", userData);
 		if (Object.keys(userData).length === 0) navigate("/");
-		console.log("userData.token ====> ", userData.token);
 		const token = "Bearer " + userData.token;
 		console.log("token ====> ", token);
-		var myHeaders = new Headers();
+		const newURL = URL + process.env.REACT_APP_ORDER_ID;
+		console.log("newUrl ===> ", newURL);
+		let myHeaders = new Headers();
 		myHeaders.append(
 			"Authorization",
-			token
-			// process.env.REACT_APP_USER_BEARER_TOKEN
+			`Bearer ${userData.token}`
 		);
-		myHeaders.append("Content-Type", "application/json");
 
-		var raw = JSON.stringify({
-			user: userData.id,
-			id: 0,
-		});
-
-		fetch(URL, {
+		let requestOptions = {
 			method: "GET",
 			headers: myHeaders,
-			body: JSON.stringify(raw),
-		})
+			redirect: "follow",
+		};
+
+		fetch(
+			newURL,
+			requestOptions
+		)
 			.then((response) => response.text())
-			.then((result) => {
-				console.log("result ====> ", result);
-				// setOrder([...JSON.parse(result)]);
-			})
+			.then((result) => console.log(result))
 			.catch((error) => console.log("error", error));
 	});
 	return (

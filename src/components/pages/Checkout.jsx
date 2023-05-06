@@ -124,7 +124,7 @@ export const Checkout = () => {
 		console.log("userData.token ====> ", userData.token);
 		const token = "Bearer " + userData.token;
 		console.log("token ====> ", token);
-		var myHeaders = new Headers();
+		let myHeaders = new Headers();
 		myHeaders.append(
 			"Authorization",
 			token
