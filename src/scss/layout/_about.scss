@@ -52,11 +52,29 @@
 }
 
 .about__content img:hover + .about__subtitle {
-	transform: scale(2.3);
+	transform: scale(2);
 }
 
 @media screen and (max-width: 600px) {
 	.about {
 		padding: 0 1rem;
+	}
+
+	.about__title {
+		transition: transform 0.3s ease;
+	}
+
+	.about__title:hover {
+		transform: scale(1.05);
+	}
+
+	.about__subtitle {
+		font-weight: 600;
+		font-size: 2.2rem;
+		line-height: 140%;
+	}
+
+	.about__content img:hover + .about__subtitle {
+		transform: scale(1.05);
 	}
 }

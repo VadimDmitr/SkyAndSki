@@ -73,8 +73,8 @@ export const Gallery = () => {
 					alt="Snowboarder descending"
 					className="laptop-images__image laptop-images__image--1"
 					data-aos="fade-right"
-					data-aos-once="true"
-					data-aos-delay="500"
+					// data-aos-once="true"
+					// data-aos-delay="500"
 				/>
 				<img
 					src={snowboarderWhiteJacket}
@@ -89,8 +89,8 @@ export const Gallery = () => {
 					alt="Snowboarder Yellow Jacket"
 					className="laptop-images__image laptop-images__image--3"
 					data-aos="fade-up"
-					data-aos-once="true"
-					data-aos-delay="500"
+					// data-aos-once="true"
+					// data-aos-delay="500"
 				/>
 			</div>
 		</>
