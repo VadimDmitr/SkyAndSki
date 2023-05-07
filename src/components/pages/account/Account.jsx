@@ -69,7 +69,7 @@ export const Account = () => {
 						<div className="account__sidebar">
 							<h2 className="account__greeting">
 								Hello,{" "}
-								{Object.keys(userData).length === 0 ? (
+								{Object.keys(userData).length !== 0 ? (
 									userData.user.name
 								) : (
 									<></>
