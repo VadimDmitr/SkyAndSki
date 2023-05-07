@@ -5,18 +5,22 @@ import { OrderCard } from "components/pages/account/orders/OrderCard";
 
 export const OrderHistory = () => {
 	const { userData } = useContext(userDataContext);
-	const URL = BASEURL + "orders/user/";
+	const URL = BASEURL + "allOrders/";
 	const [orders, setOrders] = useState([]);
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
+		console.log("userData ===> ", userData);
 		console.log("userData.token ====> ", userData.token);
 		const token = "Bearer " + userData.token;
 		console.log("token ====> ", token);
+		console.log("userData.user.id ===> ", userData.user.id);
+		const newURL = URL + userData.user.id;
+		console.log("newURL ===> ", newURL);
 		let myHeaders = new Headers();
 		myHeaders.append("Authorization", token);
 		myHeaders.append("Content-Type", "application/json");
-		fetch(URL + userData.id, {
+		fetch(newURL, {
 			method: "GET",
 			headers: myHeaders,
 		})
