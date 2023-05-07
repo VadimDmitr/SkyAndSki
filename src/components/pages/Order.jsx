@@ -1,5 +1,9 @@
 import { useEffect, useContext, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import {
+	useNavigate,
+	useLocation,
+	Link,
+} from "react-router-dom";
 import { BASEURL } from "api/index";
 // import { cartDataContext } from "contexts/cartContext";
 import { userDataContext } from "contexts/userContext";
@@ -7,7 +11,9 @@ import { userDataContext } from "contexts/userContext";
 export const Order = () => {
 	const { userData } = useContext(userDataContext);
 	const URL = BASEURL + "orders/";
-	const [order] = useState(null);
+	const [order, setOrder] = useState(null);
+	const currentPath = useLocation().pathname.split("/")[2];
+	console.log(currentPath);
 	const navigate = useNavigate();
 	// const order = {
 	// 	products: [
@@ -46,7 +52,7 @@ export const Order = () => {
 		if (Object.keys(userData).length === 0) navigate("/");
 		const token = "Bearer " + userData.token;
 		console.log("token ====> ", token);
-		const newURL = URL + process.env.REACT_APP_ORDER_ID;
+		const newURL = URL + currentPath;
 		console.log("newUrl ===> ", newURL);
 		let myHeaders = new Headers();
 		myHeaders.append(
@@ -62,9 +68,16 @@ export const Order = () => {
 
 		fetch(newURL, requestOptions)
 			.then((response) => response.text())
-			.then((result) => console.log(result))
+			.then((result) => {
+				console.log(JSON.parse(result).order);
+				setOrder(JSON.parse(result).order);
+				console.log(
+					"order.createdAt ===> ",
+					order.createdAt
+				);
+			})
 			.catch((error) => console.log("error", error));
-	});
+	}, []);
 	return (
 		<>
 			{Object.keys(userData).length === 0 ? (
@@ -76,9 +89,15 @@ export const Order = () => {
 							Your order has been placed
 						</h2>
 						<div className="order__info-container">
-							<p className="order__info-container-date">
-								23 March 2023
-							</p>
+							{order ? (
+								<p className="order__info-container-date">
+									{/* 23 March 2023 */}
+									{order.createdAt}
+								</p>
+							) : (
+								<></>
+							)}
+
 							<p className="order__info-container-order-number">
 								N-573927584
 							</p>
