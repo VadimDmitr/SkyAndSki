@@ -141,14 +141,22 @@ export const Checkout = () => {
 			.then((response) => response.text())
 			.then((result) => {
 				console.log("result ====> ", result);
-				console.log("JSON.parse(result) ====> ", JSON.parse(result));
+				console.log(
+					"JSON.parse(result) ====> ",
+					JSON.parse(result)
+				);
 				let resultFromResponse = JSON.parse(result);
-				console.log("resultFromResponse ====> ", resultFromResponse);
-				console.log("resultFromResponse[_id] ===> ", resultFromResponse.order._id);
+				console.log(
+					"resultFromResponse ====> ",
+					resultFromResponse
+				);
+				console.log(
+					"resultFromResponse[_id] ===> ",
+					resultFromResponse.order._id
+				);
 				// setProducts([...JSON.parse(result).products]);
 				setOrderId(resultFromResponse.order._id);
 				console.log("orderId inside fetch ===> ", orderId);
-
 
 				navigate(`/order/${resultFromResponse.order._id}`);
 
