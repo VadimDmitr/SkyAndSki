@@ -10,10 +10,11 @@ export const Logout = () => {
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 
-		const userDataNull = {
-			user: null,
-			token: null,
-		};
+		// const userDataNull = {
+		// 	user: null,
+		// 	token: null,
+		// };
+		const userDataNull = null;
 		setUserData({ ...userData, ...userDataNull });
 		navigate("/");
 		console.log("userData ====> ", userData);

@@ -2,6 +2,7 @@ import { useEffect, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
 import { Accordion } from "../../accordion/Accordion";
+import { OrderHistory } from "components/pages/account/orders/OrderHistory";
 import { ChangePassword } from "components/pages/account/ChangePassword";
 import { DeleteAccount } from "components/pages/account/DeleteAccount";
 // import { Logout } from "./Logout";
@@ -14,16 +15,19 @@ export const AccountMobile = () => {
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
 		console.log("userData =====> ", userData);
-		if (userData === null) navigate("/");
-		// if (userData.token === null) navigate ("/");
+		// if (userData === null) navigate("/");
+
+		if (userData.token === null) navigate("/");
 	}, [userData]);
 	/* eslint-disable react-hooks/exhaustive-deps */
 
 	const logout = () => {
-		const userDataNull = {
+		let userDataNull = {
 			user: null,
 			token: null,
 		};
+		setUserData({ ...userData, ...userDataNull });
+		userDataNull = null;
 		setUserData({ ...userData, ...userDataNull });
 		console.log("userData ====> ", userData);
 		console.log("logged out!");
@@ -36,9 +40,13 @@ export const AccountMobile = () => {
 				{/* {userData.token === "" ? <></> : <h1>Account</h1>} */}
 				{/* {userData.token === null ? <></> : <h1>{JSON.stringify(userData, null, 4)}</h1>} */}
 				{/* {userData.token === null ? <></> : <h1>User name: {userData.user.name} <br/> Token: {userData.token}</h1>} */}
-				<h1 className="account__greeting">
-					Hello, {userData.user.name}
-				</h1>
+				{Object.keys(userData).length === 0 ? (
+					<h1 className="account__greeting">Hello,</h1>
+				) : (
+					<h1 className="account__greeting">
+						Hello, {userData.user.name}
+					</h1>
+				)}
 				<Accordion title="Order history">
 					<p
 						style={{
@@ -47,7 +55,8 @@ export const AccountMobile = () => {
 							color: "var(--color-neutral-grey)",
 						}}
 					>
-						In development
+						{/* In development */}
+						<OrderHistory />
 					</p>
 				</Accordion>
 				<Accordion title="Change password">
