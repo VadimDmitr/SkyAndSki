@@ -53,17 +53,27 @@ export const Cart = () => {
 		setCart([...updatedCart]);
 	};
 
+	// todo:
+	// - to fix decrease function
+
+	// - to make universal function for the price changer
+	// - pass just 'item.title' instead of whole object
+	// - cart.some() and cart.find() are the same thing -> rewrite it
+	// - updatedCart is the same cart array, you don't need to duplicate it - just update initial data
+
 	const increaseQuantity = (item, quantity) => {
+		console.log("input cart ====> ", cart);
+		console.log("increase input ====> ", item);
 		if (
 			cart.some(
 				(cartItem) =>
-					cartItem.productName === item.productName
+					cartItem.title === item.title
 			)
 		) {
 			let updatedCart = cart;
 			updatedCart.find(
 				(cartItemLocal) =>
-					cartItemLocal.productName === item.productName
+					cartItemLocal.title === item.title
 			).quantity += quantity;
 			setCart([...updatedCart]);
 		}
@@ -74,18 +84,18 @@ export const Cart = () => {
 		if (
 			cart.some(
 				(cartItem) =>
-					cartItem.productName === item.productName
+					cartItem.title === item.title
 			)
 		) {
 			let updatedCart = cart;
 			let cartItemQuantity = updatedCart.find(
 				(cartItemLocal) =>
-					cartItemLocal.productName === item.productName
+					cartItemLocal.title === item.title
 			).quantity;
 			if (cartItemQuantity > 1) {
 				updatedCart.find(
 					(cartItemLocal) =>
-						cartItemLocal.productName === item.productName
+						cartItemLocal.title === item.title
 				).quantity -= quantity;
 				setCart([...updatedCart]);
 			}
