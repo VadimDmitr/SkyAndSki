@@ -37,6 +37,7 @@ export const Checkout = () => {
 		ccv: "123",
 		bill: "550",
 	};
+	const [orderId, setOrderId] = useState("");
 
 	const navigate = useNavigate();
 
@@ -140,11 +141,26 @@ export const Checkout = () => {
 			.then((response) => response.text())
 			.then((result) => {
 				console.log("result ====> ", result);
+				console.log("JSON.parse(result) ====> ", JSON.parse(result));
+				let resultFromResponse = JSON.parse(result);
+				console.log("resultFromResponse ====> ", resultFromResponse);
+				console.log("resultFromResponse[_id] ===> ", resultFromResponse.order._id);
 				// setProducts([...JSON.parse(result).products]);
+				setOrderId(resultFromResponse.order._id);
+				console.log("orderId inside fetch ===> ", orderId);
+
+
+				navigate(`/order/${resultFromResponse.order._id}`);
+
+				// console.log("orderId before navigate ===> ", orderId);
+				// navigate(`/order/${orderId}`);
 			})
 			.catch((error) => console.log("error", error));
 
-		navigate("/order");
+		// navigate(`/order/${}`);
+
+		// console.log("orderId before navigate ===> ", orderId);
+		// navigate(`/order/${orderId}`);
 	};
 
 	if (Object.keys(userData).length !== 0)
