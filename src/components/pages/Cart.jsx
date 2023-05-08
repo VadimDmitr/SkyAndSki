@@ -255,7 +255,8 @@ export const Cart = () => {
 				</>
 			) : (
 				<div
-					className={{
+					className="wrapper"
+					style={{
 						display: "flex",
 						flexDirection: "column",
 					}}

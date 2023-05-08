@@ -17,7 +17,8 @@ export const AccountMobile = () => {
 		console.log("userData =====> ", userData);
 		// if (userData === null) navigate("/");
 
-		if (userData.token === null) navigate("/");
+		if (userData.token === null) navigate("/login");
+		// if (userData === null) navigate("/");
 	}, [userData]);
 	/* eslint-disable react-hooks/exhaustive-deps */
 
@@ -26,15 +27,16 @@ export const AccountMobile = () => {
 			user: null,
 			token: null,
 		};
-		setUserData({ ...userData, ...userDataNull });
-		userDataNull = null;
+		// setUserData({ ...userData, ...userDataNull });
+		// userDataNull = null;
+		// let userDataNull = null;
 		setUserData({ ...userData, ...userDataNull });
 		console.log("userData ====> ", userData);
 		console.log("logged out!");
 		navigate("/");
 	};
 
-	if (userData)
+	if (userData?.token)
 		return (
 			<section className="account mobile wrapper">
 				{/* {userData.token === "" ? <></> : <h1>Account</h1>} */}
@@ -44,7 +46,7 @@ export const AccountMobile = () => {
 					<h1 className="account__greeting">Hello,</h1>
 				) : (
 					<h1 className="account__greeting">
-						Hello, {userData.user.name}
+						Hello, {userData?.user?.name}
 					</h1>
 				)}
 				<Accordion title="Order history">
