@@ -112,6 +112,19 @@
 }
 
 .cart-empty {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	&__header {
+		font-size: 2rem;
+	}
+
+	&__link {
+		display: block;
+		font-size: 1.6rem;
+		color: blue;
+	}
 }
 
 .cart-item-quantity-container {
@@ -146,5 +159,11 @@
 @media only screen and (min-width: 768px) {
 	.cart {
 		flex-direction: row;
+	}
+
+	.cart-empty {
+		&__header {
+			font-size: 3rem;
+		}
 	}
 }

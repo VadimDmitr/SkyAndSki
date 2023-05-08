@@ -255,20 +255,14 @@ export const Cart = () => {
 				</>
 			) : (
 				<div
-					className="wrapper"
-					style={{
-						display: "flex",
-						flexDirection: "column",
-					}}
+					className="cart-empty wrapper"
 				>
-					<h1>Cart is empty</h1>
-					<br />
-					<a
-						style={{ display: "block", fontSize: "1.6rem" }}
-						href="/"
+					<h1 className="cart-empty__header">Cart is empty</h1>
+					<Link className="cart-empty__link"
+						to={"/"}
 					>
 						Go back to shopping
-					</a>
+					</Link>
 				</div>
 			)}
 			{/* <button onClick={() => getCartValue()}>Click</button> */}
