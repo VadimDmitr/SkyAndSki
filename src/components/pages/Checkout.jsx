@@ -37,7 +37,6 @@ export const Checkout = () => {
 		ccv: "123",
 		bill: "550",
 	};
-	const [orderId, setOrderId] = useState("");
 
 	const navigate = useNavigate();
 

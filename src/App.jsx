@@ -22,6 +22,7 @@ import { DeleteAccount } from "components/pages/account/DeleteAccount";
 import { ChangePassword } from "components/pages/account/ChangePassword";
 import { NotFound } from "components/pages/NotFound";
 import { ReadMore } from "components/pages/ReadMore";
+import { Catalog } from "components/Catalog";
 
 function ScrollToTop() {
 	const { pathname } = useLocation();
@@ -47,6 +48,7 @@ function App() {
 					<Route path="/checkout" element={<Checkout />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/read more" element={<ReadMore />} />
+					<Route path="/catalog" element={<Catalog />} />
 					<Route
 						path="/product/:id"
 						element={<Product />}
