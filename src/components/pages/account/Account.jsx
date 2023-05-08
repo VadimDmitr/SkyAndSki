@@ -30,9 +30,7 @@ export const Account = () => {
 		console.log("logged out!");
 		navigate("/");
 	};
-	const test =() => {
-		navigate("/");
-	}
+
 	const changeView = (str) => {
 		switch (str) {
 			case "order-history":
@@ -58,66 +56,69 @@ export const Account = () => {
 	};
 
 	// if (userData)
-	if (userData?.user) {
-		return (
-			<section className="wrapper">
-				<div className="account mobile">
-					<AccountMobile />
-				</div>
-				<div className="account desktop">
-					<div className="account__sidebar">
-						<h2 className="account__greeting">
-							Hello,{" "}
-							{Object.keys(userData).length === 0 ? (
-								userData.user.name
+	return (
+		<>
+			{Object.keys(userData).length === 0 ? (
+				<></>
+			) : (
+				<section className="wrapper">
+					<div className="account mobile">
+						<AccountMobile />
+					</div>
+					<div className="account desktop">
+						<div className="account__sidebar">
+							<h2 className="account__greeting">
+								Hello,{" "}
+								{Object.keys(userData).length === 0 ? (
+									userData.user.name
+								) : (
+									<></>
+								)}
+							</h2>
+							<p
+								className="account__sidebar-heading pointer"
+								onClick={() => changeView("order-history")}
+							>
+								Order history
+							</p>
+							<p
+								className="account__sidebar-heading pointer"
+								onClick={() =>
+									changeView("change-password")
+								}
+							>
+								Change password
+							</p>
+							<p
+								className="account__sidebar-heading pointer"
+								onClick={() => changeView("delete-account")}
+							>
+								Delete account
+							</p>
+							<Link
+								to="/"
+								className="account__sidebar-heading"
+								onClick={() => logout()}
+							>
+								Log out
+							</Link>
+						</div>
+						<div className="account__switch-section desktop">
+							{view === "order-history" ? (
+								<OrderHistory />
+							) : view === "change-password" ? (
+								<ChangePassword />
+							) : view === "delete-account" ? (
+								<DeleteAccount />
 							) : (
-								<></>
+								<Link to="/" onClick={() => logout()} />
 							)}
-						</h2>
-						<p
-							className="account__sidebar-heading pointer"
-							onClick={() => changeView("order-history")}
-						>
-							Order history
-						</p>
-						<p
-							className="account__sidebar-heading pointer"
-							onClick={() => changeView("change-password")}
-						>
-							Change password
-						</p>
-						<p
-							className="account__sidebar-heading pointer"
-							onClick={() => changeView("delete-account")}
-						>
-							Delete account
-						</p>
-						<Link
-							to="/"
-							className="account__sidebar-heading"
-							onClick={() => logout()}
-						>
-							Log out
-						</Link>
+						</div>
 					</div>
-					<div className="account__switch-section desktop">
-						{view === "order-history" ? (
-							<OrderHistory />
-						) : view === "change-password" ? (
-							<ChangePassword />
-						) : view === "delete-account" ? (
-							<DeleteAccount />
-						) : (
-							<Link to="/" onClick={() => logout()} />
-						)}
-					</div>
-				</div>
-			</section>
-		);
-	} else {
-		return test();
-		// return navigate("/login");
-	}
+				</section>
+			)}
+		</>
+	);
 	// return <></>;
 };
 
