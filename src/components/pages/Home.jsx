@@ -27,10 +27,10 @@ export const Home = () => {
 			<div className="why-choose-us-container">
 				<WhyChooseUs />
 			</div>
-			<div className="">
+			<div className="wrapper">
 				<VideoAboutUs />
 			</div>
-			<div className="">
+			<div className="wrapper-mobile-full-screen">
 				<MapSection />
 			</div>
 		</>

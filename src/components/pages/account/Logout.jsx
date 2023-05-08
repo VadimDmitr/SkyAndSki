@@ -14,6 +14,7 @@ export const Logout = () => {
 			user: null,
 			token: null,
 		};
+		// const userDataNull = null;
 		setUserData({ ...userData, ...userDataNull });
 		navigate("/");
 		console.log("userData ====> ", userData);
