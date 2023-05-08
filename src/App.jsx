@@ -24,7 +24,6 @@ import { NotFound } from "components/pages/NotFound";
 import { ReadMore } from "components/pages/ReadMore";
 import { Catalog } from "components/Catalog";
 
-
 function ScrollToTop() {
 	const { pathname } = useLocation();
 

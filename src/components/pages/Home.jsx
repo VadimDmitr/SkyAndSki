@@ -18,8 +18,8 @@ export const Home = () => {
 			<div className="wrapper">
 				{/* not sure if i should use h1, h2, or h3 here */}
 				<div className="wrapper" id="catalog">
-				<Catalog />
-			</div>
+					<Catalog />
+				</div>
 			</div>
 			<div className="gallery">
 				<Gallery />

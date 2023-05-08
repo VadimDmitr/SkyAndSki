@@ -89,8 +89,8 @@ export const Header = () => {
 						<p className="nav__link-text">About</p>
 					</NavLink>
 					<NavLink className="nav__link" to="/catalog">
-  <p className="nav__link-text">Shop</p>
-</NavLink>
+						<p className="nav__link-text">Shop</p>
+					</NavLink>
 					<NavLink className="nav__link" to={"/contact"}>
 						<p className="nav__link-text">Contact</p>
 					</NavLink>
