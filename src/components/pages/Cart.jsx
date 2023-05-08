@@ -65,10 +65,7 @@ export const Cart = () => {
 		console.log("input cart ====> ", cart);
 		console.log("increase input ====> ", item);
 		if (
-			cart.some(
-				(cartItem) =>
-					cartItem.title === item.title
-			)
+			cart.some((cartItem) => cartItem.title === item.title)
 		) {
 			let updatedCart = cart;
 			updatedCart.find(
@@ -82,10 +79,7 @@ export const Cart = () => {
 
 	const decreaseQuantity = (item, quantity) => {
 		if (
-			cart.some(
-				(cartItem) =>
-					cartItem.title === item.title
-			)
+			cart.some((cartItem) => cartItem.title === item.title)
 		) {
 			let updatedCart = cart;
 			let cartItemQuantity = updatedCart.find(
