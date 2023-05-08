@@ -51,7 +51,7 @@ export const MapSection = () => {
 					</GoogleMap>
 				</LoadScript>
 				{/* <div className="map-section__info"> */}
-					{/* <div>
+				{/* <div>
 						<h2 className="map-section__title">
 							Location of our Hotelos
 						</h2>
@@ -61,7 +61,7 @@ export const MapSection = () => {
 							has been the industry's
 						</h3>
 					</div> */}
-					{/* <div className="map-section-contact">
+				{/* <div className="map-section-contact">
 						<input type="email" placeholder="Email" />
 						<button>Contact</button>
 					</div> */}
