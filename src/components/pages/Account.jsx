@@ -2,6 +2,7 @@ import { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userDataContext } from "contexts/userContext";
 
+// NOT IN USE
 export const Account = () => {
 	const navigate = useNavigate();
 	const { userData } = useContext(userDataContext);
