@@ -15,7 +15,8 @@ export const Account = () => {
 
 	useEffect(() => {
 		console.log("userData =====> ", userData);
-		if (Object.keys(userData).length === 0) navigate("/login");
+		if (Object.keys(userData).length === 0)
+			navigate("/login");
 		// if (userData === null) navigate("/");
 		// if (userData.token === null) navigate ("/");
 	});

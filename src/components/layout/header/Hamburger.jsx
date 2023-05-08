@@ -19,7 +19,7 @@ const Div = styled.div`
     width: 3.3rem;
     height: 0.25rem;
     background-color ${({ currentPath }) =>
-currentPath === "/" || currentPath === "/login"
+			currentPath === "/" || currentPath === "/login"
 				? "var(--color-primary)"
 				: "var(--color-secondary)"};
     border-radius: 10px;
