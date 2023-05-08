@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASEURL = "http://localhost:8000/api/v1/";
+const BASEURL = "https://ctd-practicum-team4-back.onrender.com/api/v1/";
 
 // note: not used, but could be used with GET with params
 const getData = async (url, params) => {
