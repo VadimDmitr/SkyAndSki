@@ -18,7 +18,7 @@ export const AccountMobile = () => {
 		// if (userData === null) navigate("/");
 
 		if (userData.token === null) navigate("/");
-	}, [userData]);
+	});
 	/* eslint-disable react-hooks/exhaustive-deps */
 
 	const logout = () => {
@@ -34,7 +34,7 @@ export const AccountMobile = () => {
 		navigate("/");
 	};
 
-	if (userData)
+	if (userData?.user)
 		return (
 			<section className="account mobile wrapper">
 				{/* {userData.token === "" ? <></> : <h1>Account</h1>} */}
@@ -77,7 +77,7 @@ export const AccountMobile = () => {
 				</Link>
 			</section>
 		);
-	return <></>;
+	// return navigate("/login");
 };
 
 // userData.token === null ? <></> : <h1>{JSON.stringify(userData, null, 4)}</h1>
