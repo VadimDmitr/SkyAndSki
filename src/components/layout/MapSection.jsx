@@ -49,8 +49,11 @@ export const MapSection = () => {
 						</Marker>
 					</GoogleMap>
 				</LoadScript>
-				<div className="map-section__info">
-					<div>
+				<h2 className="map-section__heading">
+					Location of our store
+				</h2>
+				{/* <div className="map-section__info"> */}
+				{/* <div>
 						<h2 className="map-section__title">
 							Location of our Hotelos
 						</h2>
@@ -59,12 +62,12 @@ export const MapSection = () => {
 							printing and typesetting industry. Lorem Ipsum
 							has been the industry's
 						</h3>
-					</div>
-					{/* <div className="map-section-contact">
+					</div> */}
+				{/* <div className="map-section-contact">
 						<input type="email" placeholder="Email" />
 						<button>Contact</button>
 					</div> */}
-				</div>
+				{/* </div> */}
 			</div>
 		</div>
 	);

@@ -42,11 +42,13 @@ const Div = styled.div`
 `;
 
 export const Hamburger = ({
+	currentPath,
 	openMobileMenu,
 	setOpenMobileMenu,
 }) => {
 	return (
 		<Div
+			currentPath={currentPath}
 			className="pointer"
 			openMobileMenu={openMobileMenu}
 			onClick={() => setOpenMobileMenu(!openMobileMenu)}
