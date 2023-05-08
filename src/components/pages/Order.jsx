@@ -48,6 +48,7 @@ export const Order = () => {
 	// 	bill: "550",
 	// };
 
+	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
 		if (Object.keys(userData).length === 0) navigate("/");
 		const token = "Bearer " + userData.token;
@@ -78,6 +79,8 @@ export const Order = () => {
 			})
 			.catch((error) => console.log("error", error));
 	}, []);
+	/* eslint-disable react-hooks/exhaustive-deps */
+
 	return (
 		<>
 			{Object.keys(userData).length === 0 ? (
