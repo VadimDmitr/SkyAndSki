@@ -19,9 +19,11 @@ const Div = styled.div`
     width: 3.3rem;
     height: 0.25rem;
     background-color ${({ currentPath }) =>
-    currentPath === "/" || currentPath === "/login"
-      ? "var(--color-primary)"
-      : "var(--color-secondary)"};
+			currentPath === "/" ||
+			currentPath === "/login" ||
+			currentPath === "/register"
+				? "var(--color-secondary)"
+				: "var(--color-primary)"};
     border-radius: 10px;
     transition: all 0.3s linear;
 
@@ -42,11 +44,13 @@ const Div = styled.div`
 `;
 
 export const Hamburger = ({
+	currentPath,
 	openMobileMenu,
 	setOpenMobileMenu,
 }) => {
 	return (
 		<Div
+			currentPath={currentPath}
 			className="pointer"
 			openMobileMenu={openMobileMenu}
 			onClick={() => setOpenMobileMenu(!openMobileMenu)}

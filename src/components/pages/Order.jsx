@@ -1,11 +1,19 @@
 import { useEffect, useContext, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import {
+	useNavigate,
+	useLocation,
+	Link,
+} from "react-router-dom";
+import { BASEURL } from "api/index";
 // import { cartDataContext } from "contexts/cartContext";
 import { userDataContext } from "contexts/userContext";
 
 export const Order = () => {
 	const { userData } = useContext(userDataContext);
-	const [order] = useState(null);
+	const URL = BASEURL + "orders/";
+	const [order, setOrder] = useState(null);
+	const currentPath = useLocation().pathname.split("/")[2];
+	console.log(currentPath);
 	const navigate = useNavigate();
 	// const order = {
 	// 	products: [
@@ -40,37 +48,39 @@ export const Order = () => {
 	// 	bill: "550",
 	// };
 
+	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
-		console.log("userData =====> ", userData);
 		if (Object.keys(userData).length === 0) navigate("/");
-		console.log("userData.token ====> ", userData.token);
 		const token = "Bearer " + userData.token;
 		console.log("token ====> ", token);
-		var myHeaders = new Headers();
+		const newURL = URL + currentPath;
+		console.log("newUrl ===> ", newURL);
+		let myHeaders = new Headers();
 		myHeaders.append(
 			"Authorization",
-			token
-			// process.env.REACT_APP_USER_BEARER_TOKEN
+			`Bearer ${userData.token}`
 		);
-		myHeaders.append("Content-Type", "application/json");
 
-		var raw = JSON.stringify({
-			user: userData.id,
-			id: 0,
-		});
-
-		fetch(URL, {
+		let requestOptions = {
 			method: "GET",
 			headers: myHeaders,
-			body: JSON.stringify(raw),
-		})
+			redirect: "follow",
+		};
+
+		fetch(newURL, requestOptions)
 			.then((response) => response.text())
 			.then((result) => {
-				console.log("result ====> ", result);
-				// setOrder([...JSON.parse(result)]);
+				console.log(JSON.parse(result).order);
+				setOrder(JSON.parse(result).order);
+				console.log(
+					"order.createdAt ===> ",
+					order.createdAt
+				);
 			})
 			.catch((error) => console.log("error", error));
-	});
+	}, []);
+	/* eslint-disable react-hooks/exhaustive-deps */
+
 	return (
 		<>
 			{Object.keys(userData).length === 0 ? (
@@ -82,9 +92,15 @@ export const Order = () => {
 							Your order has been placed
 						</h2>
 						<div className="order__info-container">
-							<p className="order__info-container-date">
-								23 March 2023
-							</p>
+							{order ? (
+								<p className="order__info-container-date">
+									{/* 23 March 2023 */}
+									{order.createdAt}
+								</p>
+							) : (
+								<></>
+							)}
+
 							<p className="order__info-container-order-number">
 								N-573927584
 							</p>

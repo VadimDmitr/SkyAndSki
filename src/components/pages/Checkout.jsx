@@ -35,8 +35,9 @@ export const Checkout = () => {
 		expirationMonth: "12",
 		expirationYear: "34",
 		ccv: "123",
-		bill: "550"
-	}
+		bill: "550",
+	};
+	const [orderId, setOrderId] = useState("");
 
 	const navigate = useNavigate();
 
@@ -114,13 +115,17 @@ export const Checkout = () => {
 			process.env.REACT_APP_USER_BEARER_TOKEN
 		);
 		console.log("cart ===> ", cart);
-		let order = {...{products: [cart[0]]}, ...data, ...{bill: finalPrice}};
+		let order = {
+			...{ products: [cart[0]] },
+			...data,
+			...{ bill: finalPrice },
+		};
 		console.log("order ===> ", order);
 		event.preventDefault();
 		console.log("userData.token ====> ", userData.token);
 		const token = "Bearer " + userData.token;
 		console.log("token ====> ", token);
-		var myHeaders = new Headers();
+		let myHeaders = new Headers();
 		myHeaders.append(
 			"Authorization",
 			token
@@ -136,11 +141,34 @@ export const Checkout = () => {
 			.then((response) => response.text())
 			.then((result) => {
 				console.log("result ====> ", result);
+				console.log(
+					"JSON.parse(result) ====> ",
+					JSON.parse(result)
+				);
+				let resultFromResponse = JSON.parse(result);
+				console.log(
+					"resultFromResponse ====> ",
+					resultFromResponse
+				);
+				console.log(
+					"resultFromResponse[_id] ===> ",
+					resultFromResponse.order._id
+				);
 				// setProducts([...JSON.parse(result).products]);
+				setOrderId(resultFromResponse.order._id);
+				console.log("orderId inside fetch ===> ", orderId);
+
+				navigate(`/order/${resultFromResponse.order._id}`);
+
+				// console.log("orderId before navigate ===> ", orderId);
+				// navigate(`/order/${orderId}`);
 			})
 			.catch((error) => console.log("error", error));
 
-		navigate("/order");
+		// navigate(`/order/${}`);
+
+		// console.log("orderId before navigate ===> ", orderId);
+		// navigate(`/order/${orderId}`);
 	};
 
 	if (Object.keys(userData).length !== 0)
