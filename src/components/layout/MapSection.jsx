@@ -18,8 +18,7 @@ export const MapSection = () => {
 	};
 
 	return (
-		<div className="map-section wrapper-mobile-full-screen">
-			<h2 className="map-section__heading">Our location</h2>
+		<div className="map-section">
 			<div className="map-section__content">
 				<LoadScript
 					googleMapsApiKey={
@@ -50,8 +49,11 @@ export const MapSection = () => {
 						</Marker>
 					</GoogleMap>
 				</LoadScript>
+				<h2 className="map-section__heading">
+					Location of our store
+				</h2>
 				{/* <div className="map-section__info"> */}
-					{/* <div>
+				{/* <div>
 						<h2 className="map-section__title">
 							Location of our Hotelos
 						</h2>
@@ -61,7 +63,7 @@ export const MapSection = () => {
 							has been the industry's
 						</h3>
 					</div> */}
-					{/* <div className="map-section-contact">
+				{/* <div className="map-section-contact">
 						<input type="email" placeholder="Email" />
 						<button>Contact</button>
 					</div> */}
