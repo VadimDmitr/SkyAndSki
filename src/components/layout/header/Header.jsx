@@ -12,23 +12,6 @@ import { Account } from "components/icons/Account";
 import { Caret } from "components/icons/Caret";
 
 const HeaderElement = styled.header`
-	// display: $ {({ currentPath }) =>
-	// 	currentPath === "/" ||
-	// 	currentPath === "/home" ||
-	// 	currentPath === "/about" ||
-	// 	currentPath === "/account" ||
-	// 	currentPath === "/cart" ||
-	// 	currentPath === "/checkout" ||
-	// 	currentPath === "/contact" ||
-	// 	currentPath === "/product" ||
-	// 	currentPath === "/shop" ||
-	// 	currentPath === "/login" ||
-	// 	currentPath === "/logout" ||
-	// 	currentPath === "/register" ||
-	// 	currentPath === "/order"
-	// 		? "flex"
-	// 		: "none"};
-
 	border-bottom: ${({ currentPath }) =>
 		currentPath === "/" ||
 		currentPath === "/login" ||
@@ -41,10 +24,6 @@ const HeaderElement = styled.header`
 		currentPath === "/register"
 			? "absolute"
 			: "static"};
-	border-bottom: ${({ currentPath }) =>
-		currentPath === "/" || currentPath === "/login"
-			? "1px solid var(--color-secondary)"
-			: "1px solid var(--color-primary)"};
 
 	.nav__link-text {
 		color: ${({ currentPath }) =>
@@ -91,7 +70,6 @@ export const Header = () => {
 						<Account currentPath={currentPath} />
 					</NavLink>
 					<Hamburger
-						currentPath={currentPath}
 						openMobileMenu={openMobileMenu}
 						setOpenMobileMenu={setOpenMobileMenu}
 					/>
@@ -110,9 +88,9 @@ export const Header = () => {
 					<NavLink className="nav__link" to={"/about"}>
 						<p className="nav__link-text">About</p>
 					</NavLink>
-					<NavLink className="nav__link" to={"/shop"}>
-						<p className="nav__link-text">Shop</p>
-					</NavLink>
+					<NavLink className="nav__link" to="/catalog">
+  <p className="nav__link-text">Shop</p>
+</NavLink>
 					<NavLink className="nav__link" to={"/contact"}>
 						<p className="nav__link-text">Contact</p>
 					</NavLink>
