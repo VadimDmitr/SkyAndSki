@@ -254,13 +254,11 @@ export const Cart = () => {
 					</div>
 				</>
 			) : (
-				<div
-					className="cart-empty wrapper"
-				>
-					<h1 className="cart-empty__header">Cart is empty</h1>
-					<Link className="cart-empty__link"
-						to={"/"}
-					>
+				<div className="cart-empty wrapper">
+					<h1 className="cart-empty__header">
+						Cart is empty
+					</h1>
+					<Link className="cart-empty__link" to={"/"}>
 						Go back to shopping
 					</Link>
 				</div>
