@@ -6,12 +6,20 @@
 		padding: 3rem 0;
 		font-size: 3rem;
 	}
+
+	&__sidebar-heading {
+		font-size: 3.2rem;
+	}
 }
 
 @media only screen and (min-width: 768px) {
 	.account {
 		flex-direction: row;
 		gap: 7rem;
+
+		&__switch-section {
+			padding-top: 3rem;
+		}
 
 		&__sidebar {
 			display: flex;
