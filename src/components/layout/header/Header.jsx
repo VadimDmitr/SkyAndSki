@@ -6,10 +6,10 @@ import styled from "styled-components";
 import { Hamburger } from "components/layout/header/Hamburger";
 import { MobileMenu } from "components/layout/header/MobileMenu";
 import { Logo } from "components/icons/Logo";
-import { Search } from "components/icons/Search";
+// import { Search } from "components/icons/Search";
 import { Cart } from "components/icons/Cart";
 import { Account } from "components/icons/Account";
-import { Caret } from "components/icons/Caret";
+// import { Caret } from "components/icons/Caret";
 
 const HeaderElement = styled.header`
 	border-bottom: ${({ currentPath }) =>
