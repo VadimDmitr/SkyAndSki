@@ -1,16 +1,16 @@
 .order-card {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 
-    &__date-created {
-        font-size: 2rem;
-    }
+	&__date-created {
+		font-size: 2rem;
+	}
 
-    &__total {
-        font-size: 2rem;
-    }
-    &__product-title {
-        font-size: 2rem;
-    }
+	&__total {
+		font-size: 2rem;
+	}
+	&__product-title {
+		font-size: 2rem;
+	}
 }
