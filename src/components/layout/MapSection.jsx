@@ -19,7 +19,7 @@ export const MapSection = () => {
 
 	return (
 		<div className="map-section">
-			<div className="map-section__content">
+			<div className="map-section-content">
 				<LoadScript
 					googleMapsApiKey={
 						process.env.REACT_APP_GOOGLE_MAPS_API_KEY
@@ -49,25 +49,22 @@ export const MapSection = () => {
 						</Marker>
 					</GoogleMap>
 				</LoadScript>
-				<h2 className="map-section__heading">
-					Location of our store
-				</h2>
-				{/* <div className="map-section__info"> */}
-				{/* <div>
-						<h2 className="map-section__title">
-							Location of our Hotelos
+				<div className="map-section-info">
+					<div>
+						<h2 className="map-section-title">
+							Location of our Store
 						</h2>
-						<h3 className="map-section__text">
+						<h3 className="map-section-text">
 							Lorem Ipsum is simply dummy text of the
 							printing and typesetting industry. Lorem Ipsum
 							has been the industry's
 						</h3>
-					</div> */}
-				{/* <div className="map-section-contact">
+					</div>
+					{/* <div className="map-section-contact">
 						<input type="email" placeholder="Email" />
 						<button>Contact</button>
 					</div> */}
-				{/* </div> */}
+				</div>
 			</div>
 		</div>
 	);
