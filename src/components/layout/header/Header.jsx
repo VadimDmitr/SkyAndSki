@@ -60,9 +60,9 @@ export const Header = () => {
 					<Logo currentPath={currentPath} />
 				</NavLink>
 				<div className="nav-mobile__right-group">
-					<NavLink className="nav__link" to={"/search"}>
+					{/* <NavLink className="nav__link" to={"/search"}>
 						<Search currentPath={currentPath} />
-					</NavLink>
+					</NavLink> */}
 					<NavLink className="nav__link" to={"/cart"}>
 						<Cart currentPath={currentPath} />
 					</NavLink>
@@ -96,13 +96,13 @@ export const Header = () => {
 					</NavLink>
 				</div>
 				<div className="nav__right-group">
-					<NavLink className="nav__link" to={"/language"}>
+					{/* <NavLink className="nav__link" to={"/language"}>
 						<p className="nav__link-text">En</p>
 						<Caret currentPath={currentPath} />
 					</NavLink>
 					<NavLink className="nav__link" to={"/search"}>
 						<Search currentPath={currentPath} />
-					</NavLink>
+					</NavLink> */}
 					<NavLink className="nav__link" to={"/cart"}>
 						<Cart currentPath={currentPath} />
 					</NavLink>
