@@ -9,6 +9,7 @@
 
 	&__sidebar-heading {
 		font-size: 3.2rem;
+		color: black;
 	}
 }
 
@@ -39,6 +40,13 @@
 	}
 }
 
+@media only screen and (min-width: 768px) {
+	.account {
+		&__section-heading {
+			font-size: 3rem;
+		}
+	}
+}
 @media only screen and (min-width: 1920px) {
 	.account {
 		flex-direction: row;
