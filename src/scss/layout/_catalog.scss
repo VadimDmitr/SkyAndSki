@@ -1,6 +1,7 @@
 .catalog-header-container {
 	display: flex;
 	align-items: center;
+	padding: 2rem 2rem;
 	gap: 1rem;
 
 	&__horizontal-line {
@@ -11,7 +12,11 @@
 
 	&__heading {
 		color: var(--color-primary);
-		font-size: 2rem;
+		font-size: 3rem;
+	}
+	&__title {
+		padding: 1rem;
+		font-size: 4rem;
 	}
 }
 
