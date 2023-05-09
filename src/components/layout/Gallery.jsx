@@ -13,6 +13,19 @@ export const Gallery = () => {
 	const location = useLocation();
 
 	useEffect(() => {
+		const handleVisibilityChange = () => {
+			if (document.hidden) {
+				AOS.remove();
+			} else {
+				AOS.init({
+					duration: 1000,
+					once: false,
+					mirror: true,
+				});
+				AOS.refresh();
+			}
+		};
+
 		AOS.init({
 			duration: 1000,
 			once: false,
@@ -20,8 +33,17 @@ export const Gallery = () => {
 		});
 		AOS.refresh();
 
+		document.addEventListener(
+			"visibilitychange",
+			handleVisibilityChange
+		);
+
 		return () => {
 			AOS.refreshHard();
+			document.removeEventListener(
+				"visibilitychange",
+				handleVisibilityChange
+			);
 		};
 	}, [location]);
 
@@ -74,6 +96,7 @@ export const Gallery = () => {
 					className="laptop-images__image laptop-images__image--1"
 					data-aos="fade-right"
 					// data-aos-once="true"
+					data-aos-anchor-placement="top-bottom"
 					data-aos-delay="500"
 				/>
 				<img
@@ -89,7 +112,8 @@ export const Gallery = () => {
 					alt="Snowboarder Yellow Jacket"
 					className="laptop-images__image laptop-images__image--3"
 					data-aos="fade-up"
-					//data-aos-once="true"
+					// data-aos-once="true"
+					data-aos-anchor-placement="top-bottom"
 					data-aos-delay="500"
 				/>
 			</div>
