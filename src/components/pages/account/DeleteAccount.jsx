@@ -9,8 +9,11 @@ export const DeleteAccount = () => {
 	const { userData, setUserData } =
 		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
-		email: "test@test.com",
+		email: "",
 	});
+	// const [userFormData, setUserFormData] = useState({
+	// 	email: "test@test.com",
+	// });
 
 	const handleChange = (event) => {
 		setUserFormData({
@@ -59,7 +62,7 @@ export const DeleteAccount = () => {
 					id="email"
 					name="email"
 					required
-					value="test@test.com"
+					value={userFormData.email}
 					onChange={(e) => handleChange(e)}
 				/>
 				<button className="button pointer" type="submit">

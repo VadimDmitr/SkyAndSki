@@ -74,7 +74,7 @@ export const Order = () => {
 				setOrder(JSON.parse(result).order);
 				console.log(
 					"order.createdAt ===> ",
-					order.createdAt
+					order.createdAt.slice(0, 10)
 				);
 			})
 			.catch((error) => console.log("error", error));

@@ -22,7 +22,7 @@ export const TopScreen = () => {
 					exacting demands
 				</h2>
 				<button
-					className="top-screen__button"
+					className="top-screen__button pointer"
 					onClick={handleShopNowClick}
 				>
 					SHOP NOW

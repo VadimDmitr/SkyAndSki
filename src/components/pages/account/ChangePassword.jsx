@@ -9,9 +9,14 @@ export const ChangePassword = () => {
 	const { userData, setUserData } =
 		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
-		email: "test@test.com",
-		emailToEdit: "test@test.com",
+		email: "",
+		emailToEdit: ""
 	});
+
+	// const [userFormData, setUserFormData] = useState({
+	// 	email: "test@test.com",
+	// 	emailToEdit: "test@test.com",
+	// });
 
 	const handleChange = (event) => {
 		setUserFormData({
@@ -58,10 +63,10 @@ export const ChangePassword = () => {
 					id="email"
 					name="email"
 					required
-					value="tests@test.com"
+					value={userFormData.email}
 					onChange={(e) => handleChange(e)}
 				/>
-				<label className="label" htmlFor="email">
+				{/* <label className="label" htmlFor="email">
 					Email To Edit:{" "}
 				</label>
 				<input
@@ -72,7 +77,7 @@ export const ChangePassword = () => {
 					required
 					value="test@test.com"
 					onChange={(e) => handleChange(e)}
-				/>
+				/> */}
 				<button className="button pointer" type="submit">
 					Change password
 				</button>
