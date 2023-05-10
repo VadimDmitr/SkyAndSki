@@ -13,14 +13,14 @@ export const Login = () => {
 	console.log("prevPath ====> ", prevPath);
 	const { userData, setUserData } =
 		useContext(userDataContext);
-	const [userFormData, setUserFormData] = useState({
-		email: "",
-		password: "",
-	});
 	// const [userFormData, setUserFormData] = useState({
-	// 	email: "test@test.com",
-	// 	password: "test@test.com",
+	// 	email: "",
+	// 	password: "",
 	// });
+	const [userFormData, setUserFormData] = useState({
+		email: "test@test.com",
+		password: "test@test.com",
+	});
 	const [error, setError] = useState(null);
 
 	const handleChange = (event) => {

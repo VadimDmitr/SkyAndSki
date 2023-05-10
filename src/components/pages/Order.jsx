@@ -95,21 +95,26 @@ export const Order = () => {
 							{order ? (
 								<p className="order__info-container-date">
 									{/* 23 March 2023 */}
-									{order.createdAt}
+									{order?.createdAt.slice(0, 10)}
 								</p>
 							) : (
 								<></>
 							)}
 
 							<p className="order__info-container-order-number">
-								N-573927584
+								{/* N-573927584 */}
+								N-{order?._id.slice(0,9)}
 							</p>
 							<p className="order__info-container-delivery-date">
 								Delivery date: 30 March 2023
 							</p>
 							<p className="order__info-container-delivery-address">
-								Address: 7, Oxford Street, London W 13 NP,
-								Great Britain
+								{/* Address: 7, Oxford Street, London W 13 NP,
+								Great Britains43 */}
+								Address: {order?.address} <br />
+								City: {order?.city} <br />
+								Zip: {order?.zip} <br />
+								Country: {order?.country} <br />
 							</p>
 						</div>
 						<div className="order__content-container">
