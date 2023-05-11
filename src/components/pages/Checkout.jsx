@@ -21,6 +21,9 @@ export const Checkout = () => {
 		expirationYear: "",
 		cvv: "",
 	});
+
+	const [orderId, setOrderId] = useState(null);
+
 	const data = {
 		firstName: "first",
 		lastName: "last",
@@ -154,8 +157,8 @@ export const Checkout = () => {
 					resultFromResponse.order._id
 				);
 				// setProducts([...JSON.parse(result).products]);
-				// setOrderId(resultFromResponse.order._id);
-				// console.log("orderId inside fetch ===> ", orderId);
+				setOrderId(resultFromResponse.order._id);
+				console.log("orderId inside fetch ===> ", orderId);
 
 				navigate(`/order/${resultFromResponse.order._id}`);
 
