@@ -31,7 +31,7 @@ export const Footer = () => {
 	return (
 		<FooterElement className="footer">
 			<div className="footer__company-column footer__links-container">
-				<h3 className="footer__company-title">Company</h3>
+				<h3 className="footer__column-heading">Company</h3>
 				<Link
 					className="footer__link"
 					to={"/about"}
@@ -61,7 +61,7 @@ export const Footer = () => {
 				</Link>
 			</div>
 			<div className="footer__support-column footer__links-container">
-				<h3 className="footer__support-title">Support</h3>
+				<h3 className="footer__column-heading">Support</h3>
 				<Link className="footer__link" to={"/help"}>
 					Help Center
 				</Link>
@@ -108,7 +108,7 @@ export const Footer = () => {
 				</form>
 				<div className="footer__social-icons">
 					<ExternalLink
-						className="footer__social-link1"
+						className="footer__social-link"
 						href="https://instagram.com/"
 					>
 						<img
@@ -118,7 +118,7 @@ export const Footer = () => {
 						/>
 					</ExternalLink>
 					<ExternalLink
-						className="footer__social-link2"
+						className="footer__social-link"
 						href="https://dribbble.com/"
 					>
 						<img
@@ -128,7 +128,7 @@ export const Footer = () => {
 						/>
 					</ExternalLink>
 					<ExternalLink
-						className="footer__social-link3"
+						className="footer__social-link"
 						href="https://twitter.com/"
 					>
 						<img
@@ -138,7 +138,7 @@ export const Footer = () => {
 						/>
 					</ExternalLink>
 					<ExternalLink
-						className="footer__social-link4"
+						className="footer__social-link"
 						href="https://youtube.com/@videoproduction7283/videos"
 					>
 						<img

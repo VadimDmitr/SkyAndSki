@@ -2,7 +2,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto auto;
-	grid-gap: 3.2rem;
+	grid-gap: 1.6rem;
 	grid-template-areas:
 		"company support"
 		"social social";
@@ -16,22 +16,37 @@
 	&__links-container {
 		display: flex;
 		flex-direction: column;
+		gap: .2rem;
 	}
 
 	&__company-column {
 		grid-area: company;
+		padding-left: 1.6rem;
 	}
 
 	&__support-column {
 		grid-area: support;
+		padding-right: 1.6rem;
 	}
 
 	&__social-media-container {
 		grid-area: social;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
+
+	&__column-heading {
+		font-size: 2rem;
+		color: var(--color-secondary);
+		margin-bottom: 1.2rem;
+	}
+
 
 	&__link {
 		font-size: 1.6rem;
+		line-height: 3.3rem;
+		letter-spacing: -0.01em;
 		color: var(--color-secondary);
 	}
 
@@ -103,7 +118,8 @@
 
 	&__social-icons {
 		display: flex;
-		justify-content: space-between;
+		gap: 2.3rem;
+		// justify-content: space-between;
 		// gap: 2.5rem;
 		// width: 31rem;
 		// padding: 1rem;
