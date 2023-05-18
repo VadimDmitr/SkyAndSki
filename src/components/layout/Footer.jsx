@@ -6,7 +6,7 @@ import twitter from "images/icons/twitter.svg";
 import youtube from "images/icons/youtube.svg";
 import dribbble from "images/icons/dribbble.svg";
 import instagram from "images/icons/instagram.svg";
-import subscbutton from "images/icons/subscbutton.svg";
+import subscribe from "images/icons/subscribe.svg";
 
 const FooterElement = styled.footer`
 	// display: $ {({ currentPath }) =>
@@ -32,31 +32,19 @@ export const Footer = () => {
 		<FooterElement className="footer">
 			<div className="footer__company-column footer__links-container">
 				<h3 className="footer__column-heading">Company</h3>
-				<Link
-					className="footer__link"
-					to={"/about"}
-				>
+				<Link className="footer__link" to={"/about"}>
 					About
 				</Link>
 				<Link className="footer__link" to={"/blog"}>
 					Blog
 				</Link>
-				<Link
-					className="footer__link"
-					to={"/contact"}
-				>
+				<Link className="footer__link" to={"/contact"}>
 					Contact US
 				</Link>
-				<Link
-					className="footer__link"
-					to={"/pricing"}
-				>
+				<Link className="footer__link" to={"/pricing"}>
 					Pricing
 				</Link>
-				<Link
-					className="footer__link"
-					to={"/testimonials"}
-				>
+				<Link className="footer__link" to={"/testimonials"}>
 					Testimonials
 				</Link>
 			</div>
@@ -65,16 +53,10 @@ export const Footer = () => {
 				<Link className="footer__link" to={"/help"}>
 					Help Center
 				</Link>
-				<Link
-					className="footer__link"
-					to={"/service"}
-				>
+				<Link className="footer__link" to={"/service"}>
 					Terms of Service
 				</Link>
-				<Link
-					className="footer__link"
-					to={"/legal"}
-				>
+				<Link className="footer__link" to={"/legal"}>
 					Legal
 				</Link>
 				<Link
@@ -83,10 +65,7 @@ export const Footer = () => {
 				>
 					Privacy Policy
 				</Link>
-				<Link
-					className="footer__link"
-					to={"/status"}
-				>
+				<Link className="footer__link" to={"/status"}>
 					Status
 				</Link>
 			</div>
@@ -97,11 +76,11 @@ export const Footer = () => {
 						className="footer__subscription-input"
 						placeholder="Your email address"
 						required
-					/>
-					<button type="submit">
+					/>``
+					<button type="submit" className="footer__subscribe-button">
 						<img
-							className="footer__subscription-button"
-							src={subscbutton}
+							className="footer__subscribe-button-img"
+							src={subscribe}
 							alt="Subscription button"
 						/>
 					</button>

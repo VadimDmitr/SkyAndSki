@@ -2,7 +2,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto auto;
-	grid-gap: 1.6rem;
+	column-gap: 1.6rem;
 	grid-template-areas:
 		"company support"
 		"social social";
@@ -22,11 +22,15 @@
 	&__company-column {
 		grid-area: company;
 		padding-left: 1.6rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 	}
 
 	&__support-column {
 		grid-area: support;
 		padding-right: 1.6rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 	}
 
 	&__social-media-container {
@@ -34,6 +38,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 1.6rem;
 	}
 
 	&__column-heading {
@@ -97,9 +102,11 @@
 		color: var(--color-secondary);
 	}
 
-	&__subscription-input,
+	// &__subscription-input,
 	&__subscription-form {
 		display: flex;
+		width: 100%;
+		position: relative;
 		// height: 3rem;
 		// left: 1.9rem;
 		// bottom: 9.253rem;
@@ -109,11 +116,27 @@
 		border: none;
 	}
 
-	&__subscription-button {
-		left: 40rem;
+	&__subscription-input {
+		width: 100%;
+		padding: 1.2rem 1.4rem;
+		font-size: 1.6rem;
+		line-height: 3.81rem;
+		background-color: #47474b;
+
+		&::placeholder {
+			color: var(--color-secondary);
+		}
+	}
+
+	&__subscribe-button {
+		border: none;
+		position: absolute;
+		right: 0;
+		background-color: transparent;
+		// left: 40rem;
 		// top: 31rem;
-		background: var(--color-neutral-black);
-		height: 3rem;
+		// background: var(--color-neutral-black);
+		// height: 3rem;
 	}
 
 	&__social-icons {
@@ -214,7 +237,7 @@
 			padding: 1rem; /* Add some padding to make the text more readable */
 		}
 
-		&__subscription-button {
+		&__subscribe-button {
 			// left: 40rem;
 			// top: 31rem;
 			// height: 4.7rem;
