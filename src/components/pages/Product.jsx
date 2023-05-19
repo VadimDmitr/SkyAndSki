@@ -23,7 +23,7 @@ export const Product = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				console.log("result ===> ", result);
+				// console.log("result ===> ", result);
 				const productFromBackend =
 					JSON.parse(result).product;
 				setProduct({ ...product, ...productFromBackend });
@@ -33,13 +33,13 @@ export const Product = () => {
 	/* eslint-disable react-hooks/exhaustive-deps */
 
 	const increaseQuantityToAdd = () => {
-		console.log("quantityBox ===> ", quantityBox);
+		// console.log("quantityBox ===> ", quantityBox);
 		setQuantityBox(quantityBox + 1);
 	};
 
 	const decreaseQuantityToAdd = () => {
 		if (quantityBox > 1) {
-			console.log("quantityBox ===> ", quantityBox);
+			// console.log("quantityBox ===> ", quantityBox);
 			setQuantityBox(quantityBox - 1);
 		}
 	};

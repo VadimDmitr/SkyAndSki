@@ -9,7 +9,7 @@ export const Cart = () => {
 	// let history = useHistory();
 	// const navigate = useNavigate();
 	const currentPath = useLocation().pathname;
-	console.log(currentPath);
+	// console.log(currentPath);
 	const { userData } = useContext(userDataContext);
 	const { cart, setCart } = useContext(cartDataContext);
 
@@ -49,7 +49,7 @@ export const Cart = () => {
 		const x = updatedCart.splice(index, 1);
 		// TO DO
 		// need to figure out how to remove item from cart without creating variable X that we will not use again
-		console.log("x => ", x);
+		// console.log("x => ", x);
 		setCart([...updatedCart]);
 	};
 
@@ -62,8 +62,8 @@ export const Cart = () => {
 	// - updatedCart is the same cart array, you don't need to duplicate it - just update initial data
 
 	const increaseQuantity = (item, quantity) => {
-		console.log("input cart ====> ", cart);
-		console.log("increase input ====> ", item);
+		// console.log("input cart ====> ", cart);
+		// console.log("increase input ====> ", item);
 		if (
 			cart.some((cartItem) => cartItem.title === item.title)
 		) {
@@ -74,7 +74,7 @@ export const Cart = () => {
 			).quantity += quantity;
 			setCart([...updatedCart]);
 		}
-		console.log("cart after setCart ====> ", cart);
+		// console.log("cart after setCart ====> ", cart);
 	};
 
 	const decreaseQuantity = (item, quantity) => {

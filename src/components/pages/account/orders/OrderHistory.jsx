@@ -10,16 +10,16 @@ export const OrderHistory = () => {
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
-		console.log("userData ===> ", userData);
-		console.log("userData.token ====> ", userData.token);
+		// console.log("userData ===> ", userData);
+		// console.log("userData.token ====> ", userData.token);
 		const token = "Bearer " + userData.token;
-		console.log("token ====> ", token);
-		console.log(
-			"userData.user?.id ===> ",
-			userData.user?.id
-		);
+		// console.log("token ====> ", token);
+		// console.log(
+		// 	"userData.user?.id ===> ",
+		// 	userData.user?.id
+		// );
 		const newURL = URL + userData.user?.id;
-		console.log("newURL ===> ", newURL);
+		// console.log("newURL ===> ", newURL);
 		let myHeaders = new Headers();
 		myHeaders.append("Authorization", token);
 		myHeaders.append("Content-Type", "application/json");
@@ -29,11 +29,11 @@ export const OrderHistory = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				console.log("result ====> ", result);
-				console.log(
-					"JSON.parse(result) => ",
-					JSON.parse(result)
-				);
+				// console.log("result ====> ", result);
+				// console.log(
+				// 	"JSON.parse(result) => ",
+				// 	JSON.parse(result)
+				// );
 				setOrders([...JSON.parse(result).orders]);
 			})
 			.catch((error) => console.log("error", error));

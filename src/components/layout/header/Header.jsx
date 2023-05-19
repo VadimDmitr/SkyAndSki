@@ -37,7 +37,7 @@ const HeaderElement = styled.header`
 
 export const Header = () => {
 	const currentPath = useLocation().pathname;
-	console.log(currentPath);
+	// console.log(currentPath);
 	const [openMobileMenu, setOpenMobileMenu] =
 		useState(false);
 

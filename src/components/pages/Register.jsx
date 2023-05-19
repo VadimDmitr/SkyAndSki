@@ -38,13 +38,13 @@ export const Register = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				console.log(result);
-				console.log("type of result ====> ", typeof result);
-				console.log(JSON.parse(result));
-				console.log(
-					"JSON.parse(result).token ====> ",
-					JSON.parse(result).token
-				);
+				// console.log(result);
+				// console.log("type of result ====> ", typeof result);
+				// console.log(JSON.parse(result));
+				// console.log(
+				// 	"JSON.parse(result).token ====> ",
+				// 	JSON.parse(result).token
+				// );
 				// setUserData({ ...userData, token: JSON.parse(result).token})
 				// setUserData({ ...userData, name: JSON.parse(result).name})
 				const userDateFromBackend = {
@@ -55,7 +55,7 @@ export const Register = () => {
 					...userData,
 					...userDateFromBackend,
 				});
-				console.log("userData ====> ", userData);
+				// console.log("userData ====> ", userData);
 				if (userData) {
 					navigate("/account");
 				}

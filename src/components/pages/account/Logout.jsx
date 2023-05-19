@@ -17,8 +17,8 @@ export const Logout = () => {
 		// const userDataNull = null;
 		setUserData({ ...userData, ...userDataNull });
 		navigate("/");
-		console.log("userData ====> ", userData);
-		console.log("logged out!");
+		// console.log("userData ====> ", userData);
+		// console.log("logged out!");
 	};
 
 	return (
