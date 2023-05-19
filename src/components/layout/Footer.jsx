@@ -77,7 +77,10 @@ export const Footer = () => {
 						placeholder="Your email address"
 						required
 					/>
-					<button type="submit" className="footer__subscribe-button pointer">
+					<button
+						type="submit"
+						className="footer__subscribe-button pointer"
+					>
 						<img
 							className="footer__subscribe-button-img"
 							src={subscribe}

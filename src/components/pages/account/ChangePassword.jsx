@@ -10,7 +10,7 @@ export const ChangePassword = () => {
 		useContext(userDataContext);
 	const [userFormData, setUserFormData] = useState({
 		email: "",
-		emailToEdit: ""
+		emailToEdit: "",
 	});
 
 	// const [userFormData, setUserFormData] = useState({

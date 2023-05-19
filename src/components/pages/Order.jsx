@@ -103,7 +103,7 @@ export const Order = () => {
 
 							<p className="order__info-container-order-number">
 								{/* N-573927584 */}
-								N-{order?._id.slice(0,9).toUpperCase()}
+								N-{order?._id.slice(0, 9).toUpperCase()}
 							</p>
 							<p className="order__info-container-delivery-date">
 								Delivery date: 30 March 2023
