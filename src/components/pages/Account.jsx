@@ -8,7 +8,7 @@ export const Account = () => {
 	const { userData } = useContext(userDataContext);
 
 	useEffect(() => {
-		console.log("userData =====> ", userData);
+		// console.log("userData =====> ", userData);
 		// if (userData === null) navigate("/");
 		if (Object.keys(userData).length === 0) navigate("/");
 		// if (userData.token === null) navigate ("/");

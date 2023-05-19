@@ -20,8 +20,8 @@ export const Catalog = () => {
 	const [selectedCategory, setSelectedCategory] =
 		useState("all");
 
-	console.log("selectedCategory ===> ", selectedCategory);
-	console.log("products ===> ", products);
+	// console.log("selectedCategory ===> ", selectedCategory);
+	// console.log("products ===> ", products);
 
 	const handleClick = (category) => {
 		setSelectedCategory(category);
@@ -44,13 +44,13 @@ export const Catalog = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				console.log("products ====> ", products);
+				// console.log("products ====> ", products);
 				setProducts([...JSON.parse(result).products]);
 			})
 			.catch((errorResponse) => {
 				setError(errorResponse);
-				console.log("errorResponse ===> ", errorResponse);
-				console.log("error ===> ", error);
+				// console.log("errorResponse ===> ", errorResponse);
+				// console.log("error ===> ", error);
 			});
 	}, []);
 	/* eslint-disable react-hooks/exhaustive-deps */

@@ -14,7 +14,7 @@ export const Account = () => {
 		useContext(userDataContext);
 
 	useEffect(() => {
-		console.log("userData =====> ", userData);
+		// console.log("userData =====> ", userData);
 		if (Object.keys(userData).length === 0)
 			navigate("/login");
 		// if (userData === null) navigate("/");
@@ -27,8 +27,8 @@ export const Account = () => {
 			token: null,
 		};
 		setUserData({ ...userData, ...userDataNull });
-		console.log("userData ====> ", userData);
-		console.log("logged out!");
+		// console.log("userData ====> ", userData);
+		// console.log("logged out!");
 		navigate("/");
 	};
 

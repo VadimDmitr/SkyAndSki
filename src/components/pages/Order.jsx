@@ -13,7 +13,7 @@ export const Order = () => {
 	const URL = BASEURL + "orders/";
 	const [order, setOrder] = useState(null);
 	const currentPath = useLocation().pathname.split("/")[2];
-	console.log(currentPath);
+	// console.log(currentPath);
 	const navigate = useNavigate();
 	// const order = {
 	// 	products: [
@@ -52,9 +52,9 @@ export const Order = () => {
 	useEffect(() => {
 		if (Object.keys(userData).length === 0) navigate("/");
 		const token = "Bearer " + userData.token;
-		console.log("token ====> ", token);
+		// console.log("token ====> ", token);
 		const newURL = URL + currentPath;
-		console.log("newUrl ===> ", newURL);
+		// console.log("newUrl ===> ", newURL);
 		let myHeaders = new Headers();
 		myHeaders.append(
 			"Authorization",
@@ -70,12 +70,12 @@ export const Order = () => {
 		fetch(newURL, requestOptions)
 			.then((response) => response.text())
 			.then((result) => {
-				console.log(JSON.parse(result).order);
+				// console.log(JSON.parse(result).order);
 				setOrder(JSON.parse(result).order);
-				console.log(
-					"order.createdAt ===> ",
-					order.createdAt.slice(0, 10)
-				);
+				// console.log(
+				// 	"order.createdAt ===> ",
+				// 	order.createdAt.slice(0, 10)
+				// );
 			})
 			.catch((error) => console.log("error", error));
 	}, []);
@@ -95,21 +95,26 @@ export const Order = () => {
 							{order ? (
 								<p className="order__info-container-date">
 									{/* 23 March 2023 */}
-									{order.createdAt}
+									{order?.createdAt.slice(0, 10)}
 								</p>
 							) : (
 								<></>
 							)}
 
 							<p className="order__info-container-order-number">
-								N-573927584
+								{/* N-573927584 */}
+								N-{order?._id.slice(0,9).toUpperCase()}
 							</p>
 							<p className="order__info-container-delivery-date">
 								Delivery date: 30 March 2023
 							</p>
 							<p className="order__info-container-delivery-address">
-								Address: 7, Oxford Street, London W 13 NP,
-								Great Britain
+								{/* Address: 7, Oxford Street, London W 13 NP,
+								Great Britains43 */}
+								Address: {order?.address} <br />
+								City: {order?.city} <br />
+								Zip: {order?.zip} <br />
+								Country: {order?.country} <br />
 							</p>
 						</div>
 						<div className="order__content-container">

@@ -35,11 +35,11 @@ export const DeleteAccount = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				console.log(result);
-				console.log("type of result ====> ", typeof result);
+				// console.log(result);
+				// console.log("type of result ====> ", typeof result);
 				// console.log(JSON.stringify(result))
 				setUserData({ ...userData, token: null });
-				console.log("userData ====> ", userData);
+				// console.log("userData ====> ", userData);
 			})
 			.catch((error) => console.log("error", error));
 	};

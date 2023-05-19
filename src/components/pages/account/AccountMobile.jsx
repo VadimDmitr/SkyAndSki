@@ -14,7 +14,7 @@ export const AccountMobile = () => {
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
-		console.log("userData =====> ", userData);
+		// console.log("userData =====> ", userData);
 		// if (userData === null) navigate("/");
 
 		if (userData.token === null) navigate("/login");
@@ -31,8 +31,8 @@ export const AccountMobile = () => {
 		// userDataNull = null;
 		// let userDataNull = null;
 		setUserData({ ...userData, ...userDataNull });
-		console.log("userData ====> ", userData);
-		console.log("logged out!");
+		// console.log("userData ====> ", userData);
+		// console.log("logged out!");
 		navigate("/");
 	};
 

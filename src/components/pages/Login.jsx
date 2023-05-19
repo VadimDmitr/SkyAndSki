@@ -10,17 +10,17 @@ const URL = BASEAUTHURL + "login";
 export const Login = () => {
 	const navigate = useNavigate();
 	let { prevPath } = useLocation();
-	console.log("prevPath ====> ", prevPath);
+	// console.log("prevPath ====> ", prevPath);
 	const { userData, setUserData } =
 		useContext(userDataContext);
-	const [userFormData, setUserFormData] = useState({
-		email: "",
-		password: "",
-	});
 	// const [userFormData, setUserFormData] = useState({
-	// 	email: "test@test.com",
-	// 	password: "test@test.com",
+	// 	email: "",
+	// 	password: "",
 	// });
+	const [userFormData, setUserFormData] = useState({
+		email: "test@test.com",
+		password: "test@test.com",
+	});
 	const [error, setError] = useState(null);
 
 	const handleChange = (event) => {
@@ -44,13 +44,13 @@ export const Login = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				console.log(result);
-				console.log("type of result ====> ", typeof result);
-				console.log(JSON.parse(result));
-				console.log(
-					"JSON.parse(result).token ====> ",
-					JSON.parse(result).token
-				);
+				// console.log(result);
+				// console.log("type of result ====> ", typeof result);
+				// console.log(JSON.parse(result));
+				// console.log(
+				// 	"JSON.parse(result).token ====> ",
+				// 	JSON.parse(result).token
+				// );
 				const userDateFromBackend = {
 					token: JSON.parse(result).token,
 					user: JSON.parse(result).user,
@@ -60,7 +60,7 @@ export const Login = () => {
 					...userDateFromBackend,
 				});
 				// setUserData({ ...userData, name: JSON.parse(result).name})
-				console.log("userData ====> ", userData);
+				// console.log("userData ====> ", userData);
 				if (userData) {
 					if (prevPath === "/checkout") {
 						navigate("/checkout");
@@ -71,8 +71,8 @@ export const Login = () => {
 			})
 			.catch((errorResponse) => {
 				setError(errorResponse);
-				console.log("errorResponse ===> ", errorResponse);
-				console.log("error ===> ", error);
+				// console.log("errorResponse ===> ", errorResponse);
+				// console.log("error ===> ", error);
 			});
 	};
 

@@ -47,7 +47,7 @@ export const Checkout = () => {
 	const { userData } = useContext(userDataContext);
 
 	useEffect(() => {
-		console.log("userData =====> ", userData);
+		// console.log("userData =====> ", userData);
 		// if (Object.keys(userData).length === 0)  navigate("/");
 	});
 
@@ -108,25 +108,25 @@ export const Checkout = () => {
 			...formData,
 			[evt.target.name]: value,
 		});
-		console.log("state ===> ", formData);
+		// console.log("state ===> ", formData);
 	};
 
 	const handleSubmit = (event) => {
-		console.log(
-			"process.env.REACT_APP_USER_BEARER_TOKEN ====> ",
-			process.env.REACT_APP_USER_BEARER_TOKEN
-		);
-		console.log("cart ===> ", cart);
+		// console.log(
+		// 	"process.env.REACT_APP_USER_BEARER_TOKEN ====> ",
+		// 	process.env.REACT_APP_USER_BEARER_TOKEN
+		// );
+		// console.log("cart ===> ", cart);
 		let order = {
 			...{ products: [cart[0]] },
 			...data,
 			...{ bill: finalPrice },
 		};
-		console.log("order ===> ", order);
+		// console.log("order ===> ", order);
 		event.preventDefault();
-		console.log("userData.token ====> ", userData.token);
+		// console.log("userData.token ====> ", userData.token);
 		const token = "Bearer " + userData.token;
-		console.log("token ====> ", token);
+		// console.log("token ====> ", token);
 		let myHeaders = new Headers();
 		myHeaders.append(
 			"Authorization",
@@ -142,20 +142,20 @@ export const Checkout = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				console.log("result ====> ", result);
-				console.log(
-					"JSON.parse(result) ====> ",
-					JSON.parse(result)
-				);
+				// console.log("result ====> ", result);
+				// console.log(
+				// 	"JSON.parse(result) ====> ",
+				// 	JSON.parse(result)
+				// );
 				let resultFromResponse = JSON.parse(result);
-				console.log(
-					"resultFromResponse ====> ",
-					resultFromResponse
-				);
-				console.log(
-					"resultFromResponse[_id] ===> ",
-					resultFromResponse.order._id
-				);
+				// console.log(
+				// 	"resultFromResponse ====> ",
+				// 	resultFromResponse
+				// );
+				// console.log(
+				// 	"resultFromResponse[_id] ===> ",
+				// 	resultFromResponse.order._id
+				// );
 				// setProducts([...JSON.parse(result).products]);
 				setOrderId(resultFromResponse.order._id);
 				console.log("orderId inside fetch ===> ", orderId);
