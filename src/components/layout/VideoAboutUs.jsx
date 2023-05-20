@@ -11,11 +11,11 @@ export const VideoAboutUs = () => {
 	};
 
 	const onReady = (event) => {
-		console.log("Video is ready");
+		// console.log("Video is ready");
 	};
 
 	const onPlay = (event) => {
-		console.log("Video is playing");
+		// console.log("Video is playing");
 	};
 
 	return (
