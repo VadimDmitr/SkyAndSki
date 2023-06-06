@@ -1,6 +1,6 @@
-# BB Practicum Team 4 Front-end
+# BB Front-end
 
-This is the front-end repository for the BB Practicum Team 4 project.
+This is the front-end repository for https://sky-and-ski.onrender.com
 
 - Make sure to set up the back-end server first by following the instructions in the [back-end README](https://github.com/Code-the-Dream-School/bb-practicum-team-4-back/blob/readme/README.md).
 
@@ -13,13 +13,13 @@ This is the front-end repository for the BB Practicum Team 4 project.
 - Clone the repository.
 
 ```bash
-git clone https://github.com/Code-the-Dream-School/bb-practicum-team-4-front
+git clone https://github.com/VadimDmitr/SkyAndSki.git
 ```
 
 - Install dependencies.
 
 ```bash
-cd bb-practicum-team-4-front
+cd SkyAndSki
 npm install
 ```
 
