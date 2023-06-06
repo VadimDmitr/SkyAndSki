@@ -2,7 +2,7 @@
 
 This is the front-end repository for https://sky-and-ski.onrender.com
 
-- Make sure to set up the back-end server first by following the instructions in the [back-end README](https://github.com/Code-the-Dream-School/bb-practicum-team-4-back/blob/readme/README.md).
+- Make sure to set up the back-end server first by following the instructions in the [back-end README](https://github.com/Code-the-Dream-School/bb-practicum-team-4-back/blob/dev/README.md).
 
 ## Prerequisites
 
